@@ -4,6 +4,9 @@
 *_v*_*.md
 UPDATE_LOG_*.md
 
+# 数据验证报告（保留，但可以提交）
+# FINANCIAL_DATA_VALIDATION_*.md
+
 # 备份目录
 backups/
 
