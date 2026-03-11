@@ -2,6 +2,7 @@
 
 # 冗余版本文件（根据用户要求，使用Git进行版本控制）
 *_v*_*.md
+UPDATE_LOG_*.md
 
 # 备份目录
 backups/
