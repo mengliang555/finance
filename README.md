@@ -1,6 +1,6 @@
 # 公司财务分析项目
 
-## 项目概述
+## 📊 项目概述
 
 本项目对四家中国科技公司进行财务分析：
 1. **小米集团** (1810.HK) - 消费电子和IoT平台
@@ -8,10 +8,25 @@
 3. **地平线机器人** (未上市) - AI芯片和自动驾驶解决方案
 4. **三安光电** (600703.SH) - LED芯片和化合物半导体
 
-## 文件结构
+## 🌐 在线网站
+
+**财务分析网站已部署到GitHub Pages：**
+- 🔗 **访问地址**: [https://mengliang555.github.io/finance](https://mengliang555.github.io/finance)
+- 📱 **响应式设计**: 适配桌面和移动设备
+- 📈 **交互式图表**: 风险雷达图、估值对比图、营收趋势图
+- 🔍 **对比分析**: 四家公司全方位对比
+
+## 📁 文件结构
 
 ```
 finance/
+├── docs/                              # 网站部署目录
+│   ├── index.html                     # 主页面
+│   ├── css/style.css                  # 样式表
+│   ├── js/main.js                     # JavaScript文件
+│   ├── _config.yml                    # GitHub Pages配置
+│   ├── .nojekyll                      # 禁用Jekyll处理
+│   └── README.md                      # 网站部署说明
 ├── README.md                          # 项目说明文件
 ├── company_analysis_framework.md      # 财务分析框架
 ├── xiaomi_financial_analysis.md       # 小米集团财务分析
@@ -21,6 +36,133 @@ finance/
 ├── comparative_analysis_report.md     # 三家公司对比分析（旧版）
 └── comparative_analysis_report_v2.md  # 四家公司对比分析（新版）
 ```
+
+## 🚀 快速开始
+
+### 查看在线网站
+访问 [https://mengliang555.github.io/finance](https://mengliang555.github.io/finance) 查看交互式财务分析网站。
+
+### 本地运行
+```bash
+# 克隆项目
+git clone https://github.com/mengliang555/finance.git
+cd finance
+
+# 启动本地服务器
+cd docs
+python3 -m http.server 8000
+
+# 在浏览器中访问 http://localhost:8000
+```
+
+### 查看分析报告
+```bash
+# 查看小米集团分析
+cat xiaomi_financial_analysis.md
+
+# 查看四家公司对比分析
+cat comparative_analysis_report_v2.md
+```
+
+## 🎯 网站功能
+
+### 1. 公司分析展示
+- 交互式公司卡片，展示基本信息
+- 财务指标可视化
+- 投资评级和建议
+
+### 2. 对比分析
+- 财务指标对比表格
+- 风险雷达图可视化
+- 估值对比图表
+- 业务模式对比
+
+### 3. 分析框架
+- 六步财务分析流程
+- 系统化的分析方法论
+- 实用的分析工具
+
+### 4. 响应式设计
+- 适配桌面、平板、手机
+- 优化的移动端体验
+- 快速加载性能
+
+## 🔧 技术栈
+
+- **前端**: HTML5, CSS3, JavaScript (ES6+)
+- **图表**: Chart.js 数据可视化
+- **图标**: Font Awesome 图标库
+- **字体**: Google Fonts (Inter, Source Code Pro)
+- **部署**: GitHub Pages 静态托管
+- **构建**: 纯静态网站，无需构建工具
+
+## 📈 分析内容
+
+### 财务指标分析
+- 盈利能力分析（毛利率、净利率、ROE等）
+- 成长能力分析（营收增长率、净利润增长率等）
+- 偿债能力分析（资产负债率、流动比率等）
+- 运营效率分析（周转率指标）
+- 现金流分析（经营活动现金流、自由现金流等）
+
+### 业务分析
+- 主营业务构成分析
+- 市场竞争力分析
+- 增长驱动因素分析
+- SWOT分析和波特五力分析
+
+### 风险分析
+- 行业风险分析
+- 公司特有风险分析
+- 宏观经济风险分析
+- 风险矩阵评估
+
+### 估值分析
+- 相对估值分析（P/E、P/B、P/S等）
+- 绝对估值分析（DCF模型）
+- 估值合理性评估
+- 安全边际计算
+
+## 🤝 贡献指南
+
+欢迎贡献代码、改进分析或添加新公司：
+
+1. Fork本仓库
+2. 创建功能分支：`git checkout -b feature/新功能`
+3. 提交更改：`git commit -m '添加新功能'`
+4. 推送到分支：`git push origin feature/新功能`
+5. 创建Pull Request
+
+### 添加新公司分析
+1. 创建新的分析报告文件：`公司名_financial_analysis.md`
+2. 按照分析框架编写完整分析
+3. 更新对比分析报告
+4. 在网站中添加公司卡片和图表数据
+
+## 📝 许可证
+
+本项目采用MIT许可证。详见LICENSE文件。
+
+## 📞 联系方式
+
+- **GitHub Issues**: [问题反馈](https://github.com/mengliang555/finance/issues)
+- **项目地址**: [https://github.com/mengliang555/finance](https://github.com/mengliang555/finance)
+- **在线网站**: [https://mengliang555.github.io/finance](https://mengliang555.github.io/finance)
+
+## 🎉 更新日志
+
+### v1.0.0 (2026-03-11)
+- ✅ 完成四家公司财务分析报告
+- ✅ 创建交互式财务分析网站
+- ✅ 部署到GitHub Pages
+- ✅ 添加响应式设计和交互式图表
+- ✅ 创建完整的分析框架文档
+
+---
+
+**最后更新**: 2026年3月11日  
+**当前版本**: v1.0.0  
+**在线状态**: ✅ 已部署到GitHub Pages
 
 ## 分析内容
 

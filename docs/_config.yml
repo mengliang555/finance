@@ -1,0 +1,154 @@
+# GitHub Pages 配置文件
+
+title: 公司财务分析项目
+description: 深度分析中国领先科技公司的财务表现和投资价值
+baseurl: "" # 子目录路径，如果部署在子目录下
+url: "https://mengliang555.github.io/finance" # 你的GitHub Pages地址
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# 包含文件
+include:
+  - "_redirects"
+  - ".nojekyll"
+
+# SEO设置
+author:
+  name: 财务分析系统
+  email: example@example.com
+  twitter: username
+  github: mengliang555
+
+# 社交链接
+social:
+  name: 财务分析项目
+  links:
+    - https://github.com/mengliang555/finance
+    - https://twitter.com/username
+    - https://linkedin.com/in/username
+
+# 网站图标
+favicon: /images/favicon.ico
+
+# 默认设置
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "财务分析系统"
+
+# 自定义变量
+analytics:
+  google: "UA-XXXXXXXXX-X" # Google Analytics ID
+  plausible: "your-domain.com" # Plausible Analytics
+
+# 评论系统
+comments:
+  disqus: "your-disqus-shortname"
+
+# 分享按钮
+sharing:
+  twitter: true
+  facebook: true
+  linkedin: true
+  reddit: true
+
+# 导航
+navigation:
+  - title: 首页
+    url: /
+  - title: 公司分析
+    url: /#companies
+  - title: 对比分析
+    url: /#comparison
+  - title: 分析框架
+    url: /#framework
+  - title: 关于
+    url: /#about
+
+# 页脚链接
+footer_links:
+  - title: GitHub
+    url: https://github.com/mengliang555/finance
+  - title: 问题反馈
+    url: https://github.com/mengliang555/finance/issues
+  - title: 贡献指南
+    url: https://github.com/mengliang555/finance/blob/main/CONTRIBUTING.md
+  - title: 隐私政策
+    url: /privacy
+  - title: 使用条款
+    url: /terms
+
+# 颜色主题
+theme:
+  primary: "#2563eb"
+  secondary: "#7c3aed"
+  accent: "#10b981"
+  background: "#f9fafb"
+  text: "#111827"
+
+# 公司颜色
+company_colors:
+  xiaomi: "#ff6900"
+  meituan: "#ffc300"
+  horizon: "#00b894"
+  sanan: "#0984e3"
+
+# 构建优化
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+
+# 缓存控制
+cache_control:
+  pages: 86400
+  assets: 31536000
+
+# 安全头
+security_headers:
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: "1; mode=block"
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# 自定义404页面
+error_pages:
+  404: /404.html
+
+# 语言设置
+lang: zh-CN
+encoding: UTF-8
+timezone: Asia/Shanghai
+
+# 输出格式
+output:
+  html: true
+  json: false
+  xml: false
+
+# 开发设置
+development: false
