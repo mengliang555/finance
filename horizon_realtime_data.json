@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-03-11T17:44:22.663483",
+  "market_data": {
+    "source": "sina",
+    "name_en": "HORIZONROBOT-W",
+    "name_cn": "地平线机器人－Ｗ",
+    "current_price": 7.76,
+    "open_price": 7.61,
+    "high_price": 7.87,
+    "low_price": 7.66,
+    "close_price": 7.71,
+    "change": 0.1,
+    "change_percent": 1.314,
+    "volume": "7.71000",
+    "turnover": "674725701",
+    "timestamp": "2026/03/11 16:08",
+    "raw_data": "HORIZONROBOT-W,地平线机器人－Ｗ,7.760,7.610,7.870,7.660,7.710,0.100,1.314,7.70000,7.71000,674725701,87088360,0.000,0.000,11.320,4.550,2026/03/11,16:08"
+  },
+  "analysis": {
+    "current_price": 7.76,
+    "estimated_market_cap_hkd": 50.44,
+    "estimated_market_cap_usd": 6.466666666666666,
+    "investment_rating": "增持",
+    "target_price": "9.0-10.0 HKD",
+    "stop_loss": "6.5 HKD",
+    "suggested_position": "2-5%"
+  }
+}
