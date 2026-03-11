@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四家公司财务对比分析报告</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .report-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .report-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .report-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .report-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+        
+        .report-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #5a6268;
+        }
+        
+        .meta-item i {
+            color: #3498db;
+        }
+        
+        .companies-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .company-summary {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 4px solid;
+            transition: transform 0.3s;
+        }
+        
+        .company-summary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .company-summary.xiaomi {
+            border-color: #ff6b6b;
+        }
+        
+        .company-summary.meituan {
+            border-color: #1dd1a1;
+        }
+        
+        .company-summary.horizon {
+            border-color: #54a0ff;
+        }
+        
+        .company-summary.sanan {
+            border-color: #5f27cd;
+        }
+        
+        .company-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .company-icon.xiaomi {
+            background: #ff6b6b;
+        }
+        
+        .company-icon.meituan {
+            background: #1dd1a1;
+        }
+        
+        .company-icon.horizon {
+            background: #54a0ff;
+        }
+        
+        .company-icon.sanan {
+            background: #5f27cd;
+        }
+        
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company-ticker {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+        
+        .company-rating {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rating-buy {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .rating-watch {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .rating-cautious {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .rating-high-risk {
+            background: #cce5ff;
+            color: #004085;
+            border: 1px solid #b8daff;
+        }
+        
+        .company-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        
+        .price-change {
+            font-size: 0.9rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .change-positive {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .change-negative {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .comparison-table-container {
+            overflow-x: auto;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            min-width: 800px;
+        }
+        
+        .comparison-table th {
+            background: #3498db;
+            color: white;
+            font-weight: 600;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            text-align: center;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table .metric-name {
+            text-align: left;
+            font-weight: 500;
+            background: #f8f9fa;
+        }
+        
+        .best-value {
+            background: #d4edda !important;
+            font-weight: 600;
+        }
+        
+        .worst-value {
+            background: #f8d7da !important;
+            font-weight: 600;
+        }
+        
+        .key-points {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .key-points li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .key-points li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .investment-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid;
+        }
+        
+        .investment-card.xiaomi {
+            border-color: #ff6b6b;
+        }
+        
+        .investment-card.meituan {
+            border-color: #1dd1a1;
+        }
+        
+        .investment-card.horizon {
+            border-color: #54a0ff;
+        }
+        
+        .investment-card.sanan {
+            border-color: #5f27cd;
+        }
+        
+        .investment-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .investment-points {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .investment-points li {
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        
+        .investment-points li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: background 0.3s;
+        }
+        
+        .back-button:hover {
+            background: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .report-container {
+                padding: 1rem;
+            }
+            
+            .report-title {
+                font-size: 2rem;
+            }
+            
+            .companies-overview {
+                grid-template-columns: 1fr;
+            }
+            
+            .investment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <!-- 报告头部 -->
+        <div class="report-header">
+            <h1 class="report-title">四家公司财务对比分析报告</h1>
+            <p class="report-subtitle">小米集团、美团、地平线机器人、三安光电深度对比分析</p>
+            
+            <div class="report-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>更新日期: 2026年3月11日</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>数据来源: Yahoo Finance + 公开信息</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>分析公司: 4家</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>数据状态: 最新</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 公司概览 -->
+        <div class="section">
+            <h2 class="section-title">🏢 公司概览</h2>
+            
+            <div class="companies-overview">
+                <!-- 小米集团 -->
+                <div class="company-summary xiaomi">
+                    <div class="company-icon xiaomi">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="company-name">小米集团</h3>
+                    <div class="company-ticker">1810.HK</div>
+                    <div class="company-rating rating-buy">买入</div>
+                    <div class="company-price">33.34 HKD</div>
+                    <div class="price-change change-negative">-0.83%</div>
+                    <p>消费电子龙头，汽车业务新增长点</p>
+                </div>
+                
+                <!-- 美团 -->
+                <div class="company-summary meituan">
+                    <div class="company-icon meituan">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3 class="company-name">美团</h3>
+                    <div class="company-ticker">3690.HK</div>
+                    <div class="company-rating rating-watch">观望</div>
+                    <div class="company-price">77.40 HKD</div>
+                    <div class="price-change change-negative">-2.15%</div>
+                    <p>本地生活服务平台，新业务减亏关键期</p>
+                </div>
+                
+                <!-- 地平线机器人 -->
+                <div class="company-summary horizon">
+                    <div class="company-icon horizon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="company-name">地平线机器人</h3>
+                    <div class="company-ticker">未上市</div>
+                    <div class="company-rating rating-high-risk">高风险高回报</div>
+                    <div class="company-price">N/A</div>
+                    <div class="price-change">未上市</div>
+                    <p>自动驾驶芯片领先，硬科技代表</p>
+                </div>
+                
+                <!-- 三安光电 -->
+                <div class="company-summary sanan">
+                    <div class="company-icon sanan">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="company-name">三安光电</h3>
+                    <div class="company-ticker">600703.SS</div>
+                    <div class="company-rating rating-cautious">谨慎</div>
+                    <div class="company-price">17.04 CNY</div>
+                    <div class="price-change change-positive">+5.77%</div>
+                    <p>LED芯片龙头，化合物半导体转型</p>
+                </div>
+            </div>
+            
+            <div class="key-points">
+                <h4>核心结论:</h4>
+                <li><strong>市场分化明显</strong>: 四家公司股价表现差异大，三安光电上涨26%，美团下跌53%</li>
+                <li><strong>估值重新定价</strong>: 需基于最新财务数据调整估值，美团估值较低，三安光电估值过高</li>
+                <li><strong>风险收益重估</strong>: 美团风险增加，小米相对稳健，地平线高风险高回报</li>
+                <li><strong>投资逻辑调整</strong>: 从增长故事转向价值重估，关注盈利改善和估值修复</li>
+            </div>
+        </div>
+
+        <!-- 财务指标对比 -->
+        <div class="section">
+            <h2 class="section-title">📊 财务指标对比</h2>
+            
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>财务指标</th>
+                            <th>小米集团</th>
+                            <th>美团</th>
+                            <th>地平线机器人</th>
+                            <th>三安光电</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="metric-name">当前股价</td>
+                            <td>33.34 HKD</td>
+                            <td>77.40 HKD</td>
+                            <td>N/A</td>
+                            <td class="best-value">17.04 CNY</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">52周变化</td>
+                            <td class="worst-value">-35.41%</td>
+                            <td class="worst-value">-53.00%</td>
+                            <td>N/A</td>
+                            <td class="best-value">+26.16%</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">市值</td>
+                            <td>864亿港元</td>
+                            <td>473亿港元</td>
+                            <td>60-70亿美元</td>
+                            <td>850亿人民币</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">营业收入</td>
+                            <td class="best-value">4,494亿港元</td>
+                            <td>3,624亿港元</td>
+                            <td>35-55亿人民币</td>
+                            <td>181亿人民币</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">净利润</td>
+                            <td class="best-value">441亿港元</td>
+                            <td class="worst-value">-20亿港元</td>
+                            <td>亏损</td>
+                            <td>0.94亿人民币</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">毛利率</td>
+                            <td>22.23%</td>
+                            <td class="best-value">33.52%</td>
+                            <td>46%</td>
+                            <td class="worst-value">11.95%</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">净利率</td>
+                            <td class="best-value">9.82%</td>
+                            <td class="worst-value">-0.55%</td>
+                            <td>亏损</td>
+                            <td>0.52%</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">市盈率(P/E)</td>
+                            <td>20.45x</td>
+                            <td>14.55x</td>
+                            <td>N/A</td>
+                            <td class="worst-value">852.00x</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">市净率(P/B)</td>
+                            <td>2.88x</td>
+                            <td>2.39x</td>
+                            <td>N/A</td>
+                            <td class="best-value">1.87x</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">现金储备</td>
+                            <td>1,102亿港元</td>
+                            <td class="best-value">1,413亿港元</td>
+                            <td>充足</td>
+                            <td>86亿人民币</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">员工人数</td>
+                            <td>56,231人</td>
+                            <td class="best-value">108,900人</td>
+                            <td>约2,000人</td>
+                            <td>15,828人</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="key-points">
+                <h4>财务分析要点:</h4>
+                <li><strong>规模对比</strong>: 小米营收规模最大，美团员工最多，地平线规模最小但增长最快</li>
+                <li><strong>盈利能力</strong>: 小米盈利最稳定，美团亏损需关注，三安光电盈利微薄</li>
+                <li><strong>财务健康度</strong>: 美团现金最充裕，小米财务稳健，三安光电债务适中</li>
+                <li><strong>估值水平</strong>: 美团估值较低，三安光电估值极高，小米估值合理</li>
+            </div>
+        </div>
+
+        <!-- 业务分析对比 -->
+        <div class="section">
+            <h2 class="section-title">🚀 业务分析对比</h2>
+            
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>业务维度</th>
+                            <th>小米集团</th>
+                            <th>美团</th>
+                            <th>地平线机器人</th>
+                            <th>三安光电</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="metric-name">核心业务</td>
+                            <td>智能手机、IoT</td>
+                            <td>外卖、到店服务</td>
+                            <td>AI芯片、自动驾驶</td>
+                            <td>LED芯片、化合物半导体</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">市场地位</td>
+                            <td>全球智能手机前五</td>
+                            <td>中国外卖市场领先</td>
+                            <td>中国自动驾驶芯片领先</td>
+                            <td>LED芯片全球龙头</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">发展阶段</td>
+                            <td>成熟期</td>
+                            <td>成长期</td>
+                            <td>初创期</td>
+                            <td>转型期</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">增长驱动</td>
+                            <td>高端化、汽车业务</td>
+                            <td>即时零售、下沉市场</td>
+                            <td>汽车智能化、国产替代</td>
+                            <td>化合物半导体、Mini LED</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">竞争格局</td>
+                            <td>激烈（苹果、三星）</td>
+                            <td>激烈（抖音、饿了么）</td>
+                            <td>激烈（英伟达、Mobileye）</td>
+                            <td>激烈（科锐、华灿）</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">护城河</td>
+                            <td>品牌、生态、用户</td>
+                            <td>网络效应、用户习惯</td>
+                            <td>技术、先发优势</td>
+                            <td>规模、技术、客户</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="key-points">
+                <h4>业务分析要点:</h4>
+                <li><strong>发展阶段差异</strong>: 小米成熟期，美团成长期，地平线初创期，三安光电转型期</li>
+                <li><strong>增长逻辑不同</strong>: 小米靠生态和汽车，美团靠网络效应，地平线靠技术，三安靠转型</li>
+                <li><strong>竞争环境</strong>: 四家公司都面临激烈竞争，但竞争维度不同</li>
+                <li><strong>护城河类型</strong>: 品牌生态、网络效应、技术壁垒、规模优势四种不同类型</li>
+            </div>
+        </div>
+
+        <!-- 投资建议对比 -->
+        <div class="section">
+            <h2 class="section-title">🎯 投资建议对比</h2>
+            
+            <div class="investment-grid">
+                <!-- 小米集团 -->
+                <div class="investment-card xiaomi">
+                    <h4><i class="fas fa-mobile-alt"></i> 小米集团</h4>
+                    <div class="company-rating rating-buy" style="margin-bottom: 1rem;">买入</div>
+                    <ul class="investment-points">
+                        <li><strong>目标价格</strong>: 40-45 HKD（上涨空间20-35%）</li>
+                        <li><strong>买入时机</strong>: 当前价格附近可分批建仓</li>
+                        <li><strong>持有策略</strong>: 长期持有，关注季度业绩</li>
+                        <li><strong>止损位</strong>: 30 HKD（-10%）</li>
+                        <li><strong>关键看点</strong>: 汽车业务进展、高端化成效</li>
+                    </ul>
+                </div>
+                
+                <!-- 美团 -->
+                <div class="investment-card meituan">
+                    <h4><i class="fas fa-shopping-bag"></i> 美团</h4>
+                    <div class="company-rating rating-watch" style="margin-bottom: 1rem;">观望</div>
+                    <ul class="investment-points">
+                        <li><strong>目标价格</strong>: 90-100 HKD（上涨空间16-29%）</li>
+                        <li><strong>买入时机</strong>: 等待企稳信号，70-75 HKD区间</li>
+                        <li><strong>持有策略</strong>: 中期持有，跟踪新业务减亏</li>
+                        <li><strong>止损位</strong>: 65 HKD（-16%）</li>
+                        <li><strong>关键看点</strong>: 新业务减亏、监管明朗化</li>
+                    </ul>
+                </div>
+                
+                <!-- 地平线机器人 -->
+                <div class="investment-card horizon">
+                    <h4><i class="fas fa-robot"></i> 地平线机器人</h4>
+                    <div class="company-rating rating-high-risk" style="margin-bottom: 1rem;">高风险高回报</div>
+                    <ul class="investment-points">
+                        <li><strong>投资方式</strong>: 通过私募股权或相关基金</li>
+                        <li><strong>投资时机</strong>: 下一轮融资或IPO前</li>
+                        <li><strong>仓位控制</strong>: 小仓位配置（3-5%）</li>
+                        <li><strong>退出策略</strong>: IPO后逐步退出</li>
+                        <li><strong>关键看点</strong>: 技术突破、IPO进展</li>
+                    </ul>
+                </div>
+                
+                <!-- 三安光电 -->
+                <div class="investment-card sanan">
+                    <h4><i class="fas fa-microchip"></i> 三安光电</h4>
+                    <div class="company-rating rating-cautious" style="margin-bottom: 1rem;">谨慎</div>
+                    <ul class="investment-points">
+                        <li><strong>目标价格</strong>: 14-16 CNY（下跌风险6-18%）</li>
+                        <li><strong>买入时机</strong>: 等待估值回调，14-15 CNY区间</li>
+                        <li><strong>持有策略</strong>: 短期交易，关注技术突破</li>
+                        <li><strong>止损位</strong>: 15 CNY（-12%）</li>
+                        <li><strong>关键看点</strong>: Mini LED放量、碳化硅进展</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="key-points">
+                <h4>投资策略建议:</h4>
+                <li><strong>保守型投资者</strong>: 重点配置小米（40-50%），搭配现金和债券</li>
+                <li><strong>平衡型投资者</strong>: 小米（30-40%）、美团（25-35%）、三安光电（10-15%）</li>
+                <li><strong>进取型投资者</strong>: 美团（30-40%）、三安光电（20-30%）、小米（20-25%）</li>
+                <li><strong>行业配置</strong>: 消费电子25-30%、互联网平台20-25%、半导体15-20%</li>
+            </div>
+        </div>
+
+        <!-- 风险对比 -->
+        <div class="section">
+            <h2 class="section-title">⚠️ 风险对比</h2>
+            
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>风险类型</th>
+                            <th>小米集团</th>
+                            <th>美团</th>
+                            <th>地平线机器人</th>
+                            <th>三安光电</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="metric-name">市场风险</td>
+                            <td>中高（股价下跌35%）</td>
+                            <td class="worst-value">高（股价下跌53%）</td>
+                            <td>高（未上市）</td>
+                            <td>中（股价上涨26%）</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">竞争风险</td>
+                            <td class="worst-value">高</td>
+                            <td class="worst-value">高</td>
+                            <td class="worst-value">高</td>
+                            <td class="worst-value">高</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">技术风险</td>
+                            <td>中</td>
+                            <td>低</td>
+                            <td class="worst-value">高</td>
+                            <td class="worst-value">高</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">监管风险</td>
+                            <td>中</td>
+                            <td class="worst-value">高</td>
+                            <td>中</td>
+                            <td>中</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">财务风险</td>
+                            <td class="best-value">低</td>
+                            <td>中</td>
+                            <td>中</td>
+                            <td>中</td>
+                        </tr>
+                        <tr>
+                            <td class="metric-name">综合风险</td>
+                            <td>中高</td>
+                            <td class="worst-value">高</td>
+                            <td class="worst-value">高</td>
+                            <td>中高</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="key-points">
+                <h4>风险提示:</h4>
+                <li><strong>宏观风险</strong>: 全球经济不确定性影响所有公司</li>
+                <li><strong>政策风险</strong>: 特别是美团的监管风险和半导体公司的产业政策</li>
+                <li><strong>估值风险</strong>: 三安光电估值过高，存在回调风险</li>
+                <li><strong>流动性风险</strong>: 地平线机器人未上市，流动性差</li>
+                <li><strong>行业周期风险</strong>: 半导体和消费电子行业周期性波动</li>
+            </div>
+        </div>
+
+        <!-- 报告底部 -->
+        <div class="section">
+            <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
+                <h3>报告说明</h3>
+                <p><strong>数据来源</strong>: Yahoo Finance via yfinance + 公开信息</p>
+                <p><strong>分析日期</strong>: 2026年3月11日 16:35 (CST)</p>
+                <p><strong>分析师</strong>: 财务分析系统</p>
+                <p><strong>版本</strong>: v3.0（2026年3月11日更新版）</p>
+                <p><strong>报告位置</strong>: finance/comparative_analysis_report_v3_20260311.md</p>
+                <p><strong>风险提示</strong>: 本报告基于公开信息分析，不构成投资建议。市场有风险，投资需谨慎。</p>
+                
+                <div style="margin-top: 1.5rem;">
+                    <a href="../index.html" class="back-button">
+                        <i class="fas fa-arrow-left"></i> 返回首页
+                    </a>
+                    <a href="xiaomi_report.html" class="back-button" style="background: #ff6b6b; margin-left: 1rem;">
+                        <i class="fas fa-mobile-alt"></i> 小米报告
+                    </a>
+                    <a href="meituan_report.html" class="back-button" style="background: #1dd1a1; margin-left: 1rem;">
+                        <i class="fas fa-shopping-bag"></i> 美团报告
+                    </a>
+                    <a href="sanan_report.html" class="back-button" style="background: #5f27cd; margin-left: 1rem;">
+                        <i class="fas fa-microchip"></i> 三安报告
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为表格行添加点击效果
+            const tableRows = document.querySelectorAll('.comparison-table tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('click', function() {
+                    this.classList.toggle('selected');
+                });
+            });
+            
+            // 为公司卡片添加点击跳转
+            const companyCards = document.querySelectorAll('.company-summary');
+            companyCards.forEach(card => {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', function() {
+                    const companyName = this.querySelector('.company-name').textContent;
+                    let reportUrl = '';
+                    
+                    switch(companyName) {
+                        case '小米集团':
+                            reportUrl = 'xiaomi_report.html';
+                            break;
+                        case '美团':
+                            reportUrl = 'meituan_report.html';
+                            break;
+                        case '地平线机器人':
+                            reportUrl = 'horizon_report.html';
+                            break;
+                        case '三安光电':
+                            reportUrl = 'sanan_report.html';
+                            break;
+                    }
+                    
+                    if (reportUrl) {
+                        window.open(reportUrl, '_blank');
+                    }
+                });
+            });
+            
+            // 打印功能
+            const printButton = document.createElement('button');
+            printButton.innerHTML = '<i class="fas fa-print"></i> 打印报告';
+            printButton.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                padding: 10px 15px;
+                background: #3498db;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 600;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+            `;
+            printButton.addEventListener('click', function() {
+                window.print();
+            });
+            document.body.appendChild(printButton);
+            
+            // 添加复制表格数据功能
+            const copyButton = document.createElement('button');
+            copyButton.innerHTML = '<i class="fas fa-copy"></i> 复制数据';
+            copyButton.style.cssText = `
+                position: fixed;
+                bottom: 70px;
+                right: 20px;
+                padding: 10px 15px;
+                background: #2ecc71;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 600;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+            `;
+            copyButton.addEventListener('click', function() {
+                // 简单的复制功能提示
+                alert('数据复制功能需要更复杂的实现。建议手动选择需要的数据进行复制。');
+            });
+            document.body.appendChild(copyButton);
+        });
+    </script>
+</body>
+</html>
