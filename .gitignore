@@ -1,0 +1,58 @@
+# Git忽略文件配置
+
+# 冗余版本文件（根据用户要求，使用Git进行版本控制）
+*_v*_*.md
+
+# 备份目录
+backups/
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python相关
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+
+# 数据文件（大文件）
+*.csv
+*.xlsx
+*.xls
+*.pdf
+*.zip
+*.tar.gz
+
+# 日志文件
+*.log
+logs/
+
+# 测试文件
+test_*
+*_test.py
+
+# 个人配置文件（不提交）
+personal_config.json
+local_settings.py
+
+# 自动生成的文件
+generated/
+output/
