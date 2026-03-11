@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{COMPANY_NAME} 财务分析报告</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/report.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <style>
+        .report-header {
+            background: linear-gradient(135deg, {PRIMARY_COLOR} 0%, {SECONDARY_COLOR} 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .company-logo-large {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 3rem;
+            color: {PRIMARY_COLOR};
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .report-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            text-align: center;
+        }
+        
+        .meta-label {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-value {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .report-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid {PRIMARY_COLOR};
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: {PRIMARY_COLOR};
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-title i {
+            font-size: 1.5rem;
+        }
+        
+        .financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .financial-table th {
+            background: {PRIMARY_COLOR}15;
+            color: {PRIMARY_COLOR};
+            font-weight: 600;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid {PRIMARY_COLOR}30;
+        }
+        
+        .financial-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .financial-table tr:hover {
+            background: {PRIMARY_COLOR}08;
+        }
+        
+        .rating-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        .rating-hold { background: #fef3c7; color: #92400e; }
+        .rating-cautious { background: #d1fae5; color: #065f46; }
+        .rating-high-risk { background: #fee2e2; color: #991b1b; }
+        
+        .risk-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .risk-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .risk-level {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .risk-high { background: #fee2e2; color: #991b1b; }
+        .risk-medium { background: #fef3c7; color: #92400e; }
+        .risk-low { background: #d1fae5; color: #065f46; }
+        
+        .back-to-home {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: {PRIMARY_COLOR};
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: all 0.3s;
+        }
+        
+        .back-to-home:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 7rem;
+            background: #6b7280;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: all 0.3s;
+        }
+        
+        .print-btn:hover {
+            background: #4b5563;
+            transform: translateY(-5px);
+        }
+        
+        @media print {
+            .back-to-home, .print-btn {
+                display: none;
+            }
+            
+            .section-card {
+                box-shadow: none;
+                border: 1px solid #e5e7eb;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .report-content {
+                padding: 0 1rem;
+            }
+            
+            .section-card {
+                padding: 1.5rem;
+            }
+            
+            .report-meta {
+                gap: 1.5rem;
+            }
+            
+            .back-to-home, .print-btn {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .print-btn {
+                right: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 报告头部 -->
+    <header class="report-header">
+        <div class="container">
+            <div class="company-logo-large">
+                <i class="{COMPANY_ICON}"></i>
+            </div>
+            <h1 class="hero-title">{COMPANY_NAME} 财务分析报告</h1>
+            <p class="hero-subtitle">深度财务分析和投资价值评估</p>
+            
+            <div class="report-meta">
+                <div class="meta-item">
+                    <div class="meta-label">股票代码</div>
+                    <div class="meta-value">{STOCK_CODE}</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">分析日期</div>
+                    <div class="meta-value">{ANALYSIS_DATE}</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">投资评级</div>
+                    <div class="meta-value">
+                        <span class="rating-badge {RATING_CLASS}">{INVESTMENT_RATING}</span>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">分析周期</div>
+                    <div class="meta-value">{ANALYSIS_PERIOD}</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 报告内容 -->
+    <main class="report-content">
+        <!-- 执行摘要 -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <i class="fas fa-file-alt"></i>
+                执行摘要
+            </h2>
+            {EXECUTIVE_SUMMARY}
+        </section>
+
+        <!-- 公司概况 -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <i class="fas fa-building"></i>
+                公司概况
+            </h2>
+            {COMPANY_OVERVIEW}
+        </section>
+
+        <!-- 财务指标分析 -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i>
+                财务指标分析
+            </h2>
+            {FINANCIAL_ANALYSIS}
+        </section>
+
+        <!-- 业务分析 -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <i class="fas fa-briefcase"></i>
+                业务分析
+            </h2>
+            {BUSINESS_ANALYSIS}
+        </section>
+
+        <!-- 风险分析 -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                风险分析
+            </h2>
+            {RISK_ANALYSIS}
+        </section>
+
+        <!-- 估值分析 -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <i class="fas fa-calculator"></i>
+                估值分析
+            </h2>
+            {VALUATION_ANALYSIS}
+        </section>
+
+        <!-- 投资建议 -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                投资建议
+            </h2>
+            {INVESTMENT_RECOMMENDATION}
+        </section>
+
+        <!-- 附录 -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <i class="fas fa-paperclip"></i>
+                附录
+            </h2>
+            {APPENDIX}
+        </section>
+    </main>
+
+    <!-- 浮动按钮 -->
+    <a href="../index.html" class="back-to-home" title="返回首页">
+        <i class="fas fa-home"></i>
+    </a>
+    
+    <button class="print-btn" onclick="window.print()" title="打印报告">
+        <i class="fas fa-print"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 添加交互功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 表格行悬停效果
+            const tableRows = document.querySelectorAll('.financial-table tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '{PRIMARY_COLOR}08';
+                });
+                row.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 添加章节导航
+            addSectionNavigation();
+        });
+        
+        function addSectionNavigation() {
+            const sections = document.querySelectorAll('.section-card');
+            const nav = document.createElement('div');
+            nav.className = 'section-nav';
+            nav.innerHTML = `
+                <div class="nav-header">
+                    <i class="fas fa-list"></i>
+                    <span>报告导航</span>
+                </div>
+                <div class="nav-items"></div>
+            `;
+            
+            sections.forEach((section, index) => {
+                const title = section.querySelector('.section-title');
+                if (title) {
+                    const titleText = title.textContent.replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g, '');
+                    const navItem = document.createElement('a');
+                    navItem.href = `#section-${index}`;
+                    navItem.textContent = titleText;
+                    navItem.className = 'nav-item';
+                    section.id = `section-${index}`;
+                    nav.querySelector('.nav-items').appendChild(navItem);
+                }
+            });
+            
+            // 添加样式
+            const style = document.createElement('style');
+            style.textContent = `
+                .section-nav {
+                    position: fixed;
+                    left: 2rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: white;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+                    padding: 1rem;
+                    width: 200px;
+                    z-index: 99;
+                    display: none;
+                }
+                
+                .nav-header {
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    color: {PRIMARY_COLOR};
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+                
+                .nav-items {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+                
+                .nav-item {
+                    padding: 0.5rem;
+                    color: #4b5563;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-size: 0.875rem;
+                }
+                
+                .nav-item:hover {
+                    background: {PRIMARY_COLOR}10;
+                    color: {PRIMARY_COLOR};
+                }
+                
+                @media (min-width: 1200px) {
+                    .section-nav {
+                        display: block;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            document.body.appendChild(nav);
+        }
+    </script>
+</body>
+</html>
