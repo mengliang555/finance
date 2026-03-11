@@ -2,10 +2,11 @@
 
 ## 项目概述
 
-本项目对三家中国科技公司进行财务分析：
+本项目对四家中国科技公司进行财务分析：
 1. **小米集团** (1810.HK) - 消费电子和IoT平台
 2. **美团** (3690.HK) - 本地生活服务平台
 3. **地平线机器人** (未上市) - AI芯片和自动驾驶解决方案
+4. **三安光电** (600703.SH) - LED芯片和化合物半导体
 
 ## 文件结构
 
@@ -16,7 +17,9 @@ finance/
 ├── xiaomi_financial_analysis.md       # 小米集团财务分析
 ├── meituan_financial_analysis.md      # 美团财务分析
 ├── horizon_robotics_financial_analysis.md # 地平线机器人财务分析
-└── comparative_analysis_report.md     # 三家公司对比分析
+├── sanan_opto_financial_analysis.md   # 三安光电财务分析
+├── comparative_analysis_report.md     # 三家公司对比分析（旧版）
+└── comparative_analysis_report_v2.md  # 四家公司对比分析（新版）
 ```
 
 ## 分析内容
