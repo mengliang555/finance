@@ -60,3 +60,22 @@ local_settings.py
 # 自动生成的文件
 generated/
 output/
+# 整理后的忽略规则
+archive/*.md
+temp/
+tmp/
+*.log
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# 数据文件（大文件）
+data/raw/*.json
+data/raw/*.csv
+data/raw/*.xlsx
+
+# 临时分析文件
+*.tmp
+*.temp
+*.bak

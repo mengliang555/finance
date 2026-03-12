@@ -1,323 +1,142 @@
-# 公司财务分析项目
+# Finance Analysis Project
 
-## 📊 项目概述
+专业的财务分析项目，包含公司分析、行业研究、每日报告和AI分析。
 
-本项目对四家中国科技公司进行财务分析：
-1. **小米集团** (1810.HK) - 消费电子和IoT平台
-2. **美团** (3690.HK) - 本地生活服务平台
-3. **地平线机器人** (未上市) - AI芯片和自动驾驶解决方案
-4. **三安光电** (600703.SH) - LED芯片和化合物半导体
-
-## 🌐 在线网站
-
-**财务分析网站已部署到GitHub Pages：**
-- 🔗 **访问地址**: [https://mengliang555.github.io/finance](https://mengliang555.github.io/finance)
-- 📱 **响应式设计**: 适配桌面和移动设备
-- 📈 **交互式图表**: 风险雷达图、估值对比图、营收趋势图
-- 🔍 **对比分析**: 四家公司全方位对比
-
-## 📁 文件结构
+## 📁 项目结构
 
 ```
 finance/
-├── docs/                              # 网站部署目录
-│   ├── index.html                     # 主页面
-│   ├── css/style.css                  # 样式表
-│   ├── js/main.js                     # JavaScript文件
-│   ├── _config.yml                    # GitHub Pages配置
-│   ├── .nojekyll                      # 禁用Jekyll处理
-│   └── README.md                      # 网站部署说明
-├── README.md                          # 项目说明文件
-├── company_analysis_framework.md      # 财务分析框架
-├── xiaomi_financial_analysis.md       # 小米集团财务分析
-├── meituan_financial_analysis.md      # 美团财务分析
-├── horizon_robotics_financial_analysis.md # 地平线机器人财务分析
-├── sanan_opto_financial_analysis.md   # 三安光电财务分析
-├── comparative_analysis_report.md     # 三家公司对比分析（旧版）
-└── comparative_analysis_report_v2.md  # 四家公司对比分析（新版）
+├── README.md                    # 项目说明
+├── docs/                        # 网站文件
+│   ├── index.html              # 主页面
+│   ├── css/                    # 样式文件
+│   ├── js/                     # JavaScript文件
+│   ├── reports/                # 报告页面
+│   └── archive/                # 归档文件
+├── reports/                     # 分析报告
+│   ├── company_analysis/       # 公司分析
+│   │   ├── xiaomi_financial_analysis.md
+│   │   ├── meituan_financial_analysis.md
+│   │   ├── horizon_robotics_financial_analysis.md
+│   │   └── sanan_opto_financial_analysis.md
+│   ├── industry_analysis/      # 行业分析
+│   │   ├── comparative_analysis.md
+│   │   └── power_equipment_grid.md
+│   ├── daily_reports/          # 每日报告
+│   │   └── daily_stock_performance_20260312.md
+│   └── ai_analysis/            # AI分析
+│       ├── deepseek_v4_open_source_analysis.md
+│       └── deepseek_v4_huawei_ascend_analysis.md
+├── data/                       # 数据文件
+│   ├── raw/                    # 原始数据
+│   └── processed/              # 处理后的数据
+├── scripts/                    # 脚本文件
+│   ├── data_collection/        # 数据收集脚本
+│   └── analysis/               # 分析脚本
+├── guides/                     # 指南文档
+│   ├── company_analysis_framework.md
+│   ├── ACCESS_GUIDE.md
+│   ├── GITHUB_PAGES_SETUP.md
+│   └── GIT_VERSION_CONTROL_GUIDE.md
+├── archive/                    # 归档文件
+│   └── 20260311/               # 2026年3月11日归档
+└── .gitignore                  # Git忽略配置
 ```
+
+## 🎯 核心功能
+
+### 1. 公司财务分析
+- 小米集团 (1810.HK) 财务分析
+- 美团 (3690.HK) 财务分析
+- 地平线机器人 (09660.HK) 财务分析
+- 三安光电 (600703.SS) 财务分析
+
+### 2. 行业对比分析
+- 四家公司对比分析报告
+- 电力设备和电网领域分析
+- 投资组合建议
+
+### 3. 每日市场报告
+- 关注股票每日涨幅情况
+- 市场表现总结
+- 操作建议
+
+### 4. AI技术分析
+- DeepSeek V4开源影响分析
+- 华为升腾芯片训练影响分析
+- AI产业链投资机会
+
+### 5. 自动化工具
+- 数据收集脚本
+- 网站报告更新脚本
+- 分析工具
 
 ## 🚀 快速开始
 
-### 查看在线网站
-访问 [https://mengliang555.github.io/finance](https://mengliang555.github.io/finance) 查看交互式财务分析网站。
+### 访问网站
+```
+https://mengliang555.github.io/finance/
+```
 
-### 本地运行
+### 本地开发
 ```bash
 # 克隆项目
 git clone https://github.com/mengliang555/finance.git
 cd finance
 
-# 启动本地服务器
-cd docs
-python3 -m http.server 8000
+# 安装依赖
+pip install -r requirements.txt
 
-# 在浏览器中访问 http://localhost:8000
+# 运行数据收集脚本
+python scripts/data_collection/get_horizon_data.py
+
+# 更新网站报告
+python scripts/analysis/update_website_reports.py
 ```
 
-### 查看分析报告
-```bash
-# 查看小米集团分析
-cat xiaomi_financial_analysis.md
+### 查看报告
+- 公司分析报告: `reports/company_analysis/`
+- 行业分析报告: `reports/industry_analysis/`
+- 每日报告: `reports/daily_reports/`
+- AI分析报告: `reports/ai_analysis/`
 
-# 查看四家公司对比分析
-cat comparative_analysis_report_v2.md
-```
+## 📊 数据来源
 
-## 🎯 网站功能
-
-### 1. 公司分析展示
-- 交互式公司卡片，展示基本信息
-- 财务指标可视化
-- 投资评级和建议
-
-### 2. 对比分析
-- 财务指标对比表格
-- 风险雷达图可视化
-- 估值对比图表
-- 业务模式对比
-
-### 3. 分析框架
-- 六步财务分析流程
-- 系统化的分析方法论
-- 实用的分析工具
-
-### 4. 响应式设计
-- 适配桌面、平板、手机
-- 优化的移动端体验
-- 快速加载性能
+1. **股票数据**: 新浪财经API、腾讯财经API
+2. **财务数据**: 公司财报、公开信息
+3. **行业数据**: 行业研究报告、政策文件
+4. **AI数据**: 技术文档、行业分析
 
 ## 🔧 技术栈
 
-- **前端**: HTML5, CSS3, JavaScript (ES6+)
-- **图表**: Chart.js 数据可视化
-- **图标**: Font Awesome 图标库
-- **字体**: Google Fonts (Inter, Source Code Pro)
-- **部署**: GitHub Pages 静态托管
-- **构建**: 纯静态网站，无需构建工具
+- **前端**: HTML5、CSS3、JavaScript
+- **后端**: Python、Shell脚本
+- **数据**: JSON、Markdown
+- **部署**: GitHub Pages
+- **版本控制**: Git
 
-## 📈 分析内容
+## 📈 更新日志
 
-### 财务指标分析
-- 盈利能力分析（毛利率、净利率、ROE等）
-- 成长能力分析（营收增长率、净利润增长率等）
-- 偿债能力分析（资产负债率、流动比率等）
-- 运营效率分析（周转率指标）
-- 现金流分析（经营活动现金流、自由现金流等）
-
-### 业务分析
-- 主营业务构成分析
-- 市场竞争力分析
-- 增长驱动因素分析
-- SWOT分析和波特五力分析
-
-### 风险分析
-- 行业风险分析
-- 公司特有风险分析
-- 宏观经济风险分析
-- 风险矩阵评估
-
-### 估值分析
-- 相对估值分析（P/E、P/B、P/S等）
-- 绝对估值分析（DCF模型）
-- 估值合理性评估
-- 安全边际计算
+详细更新记录请查看: [UPDATE_LOG.md](UPDATE_LOG.md)
 
 ## 🤝 贡献指南
 
-欢迎贡献代码、改进分析或添加新公司：
+1. Fork 本项目
+2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启 Pull Request
 
-1. Fork本仓库
-2. 创建功能分支：`git checkout -b feature/新功能`
-3. 提交更改：`git commit -m '添加新功能'`
-4. 推送到分支：`git push origin feature/新功能`
-5. 创建Pull Request
+## 📄 许可证
 
-### 添加新公司分析
-1. 创建新的分析报告文件：`公司名_financial_analysis.md`
-2. 按照分析框架编写完整分析
-3. 更新对比分析报告
-4. 在网站中添加公司卡片和图表数据
-
-## 📝 许可证
-
-本项目采用MIT许可证。详见LICENSE文件。
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
 ## 📞 联系方式
 
-- **GitHub Issues**: [问题反馈](https://github.com/mengliang555/finance/issues)
-- **项目地址**: [https://github.com/mengliang555/finance](https://github.com/mengliang555/finance)
-- **在线网站**: [https://mengliang555.github.io/finance](https://mengliang555.github.io/finance)
-
-## 🎉 更新日志
-
-### v1.0.0 (2026-03-11)
-- ✅ 完成四家公司财务分析报告
-- ✅ 创建交互式财务分析网站
-- ✅ 部署到GitHub Pages
-- ✅ 添加响应式设计和交互式图表
-- ✅ 创建完整的分析框架文档
+如有问题或建议，请通过GitHub Issues提交。
 
 ---
 
-**最后更新**: 2026年3月11日  
-**当前版本**: v1.0.0  
-**在线状态**: ✅ 已部署到GitHub Pages
-
-## 分析内容
-
-### 1. 公司概况
-- 基本信息、主营业务、市场地位
-- 发展阶段、商业模式、竞争优势
-
-### 2. 财务指标分析
-- 盈利能力、成长能力、偿债能力
-- 运营效率、现金流分析
-- 关键财务比率和趋势分析
-
-### 3. 业务分析
-- 主营业务构成和毛利率结构
-- 市场竞争力分析
-- 增长驱动因素和战略方向
-
-### 4. 风险分析
-- 行业风险、公司特有风险
-- 宏观经济风险、政策风险
-- 风险等级评估和应对策略
-
-### 5. 估值分析
-- 相对估值（同业比较）
-- 绝对估值（DCF模型）
-- 估值合理性评估
-
-### 6. 投资建议
-- 投资评级和目标价格
-- 投资亮点和风险提示
-- 操作建议和仓位管理
-
-## 分析方法
-
-### 定量分析
-1. **财务比率分析**: 盈利能力、偿债能力、运营效率
-2. **趋势分析**: 历史数据和未来预测
-3. **同业比较**: 与竞争对手对比分析
-4. **敏感性分析**: 关键假设变化的影响
-
-### 定性分析
-1. **SWOT分析**: 优势、劣势、机会、威胁
-2. **波特五力分析**: 行业竞争结构
-3. **PEST分析**: 宏观环境影响因素
-4. **管理层评估**: 团队能力和执行记录
-
-## 数据来源
-
-### 主要数据来源
-1. **公司官方渠道**
-   - 年度报告、季度报告
-   - 业绩发布会材料
-   - 投资者关系页面
-
-2. **第三方数据服务**
-   - 行业研究报告（IDC、Counterpoint等）
-   - 券商研究报告（中金、中信、外资投行等）
-   - 财经媒体（财新、Bloomberg、Reuters等）
-
-3. **公开信息**
-   - 新闻报道和专家观点
-   - 行业会议和发布会信息
-   - 监管公告和政策文件
-
-### 数据局限性
-1. **预测数据**: 部分数据为基于公开信息的合理预测
-2. **信息滞后**: 最新财务数据可能有1-2个季度滞后
-3. **估算误差**: 非官方数据存在一定估算误差
-4. **假设风险**: 分析基于当前市场环境和公司战略
-
-## 使用说明
-
-### 快速开始
-1. **查看框架**: 先阅读 `company_analysis_framework.md` 了解分析方法
-2. **选择公司**: 根据兴趣选择具体公司分析报告
-3. **对比分析**: 查看 `comparative_analysis_report.md` 进行对比
-4. **深入细节**: 根据需要查看具体章节和附录
-
-### 更新维护
-1. **定期更新**: 建议每季度更新财务数据
-2. **事件驱动**: 重大事件后及时更新分析
-3. **版本控制**: 使用Git进行版本管理
-4. **数据验证**: 定期验证数据准确性和时效性
-
-## 注意事项
-
-### 分析客观性
-1. **避免偏见**: 尽量保持分析客观中立
-2. **多角度验证**: 从不同角度验证分析结论
-3. **明确假设**: 明确分析中的关键假设
-4. **承认局限**: 承认分析方法的局限性
-
-### 风险提示
-1. **投资风险**: 本分析不构成投资建议
-2. **信息风险**: 基于公开信息，可能存在信息不全
-3. **预测风险**: 未来预测存在不确定性
-4. **市场风险**: 市场变化可能影响分析结论
-
-## 扩展计划
-
-### 短期计划（1-3个月）
-1. 增加更多财务指标和图表
-2. 完善估值模型和敏感性分析
-3. 添加行业分析和竞争格局
-4. 优化报告格式和可视化
-
-### 中期计划（3-12个月）
-1. 扩展到更多公司分析
-2. 开发自动化数据收集工具
-3. 建立财务数据库
-4. 开发交互式分析工具
-
-### 长期计划（1年以上）
-1. 建立完整的财务分析系统
-2. 开发AI辅助分析功能
-3. 提供实时数据和分析服务
-4. 建立投资组合管理功能
-
-## 贡献指南
-
-### 如何贡献
-1. **数据更新**: 提供更新的财务数据
-2. **分析改进**: 改进分析方法和框架
-3. **错误修正**: 修正数据或分析错误
-4. **功能扩展**: 添加新的分析功能
-
-### 提交要求
-1. **数据来源**: 提供可靠的数据来源
-2. **分析方法**: 说明分析方法和假设
-3. **验证过程**: 描述数据验证过程
-4. **更新说明**: 说明更新内容和原因
-
-## 联系方式
-
-### 项目维护
-- **项目创建者**: 财务分析系统
-- **创建时间**: 2026年3月10日
-- **项目状态**: 活跃开发中
-
-### 问题反馈
-- **数据问题**: 报告数据错误或不准确
-- **分析问题**: 提出分析方法的改进建议
-- **功能需求**: 提出新的功能需求
-- **合作意向**: 探讨合作可能性
-
-## 许可证
-
-本项目采用 [MIT License](LICENSE) 许可证。
-
-## 免责声明
-
-本项目的分析报告基于公开信息，仅供参考和学习使用，不构成任何投资建议。使用者应自行判断和承担投资风险。作者不对因使用本项目内容而产生的任何损失负责。
-
----
-
-**最后更新**: 2026年3月10日  
-**版本**: v1.0  
-**状态**: 已完成三家公司的初步分析
+**最后更新**: 2026年3月12日  
+**项目状态**: 活跃开发中  
+**数据更新频率**: 每日
