@@ -1,0 +1,183 @@
+[
+  {
+    "company_id": "xiaomi",
+    "company_name": "小米集团",
+    "ticker": "1810.HK",
+    "market": "港股",
+    "industry": "消费电子/智能硬件",
+    "analysis_date": "2026-03-12",
+    "analysis_time": "2026-03-12 16:58:44",
+    "success": true,
+    "price": {
+      "current": 33.3,
+      "previous": 33.42,
+      "change": -0.12,
+      "change_pct": -0.36,
+      "trend": "下跌"
+    },
+    "fundamentals": {
+      "market_cap": 862894882816,
+      "pe_ratio": 20.429447,
+      "pb_ratio": 2.856707,
+      "dividend_yield": null,
+      "beta": 0.779,
+      "volume": 78766156,
+      "avg_volume": 152387078
+    },
+    "recent_news": [
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      },
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      },
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      },
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      },
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      }
+    ],
+    "conclusion": [
+      "股价相对稳定，波动0.36%",
+      "大盘股，流动性好",
+      "近期有5条相关新闻，关注市场情绪",
+      "消费类公司，关注宏观经济影响"
+    ]
+  },
+  {
+    "company_id": "meituan",
+    "company_name": "美团",
+    "ticker": "3690.HK",
+    "market": "港股",
+    "industry": "本地生活服务",
+    "analysis_date": "2026-03-12",
+    "analysis_time": "2026-03-12 16:58:46",
+    "success": true,
+    "price": {
+      "current": 76.7,
+      "previous": 76.85,
+      "change": -0.15,
+      "change_pct": -0.2,
+      "trend": "下跌"
+    },
+    "fundamentals": {
+      "market_cap": 468396736512,
+      "pe_ratio": 14.444444,
+      "pb_ratio": 2.3609445,
+      "dividend_yield": null,
+      "beta": 0.263,
+      "volume": 37947210,
+      "avg_volume": 45940809
+    },
+    "recent_news": [
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      },
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      },
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      },
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      },
+      {
+        "title": "",
+        "publisher": "",
+        "link": "",
+        "published": ""
+      }
+    ],
+    "conclusion": [
+      "股价相对稳定，波动0.2%",
+      "估值较低，PE比率处于合理区间",
+      "大盘股，流动性好",
+      "近期有5条相关新闻，关注市场情绪"
+    ]
+  },
+  {
+    "company_id": "horizon",
+    "company_name": "地平线机器人",
+    "ticker": "09660.HK",
+    "market": "港股",
+    "industry": "自动驾驶/AI芯片",
+    "analysis_date": "2026-03-12",
+    "analysis_time": "2026-03-12 16:58:49",
+    "success": true,
+    "fundamentals": {
+      "market_cap": null,
+      "pe_ratio": null,
+      "pb_ratio": null,
+      "dividend_yield": null,
+      "beta": null,
+      "volume": null,
+      "avg_volume": null
+    },
+    "conclusion": [
+      "属于AI/半导体赛道，长期成长性看好"
+    ]
+  },
+  {
+    "company_id": "sanan",
+    "company_name": "三安光电",
+    "ticker": "600703.SS",
+    "market": "A股",
+    "industry": "LED芯片/化合物半导体",
+    "analysis_date": "2026-03-12",
+    "analysis_time": "2026-03-12 16:58:51",
+    "success": true,
+    "price": {
+      "current": 18.74,
+      "previous": 16.97,
+      "change": 1.77,
+      "change_pct": 10.43,
+      "trend": "上涨"
+    },
+    "fundamentals": {
+      "market_cap": 93494206464,
+      "pe_ratio": 937.0,
+      "pb_ratio": 2.0591145,
+      "dividend_yield": 0.12,
+      "beta": 0.591,
+      "volume": 435418844,
+      "avg_volume": 146574225
+    },
+    "conclusion": [
+      "股价表现强劲，今日上涨10.43%",
+      "估值较高，需关注盈利增长",
+      "属于AI/半导体赛道，长期成长性看好"
+    ]
+  }
+]

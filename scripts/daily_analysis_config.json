@@ -1,0 +1,84 @@
+{
+  "name": "每日公司分析定时任务",
+  "description": "每天6点自动分析小米、美团、地平线机器人、三安光电四家公司，生成分析报告并存储",
+  "schedule": {
+    "cron_expression": "0 6 * * *",
+    "timezone": "Asia/Shanghai",
+    "description": "每天上午6点执行"
+  },
+  "companies": [
+    {
+      "id": "xiaomi",
+      "name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": ["智能手机", "IoT", "汽车业务", "海外市场"]
+    },
+    {
+      "id": "meituan",
+      "name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": ["外卖业务", "到店服务", "酒店旅游", "新业务"]
+    },
+    {
+      "id": "horizon",
+      "name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": ["AI芯片", "自动驾驶", "合作伙伴", "技术优势"]
+    },
+    {
+      "id": "sanan",
+      "name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": ["LED芯片", "化合物半导体", "Mini/Micro LED", "碳化硅"]
+    }
+  ],
+  "analysis_parameters": {
+    "data_period": "5d",
+    "include_news": true,
+    "news_count": 5,
+    "generate_json": true,
+    "generate_markdown": true,
+    "generate_summary": true,
+    "log_analysis": true
+  },
+  "output_directories": {
+    "data": "data/daily_analysis",
+    "reports": "reports/daily_analysis",
+    "logs": "logs"
+  },
+  "notification": {
+    "enabled": false,
+    "channels": ["email", "slack"],
+    "recipients": ["analyst@example.com"]
+  },
+  "retention_policy": {
+    "keep_daily_reports": 30,
+    "keep_weekly_summaries": 12,
+    "keep_monthly_reports": 24,
+    "cleanup_schedule": "0 0 * * 0"
+  },
+  "dependencies": {
+    "python_packages": ["yfinance", "pandas", "numpy"],
+    "system_requirements": ["python3", "bash", "cron"],
+    "api_keys": {
+      "yfinance": "not_required",
+      "news_api": "optional"
+    }
+  },
+  "monitoring": {
+    "health_check_url": "https://mengliang555.github.io/finance/",
+    "error_notification": true,
+    "performance_metrics": true
+  },
+  "version": "1.0.0",
+  "last_updated": "2026-03-12",
+  "maintainer": "财务分析中心"
+}
