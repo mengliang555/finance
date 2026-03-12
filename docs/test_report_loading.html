@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>报告加载测试</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .success {
+            background: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .loading {
+            background: #fff3cd;
+            border-color: #ffeaa7;
+            color: #856404;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>报告加载测试</h1>
+    <p>测试时间: 2026年3月12日 15:35</p>
+    
+    <div class="test-section">
+        <h2>测试1: 检查GitHub raw文件URL</h2>
+        <p>测试URL: <code id="testUrl"></code></p>
+        <button onclick="testRawUrl()">测试加载</button>
+        <div id="test1Result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>测试2: 渲染Markdown内容</h2>
+        <button onclick="testMarkdownRendering()">测试渲染</button>
+        <div id="test2Result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>测试3: 完整报告加载</h2>
+        <p>选择报告:</p>
+        <select id="reportSelect">
+            <option value="reports/company_analysis/xiaomi_financial_analysis.md">小米集团财务分析</option>
+            <option value="reports/company_analysis/meituan_financial_analysis.md">美团财务分析</option>
+            <option value="reports/industry_analysis/comparative_analysis.md">对比分析报告</option>
+            <option value="reports/daily_reports/daily_stock_performance_20260312.md">每日报告</option>
+        </select>
+        <button onclick="testFullReport()">加载报告</button>
+        <div id="test3Result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>测试结果总结</h2>
+        <div id="summary"></div>
+        <button onclick="runAllTests()">运行所有测试</button>
+    </div>
+
+    <script>
+        const baseUrl = 'https://raw.githubusercontent.com/mengliang555/finance/main/';
+        const testUrl = baseUrl + 'reports/company_analysis/xiaomi_financial_analysis.md';
+        
+        document.getElementById('testUrl').textContent = testUrl;
+        
+        async function testRawUrl() {
+            const resultDiv = document.getElementById('test1Result');
+            resultDiv.innerHTML = '<div class="loading">正在测试URL访问...</div>';
+            
+            try {
+                const response = await fetch(testUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP错误: ${response.status}`);
+                }
+                
+                const text = await response.text();
+                const size = text.length;
+                const lines = text.split('\n').length;
+                
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        <h3>✅ 测试成功</h3>
+                        <p>URL访问正常，成功获取文件内容。</p>
+                        <p>文件大小: ${size} 字符</p>
+                        <p>行数: ${lines} 行</p>
+                        <p>前100字符预览:</p>
+                        <pre>${text.substring(0, 100)}...</pre>
+                    </div>
+                `;
+                
+                return { success: true, size, lines };
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <h3>❌ 测试失败</h3>
+                        <p>错误信息: ${error.message}</p>
+                        <p>可能的原因:</p>
+                        <ul>
+                            <li>文件未提交到GitHub</li>
+                            <li>GitHub raw服务暂时不可用</li>
+                            <li>网络连接问题</li>
+                        </ul>
+                    </div>
+                `;
+                return { success: false, error: error.message };
+            }
+        }
+        
+        async function testMarkdownRendering() {
+            const resultDiv = document.getElementById('test2Result');
+            resultDiv.innerHTML = '<div class="loading">正在测试Markdown渲染...</div>';
+            
+            try {
+                // 测试Markdown
+                const testMarkdown = `# 测试标题
+                
+## 二级标题
+
+这是一个测试段落，包含**粗体**和*斜体*文本。
+
+### 列表测试
+- 列表项1
+- 列表项2
+- 列表项3
+
+### 表格测试
+| 列1 | 列2 | 列3 |
+|-----|-----|-----|
+| 数据1 | 数据2 | 数据3 |
+| 数据4 | 数据5 | 数据6 |
+
+### 代码测试
+\`\`\`javascript
+console.log('Hello, World!');
+\`\`\``;
+                
+                // 渲染Markdown
+                const html = marked.parse(testMarkdown);
+                const cleanHtml = DOMPurify.sanitize(html);
+                
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        <h3>✅ Markdown渲染测试成功</h3>
+                        <p>marked.js和DOMPurify工作正常。</p>
+                        <div style="border: 1px solid #ccc; padding: 15px; margin-top: 10px;">
+                            ${cleanHtml}
+                        </div>
+                    </div>
+                `;
+                
+                return { success: true };
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <h3>❌ Markdown渲染测试失败</h3>
+                        <p>错误信息: ${error.message}</p>
+                    </div>
+                `;
+                return { success: false, error: error.message };
+            }
+        }
+        
+        async function testFullReport() {
+            const select = document.getElementById('reportSelect');
+            const reportPath = select.value;
+            const reportName = select.options[select.selectedIndex].text;
+            const resultDiv = document.getElementById('test3Result');
+            
+            resultDiv.innerHTML = `<div class="loading">正在加载报告: ${reportName}...</div>`;
+            
+            try {
+                const url = baseUrl + reportPath;
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误: ${response.status}`);
+                }
+                
+                const markdown = await response.text();
+                const html = marked.parse(markdown);
+                const cleanHtml = DOMPurify.sanitize(html);
+                
+                // 提取报告标题
+                const titleMatch = markdown.match(/^#\s+(.+)$/m);
+                const title = titleMatch ? titleMatch[1] : reportName;
+                
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        <h3>✅ 报告加载成功: ${title}</h3>
+                        <p>文件路径: ${reportPath}</p>
+                        <p>文件大小: ${markdown.length} 字符</p>
+                        <div style="border: 1px solid #ccc; padding: 15px; margin-top: 10px; max-height: 300px; overflow-y: auto;">
+                            ${cleanHtml}
+                        </div>
+                    </div>
+                `;
+                
+                return { success: true, title, size: markdown.length };
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <h3>❌ 报告加载失败: ${reportName}</h3>
+                        <p>错误信息: ${error.message}</p>
+                        <p>文件路径: ${reportPath}</p>
+                        <p>完整URL: ${baseUrl + reportPath}</p>
+                    </div>
+                `;
+                return { success: false, error: error.message };
+            }
+        }
+        
+        async function runAllTests() {
+            const summaryDiv = document.getElementById('summary');
+            summaryDiv.innerHTML = '<div class="loading">正在运行所有测试...</div>';
+            
+            const results = [];
+            
+            // 测试1: raw URL
+            summaryDiv.innerHTML = '<div class="loading">测试1: 检查GitHub raw文件URL...</div>';
+            const test1 = await testRawUrl();
+            results.push({ name: 'GitHub raw URL', ...test1 });
+            
+            // 测试2: Markdown渲染
+            summaryDiv.innerHTML = '<div class="loading">测试2: 测试Markdown渲染...</div>';
+            const test2 = await testMarkdownRendering();
+            results.push({ name: 'Markdown渲染', ...test2 });
+            
+            // 测试3: 完整报告
+            summaryDiv.innerHTML = '<div class="loading">测试3: 加载完整报告...</div>';
+            const test3 = await testFullReport();
+            results.push({ name: '完整报告加载', ...test3 });
+            
+            // 显示总结
+            const successCount = results.filter(r => r.success).length;
+            const totalCount = results.length;
+            
+            let summaryHtml = `
+                <h3>测试完成</h3>
+                <p>成功: ${successCount}/${totalCount}</p>
+                <ul>
+            `;
+            
+            results.forEach(result => {
+                const status = result.success ? '✅' : '❌';
+                const details = result.success 
+                    ? ` (${result.size ? '大小: ' + result.size + '字符' : '成功'})`
+                    : ` (错误: ${result.error})`;
+                
+                summaryHtml += `<li>${status} ${result.name}${details}</li>`;
+            });
+            
+            summaryHtml += '</ul>';
+            
+            if (successCount === totalCount) {
+                summaryDiv.innerHTML = `<div class="success">${summaryHtml}</div>`;
+            } else {
+                summaryDiv.innerHTML = `<div class="error">${summaryHtml}</div>`;
+            }
+        }
+        
+        // 页面加载时自动运行第一个测试
+        window.onload = testRawUrl;
+    </script>
+</body>
+</html>
