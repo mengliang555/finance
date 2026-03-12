@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-本指南介绍如何设置每日公司分析定时任务，该任务会在每天6点自动分析小米、美团、地平线机器人、三安光电四家公司，生成分析报告并存储。
+本指南介绍如何设置每日公司分析定时任务，该任务会在每天下午6点（18:00）自动分析小米、美团、地平线机器人、三安光电四家公司，生成分析报告并存储。
 
 ## 🎯 功能特性
 
@@ -63,8 +63,8 @@ python3 scripts/daily_company_analysis.py
 # 编辑当前用户的crontab
 crontab -e
 
-# 添加以下行（每天6点执行）
-0 6 * * * /Users/mengliang.yang/github/finance/scripts/run_daily_analysis.sh
+# 添加以下行（每天下午6点执行）
+0 18 * * * /Users/mengliang.yang/github/finance/scripts/run_daily_analysis.sh
 
 # 保存并退出
 ```
@@ -75,7 +75,7 @@ crontab -e
 sudo nano /etc/crontab
 
 # 添加以下行
-0 6 * * * mengliang.yang /Users/mengliang.yang/github/finance/scripts/run_daily_analysis.sh
+0 18 * * * mengliang.yang /Users/mengliang.yang/github/finance/scripts/run_daily_analysis.sh
 ```
 
 #### 方法三：使用launchd（macOS）
@@ -97,7 +97,7 @@ nano ~/Library/LaunchAgents/com.finance.dailyanalysis.plist
     <key>StartCalendarInterval</key>
     <dict>
         <key>Hour</key>
-        <integer>6</integer>
+        <integer>18</integer>
         <key>Minute</key>
         <integer>0</integer>
     </dict>
@@ -152,9 +152,9 @@ guides/
 ```json
 {
   "schedule": {
-    "cron_expression": "0 6 * * *",      // 每天6点
+    "cron_expression": "0 18 * * *",     // 每天18点（下午6点）
     "timezone": "Asia/Shanghai",         // 上海时区
-    "description": "每天上午6点执行"
+    "description": "每天下午6点执行"
   }
 }
 ```
@@ -209,11 +209,14 @@ COMPANIES = {
 ### 修改分析时间
 编辑crontab配置：
 ```bash
-# 每天8点执行
-0 8 * * * /path/to/run_daily_analysis.sh
+# 每天下午6点执行（默认）
+0 18 * * * /path/to/run_daily_analysis.sh
 
-# 工作日每天6点执行
-0 6 * * 1-5 /path/to/run_daily_analysis.sh
+# 每天上午9点执行
+0 9 * * * /path/to/run_daily_analysis.sh
+
+# 工作日每天下午6点执行
+0 18 * * 1-5 /path/to/run_daily_analysis.sh
 
 # 每小时执行一次
 0 * * * * /path/to/run_daily_analysis.sh
@@ -410,6 +413,10 @@ launchctl load ~/Library/LaunchAgents/com.finance.dailyanalysis.plist
 4. 创建Pull Request
 
 ## 📝 更新日志
+
+### v1.0.1 (2026-03-12)
+- 修正定时任务时间为下午6点（18:00）
+- 更新所有文档中的时间说明
 
 ### v1.0.0 (2026-03-12)
 - 初始版本发布

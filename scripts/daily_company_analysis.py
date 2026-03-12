@@ -263,7 +263,7 @@ def generate_markdown_report(analysis_results, output_file):
         successful = sum(1 for r in analysis_results if r.get('success', False))
         f.write(f"- **成功分析**: {successful} 家公司\n")
         f.write(f"- **失败分析**: {len(analysis_results) - successful} 家公司\n")
-        f.write(f"- **分析时段**: 每日6:00自动执行\n\n")
+        f.write(f"- **分析时段**: 每日18:00自动执行\n\n")
         
         f.write("---\n\n")
         
@@ -360,7 +360,7 @@ def generate_markdown_report(analysis_results, output_file):
         # 数据来源和说明
         f.write("## 📋 数据来源和说明\n\n")
         f.write("1. **数据来源**: Yahoo Finance API\n")
-        f.write("2. **更新频率**: 每日6:00自动更新\n")
+        f.write("2. **更新频率**: 每日18:00自动更新\n")
         f.write("3. **数据延迟**: 实时数据，部分数据可能有延迟\n")
         f.write("4. **分析工具**: Python + yfinance库\n")
         f.write("5. **报告生成**: 自动生成，人工审核建议\n\n")

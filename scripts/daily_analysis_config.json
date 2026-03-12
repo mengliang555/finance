@@ -2,9 +2,9 @@
   "name": "每日公司分析定时任务",
   "description": "每天6点自动分析小米、美团、地平线机器人、三安光电四家公司，生成分析报告并存储",
   "schedule": {
-    "cron_expression": "0 6 * * *",
+    "cron_expression": "0 18 * * *",
     "timezone": "Asia/Shanghai",
-    "description": "每天上午6点执行"
+    "description": "每天下午6点执行"
   },
   "companies": [
     {
