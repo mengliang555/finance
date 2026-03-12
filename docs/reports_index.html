@@ -1,670 +1,32 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分析报告目录 | 财务分析中心</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/report.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <!-- Markdown渲染库 -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
-    <style>
-        :root {
-            --report-primary: #4f46e5;
-            --report-secondary: #7c3aed;
-        }
-        
-        .reports-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .reports-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, var(--report-primary) 0%, var(--report-secondary) 100%);
-            color: white;
-            border-radius: 12px;
-        }
-        
-        .reports-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .reports-subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .reports-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 24px;
-            margin-bottom: 40px;
-        }
-        
-        .report-card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #e5e7eb;
-            cursor: pointer;
-        }
-        
-        .report-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            border-color: var(--report-primary);
-        }
-        
-        .report-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-        
-        .report-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 16px;
-            font-size: 20px;
-            color: white;
-        }
-        
-        .report-info {
-            flex: 1;
-        }
-        
-        .report-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-            color: #1f2937;
-        }
-        
-        .report-category {
-            font-size: 0.875rem;
-            color: #6b7280;
-            background: #f3f4f6;
-            padding: 2px 8px;
-            border-radius: 4px;
-            display: inline-block;
-        }
-        
-        .report-description {
-            color: #4b5563;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 16px;
-        }
-        
-        .report-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid #e5e7eb;
-        }
-        
-        .report-date {
-            font-size: 0.875rem;
-            color: #6b7280;
-        }
-        
-        .report-size {
-            font-size: 0.875rem;
-            color: #6b7280;
-        }
-        
-        .report-view-btn {
-            background: var(--report-primary);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        
-        .report-view-btn:hover {
-            background: var(--report-secondary);
-        }
-        
-        /* 报告查看器样式 */
-        .report-viewer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .report-viewer.active {
-            display: flex;
-        }
-        
-        .viewer-container {
-            background: white;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 1000px;
-            height: 90%;
-            max-height: 800px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        
-        .viewer-header {
-            padding: 20px;
-            background: linear-gradient(135deg, var(--report-primary) 0%, var(--report-secondary) 100%);
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .viewer-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-        
-        .viewer-close {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s ease;
-        }
-        
-        .viewer-close:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
-        .viewer-content {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-        }
-        
-        .viewer-content h1,
-        .viewer-content h2,
-        .viewer-content h3,
-        .viewer-content h4 {
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
-            color: #1f2937;
-        }
-        
-        .viewer-content h1 {
-            font-size: 2rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.3em;
-        }
-        
-        .viewer-content h2 {
-            font-size: 1.5rem;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.3em;
-        }
-        
-        .viewer-content p {
-            margin-bottom: 1em;
-            color: #4b5563;
-        }
-        
-        .viewer-content ul,
-        .viewer-content ol {
-            margin-bottom: 1em;
-            padding-left: 2em;
-        }
-        
-        .viewer-content li {
-            margin-bottom: 0.5em;
-        }
-        
-        .viewer-content table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-bottom: 1em;
-        }
-        
-        .viewer-content th,
-        .viewer-content td {
-            border: 1px solid #e5e7eb;
-            padding: 8px 12px;
-            text-align: left;
-        }
-        
-        .viewer-content th {
-            background: #f9fafb;
-            font-weight: 600;
-        }
-        
-        .viewer-content code {
-            background: #f3f4f6;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 0.9em;
-        }
-        
-        .viewer-content pre {
-            background: #1f2937;
-            color: #e5e7eb;
-            padding: 16px;
-            border-radius: 6px;
-            overflow-x: auto;
-            margin-bottom: 1em;
-        }
-        
-        .viewer-content pre code {
-            background: none;
-            padding: 0;
-            color: inherit;
-        }
-        
-        .viewer-content blockquote {
-            border-left: 4px solid var(--report-primary);
-            padding-left: 16px;
-            margin-left: 0;
-            margin-right: 0;
-            color: #6b7280;
-            font-style: italic;
-        }
-        
-        .loading {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 200px;
-            color: #6b7280;
-        }
-        
-        .loading-spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid #f3f4f6;
-            border-top-color: var(--report-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-right: 12px;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        .category-filter {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .filter-btn {
-            padding: 8px 16px;
-            border: 1px solid #e5e7eb;
-            background: white;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #6b7280;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .filter-btn:hover {
-            border-color: var(--report-primary);
-            color: var(--report-primary);
-        }
-        
-        .filter-btn.active {
-            background: var(--report-primary);
-            color: white;
-            border-color: var(--report-primary);
-        }
-        
-        .no-reports {
-            text-align: center;
-            padding: 60px 20px;
-            color: #6b7280;
-            font-size: 1.1rem;
-        }
-        
-        .back-to-home {
-            display: inline-block;
-            margin-top: 20px;
-            color: var(--report-primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .back-to-home:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .reports-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .reports-title {
-                font-size: 2rem;
-            }
-            
-            .viewer-container {
-                width: 95%;
-                height: 95%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <i class="fas fa-chart-line"></i>
-                <span>财务分析中心</span>
-            </div>
-            <div class="nav-links">
-                <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> 返回首页</a>
-                <a href="#company" class="nav-link active"><i class="fas fa-building"></i> 公司分析</a>
-                <a href="#industry" class="nav-link"><i class="fas fa-industry"></i> 行业分析</a>
-                <a href="#daily" class="nav-link"><i class="fas fa-calendar-day"></i> 每日报告</a>
-                <a href="#ai" class="nav-link"><i class="fas fa-robot"></i> AI分析</a>
-            </div>
-            <div class="nav-actions">
-                <button class="btn btn-outline" onclick="window.print()">
-                    <i class="fas fa-print"></i> 打印目录
-                </button>
-            </div>
-        </div>
-    </nav>
+// 继续之前的代码...
 
-    <!-- 报告目录 -->
-    <div class="reports-container">
-        <div class="reports-header">
-            <h1 class="reports-title">分析报告目录</h1>
-            <p class="reports-subtitle">点击报告卡片查看详细内容，所有报告均为Markdown格式，支持实时渲染</p>
-        </div>
-
-        <!-- 分类筛选 -->
-        <div class="category-filter">
-            <button class="filter-btn active" data-category="all">全部报告</button>
-            <button class="filter-btn" data-category="company">公司分析</button>
-            <button class="filter-btn" data-category="industry">行业分析</button>
-            <button class="filter-btn" data-category="daily">每日报告</button>
-            <button class="filter-btn" data-category="ai">AI分析</button>
-            <button class="filter-btn" data-category="guides">指南文档</button>
-        </div>
-
-        <!-- 报告网格 -->
-        <div class="reports-grid" id="reportsGrid">
-            <!-- 报告卡片将通过JavaScript动态生成 -->
-            <div class="loading">
-                <div class="loading-spinner"></div>
-                <span>正在加载报告列表...</span>
-            </div>
-        </div>
-
-        <!-- 返回首页链接 -->
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="../index.html" class="back-to-home">
-                <i class="fas fa-arrow-left"></i> 返回财务分析中心首页
-            </a>
-        </div>
-    </div>
-
-    <!-- 报告查看器 -->
-    <div class="report-viewer" id="reportViewer">
-        <div class="viewer-container">
-            <div class="viewer-header">
-                <h2 class="viewer-title" id="viewerTitle">报告标题</h2>
-                <button class="viewer-close" id="viewerClose">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="viewer-content" id="viewerContent">
-                <div class="loading">
-                    <div class="loading-spinner"></div>
-                    <span>正在加载报告内容...</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-        // 报告数据
-        const reports = [
-            // 公司分析报告
-            {
-                id: 'xiaomi',
-                title: '小米集团财务分析报告',
-                category: 'company',
-                description: '深度分析小米集团的财务表现、业务发展和投资价值，包括智能手机、IoT、汽车等业务分析。',
-                icon: 'fas fa-mobile-alt',
-                iconColor: '#ff6b6b',
-                date: '2026-03-11',
-                size: '15.2KB',
-                path: '../reports/company_analysis/xiaomi_financial_analysis.md',
-                rawPath: 'reports/company_analysis/xiaomi_financial_analysis.md'
-            },
-            {
-                id: 'meituan',
-                title: '美团财务分析报告',
-                category: 'company',
-                description: '全面分析美团的本地生活服务平台业务，包括外卖、到店服务、酒店旅游等业务分析。',
-                icon: 'fas fa-shopping-bag',
-                iconColor: '#4ecdc4',
-                date: '2026-03-11',
-                size: '14.8KB',
-                path: '../reports/company_analysis/meituan_financial_analysis.md',
-                rawPath: 'reports/company_analysis/meituan_financial_analysis.md'
-            },
-            {
-                id: 'horizon',
-                title: '地平线机器人财务分析报告',
-                category: 'company',
-                description: '基于真实上市数据的自动驾驶AI芯片公司分析，包括技术优势、市场机会和投资建议。',
-                icon: 'fas fa-robot',
-                iconColor: '#45b7d1',
-                date: '2026-03-11',
-                size: '12.5KB',
-                path: '../reports/company_analysis/horizon_robotics_financial_analysis.md',
-                rawPath: 'reports/company_analysis/horizon_robotics_financial_analysis.md'
-            },
-            {
-                id: 'sanan',
-                title: '三安光电财务分析报告',
-                category: 'company',
-                description: 'LED芯片全球龙头和化合物半导体领先企业的财务分析和业务展望。',
-                icon: 'fas fa-microchip',
-                iconColor: '#96ceb4',
-                date: '2026-03-11',
-                size: '11.9KB',
-                path: '../reports/company_analysis/sanan_opto_financial_analysis.md',
-                rawPath: 'reports/company_analysis/sanan_opto_financial_analysis.md'
-            },
-            
-            // 行业分析报告
-            {
-                id: 'comparative',
-                title: '四家公司对比分析报告',
-                category: 'industry',
-                description: '小米、美团、地平线机器人、三安光电四家公司在财务指标、业务模式、风险特征等方面的全面对比。',
-                icon: 'fas fa-balance-scale',
-                iconColor: '#feca57',
-                date: '2026-03-11',
-                size: '18.3KB',
-                path: '../reports/industry_analysis/comparative_analysis.md',
-                rawPath: 'reports/industry_analysis/comparative_analysis.md'
-            },
-            {
-                id: 'power-grid',
-                title: '电力设备和电网领域分析',
-                category: 'industry',
-                description: '分析电力设备、电网建设、特高压、智能电网等领域的投资机会和上市公司推荐。',
-                icon: 'fas fa-bolt',
-                iconColor: '#ff9ff3',
-                date: '2026-03-12',
-                size: '8.6KB',
-                path: '../reports/industry_analysis/power_equipment_grid.md',
-                rawPath: 'reports/industry_analysis/power_equipment_grid.md'
-            },
-            
-            // 每日报告
-            {
-                id: 'daily-20260312',
-                title: '2026年3月12日股票表现报告',
-                category: 'daily',
-                description: '总结小米集团、美团、地平线机器人三只关注股票的今日涨幅情况和市场分析。',
-                icon: 'fas fa-calendar-day',
-                iconColor: '#54a0ff',
-                date: '2026-03-12',
-                size: '4.6KB',
-                path: '../reports/daily_reports/daily_stock_performance_20260312.md',
-                rawPath: 'reports/daily_reports/daily_stock_performance_20260312.md'
-            },
-            
-            // AI分析报告
-            {
-                id: 'deepseek-open',
-                title: 'DeepSeek V4开源影响分析',
-                category: 'ai',
-                description: '分析DeepSeek V4如果开源对A股和港股上市公司的影响，重点关注AI算力和应用公司。',
-                icon: 'fas fa-brain',
-                iconColor: '#5f27cd',
-                date: '2026-03-12',
-                size: '6.3KB',
-                path: '../reports/ai_analysis/deepseek_v4_open_source_analysis.md',
-                rawPath: 'reports/ai_analysis/deepseek_v4_open_source_analysis.md'
-            },
-            {
-                id: 'deepseek-huawei',
-                title: 'DeepSeek V4华为升腾芯片训练影响分析',
-                category: 'ai',
-                description: '分析如果DeepSeek V4使用华为升腾芯片训练，对华为昇腾产业链和国产AI芯片生态的影响。',
-                icon: 'fas fa-microchip',
-                iconColor: '#00d2d3',
-                date: '2026-03-12',
-                size: '6.5KB',
-                path: '../reports/ai_analysis/deepseek_v4_huawei_ascend_analysis.md',
-                rawPath: 'reports/ai_analysis/deepseek_v4_huawei_ascend_analysis.md'
-            },
-            
-            // 指南文档
-            {
-                id: 'framework',
-                title: '公司分析框架指南',
-                category: 'guides',
-                description: '系统化的公司财务分析方法论，适用于各种类型和规模的公司分析。',
-                icon: 'fas fa-sitemap',
-                iconColor: '#ff9f43',
-                date: '2026-03-11',
-                size: '8.4KB',
-                path: '../guides/company_analysis_framework.md',
-                rawPath: 'guides/company_analysis_framework.md'
-            },
-            {
-                id: 'access-guide',
-                title: '项目访问指南',
-                category: 'guides',
-                description: '财务分析项目的使用指南，包括网站访问、报告查看、数据更新等说明。',
-                icon: 'fas fa-book',
-                iconColor: '#1dd1a1',
-                date: '2026-03-11',
-                size: '4.3KB',
-                path: '../guides/ACCESS_GUIDE.md',
-                rawPath: 'guides/ACCESS_GUIDE.md'
-            },
-            {
-                id: 'markdown-guide',
-                title: 'Markdown报告在线查看指南',
-                category: 'guides',
-                description: '详细介绍如何在网站上查看和渲染Markdown格式的分析报告，包括使用方法和技术实现。',
-                icon: 'fas fa-file-code',
-                iconColor: '#9b59b6',
-                date: '2026-03-12',
-                size: '5.4KB',
-                path: '../guides/MARKDOWN_REPORTS_GUIDE.md',
-                rawPath: 'guides/MARKDOWN_REPORTS_GUIDE.md'
-            }
-        ];
-
-        // DOM元素
-        const reportsGrid = document.getElementById('reportsGrid');
-        const reportViewer = document.getElementById('reportViewer');
-        const viewerTitle = document.getElementById('viewerTitle');
-        const viewerContent = document.getElementById('viewerContent');
-        const viewerClose = document.getElementById('viewerClose');
-        const filterButtons = document.querySelectorAll('.filter-btn');
-
-        // 初始化
-        document.addEventListener('DOMContentLoaded', () => {
-            renderReports('all');
-            setupEventListeners();
-        });
+            companyCount.textContent = companyReports;
+            industryCount.textContent = industryReports;
+            dailyCount.textContent = dailyReports;
+            aiCount.textContent = aiReports;
+        }
 
         // 渲染报告卡片
         function renderReports(category) {
             reportsGrid.innerHTML = '';
+            emptyState.style.display = 'none';
             
             const filteredReports = category === 'all' 
                 ? reports 
                 : reports.filter(report => report.category === category);
             
             if (filteredReports.length === 0) {
-                reportsGrid.innerHTML = `
-                    <div class="no-reports">
-                        <i class="fas fa-file-alt" style="font-size: 3rem; margin-bottom: 20px;"></i>
-                        <h3>暂无报告</h3>
-                        <p>当前分类下没有找到分析报告。</p>
-                    </div>
-                `;
+                reportsGrid.style.display = 'none';
+                emptyState.style.display = 'block';
                 return;
             }
             
-            filteredReports.forEach(report => {
+            reportsGrid.style.display = 'grid';
+            
+            filteredReports.forEach((report, index) => {
                 const card = document.createElement('div');
-                card.className = 'report-card';
+                card.className = 'report-card fade-in slide-up';
+                card.style.animationDelay = `${index * 0.05}s`;
                 card.dataset.id = report.id;
                 card.dataset.category = report.category;
                 
@@ -680,12 +42,19 @@
                     </div>
                     <p class="report-description">${report.description}</p>
                     <div class="report-meta">
-                        <div>
-                            <span class="report-date"><i class="far fa-calendar"></i> ${report.date}</span>
-                            <span class="report-size" style="margin-left: 12px;"><i class="far fa-file"></i> ${report.size}</span>
+                        <div class="meta-info">
+                            <span class="meta-item">
+                                <i class="far fa-calendar"></i>
+                                ${report.date}
+                            </span>
+                            <span class="meta-item">
+                                <i class="far fa-file"></i>
+                                ${report.size}
+                            </span>
                         </div>
-                        <button class="report-view-btn" onclick="viewReport('${report.id}')">
-                            <i class="fas fa-eye"></i> 查看报告
+                        <button class="report-action" onclick="viewReport('${report.id}')">
+                            <i class="fas fa-eye"></i>
+                            查看报告
                         </button>
                     </div>
                 `;
@@ -716,6 +85,7 @@
             
             // 显示查看器
             reportViewer.classList.add('active');
+            document.body.style.overflow = 'hidden';
             
             // 显示加载状态
             viewerContent.innerHTML = `
@@ -732,7 +102,7 @@
                 // 获取Markdown内容
                 const response = await fetch(rawUrl);
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(`HTTP错误: ${response.status}`);
                 }
                 
                 const markdown = await response.text();
@@ -752,13 +122,17 @@
             } catch (error) {
                 console.error('加载报告失败:', error);
                 viewerContent.innerHTML = `
-                    <div style="text-align: center; padding: 40px; color: #ef4444;">
-                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px;"></i>
-                        <h3>加载失败</h3>
-                        <p>无法加载报告内容：${error.message}</p>
-                        <p style="font-size: 0.9em; margin-top: 10px;">请确保文件已提交到GitHub仓库。</p>
-                        <button onclick="viewReport('${reportId}')" style="margin-top: 20px; padding: 8px 16px; background: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer;">
-                            <i class="fas fa-redo"></i> 重试
+                    <div style="text-align: center; padding: 40px;">
+                        <div style="font-size: 3rem; color: #ef4444; margin-bottom: 20px;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin-bottom: 10px;">加载失败</h3>
+                        <p style="color: #64748b; margin-bottom: 20px;">无法加载报告内容：${error.message}</p>
+                        <p style="font-size: 0.9em; color: #94a3b8; margin-bottom: 20px;">
+                            请确保文件已提交到GitHub仓库，并且网络连接正常。
+                        </p>
+                        <button onclick="viewReport('${reportId}')" style="padding: 10px 20px; background: #4f46e5; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 500;">
+                            <i class="fas fa-redo"></i> 重试加载
                         </button>
                     </div>
                 `;
@@ -774,6 +148,8 @@
                 wrapper.className = 'table-responsive';
                 wrapper.style.overflowX = 'auto';
                 wrapper.style.marginBottom = '1em';
+                wrapper.style.borderRadius = '8px';
+                wrapper.style.border = '1px solid var(--border-color)';
                 table.parentNode.insertBefore(wrapper, table);
                 wrapper.appendChild(table);
             });
@@ -784,14 +160,23 @@
                 const language = block.className.replace('language-', '') || 'text';
                 const header = document.createElement('div');
                 header.className = 'code-header';
-                header.style.background = '#1f2937';
-                header.style.color = '#e5e7eb';
+                header.style.background = '#1e293b';
+                header.style.color = '#e2e8f0';
                 header.style.padding = '8px 16px';
-                header.style.borderTopLeftRadius = '6px';
-                header.style.borderTopRightRadius = '6px';
+                header.style.borderTopLeftRadius = '8px';
+                header.style.borderTopRightRadius = '8px';
                 header.style.fontFamily = "'Source Code Pro', monospace";
                 header.style.fontSize = '0.9em';
-                header.textContent = language;
+                header.style.fontWeight = '500';
+                header.style.display = 'flex';
+                header.style.justifyContent = 'space-between';
+                header.style.alignItems = 'center';
+                header.innerHTML = `
+                    <span>${language}</span>
+                    <button onclick="copyCode(this)" style="background: rgba(255,255,255,0.1); border: none; color: #e2e8f0; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 0.8em;">
+                        <i class="fas fa-copy"></i> 复制
+                    </button>
+                `;
                 
                 const pre = block.parentNode;
                 pre.parentNode.insertBefore(header, pre);
@@ -801,24 +186,39 @@
             });
         }
 
+        // 复制代码功能
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-header').nextElementSibling;
+            const code = codeBlock.querySelector('code').textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> 已复制';
+                button.style.background = '#10b981';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = 'rgba(255,255,255,0.1)';
+                }, 2000);
+            });
+        }
+
         // 设置事件监听器
         function setupEventListeners() {
             // 关闭查看器
-            viewerClose.addEventListener('click', () => {
-                reportViewer.classList.remove('active');
-            });
+            viewerClose.addEventListener('click', closeViewer);
             
             // 点击查看器背景关闭
             reportViewer.addEventListener('click', (e) => {
                 if (e.target === reportViewer) {
-                    reportViewer.classList.remove('active');
+                    closeViewer();
                 }
             });
             
             // ESC键关闭查看器
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && reportViewer.classList.contains('active')) {
-                    reportViewer.classList.remove('active');
+                    closeViewer();
                 }
             });
             
@@ -832,35 +232,54 @@
                     // 渲染对应分类的报告
                     const category = button.dataset.category;
                     renderReports(category);
-                    
-                    // 更新导航链接状态
-                    updateNavLinks(category);
                 });
             });
             
             // 卡片点击事件
             reportsGrid.addEventListener('click', (e) => {
                 const card = e.target.closest('.report-card');
-                if (card) {
+                if (card && !e.target.closest('.report-action')) {
                     const reportId = card.dataset.id;
                     viewReport(reportId);
                 }
             });
         }
 
-        // 更新导航链接状态
-        function updateNavLinks(category) {
-            const navLinks = document.querySelectorAll('.nav-link');
+        // 设置导航链接
+        function setupNavLinks() {
             navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${category}`) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // 更新导航链接状态
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
                     link.classList.add('active');
-                }
+                    
+                    // 更新筛选按钮状态
+                    const category = link.dataset.category;
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.dataset.category === category) {
+                            btn.classList.add('active');
+                        }
+                    });
+                    
+                    // 渲染对应分类的报告
+                    renderReports(category);
+                });
             });
+        }
+
+        // 关闭查看器
+        function closeViewer() {
+            reportViewer.classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
 
         // 暴露函数到全局作用域
         window.viewReport = viewReport;
+        window.copyCode = copyCode;
+        window.closeViewer = closeViewer;
     </script>
 </body>
 </html>
