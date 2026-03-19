@@ -33,6 +33,7 @@
     --meituan-color: #ffc300;
     --horizon-color: #00b894;
     --sanan-color: #0984e3;
+    --zhongchong-color: #ff9f43;
     
     /* 字体 */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -371,6 +372,10 @@ a:hover {
     background-color: var(--sanan-color);
 }
 
+.company-logo.zhongchong {
+    background-color: var(--zhongchong-color);
+}
+
 .company-info {
     flex: 1;
 }
@@ -566,6 +571,10 @@ a:hover {
 
 .legend-color.sanan {
     background-color: var(--sanan-color);
+}
+
+.legend-color.zhongchong {
+    background-color: var(--zhongchong-color);
 }
 
 .valuation-notes h4 {

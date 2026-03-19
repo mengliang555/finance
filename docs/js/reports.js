@@ -47,6 +47,17 @@ const reports = [
         size: '11.9KB',
         rawPath: 'reports/company_analysis/sanan_opto_financial_analysis.md'
     },
+    {
+        id: 'zhongchong',
+        title: '中宠股份深度分析报告',
+        category: 'company',
+        description: '宠物食品龙头企业深度分析，包括财务表现、行业前景、投资建议等全面分析。',
+        icon: 'fas fa-paw',
+        iconColor: 'linear-gradient(135deg, #ff9f43, #ffb872)',
+        date: '2026-03-19',
+        size: '9.3KB',
+        rawPath: 'reports/zhongchong_analysis_20260319.md'
+    },
     
     // 行业分析报告
     {
