@@ -7,6 +7,7 @@
 - [美团财务分析](reports/company_analysis/meituan_financial_analysis.md)
 - [地平线机器人财务分析](reports/company_analysis/horizon_robotics_financial_analysis.md)
 - [三安光电财务分析](reports/company_analysis/sanan_opto_financial_analysis.md)
+- [中宠股份深度分析](reports/zhongchong_analysis_20260319.md)
 
 ### 行业分析报告
 - [四家公司对比分析](reports/industry_analysis/comparative_analysis.md)
@@ -14,6 +15,13 @@
 
 ### 每日报告
 - [2026年3月12日股票表现](reports/daily_reports/daily_stock_performance_20260312.md)
+- [2026年3月12日公司分析](reports/daily_analysis/daily_company_analysis_20260312.md)
+- [2026年3月13日公司分析](reports/daily_analysis/daily_company_analysis_20260313.md)
+- [2026年3月14日公司分析（周末特别版）](reports/daily_analysis/daily_company_analysis_20260314.md)
+- [2026年3月15日公司分析（周日准备版）](reports/daily_analysis/daily_company_analysis_20260315.md)
+- [2026年3月16日公司分析（周一复盘版）](reports/daily_analysis/daily_company_analysis_20260316.md)
+- [2026年3月17日公司分析（周二复盘版）](reports/daily_analysis/daily_company_analysis_20260317.md)
+- [2026年3月18日公司分析（周三复盘版）](reports/daily_analysis/daily_company_analysis_20260318.md)
 
 ### AI分析报告
 - [DeepSeek V4开源影响分析](reports/ai_analysis/deepseek_v4_open_source_analysis.md)
@@ -122,6 +130,6 @@
 
 ---
 
-**导航索引最后更新**: 2026年3月12日  
+**导航索引最后更新**: 2026年3月19日  
 **维护状态**: 活跃  
-**下次全面检查**: 2026年3月19日
+**下次全面检查**: 2026年3月26日
