@@ -10,8 +10,8 @@ const reports = [
         description: '深度分析小米集团的财务表现、业务发展和投资价值，包括智能手机、IoT、汽车等业务分析。',
         icon: 'fas fa-mobile-alt',
         iconColor: 'linear-gradient(135deg, #ff6b6b, #ff8e8e)',
-        date: '2026-03-11',
-        size: '15.2KB',
+        date: '2026-05-09',
+        size: '8.8KB',
         rawPath: 'reports/company_analysis/xiaomi_financial_analysis.md'
     },
     {
@@ -21,8 +21,8 @@ const reports = [
         description: '全面分析美团的本地生活服务平台业务，包括外卖、到店服务、酒店旅游等业务分析。',
         icon: 'fas fa-shopping-bag',
         iconColor: 'linear-gradient(135deg, #4ecdc4, #6de5dd)',
-        date: '2026-03-11',
-        size: '14.8KB',
+        date: '2026-05-09',
+        size: '8.7KB',
         rawPath: 'reports/company_analysis/meituan_financial_analysis.md'
     },
     {
@@ -32,8 +32,8 @@ const reports = [
         description: '基于真实上市数据的自动驾驶AI芯片公司分析，包括技术优势、市场机会和投资建议。',
         icon: 'fas fa-robot',
         iconColor: 'linear-gradient(135deg, #45b7d1, #67c9e0)',
-        date: '2026-03-11',
-        size: '12.5KB',
+        date: '2026-05-09',
+        size: '8.6KB',
         rawPath: 'reports/company_analysis/horizon_robotics_financial_analysis.md'
     },
     {
@@ -43,8 +43,8 @@ const reports = [
         description: 'LED芯片全球龙头和化合物半导体领先企业的财务分析和业务展望。',
         icon: 'fas fa-microchip',
         iconColor: 'linear-gradient(135deg, #96ceb4, #b4e6d2)',
-        date: '2026-03-11',
-        size: '11.9KB',
+        date: '2026-05-09',
+        size: '8.6KB',
         rawPath: 'reports/company_analysis/sanan_opto_financial_analysis.md'
     },
     {
@@ -54,9 +54,9 @@ const reports = [
         description: '宠物食品龙头企业深度分析，包括财务表现、行业前景、投资建议等全面分析。',
         icon: 'fas fa-paw',
         iconColor: 'linear-gradient(135deg, #ff9f43, #ffb872)',
-        date: '2026-03-19',
-        size: '9.3KB',
-        rawPath: 'reports/zhongchong_analysis_20260319.md'
+        date: '2026-05-09',
+        size: '8.5KB',
+        rawPath: 'reports/company_analysis/zhongchong_financial_analysis.md'
     },
     
     // 行业分析报告

@@ -22,6 +22,8 @@
 - [2026年3月16日公司分析（周一复盘版）](reports/daily_analysis/daily_company_analysis_20260316.md)
 - [2026年3月17日公司分析（周二复盘版）](reports/daily_analysis/daily_company_analysis_20260317.md)
 - [2026年3月18日公司分析（周三复盘版）](reports/daily_analysis/daily_company_analysis_20260318.md)
+- [2026年3月19日公司分析（周四复盘版）](reports/daily_analysis/daily_company_analysis_20260319.md)
+- [2026年3月19日公司分析（周四复盘版）](reports/daily_analysis/daily_company_analysis_20260319.md)
 
 ### AI分析报告
 - [DeepSeek V4开源影响分析](reports/ai_analysis/deepseek_v4_open_source_analysis.md)
