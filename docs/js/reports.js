@@ -162,7 +162,7 @@ let filterButtons, navLinks;
 let companyCount, industryCount, dailyCount, aiCount;
 
 // 初始化
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // 获取DOM元素
     reportsGrid = document.getElementById('reportsGrid');
     emptyState = document.getElementById('emptyState');
@@ -179,12 +179,32 @@ document.addEventListener('DOMContentLoaded', () => {
     dailyCount = document.getElementById('dailyCount');
     aiCount = document.getElementById('aiCount');
     
+    await loadDynamicReports();
+
     // 初始化功能
     updateStats();
     renderReports('all');
     setupEventListeners();
     setupNavLinks();
 });
+
+async function loadDynamicReports() {
+    try {
+        const response = await fetch('reports/daily_reports.json', { cache: 'no-store' });
+        if (!response.ok) return;
+
+        const payload = await response.json();
+        const existingIds = new Set(reports.map(report => report.id));
+        (payload.reports || []).forEach(report => {
+            if (!existingIds.has(report.id)) {
+                reports.unshift(report);
+                existingIds.add(report.id);
+            }
+        });
+    } catch (error) {
+        console.warn('动态日报索引加载失败:', error);
+    }
+}
 
 // 更新统计信息
 function updateStats() {
@@ -289,6 +309,17 @@ async function viewReport(reportId) {
     `;
     
     try {
+        if (report.htmlPath) {
+            viewerContent.innerHTML = `
+                <iframe
+                    src="${report.htmlPath}"
+                    title="${report.title}"
+                    style="width: 100%; height: 75vh; border: 0; border-radius: 8px; background: #fff;"
+                ></iframe>
+            `;
+            return;
+        }
+
         // 使用GitHub raw文件URL
         const rawUrl = `https://raw.githubusercontent.com/mengliang555/finance/main/${report.rawPath}`;
         

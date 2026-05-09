@@ -1,10 +1,10 @@
 {
   "name": "每日公司分析定时任务",
-  "description": "每天6点自动分析小米、美团、地平线机器人、三安光电四家公司，生成分析报告并存储",
+  "description": "每天09:00自动分析小米、美团、地平线机器人、三安光电四家公司，生成综合分析报告并存储",
   "schedule": {
-    "cron_expression": "0 18 * * *",
+    "cron_expression": "0 9 * * *",
     "timezone": "Asia/Shanghai",
-    "description": "每天下午6点执行"
+    "description": "每天09:00 Asia/Shanghai执行"
   },
   "companies": [
     {
@@ -41,18 +41,42 @@
     }
   ],
   "analysis_parameters": {
-    "data_period": "5d",
+    "data_period": "10d",
     "include_news": true,
-    "news_count": 5,
+    "news_count": 8,
     "generate_json": true,
     "generate_markdown": true,
     "generate_summary": true,
+    "generate_pages": true,
     "log_analysis": true
   },
   "output_directories": {
     "data": "data/daily_analysis",
     "reports": "reports/daily_analysis",
-    "logs": "logs"
+    "logs": "logs",
+    "docs_reports": "docs/reports"
+  },
+  "market_close_times": {
+    "港股": "16:00",
+    "A股": "15:00",
+    "default": "16:00"
+  },
+  "market_data": {
+    "provider_order": ["yfinance", "sina"],
+    "prefer_sina_tickers": ["09660.HK"],
+    "sina_symbols": {
+      "1810.HK": "hk01810",
+      "3690.HK": "hk03690",
+      "09660.HK": "hk09660",
+      "600703.SS": "sh600703",
+      "002891.SZ": "sz002891"
+    },
+    "fallback_note": "Yahoo Finance 行情缺失或异常时自动回退到新浪财经行情接口；新浪接口为非官方公开行情源。"
+  },
+  "news": {
+    "provider": "yfinance",
+    "fallback": "网络新闻不可用时保留行情和基本面分析，并在报告中标注新闻缺失原因",
+    "industry_tickers": ["^HSI", "^HSTECH", "000001.SS", "159995.SZ"]
   },
   "notification": {
     "enabled": false,
@@ -79,6 +103,6 @@
     "performance_metrics": true
   },
   "version": "1.0.0",
-  "last_updated": "2026-03-12",
+  "last_updated": "2026-05-09",
   "maintainer": "财务分析中心"
 }
