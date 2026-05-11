@@ -1,6 +1,18 @@
 {
   "reports": [
     {
+      "id": "daily-company-20260511",
+      "title": "每日公司综合分析报告 2026-05-11",
+      "category": "daily",
+      "description": "每日公司综合分析，包含上一交易日表现、公司消息面和行业消息面。",
+      "icon": "fas fa-calendar-day",
+      "iconColor": "linear-gradient(135deg, #54a0ff, #7bb9ff)",
+      "date": "2026-05-11",
+      "size": "4.6KB",
+      "rawPath": "reports/daily_analysis/daily_company_analysis_20260511.md",
+      "htmlPath": "reports/daily_company_analysis_20260511.html"
+    },
+    {
       "id": "daily-company-20260510",
       "title": "每日公司综合分析报告 2026-05-10",
       "category": "daily",
