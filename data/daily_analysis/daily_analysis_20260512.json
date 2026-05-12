@@ -1,0 +1,673 @@
+{
+  "generated_at": "2026-05-12T09:00:15.421269+08:00",
+  "industry_news": {
+    "provider": "yfinance",
+    "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+    "items": [
+      {
+        "title": "3 Asian Growth Stocks With Up To 36% Insider Ownership",
+        "publisher": "Simply Wall St.",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/3-asian-growth-stocks-36-223801278.html",
+        "published_at": "2026-05-12T06:38:01+08:00",
+        "published_display": "2026-05-12 06:38",
+        "source": "yfinance news",
+        "source_symbol": "^HSI"
+      },
+      {
+        "title": "Asian Undervalued Small Caps With Insider Action In May 2026",
+        "publisher": "Simply Wall St.",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/asian-undervalued-small-caps-insider-223629909.html",
+        "published_at": "2026-05-12T06:36:29+08:00",
+        "published_display": "2026-05-12 06:36",
+        "source": "yfinance news",
+        "source_symbol": "^HSI"
+      },
+      {
+        "title": "Wall Street Cues, Oil, Geopolitics Roil Asian Stock Marlets",
+        "publisher": "MT Newswires",
+        "link": "https://finance.yahoo.com/markets/world-indices/articles/wall-street-cues-oil-geopolitics-104220750.html",
+        "published_at": "2026-05-11T18:42:20+08:00",
+        "published_display": "2026-05-11 18:42",
+        "source": "yfinance news",
+        "source_symbol": "^HSI"
+      }
+    ],
+    "error": null,
+    "window": {
+      "start": "2026-05-11 16:00:00 CST",
+      "end": "2026-05-12 09:00:15 CST"
+    }
+  },
+  "results": [
+    {
+      "company_id": "xiaomi",
+      "company_name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": [
+        "智能手机",
+        "IoT",
+        "汽车业务",
+        "海外市场"
+      ],
+      "analysis_date": "2026-05-12",
+      "analysis_time": "2026-05-12 09:00:15 CST",
+      "news_window": {
+        "start": "2026-05-11 16:00:00 CST",
+        "end": "2026-05-12 09:00:15 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-04-27",
+          "open": 31.200000762939453,
+          "high": 31.34000015258789,
+          "low": 30.6200008392334,
+          "close": 31.100000381469727,
+          "volume": 88584715
+        },
+        {
+          "date": "2026-04-28",
+          "open": 31.100000381469727,
+          "high": 31.200000762939453,
+          "low": 29.899999618530273,
+          "close": 29.920000076293945,
+          "volume": 211802864
+        },
+        {
+          "date": "2026-04-29",
+          "open": 29.920000076293945,
+          "high": 30.360000610351562,
+          "low": 29.700000762939453,
+          "close": 30.139999389648438,
+          "volume": 167446422
+        },
+        {
+          "date": "2026-04-30",
+          "open": 29.81999969482422,
+          "high": 29.8799991607666,
+          "low": 28.799999237060547,
+          "close": 29.020000457763672,
+          "volume": 284581634
+        },
+        {
+          "date": "2026-05-04",
+          "open": 29.059999465942383,
+          "high": 32.13999938964844,
+          "low": 29.059999465942383,
+          "close": 30.979999542236328,
+          "volume": 234369711
+        },
+        {
+          "date": "2026-05-05",
+          "open": 30.799999237060547,
+          "high": 30.920000076293945,
+          "low": 29.84000015258789,
+          "close": 30.459999084472656,
+          "volume": 110953102
+        },
+        {
+          "date": "2026-05-06",
+          "open": 30.520000457763672,
+          "high": 31.18000030517578,
+          "low": 30.299999237060547,
+          "close": 30.81999969482422,
+          "volume": 208359203
+        },
+        {
+          "date": "2026-05-07",
+          "open": 31.219999313354492,
+          "high": 31.479999542236328,
+          "low": 30.760000228881836,
+          "close": 31.1200008392334,
+          "volume": 142253475
+        },
+        {
+          "date": "2026-05-08",
+          "open": 31.020000457763672,
+          "high": 31.920000076293945,
+          "low": 30.860000610351562,
+          "close": 31.68000030517578,
+          "volume": 132137552
+        },
+        {
+          "date": "2026-05-11",
+          "open": 31.520000457763672,
+          "high": 32.0,
+          "low": 31.079999923706055,
+          "close": 31.700000762939453,
+          "volume": 113289085
+        }
+      ],
+      "price": {
+        "current": 31.7,
+        "previous": 31.68,
+        "change": 0.02,
+        "change_pct": 0.06,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-05-11",
+        "close": 31.7,
+        "previous_close": 31.68,
+        "change": 0.02,
+        "change_pct": 0.06,
+        "volume": 113289085
+      },
+      "fundamentals": {
+        "market_cap": 818637111296,
+        "pe_ratio": 17.611113,
+        "pb_ratio": 2.678982,
+        "dividend_yield": null,
+        "beta": 0.725,
+        "volume": 113291885,
+        "avg_volume": 167786049,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 1810.HK",
+        "items": [],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "3 Asian Growth Stocks With Up To 36% Insider Ownership",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/3-asian-growth-stocks-36-223801278.html",
+            "published_at": "2026-05-12T06:38:01+08:00",
+            "published_display": "2026-05-12 06:38",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "Asian Undervalued Small Caps With Insider Action In May 2026",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/asian-undervalued-small-caps-insider-223629909.html",
+            "published_at": "2026-05-12T06:36:29+08:00",
+            "published_display": "2026-05-12 06:36",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "Wall Street Cues, Oil, Geopolitics Roil Asian Stock Marlets",
+            "publisher": "MT Newswires",
+            "link": "https://finance.yahoo.com/markets/world-indices/articles/wall-street-cues-oil-geopolitics-104220750.html",
+            "published_at": "2026-05-11T18:42:20+08:00",
+            "published_display": "2026-05-11 18:42",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-05-11 16:00:00 CST",
+          "end": "2026-05-12 09:00:15 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 0.06%，价格相对平稳",
+        "窗口期内抓取到 3 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "meituan",
+      "company_name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": [
+        "外卖业务",
+        "到店服务",
+        "酒店旅游",
+        "新业务"
+      ],
+      "analysis_date": "2026-05-12",
+      "analysis_time": "2026-05-12 09:00:15 CST",
+      "news_window": {
+        "start": "2026-05-11 16:00:00 CST",
+        "end": "2026-05-12 09:00:15 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-04-27",
+          "open": 82.44999694824219,
+          "high": 82.44999694824219,
+          "low": 80.4000015258789,
+          "close": 81.8499984741211,
+          "volume": 39390929
+        },
+        {
+          "date": "2026-04-28",
+          "open": 80.8499984741211,
+          "high": 81.6500015258789,
+          "low": 80.19999694824219,
+          "close": 80.30000305175781,
+          "volume": 33674973
+        },
+        {
+          "date": "2026-04-29",
+          "open": 81.44999694824219,
+          "high": 84.1500015258789,
+          "low": 80.6500015258789,
+          "close": 83.1500015258789,
+          "volume": 45687332
+        },
+        {
+          "date": "2026-04-30",
+          "open": 81.9000015258789,
+          "high": 84.5,
+          "low": 81.25,
+          "close": 83.25,
+          "volume": 45918845
+        },
+        {
+          "date": "2026-05-04",
+          "open": 84.0,
+          "high": 86.80000305175781,
+          "low": 83.6500015258789,
+          "close": 84.44999694824219,
+          "volume": 16917991
+        },
+        {
+          "date": "2026-05-05",
+          "open": 83.5999984741211,
+          "high": 83.94999694824219,
+          "low": 82.19999694824219,
+          "close": 83.55000305175781,
+          "volume": 10874630
+        },
+        {
+          "date": "2026-05-06",
+          "open": 83.94999694824219,
+          "high": 84.55000305175781,
+          "low": 82.1500015258789,
+          "close": 82.5,
+          "volume": 38773772
+        },
+        {
+          "date": "2026-05-07",
+          "open": 84.5,
+          "high": 85.30000305175781,
+          "low": 83.80000305175781,
+          "close": 84.25,
+          "volume": 41734088
+        },
+        {
+          "date": "2026-05-08",
+          "open": 83.5999984741211,
+          "high": 84.69999694824219,
+          "low": 83.19999694824219,
+          "close": 84.05000305175781,
+          "volume": 24167472
+        },
+        {
+          "date": "2026-05-11",
+          "open": 83.0999984741211,
+          "high": 84.80000305175781,
+          "low": 82.4000015258789,
+          "close": 84.3499984741211,
+          "volume": 29716251
+        }
+      ],
+      "price": {
+        "current": 84.35,
+        "previous": 84.05,
+        "change": 0.3,
+        "change_pct": 0.36,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-05-11",
+        "close": 84.35,
+        "previous_close": 84.05,
+        "change": 0.3,
+        "change_pct": 0.36,
+        "volume": 29716251
+      },
+      "fundamentals": {
+        "market_cap": 520809218048,
+        "pe_ratio": null,
+        "pb_ratio": 2.9632366,
+        "dividend_yield": null,
+        "beta": 0.201,
+        "volume": 29716551,
+        "avg_volume": 51251219,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 3690.HK",
+        "items": [],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "3 Asian Growth Stocks With Up To 36% Insider Ownership",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/3-asian-growth-stocks-36-223801278.html",
+            "published_at": "2026-05-12T06:38:01+08:00",
+            "published_display": "2026-05-12 06:38",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "Asian Undervalued Small Caps With Insider Action In May 2026",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/asian-undervalued-small-caps-insider-223629909.html",
+            "published_at": "2026-05-12T06:36:29+08:00",
+            "published_display": "2026-05-12 06:36",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "Wall Street Cues, Oil, Geopolitics Roil Asian Stock Marlets",
+            "publisher": "MT Newswires",
+            "link": "https://finance.yahoo.com/markets/world-indices/articles/wall-street-cues-oil-geopolitics-104220750.html",
+            "published_at": "2026-05-11T18:42:20+08:00",
+            "published_display": "2026-05-11 18:42",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-05-11 16:00:00 CST",
+          "end": "2026-05-12 09:00:15 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 0.36%，价格相对平稳",
+        "窗口期内抓取到 3 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "horizon",
+      "company_name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": [
+        "AI芯片",
+        "自动驾驶",
+        "合作伙伴",
+        "技术优势"
+      ],
+      "analysis_date": "2026-05-12",
+      "analysis_time": "2026-05-12 09:00:15 CST",
+      "news_window": {
+        "start": "2026-05-11 16:00:00 CST",
+        "end": "2026-05-12 09:00:15 CST"
+      },
+      "success": true,
+      "history": [],
+      "price": {
+        "current": 6.87,
+        "previous": 7.02,
+        "change": -0.15,
+        "change_pct": -2.14,
+        "trend": "下跌",
+        "source": "Sina Finance"
+      },
+      "previous_session": {
+        "date": "2026-05-11",
+        "close": 6.87,
+        "previous_close": 7.02,
+        "change": -0.15,
+        "change_pct": -2.14,
+        "volume": 217528910,
+        "source": "Sina Finance",
+        "source_symbol": "hk09660",
+        "source_url": "https://hq.sinajs.cn/list=hk09660",
+        "open": 7.02,
+        "high": 7.02,
+        "low": 6.73,
+        "raw_name": "地平线机器人－Ｗ"
+      },
+      "fundamentals": {
+        "volume": 217528910
+      },
+      "market_data_source": "Sina Finance",
+      "market_data_notes": [
+        "配置为优先使用新浪财经行情"
+      ],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 09660.HK",
+        "items": [],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "3 Asian Growth Stocks With Up To 36% Insider Ownership",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/3-asian-growth-stocks-36-223801278.html",
+            "published_at": "2026-05-12T06:38:01+08:00",
+            "published_display": "2026-05-12 06:38",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "Asian Undervalued Small Caps With Insider Action In May 2026",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/asian-undervalued-small-caps-insider-223629909.html",
+            "published_at": "2026-05-12T06:36:29+08:00",
+            "published_display": "2026-05-12 06:36",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "Wall Street Cues, Oil, Geopolitics Roil Asian Stock Marlets",
+            "publisher": "MT Newswires",
+            "link": "https://finance.yahoo.com/markets/world-indices/articles/wall-street-cues-oil-geopolitics-104220750.html",
+            "published_at": "2026-05-11T18:42:20+08:00",
+            "published_display": "2026-05-11 18:42",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-05-11 16:00:00 CST",
+          "end": "2026-05-12 09:00:15 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 2.14%，短线承压",
+        "窗口期内抓取到 3 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "sanan",
+      "company_name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": [
+        "LED芯片",
+        "化合物半导体",
+        "Mini/Micro LED",
+        "碳化硅"
+      ],
+      "analysis_date": "2026-05-12",
+      "analysis_time": "2026-05-12 09:00:15 CST",
+      "news_window": {
+        "start": "2026-05-11 15:00:00 CST",
+        "end": "2026-05-12 09:00:15 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-04-23",
+          "open": 15.899999618530273,
+          "high": 16.059999465942383,
+          "low": 15.1899995803833,
+          "close": 15.510000228881836,
+          "volume": 542264223
+        },
+        {
+          "date": "2026-04-24",
+          "open": 15.350000381469727,
+          "high": 15.9399995803833,
+          "low": 15.0,
+          "close": 15.109999656677246,
+          "volume": 355345492
+        },
+        {
+          "date": "2026-04-27",
+          "open": 14.979999542236328,
+          "high": 15.460000038146973,
+          "low": 14.539999961853027,
+          "close": 14.729999542236328,
+          "volume": 299420167
+        },
+        {
+          "date": "2026-04-28",
+          "open": 14.520000457763672,
+          "high": 14.680000305175781,
+          "low": 13.920000076293945,
+          "close": 13.989999771118164,
+          "volume": 237375606
+        },
+        {
+          "date": "2026-04-29",
+          "open": 13.800000190734863,
+          "high": 14.270000457763672,
+          "low": 13.789999961853027,
+          "close": 13.9399995803833,
+          "volume": 176255829
+        },
+        {
+          "date": "2026-04-30",
+          "open": 13.970000267028809,
+          "high": 14.050000190734863,
+          "low": 13.579999923706055,
+          "close": 13.670000076293945,
+          "volume": 163049652
+        },
+        {
+          "date": "2026-05-06",
+          "open": 14.0600004196167,
+          "high": 15.039999961853027,
+          "low": 14.0600004196167,
+          "close": 14.680000305175781,
+          "volume": 329183457
+        },
+        {
+          "date": "2026-05-07",
+          "open": 14.680000305175781,
+          "high": 15.25,
+          "low": 14.609999656677246,
+          "close": 15.140000343322754,
+          "volume": 302006543
+        },
+        {
+          "date": "2026-05-08",
+          "open": 14.949999809265137,
+          "high": 15.449999809265137,
+          "low": 14.770000457763672,
+          "close": 15.279999732971191,
+          "volume": 245560577
+        },
+        {
+          "date": "2026-05-11",
+          "open": 15.619999885559082,
+          "high": 16.329999923706055,
+          "low": 15.600000381469727,
+          "close": 16.040000915527344,
+          "volume": 369735268
+        }
+      ],
+      "price": {
+        "current": 16.04,
+        "previous": 15.28,
+        "change": 0.76,
+        "change_pct": 4.97,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-05-11",
+        "close": 16.04,
+        "previous_close": 15.28,
+        "change": 0.76,
+        "change_pct": 4.97,
+        "volume": 369735268
+      },
+      "fundamentals": {
+        "market_cap": 80023863296,
+        "pe_ratio": null,
+        "pb_ratio": 2.1628911,
+        "dividend_yield": 0.12,
+        "beta": 0.844,
+        "volume": 369735268,
+        "avg_volume": 244334441,
+        "currency": "CNY"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 600703.SS",
+        "items": [],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "3 Asian Growth Stocks With Up To 36% Insider Ownership",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/3-asian-growth-stocks-36-223801278.html",
+            "published_at": "2026-05-12T06:38:01+08:00",
+            "published_display": "2026-05-12 06:38",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "Asian Undervalued Small Caps With Insider Action In May 2026",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/asian-undervalued-small-caps-insider-223629909.html",
+            "published_at": "2026-05-12T06:36:29+08:00",
+            "published_display": "2026-05-12 06:36",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "Wall Street Cues, Oil, Geopolitics Roil Asian Stock Marlets",
+            "publisher": "MT Newswires",
+            "link": "https://finance.yahoo.com/markets/world-indices/articles/wall-street-cues-oil-geopolitics-104220750.html",
+            "published_at": "2026-05-11T18:42:20+08:00",
+            "published_display": "2026-05-11 18:42",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-05-11 16:00:00 CST",
+          "end": "2026-05-12 09:00:15 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 4.97%，短线动能偏强",
+        "窗口期内抓取到 3 条行业消息，需关注板块情绪"
+      ]
+    }
+  ]
+}
