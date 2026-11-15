@@ -1,5 +1,32 @@
 # 更新日志
 
+## 2026年11月15日 - LLM 估值分析与邮件日报（分支 feat/llm-valuation-email）
+
+### 主要变更
+1. **新增 `scripts/valuation_report.py`**
+   - 复用行情与新闻采集，计算 52 周区间位置、20/60 日均线、区间收益、年化波动率
+   - 调用 OpenAI 兼容接口（默认 DeepSeek）生成结构化估值 JSON
+   - 校验枚举与长度，非法输出降级为规则结论
+   - 生成 Markdown 报告并渲染 HTML 邮件，支持 SMTP SSL 与 STARTTLS
+
+2. **新增 `.github/workflows/valuation-report.yml`**
+   - 每天 02:00 UTC（10:00 Asia/Shanghai）运行，支持手动触发
+   - 密钥全部来自 GitHub Secrets，报告作为 artifact 上传
+
+3. **配置新增 `valuation` 段**：历史区间、新闻条数、模型参数、邮件主题前缀
+
+4. **新增 26 个单元测试**：JSON 解析、枚举降级、规则回退、HTML 转义、邮件头注入、SMTP 分支
+
+5. **新增 `guides/VALUATION_LLM_EMAIL.md`**：密钥申请、SMTP 授权码、本地测试与故障排查
+
+### 背景
+- 现有日报的“分析结论”是固定阈值模板，没有真正的估值推理，也不会主动送达。
+
+### 影响
+- ✅ 每天一封估值邮件，包含评级、合理区间、驱动与风险
+- ✅ 模型不可用时自动降级，邮件不会因为单点失败而丢失
+- ✅ 密钥不落库，新闻输入按不可信数据处理
+
 ## 2026年11月15日 - 新闻源增加 Google News RSS 兜底
 
 ### 主要变更

@@ -84,6 +84,21 @@
       "timeout": 12
     }
   },
+  "valuation": {
+    "history_period": "1y",
+    "news_days": 7,
+    "max_news": 5,
+    "llm": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-chat",
+      "temperature": 0.2,
+      "max_tokens": 1200,
+      "timeout": 60
+    },
+    "email": {
+      "subject_prefix": "每日估值分析"
+    }
+  },
   "notification": {
     "enabled": false,
     "channels": ["email", "slack"],

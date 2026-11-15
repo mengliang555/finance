@@ -33,6 +33,7 @@
 - [GitHub Pages设置指南](guides/GITHUB_PAGES_SETUP.md)
 - [Cloudflare Workers部署指南](guides/CLOUDFLARE_DEPLOY.md)
 - [每日分析自动化指南](guides/DAILY_ANALYSIS_SETUP.md)
+- [LLM 估值邮件指南](guides/VALUATION_LLM_EMAIL.md)
 - [Markdown报告指南](guides/MARKDOWN_REPORTS_GUIDE.md)
 
 ### 网站页面
