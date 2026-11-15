@@ -1,25 +1,19 @@
 #!/usr/bin/env python3
-"""基于 LLM 的每日估值分析，并通过邮件发送。
+"""基于 LLM 的估值与仓位建议报告。
 
-数据采集复用 ``daily_company_analysis`` 的配置、行情与新闻逻辑；LLM 与 SMTP
-只用标准库实现，密钥全部来自环境变量，不写入仓库。
+数据采集复用 ``daily_company_analysis`` 的配置、行情与新闻逻辑；结果写入
+``docs/`` 下的独立页面与 JSON 索引，不发送邮件。
 
 环境变量：
     LLM_API_KEY        调用大模型所需密钥（使用 --no-llm 时可不设）
     LLM_BASE_URL       默认取配置 valuation.llm.base_url
     LLM_MODEL          默认取配置 valuation.llm.model
-    SMTP_HOST          邮件服务器
-    SMTP_PORT          默认 465
-    SMTP_USE_SSL       默认 true；设为 false 时使用 STARTTLS（常见于 587）
-    SMTP_USER          SMTP 账号
-    SMTP_PASSWORD      SMTP 密码 / 授权码
-    SMTP_FROM          发件人，默认等于 SMTP_USER
-    MAIL_TO            收件人，逗号分隔
 
 用法：
-    python scripts/valuation_report.py --dry-run      # 只生成报告，不发邮件
+    python scripts/valuation_report.py                # 生成 Markdown、页面与索引
+    python scripts/valuation_report.py --dry-run      # 额外把 Markdown 打印到终端
     python scripts/valuation_report.py --no-llm       # 用规则结论，不调用 LLM
-    python scripts/valuation_report.py                # 生成并发送
+    python scripts/valuation_report.py --no-page      # 不写入 docs/ 页面
 """
 
 from __future__ import annotations
@@ -30,15 +24,11 @@ import json
 import math
 import os
 import re
-import smtplib
-import ssl
 import statistics
 import sys
-import traceback
 import urllib.error
 import urllib.request
 from datetime import datetime, timedelta
-from email.message import EmailMessage
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -462,75 +452,6 @@ def render_markdown(results, now):
     return "\n".join(lines) + "\n"
 
 
-def render_html(results, now):
-    rows = []
-    sections = []
-    for result in results:
-        company = result["company"]
-        metrics = result["metrics"]
-        view = result["analysis"]
-        position = metrics.get("range_position")
-        position_text = f"{position:.0%}" if isinstance(position, (int, float)) else "N/A"
-        rows.append(
-            "<tr>"
-            f"<td>{html.escape(company.get('name', ''))}</td>"
-            f"<td>{html.escape(company.get('ticker', ''))}</td>"
-            f"<td>{html.escape(_format_number(metrics.get('price')))}</td>"
-            f"<td>{html.escape(_format_number(metrics.get('pe_ratio')))}</td>"
-            f"<td>{html.escape(_format_number(metrics.get('pb_ratio')))}</td>"
-            f"<td>{html.escape(position_text)}</td>"
-            f"<td><strong>{html.escape(view['rating'])}</strong></td>"
-            f"<td><strong>{html.escape(view['action'])}</strong></td>"
-            f"<td>{html.escape(view['confidence'])}</td>"
-            "</tr>"
-        )
-
-        detail = [
-            f"<h3>{html.escape(company.get('name', ''))}（{html.escape(company.get('ticker', ''))}）</h3>",
-            f"<p>现价 <strong>{html.escape(_format_number(metrics.get('price')))}</strong>"
-            f"｜52 周区间 {html.escape(_format_number(metrics.get('low_52w')))} – "
-            f"{html.escape(_format_number(metrics.get('high_52w')))}</p>",
-            f"<p>估值判断：<strong>{html.escape(view['rating'])}</strong>"
-            f"（置信度 {html.escape(view['confidence'])}）｜合理区间 {html.escape(view['fair_value_range'])}</p>",
-            f"<p>仓位建议：<strong>{html.escape(view['action'])}</strong>"
-            f"（{html.escape(view['position_hint'])}）</p>",
-            f"<p>{html.escape(view['action_reason'] or '数据不足')}</p>",
-            f"<p>{html.escape(view['thesis'] or '数据不足')}</p>",
-        ]
-        for label, key in (("驱动因素", "drivers"), ("主要风险", "risks"), ("数据缺口", "data_gaps")):
-            if view.get(key):
-                items = "".join(f"<li>{html.escape(item)}</li>" for item in view[key])
-                detail.append(f"<p><strong>{label}</strong></p><ul>{items}</ul>")
-        if result.get("error"):
-            detail.append(f"<p class='muted'>备注：{html.escape(result['error'])}</p>")
-        if metrics.get("error"):
-            detail.append(f"<p class='muted'>数据错误：{html.escape(metrics['error'])}</p>")
-        sections.append("".join(detail))
-
-    return f"""<!DOCTYPE html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8"><title>每日估值分析 {now.strftime('%Y-%m-%d')}</title></head>
-<body style="margin:0;padding:24px;background:#f6f7f9;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:#1f2937;">
-  <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:10px;padding:24px;">
-    <h1 style="font-size:20px;margin:0 0 8px;">每日估值分析 {now.strftime('%Y-%m-%d')}</h1>
-    <p style="color:#6b7280;font-size:13px;margin:0 0 20px;">{html.escape(DISCLAIMER)}</p>
-    <table style="width:100%;border-collapse:collapse;font-size:13px;">
-      <thead><tr style="background:#f3f4f6;text-align:left;">
-        <th style="padding:8px;">公司</th><th style="padding:8px;">代码</th><th style="padding:8px;">现价</th>
-        <th style="padding:8px;">PE</th><th style="padding:8px;">PB</th><th style="padding:8px;">52周位置</th>
-        <th style="padding:8px;">判断</th><th style="padding:8px;">建议</th><th style="padding:8px;">置信度</th>
-      </tr></thead>
-      <tbody>{''.join(rows)}</tbody>
-    </table>
-    <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0;">
-    {''.join(f"<section style='margin-bottom:24px;'>{section}</section>" for section in sections)}
-    <p style="color:#9ca3af;font-size:12px;">行情与基本面来自 Yahoo Finance，缺失时回退新浪行情；新闻来自 yfinance，无结果时回退 Google 新闻 RSS。</p>
-  </div>
-</body>
-</html>
-"""
-
-
 def build_items(results):
     """把分析结果压缩成页面/JSON 需要的结构。"""
     items = []
@@ -749,44 +670,11 @@ def write_report(markdown, now, out_path=None):
     return path
 
 
-def build_email(subject, text_body, html_body, recipients, sender):
-    message = EmailMessage()
-    message["Subject"] = clean_text(subject, 120) or "每日估值分析"
-    message["From"] = sender
-    message["To"] = ", ".join(recipients)
-    message.set_content(text_body)
-    message.add_alternative(html_body, subtype="html")
-    return message
-
-
-def send_email(message, timeout=30):
-    host = os.environ.get("SMTP_HOST", "").strip()
-    user = os.environ.get("SMTP_USER", "").strip()
-    password = os.environ.get("SMTP_PASSWORD", "").strip()
-    if not host or not user or not password:
-        raise RuntimeError("缺少 SMTP_HOST / SMTP_USER / SMTP_PASSWORD")
-
-    port = int(os.environ.get("SMTP_PORT", "465"))
-    use_ssl = os.environ.get("SMTP_USE_SSL", "true").strip().lower() not in {"false", "0", "no"}
-    context = ssl.create_default_context()
-
-    if use_ssl:
-        with smtplib.SMTP_SSL(host, port, timeout=timeout, context=context) as server:
-            server.login(user, password)
-            server.send_message(message)
-    else:
-        with smtplib.SMTP(host, port, timeout=timeout) as server:
-            server.starttls(context=context)
-            server.login(user, password)
-            server.send_message(message)
-
-
 def parse_args(argv=None):
-    parser = argparse.ArgumentParser(description="LLM 估值分析并发送邮件")
-    parser.add_argument("--dry-run", action="store_true", help="只生成报告，不发送邮件")
+    parser = argparse.ArgumentParser(description="生成 LLM 估值与仓位建议报告")
+    parser.add_argument("--dry-run", action="store_true", help="把 Markdown 打印到终端")
     parser.add_argument("--no-llm", action="store_true", help="跳过 LLM，使用规则结论")
     parser.add_argument("--no-page", action="store_true", help="不写入 docs/ 下的估值页面")
-    parser.add_argument("--to", default="", help="收件人，逗号分隔；默认读环境变量 MAIL_TO")
     parser.add_argument("--out", default="", help="Markdown 输出路径")
     return parser.parse_args(argv)
 
@@ -823,30 +711,11 @@ def main(argv=None):
             outputs = write_valuation_outputs(build_items(results), now)
             print(f"估值页面：{outputs['latest']}")
         except Exception as exc:
-            print(f"[警告] 估值页面生成失败：{exc}")
+            print(f"[错误] 估值页面生成失败：{exc}")
+            return 1
 
     if args.dry_run:
         print("\n" + markdown)
-        return 0
-
-    recipients = [item.strip() for item in (args.to or os.environ.get("MAIL_TO", "")).split(",") if item.strip()]
-    if not recipients:
-        print("[错误] 没有收件人：请设置 MAIL_TO 或使用 --to")
-        return 1
-
-    prefix = ((valuation.get("email") or {}).get("subject_prefix") or "每日估值分析").strip()
-    subject = f"{prefix} {now.strftime('%Y-%m-%d')}"
-    sender = os.environ.get("SMTP_FROM", "").strip() or os.environ.get("SMTP_USER", "").strip() or "no-reply@localhost"
-
-    try:
-        message = build_email(subject, markdown, render_html(results, now), recipients, sender)
-        send_email(message)
-    except Exception as exc:
-        print(f"[错误] 邮件发送失败：{exc}")
-        traceback.print_exc()
-        return 1
-
-    print(f"邮件已发送给 {len(recipients)} 个收件人")
     return 0
 
 

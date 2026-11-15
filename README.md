@@ -63,11 +63,11 @@ finance/
 - `scripts/check_consistency.py` 检查链接、报告索引、股票代码与调度配置的一致性
 - 单元测试覆盖校验逻辑，推送与 PR 时自动运行
 
-### 5. LLM 估值邮件（分支功能）
+### 5. LLM 估值报告（分支功能）
 - 工作日 10:00 用大模型基于行情、基本面与新闻生成估值判断
 - 输出加仓 / 减仓 / 持有建议，独立页面 `valuation.html`，首页新增「估值与仓位建议」区块
-- 通过 SMTP 发送 HTML 邮件，失败时回退规则结论
-- 配置见 [guides/VALUATION_LLM_EMAIL.md](guides/VALUATION_LLM_EMAIL.md)
+- 直接提交到仓库并随站点发布，不发送邮件
+- 配置见 [guides/VALUATION_LLM_REPORT.md](guides/VALUATION_LLM_REPORT.md)
 
 ## 🚀 快速开始
 

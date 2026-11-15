@@ -1,4 +1,4 @@
-# LLM 估值分析与邮件日报
+# LLM 估值与仓位建议报告
 
 > 该功能在分支 `feat/llm-valuation-email` 上，尚未合并到 `main`。
 
@@ -11,10 +11,10 @@
 3. 调用 OpenAI 兼容接口（默认 DeepSeek），让模型输出结构化估值判断与加仓/减仓建议；
 4. 生成独立页面 `docs/valuation.html`、归档页 `docs/valuation/valuation_YYYYMMDD.html`，
    以及首页使用的 `docs/valuation_reports.json`；
-5. 生成 Markdown 报告（`reports/valuation/valuation_YYYYMMDD.md`）和 HTML 邮件；
-6. 通过 SMTP 发送到你的邮箱。
+5. 生成 Markdown 报告 `reports/valuation/valuation_YYYYMMDD.md`；
+6. 全程不发送邮件，结果直接提交到仓库并随站点发布。
 
-模型失败、超时或未配置密钥时，自动降级为规则结论，邮件照常发送但不含 LLM 判断。
+模型失败、超时或未配置密钥时，自动降级为规则结论，页面仍然生成。
 
 ## 处理流程
 
@@ -31,8 +31,7 @@ confidence / thesis / drivers / risks / data_gaps
         ↓
 校验枚举与长度 → 不合法则降级规则结论
         ↓
-独立页面 + 首页索引 → 由工作流提交
-Markdown + HTML 邮件 → SMTP 发送
+独立页面 + 首页索引 + Markdown → 由工作流提交
 ```
 
 ## 输出
@@ -43,7 +42,6 @@ Markdown + HTML 邮件 → SMTP 发送
 | 归档页 | `docs/valuation/valuation_YYYYMMDD.html` | 每个工作日一份 |
 | 首页数据 | `docs/valuation_reports.json` | 首页「估值与仓位建议」区块读取最新一期 |
 | Markdown | `reports/valuation/valuation_YYYYMMDD.md` | 本地留存，不入库 |
-| 邮件 | 你的邮箱 | 含评级、加仓/减仓建议、理由与风险 |
 
 工作流生成后会提交 `docs/valuation.html`、`docs/valuation/` 与
 `docs/valuation_reports.json`，线上页面随之更新；`reports/valuation/` 已被忽略，不会入库。
@@ -51,61 +49,43 @@ Markdown + HTML 邮件 → SMTP 发送
 首页的「估值与仓位建议」区块由 `docs/js/valuation.js` 读取最新一期索引，
 显示每家公司的加仓 / 减仓 / 持有建议、现价、估值判断与理由。
 
-## 需要的 Secrets
+## 需要的密钥
 
-在 GitHub 仓库的 **Settings → Secrets and variables → Actions** 中添加：
+只需要一个仓库 Secret：
 
 | 名称 | 必填 | 说明 |
 |---|---|---|
 | `LLM_API_KEY` | 是 | 大模型 API Key（DeepSeek 等） |
-| `SMTP_HOST` | 是 | 如 `smtp.qq.com`、`smtp.163.com`、`smtp.gmail.com` |
-| `SMTP_USER` | 是 | SMTP 账号，通常是完整邮箱地址 |
-| `SMTP_PASSWORD` | 是 | SMTP 授权码，**不是**登录密码 |
-| `SMTP_FROM` | 否 | 发件人，默认等于 `SMTP_USER` |
-| `MAIL_TO` | 是 | 收件人，多个用英文逗号分隔 |
-| `SMTP_PORT` | 否 | 默认 `465` |
 
-可选 **Variables**：`LLM_BASE_URL`、`LLM_MODEL`、`SMTP_USE_SSL`（`false` 时走 STARTTLS，常见于 587 端口）。
-
-## 获取密钥
+可选 **Variables**：`LLM_BASE_URL`、`LLM_MODEL`。
+不再需要任何 SMTP / 邮箱相关配置。
 
 **DeepSeek**：登录 `platform.deepseek.com` → API Keys → 创建，模型默认 `deepseek-chat`。
 任何 OpenAI 兼容服务都可以，改 `LLM_BASE_URL` 与 `LLM_MODEL` 即可。
 
-**QQ 邮箱**：设置 → 账户 → 开启 POP3/SMTP → 生成授权码；`SMTP_HOST=smtp.qq.com`、`SMTP_PORT=465`、`SMTP_USE_SSL=true`。
-
-**163 邮箱**：设置 → POP3/SMTP/IMAP → 开启并获取授权码；`smtp.163.com`、465。
-
-**Gmail**：开启两步验证后创建“应用专用密码”；`smtp.gmail.com`、`587`、`SMTP_USE_SSL=false`。
-
 ## 本地测试
 
 ```bash
-# 只生成报告，不发送（不需要 SMTP）
+# 生成 Markdown、页面与索引，并把 Markdown 打印到终端
 python scripts/valuation_report.py --dry-run
 
 # 不调用 LLM，只看规则结论
 python scripts/valuation_report.py --no-llm --dry-run
 
-# 真实发送（先在本地导出环境变量）
-export LLM_API_KEY=sk-xxx
-export SMTP_HOST=smtp.qq.com
-export SMTP_USER=you@qq.com
-export SMTP_PASSWORD=授权码
-export MAIL_TO=you@qq.com
-python scripts/valuation_report.py
+# 只生成报告，不动 docs/ 页面
+python scripts/valuation_report.py --no-page --dry-run
 ```
 
-PowerShell 用 `$env:LLM_API_KEY="sk-xxx"` 的形式设置。
+PowerShell 用 `$env:LLM_API_KEY="sk-xxx"` 的形式设置密钥。
 
 ## 降级与失败
 
 | 情况 | 行为 |
 |---|---|
-| 未设置 `LLM_API_KEY` | 打印警告，使用规则结论，邮件照发 |
-| LLM 超时 / 401 / 返回非 JSON | 该公司回退规则结论，报告顶部标注“备注：LLM 失败” |
-| 行情采集失败 | 该公司标记“数据错误”，仍参与邮件 |
-| 缺少收件人或 SMTP 配置 | 退出码 1，工作流变红，便于发现配置问题 |
+| 未设置 `LLM_API_KEY` | 打印警告，使用规则结论，页面照常生成 |
+| LLM 超时 / 401 / 返回非 JSON | 该公司回退规则结论，页面标注“备注：LLM 失败” |
+| 行情采集失败 | 该公司标记“数据错误”，仍写入页面 |
+| 页面写入失败 | 退出码 1，工作流变红 |
 
 ## 成本
 
@@ -116,23 +96,19 @@ PowerShell 用 `$env:LLM_API_KEY="sk-xxx"` 的形式设置。
 
 - 密钥只放在 GitHub Secrets，脚本不读配置文件里的密钥，也不写日志。
 - 新闻标题是不可信外部输入：截断到 120 字、放入 `<news>` 标签，系统提示明确要求忽略其中指令。
-- 邮件主题会去掉换行等控制字符，避免邮件头注入。
-- 输出的是“仓位建议”而非交易指令，并在页面与邮件中标注“不构成投资建议”。
+- 输出的是“仓位建议”而非交易指令，并在页面与 Markdown 中标注“不构成投资建议”。
 
 ## 常见问题
 
-**没收到邮件**
-- 先看 Actions 日志最后一步是否成功；缺 Secret 时脚本会直接报错。
-- 检查垃圾邮件目录，必要时把发件人加入白名单。
+**页面没有更新**
+- 先看 Actions 日志里“提交估值页面”是否成功；分支保护或权限不足会导致推送失败。
+- 定时任务只对默认分支生效，功能分支需要手动 Run workflow。
 
-**SMTP 535 认证失败**
-- 多数邮箱要求“授权码”而不是登录密码；确认已开启 SMTP 服务。
+**页面里全是“数据不足”**
+- 说明行情采集失败，看日志里的 `数据错误`；也可能是 `yfinance` 被限流。
 
 **LLM 401 / 402**
 - 401 是 Key 无效；402 通常是余额不足。
-
-**报告里全是“数据不足”**
-- 说明行情采集失败，看日志里的 `数据错误`；也可能是 `yfinance` 被限流。
 
 **首页没有出现估值建议**
 - 确认 `docs/valuation_reports.json` 的 `reports` 首条有 `items`；

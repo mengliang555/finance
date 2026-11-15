@@ -94,9 +94,6 @@
       "temperature": 0.2,
       "max_tokens": 1200,
       "timeout": 60
-    },
-    "email": {
-      "subject_prefix": "估值与仓位建议"
     }
   },
   "notification": {

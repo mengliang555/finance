@@ -202,76 +202,15 @@ class RenderTests(unittest.TestCase):
         self.assertIn("加仓", text)
         self.assertIn(vr.DISCLAIMER, text)
 
-    def test_html_escapes_company_name(self):
+    def test_page_escapes_company_name(self):
         result = self._result()
         result["company"] = dict(COMPANY, name="<script>alert(1)</script>")
+        items = vr.build_items([result])
 
-        html = vr.render_html([result], vr.analysis.now_in_timezone("Asia/Shanghai"))
+        page = vr.render_valuation_page(items, vr.analysis.now_in_timezone("Asia/Shanghai"), [])
 
-        self.assertNotIn("<script>alert(1)</script>", html)
-        self.assertIn("&lt;script&gt;", html)
-
-
-class EmailTests(unittest.TestCase):
-    def test_subject_cannot_inject_headers(self):
-        message = vr.build_email(
-            "每日估值\nBcc: attacker@example.com",
-            "text",
-            "<p>html</p>",
-            ["me@example.com"],
-            "bot@example.com",
-        )
-        self.assertNotIn("\n", message["Subject"])
-        self.assertNotIn("\r", message["Subject"])
-
-    def test_recipients_are_set(self):
-        message = vr.build_email("标题", "text", "<p>html</p>", ["a@example.com", "b@example.com"], "bot@example.com")
-        self.assertEqual(message["To"], "a@example.com, b@example.com")
-
-    @patch.dict(
-        os.environ,
-        {
-            "SMTP_HOST": "smtp.example.com",
-            "SMTP_USER": "bot@example.com",
-            "SMTP_PASSWORD": "secret",
-            "SMTP_PORT": "465",
-        },
-    )
-    @patch.object(vr.smtplib, "SMTP_SSL")
-    def test_send_email_uses_ssl(self, mock_smtp_ssl):
-        server = MagicMock()
-        mock_smtp_ssl.return_value.__enter__.return_value = server
-        message = MagicMock()
-
-        vr.send_email(message)
-
-        server.login.assert_called_once_with("bot@example.com", "secret")
-        server.send_message.assert_called_once_with(message)
-
-    @patch.dict(
-        os.environ,
-        {
-            "SMTP_HOST": "smtp.example.com",
-            "SMTP_USER": "bot@example.com",
-            "SMTP_PASSWORD": "secret",
-            "SMTP_PORT": "587",
-            "SMTP_USE_SSL": "false",
-        },
-    )
-    @patch.object(vr.smtplib, "SMTP")
-    def test_send_email_uses_starttls(self, mock_smtp):
-        server = MagicMock()
-        mock_smtp.return_value.__enter__.return_value = server
-
-        vr.send_email(MagicMock())
-
-        server.starttls.assert_called_once()
-        server.login.assert_called_once()
-
-    @patch.dict(os.environ, {"SMTP_HOST": "", "SMTP_USER": "", "SMTP_PASSWORD": ""})
-    def test_missing_smtp_config_raises(self):
-        with self.assertRaises(RuntimeError):
-            vr.send_email(MagicMock())
+        self.assertNotIn("<script>alert(1)</script>", page)
+        self.assertIn("&lt;script&gt;", page)
 
 
 class LlmClientTests(unittest.TestCase):
