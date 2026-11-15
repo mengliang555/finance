@@ -41,6 +41,7 @@ import daily_company_analysis as analysis  # noqa: E402
 DISCLAIMER = "本报告由程序结合公开数据与语言模型生成，仅供研究参考，不构成投资建议。市场有风险，决策需谨慎。"
 
 TENCENT_KLINE_URL = "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param={symbol},day,,,{limit},qfq"
+MAX_VALUATION_VERSIONS = 100
 
 SYSTEM_PROMPT = """你是一名谨慎的证券研究员，只依据用户提供的结构化数据做估值判断。
 
@@ -610,13 +611,32 @@ table{width:100%;border-collapse:collapse;background:var(--card);border:1px soli
 th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line)}
 th{background:#f3f4f6;font-weight:600}
 tr:last-child td{border-bottom:none}
-.history{font-size:13px;color:var(--muted)}
+.history{font-size:13px;color:var(--muted);line-height:2}
 .history a{color:var(--brand);text-decoration:none;margin-right:12px}
+.history a.current{font-weight:600;color:var(--text)}
+.version{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.version select{margin-left:6px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--text)}
 .foot{margin-top:24px;color:var(--muted);font-size:12px;line-height:1.7}
 """
 
 
-def render_valuation_page(items, now, history, base="", link_prefix="valuation/"):
+def _version_label(entry):
+    """把索引条目渲染成 v3 · 2026-11-16 10:00 这样的标签。"""
+    sequence = entry.get("sequence")
+    prefix = f"v{sequence}" if sequence else (entry.get("date") or "")
+    stamp = ""
+    generated = entry.get("generated_at")
+    if generated:
+        try:
+            stamp = datetime.fromisoformat(str(generated).replace("Z", "+00:00")).strftime("%Y-%m-%d %H:%M")
+        except ValueError:
+            stamp = ""
+    if not stamp:
+        stamp = entry.get("date", "")
+    return f"{prefix} · {stamp}" if prefix and stamp else (prefix or stamp or "历史版本")
+
+
+def render_valuation_page(items, now, history, base="", link_prefix="valuation/", current_id=None, latest=False):
     """生成独立的估值页面；base 用于返回链接，link_prefix 用于历史链接。"""
     counts = {"加仓": 0, "减仓": 0, "持有": 0}
     for item in items:
@@ -664,10 +684,23 @@ def render_valuation_page(items, now, history, base="", link_prefix="valuation/"
             detail.append(f"<p class='meta'>备注：{html.escape(item['error'])}</p>")
         cards.append(f"<div class='card'>{''.join(detail)}</div>")
 
+    version_options = [f"<option value='{base}valuation.html'{' selected' if latest else ''}>最新版本</option>"]
+    for entry in history:
+        href = f"{link_prefix}{Path(entry['htmlPath']).name}"
+        selected = " selected" if (not latest and entry.get("id") == current_id) else ""
+        version_options.append(
+            f"<option value='{html.escape(href)}'{selected}>{html.escape(_version_label(entry))}</option>"
+        )
+
     history_links = "".join(
-        f"<a href='{link_prefix}{html.escape(Path(entry['htmlPath']).name)}'>{html.escape(entry['date'])}</a>"
-        for entry in history[:10]
+        f"<a href='{link_prefix}{html.escape(Path(entry['htmlPath']).name)}'"
+        f"{' class=\"current\"' if entry.get('id') == current_id else ''}>"
+        f"{html.escape(_version_label(entry))}</a>"
+        for entry in history
     )
+
+    current_entry = next((entry for entry in history if entry.get("id") == current_id), None)
+    version_text = "最新版本" if (latest or current_entry is None) else _version_label(current_entry)
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -681,8 +714,9 @@ def render_valuation_page(items, now, history, base="", link_prefix="valuation/"
 <div class="wrap">
   <div class="top">
     <div>
-      <h1>估值与仓位建议 · {now.strftime('%Y-%m-%d')}</h1>
-      <p class="sub">工作日 10:00 自动更新 · 由程序结合行情、基本面与新闻生成</p>
+      <h1>估值与仓位建议 · {version_text}</h1>
+      <p class="sub">工作日 10:00 自动更新 · {now.strftime('%Y-%m-%d %H:%M')} 生成 · 历史版本全部保留</p>
+      <p class="version">版本：<select onchange="if(this.value)location.href=this.value">{''.join(version_options)}</select></p>
     </div>
     <div class="back"><a href="{base}index.html">返回首页</a><a href="{base}reports_index.html">报告中心</a></div>
   </div>
@@ -700,7 +734,7 @@ def render_valuation_page(items, now, history, base="", link_prefix="valuation/"
 
   {''.join(cards)}
 
-  <p class="history">历史版本：{history_links or '暂无'}</p>
+  <p class="history">历史版本（{len(history)}）：{history_links or '暂无'}</p>
   <p class="foot">{html.escape(DISCLAIMER)}<br>行情与基本面来自 Yahoo Finance，缺失时回退新浪行情；新闻来自 yfinance，无结果时回退 Google 新闻 RSS。本页与每日报告相互独立。</p>
 </div>
 </body>
@@ -720,35 +754,45 @@ def _load_valuation_reports(path):
 
 
 def write_valuation_outputs(items, now, root=PROJECT_ROOT):
-    """写入独立页面（最新 + 归档）和首页使用的索引 JSON。"""
+    """写入最新页、带时间戳的归档页和版本索引；每次分析都是一个新版本。"""
     docs = Path(root) / "docs"
-    date_key = now.strftime("%Y%m%d")
-    archive_rel = f"valuation/valuation_{date_key}.html"
+    stamp = now.strftime("%Y%m%d_%H%M%S")
+    archive_rel = f"valuation/valuation_{stamp}.html"
+    index_path = docs / "valuation_reports.json"
+    existing = _load_valuation_reports(index_path)
+
+    sequence = max([int(report.get("sequence") or 0) for report in existing] + [0]) + 1
     entry = {
-        "id": f"valuation-{date_key}",
+        "id": f"valuation-{stamp}",
+        "sequence": sequence,
+        "version": f"v{sequence}",
         "date": now.strftime("%Y-%m-%d"),
         "generated_at": now.isoformat(),
         "htmlPath": archive_rel,
         "items": items,
     }
 
-    index_path = docs / "valuation_reports.json"
-    reports = [report for report in _load_valuation_reports(index_path) if report.get("id") != entry["id"]]
+    reports = [report for report in existing if report.get("id") != entry["id"]]
     reports.insert(0, entry)
-    reports = reports[:20]
+    reports = reports[:MAX_VALUATION_VERSIONS]
 
-    latest_html = render_valuation_page(items, now, reports, base="", link_prefix="valuation/")
-    archive_html = render_valuation_page(items, now, reports, base="../", link_prefix="")
+    latest_html = render_valuation_page(
+        items, now, reports, base="", link_prefix="valuation/", latest=True
+    )
+    archive_html = render_valuation_page(
+        items, now, reports, base="../", link_prefix="", current_id=entry["id"]
+    )
 
     (docs / "valuation").mkdir(parents=True, exist_ok=True)
     (docs / "valuation.html").write_text(latest_html, encoding="utf-8")
-    (docs / "valuation" / f"valuation_{date_key}.html").write_text(archive_html, encoding="utf-8")
+    (docs / "valuation" / f"valuation_{stamp}.html").write_text(archive_html, encoding="utf-8")
     index_path.write_text(json.dumps({"reports": reports}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     return {
         "latest": docs / "valuation.html",
-        "archive": docs / "valuation" / f"valuation_{date_key}.html",
+        "archive": docs / "valuation" / f"valuation_{stamp}.html",
         "index": index_path,
+        "version": entry["version"],
     }
 
 

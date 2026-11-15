@@ -39,8 +39,12 @@ confidence / thesis / drivers / risks / data_gaps
 | 产物 | 位置 | 说明 |
 |---|---|---|
 | 最新估值页 | `docs/valuation.html` | 独立页面，不和每日报告混在一起 |
-| 归档页 | `docs/valuation/valuation_YYYYMMDD.html` | 每个工作日一份 |
+| 归档页 | `docs/valuation/valuation_YYYYMMDD_HHMMSS.html` | 每次运行一份，全部保留 |
 | 首页数据 | `docs/valuation_reports.json` | 首页「估值与仓位建议」区块读取最新一期 |
+
+页面顶部有版本选择器：默认展示**最新版本**，下拉可以切换到任意历史版本；
+历史列表按 `v1`、`v2`… 编号并标注生成时间。索引最多保留 100 个版本的元数据，
+归档 HTML 文件不会删除。同一次运行重复执行只会覆盖该版本，不会产生重复记录。
 | Markdown | `reports/valuation/valuation_YYYYMMDD.md` | 本地留存，不入库 |
 
 工作流生成后会提交 `docs/valuation.html`、`docs/valuation/` 与

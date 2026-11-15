@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         grid.innerHTML = items.map(renderValuationCard).join('')
-            + `<div class="valuation-updated">更新时间：${escapeHtml(latest.date || '')}</div>`;
+            + `<div class="valuation-updated">更新时间：${escapeHtml((latest.version ? latest.version + ' · ' : '') + (latest.date || ''))}</div>`;
     } catch (error) {
         console.warn('估值数据加载失败:', error);
         grid.innerHTML = '<div class="valuation-empty">估值数据暂不可用，请稍后重试。</div>';

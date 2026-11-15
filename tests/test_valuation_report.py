@@ -7,6 +7,7 @@ import sys
 import tempfile
 import unittest
 import urllib.error
+from datetime import timedelta
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
@@ -357,24 +358,50 @@ class ValuationPageTests(unittest.TestCase):
         self.assertIn("valuation/valuation_20261117.html", page)
         self.assertIn("index.html", page)
         self.assertIn("行情来源", page)
+        self.assertIn("最新版本", page)
+        self.assertIn("历史版本", page)
 
     def test_write_outputs_creates_files_and_dedupes(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "docs").mkdir()
-            date_key = self.now.strftime("%Y%m%d")
+            stamp = self.now.strftime("%Y%m%d_%H%M%S")
 
             vr.write_valuation_outputs(self.items, self.now, root=root)
 
             self.assertTrue((root / "docs" / "valuation.html").is_file())
-            self.assertTrue((root / "docs" / "valuation" / f"valuation_{date_key}.html").is_file())
+            self.assertTrue((root / "docs" / "valuation" / f"valuation_{stamp}.html").is_file())
             data = json.loads((root / "docs" / "valuation_reports.json").read_text(encoding="utf-8"))
             self.assertEqual(len(data["reports"]), 1)
+            self.assertEqual(data["reports"][0]["version"], "v1")
             self.assertEqual(data["reports"][0]["items"][0]["action"], "加仓")
 
+            # 同一时间重复运行只覆盖同一版本，不产生重复条目
             vr.write_valuation_outputs(self.items, self.now, root=root)
             data = json.loads((root / "docs" / "valuation_reports.json").read_text(encoding="utf-8"))
             self.assertEqual(len(data["reports"]), 1)
+
+    def test_write_outputs_keeps_previous_versions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "docs").mkdir()
+
+            vr.write_valuation_outputs(self.items, self.now, root=root)
+            second = self.now + timedelta(minutes=5)
+            vr.write_valuation_outputs(self.items, second, root=root)
+
+            data = json.loads((root / "docs" / "valuation_reports.json").read_text(encoding="utf-8"))
+            reports = data["reports"]
+
+            self.assertEqual(len(reports), 2)
+            self.assertEqual([report["version"] for report in reports], ["v2", "v1"])
+            for report in reports:
+                self.assertTrue((root / "docs" / report["htmlPath"]).is_file())
+
+            latest_page = (root / "docs" / "valuation.html").read_text(encoding="utf-8")
+            self.assertIn("最新版本", latest_page)
+            self.assertIn("v1", latest_page)
+            self.assertIn("v2", latest_page)
 
 
 class WriteReportTests(unittest.TestCase):
