@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>估值与仓位建议 | 财务分析中心</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/valuation.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>估值与仓位建议 2026-11-15</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;
+--add:#059669;--reduce:#dc2626;--hold:#6b7280;--brand:#2563eb;}
+*{box-sizing:border-box}
+body{margin:0;padding:32px 16px;background:var(--bg);color:var(--text);
+font-family:-apple-system,Segoe UI,Helvetica,Arial,"Microsoft YaHei",sans-serif;}
+.wrap{max-width:1080px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+h1{font-size:24px;margin:0 0 8px}
+.sub{color:var(--muted);font-size:13px;margin:0}
+.back a{color:var(--brand);text-decoration:none;font-size:14px;margin-left:14px}
+.summary{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px}
+.chip b{font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.card-title{font-size:16px;font-weight:600;margin:0}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;color:#fff}
+.badge.add{background:var(--add)}.badge.reduce{background:var(--reduce)}.badge.hold{background:var(--hold)}
+.meta{color:var(--muted);font-size:13px;margin:8px 0}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:12px 0}
+.kv div{background:#f9fafb;border-radius:8px;padding:8px 10px}
+.kv span{display:block;color:var(--muted);font-size:12px}
+.kv strong{font-size:14px}
+p{margin:8px 0;line-height:1.6;font-size:14px}
+ul{margin:6px 0 0 20px;padding:0;color:#374151;font-size:13px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13px;margin:18px 0}
+th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f3f4f6;font-weight:600}
+tr:last-child td{border-bottom:none}
+.history{font-size:13px;color:var(--muted)}
+.history a{color:var(--brand);text-decoration:none;margin-right:12px}
+.foot{margin-top:24px;color:var(--muted);font-size:12px;line-height:1.7}
+</style>
 </head>
 <body>
-    <main class="container" style="max-width:1100px;margin:0 auto;padding:3rem 1rem;">
-        <h1 style="font-size:1.8rem;margin-bottom:0.5rem;">估值与仓位建议</h1>
-        <p style="color:#6b7280;margin-bottom:2rem;">
-            工作日 10:00 自动更新，由模型结合行情、基本面与新闻给出加仓 / 减仓 / 持有建议。
-        </p>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>估值与仓位建议 · 2026-11-15</h1>
+      <p class="sub">工作日 10:00 自动更新 · 由程序结合行情、基本面与新闻生成</p>
+    </div>
+    <div class="back"><a href="index.html">返回首页</a><a href="reports_index.html">报告中心</a></div>
+  </div>
 
-        <div class="valuation-empty">
-            尚无估值数据。首次运行「工作日估值与仓位建议」工作流后，这里会显示最新建议。
-        </div>
+  <div class="summary">
+    <div class="chip">加仓 <b>0</b></div>
+    <div class="chip">减仓 <b>1</b></div>
+    <div class="chip">持有 <b>3</b></div>
+  </div>
 
-        <p style="margin-top:2rem;">
-            <a href="index.html">返回首页</a> ·
-            <a href="reports_index.html">报告中心</a>
-        </p>
-        <p style="color:#9ca3af;font-size:0.8rem;line-height:1.7;">
-            本页内容仅供研究参考，不构成投资建议。市场有风险，决策需谨慎。
-        </p>
-    </main>
+  <table>
+    <thead><tr><th>公司</th><th>代码</th><th>现价</th><th>PE</th><th>PB</th><th>52周位置</th><th>判断</th><th>建议</th><th>置信度</th></tr></thead>
+    <tbody><tr><td>小米集团</td><td>1810.HK</td><td>28.86</td><td>21.22</td><td>2.34</td><td>34%</td><td>合理</td><td><span class='badge hold'>持有</span></td><td>中</td></tr><tr><td>美团</td><td>3690.HK</td><td>69.80</td><td>N/A</td><td>2.17</td><td>13%</td><td>合理</td><td><span class='badge hold'>持有</span></td><td>低</td></tr><tr><td>地平线机器人</td><td>09660.HK</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>合理</td><td><span class='badge hold'>持有</span></td><td>低</td></tr><tr><td>三安光电</td><td>600703.SS</td><td>9.07</td><td>N/A</td><td>1.23</td><td>1%</td><td>高估</td><td><span class='badge reduce'>减仓</span></td><td>中</td></tr></tbody>
+  </table>
+
+  <div class='card'><div class='card-head'><h2 class='card-title'>小米集团（1810.HK）</h2><span class='badge hold'>持有</span></div><p class='meta'>现价 28.86｜52 周位置 34%｜估值判断 合理（置信度 中）</p><div class='kv'><div><span>仓位建议</span><strong>持有，单一标的控制在总仓位10%以内</strong></div><div><span>合理区间</span><strong>26-32 HKD</strong></div><div><span>判断来源</span><strong>LLM</strong></div></div><p><strong>建议理由：</strong>股价处于52周区间33%分位，PE约21倍、PB2.3倍，估值中性；营收与利润负增长，自由现金流为负，缺乏加仓依据。</p><p><strong>核心逻辑：</strong>股价自低位反弹但距高点仍有距离，估值处于历史中位，盈利端营收与净利双降、FCF为负，短期缺乏基本面催化，估值与基本面大致匹配，宜持有观察。</p><p><strong>驱动因素</strong></p><ul><li>手机与IoT新品迭代（背屏适配、大电池机型）</li><li>汽车业务减碳认证等进展</li><li>公司回购提供一定支撑</li></ul><p><strong>主要风险</strong></p><ul><li>营收同比-6.1%、净利同比-19.9%，盈利承压</li><li>自由现金流为负，现金流质量待改善</li><li>年化波动率44%，股价波动大</li></ul></div><div class='card'><div class='card-head'><h2 class='card-title'>美团（3690.HK）</h2><span class='badge hold'>持有</span></div><p class='meta'>现价 69.80｜52 周位置 13%｜估值判断 合理（置信度 低）</p><div class='kv'><div><span>仓位建议</span><strong>持有，暂不加仓；若回踩 64-66 HKD 可分批建仓 5%-8%</strong></div><div><span>合理区间</span><strong>62-78 HKD</strong></div><div><span>判断来源</span><strong>LLM</strong></div></div><p><strong>建议理由：</strong>股价接近 52 周低位、远低于均线，但 ROE 与净利率为负、自由现金流大幅流出，估值缺乏盈利支撑，宜观望。</p><p><strong>核心逻辑：</strong>前瞻 PE 约 14.7 倍、PB 约 2.2 倍，对营收增长 14% 的本地生活龙头不算贵，但当前处于亏损与负现金流状态，估值锚不稳；股价贴近 52 周低点且趋势偏弱，属合理偏低但缺乏催化。</p><p><strong>驱动因素</strong></p><ul><li>营收同比增长 14.4%，核心业务仍具规模优势</li><li>前瞻 PE 14.7 倍、PB 2.2 倍，相对历史区间偏低</li><li>股价处于 52 周区间 13% 分位，技术面超跌</li></ul><p><strong>主要风险</strong></p><ul><li>ROE -21.8%、净利率 -10%，盈利能力承压</li><li>自由现金流 -241 亿，补贴与投入侵蚀现金</li><li>年化波动率 42.9%，短期下行趋势未止</li></ul></div><div class='card'><div class='card-head'><h2 class='card-title'>地平线机器人（09660.HK）</h2><span class='badge hold'>持有</span></div><p class='meta'>现价 N/A｜52 周位置 N/A｜估值判断 合理（置信度 低）</p><div class='kv'><div><span>仓位建议</span><strong>持有，单一标的控制在总仓位 5% 以内</strong></div><div><span>合理区间</span><strong>数据不足</strong></div><div><span>判断来源</span><strong>LLM</strong></div></div><p><strong>建议理由：</strong>结构化财务数据全部缺失，无新闻与估值倍数可依，无法判断高估或低估，暂维持持有。</p><p><strong>核心逻辑：</strong>地平线机器人为自动驾驶 AI 芯片标的，但本次输入未提供市值、PE、PB、增速、现金流等任何关键数据，估值缺乏锚点，只能给出中性判断。</p><p><strong>驱动因素</strong></p><ul><li>自动驾驶与 AI 芯片行业需求</li><li>车规级芯片量产与客户拓展</li><li>国产替代趋势</li></ul><p><strong>主要风险</strong></p><ul><li>高估值成长股波动大</li><li>持续亏损与现金流压力</li><li>行业竞争与技术迭代风险</li></ul></div><div class='card'><div class='card-head'><h2 class='card-title'>三安光电（600703.SS）</h2><span class='badge reduce'>减仓</span></div><p class='meta'>现价 9.07｜52 周位置 1%｜估值判断 高估（置信度 中）</p><div class='kv'><div><span>仓位建议</span><strong>减仓至不超过总仓位5%，暂不新增</strong></div><div><span>合理区间</span><strong>6-8 CNY</strong></div><div><span>判断来源</span><strong>LLM</strong></div></div><p><strong>建议理由：</strong>股价贴近52周低点、均线空头排列，营收下滑26%、净利率与ROE为负，实控人被留置属重大治理风险</p><p><strong>核心逻辑：</strong>基本面亏损叠加治理黑天鹅，PB 1.23缺乏盈利支撑，forward PE 304倍无参考意义；技术面破位且波动率64%，风险收益比不利，宜先降风险敞口</p><p><strong>驱动因素</strong></p><ul><li>LED芯片行业景气与价格周期</li><li>化合物半导体（碳化硅/氮化镓）放量进度</li><li>实控人事件后续处置与治理改善</li></ul><p><strong>主要风险</strong></p><ul><li>实控人被留置引发经营与融资不确定性</li><li>营收下滑26%且持续亏损，现金流承压</li><li>股价接近52周低点，趋势与情绪偏弱</li></ul></div>
+
+  <p class="history">历史版本：<a href='valuation/valuation_20261115.html'>2026-11-15</a></p>
+  <p class="foot">本报告由程序结合公开数据与语言模型生成，仅供研究参考，不构成投资建议。市场有风险，决策需谨慎。<br>行情与基本面来自 Yahoo Finance，缺失时回退新浪行情；新闻来自 yfinance，无结果时回退 Google 新闻 RSS。本页与每日报告相互独立。</p>
+</div>
 </body>
 </html>
