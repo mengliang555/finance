@@ -1,0 +1,529 @@
+{
+  "generated_at": "2026-11-15T20:28:28.673964+08:00",
+  "industry_news": {
+    "provider": "yfinance",
+    "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+    "items": [],
+    "error": null,
+    "window": {
+      "start": "2026-11-13 16:00:00 CST",
+      "end": "2026-11-15 20:28:28 CST"
+    }
+  },
+  "results": [
+    {
+      "company_id": "xiaomi",
+      "company_name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": [
+        "智能手机",
+        "IoT",
+        "汽车业务",
+        "海外市场"
+      ],
+      "analysis_date": "2026-11-15",
+      "analysis_time": "2026-11-15 20:28:28 CST",
+      "news_window": {
+        "start": "2026-11-13 16:00:00 CST",
+        "end": "2026-11-15 20:28:28 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-02",
+          "open": 26.899999618530273,
+          "high": 28.440000534057617,
+          "low": 26.81999969482422,
+          "close": 28.100000381469727,
+          "volume": 270210653
+        },
+        {
+          "date": "2026-11-03",
+          "open": 28.639999389648438,
+          "high": 28.920000076293945,
+          "low": 28.1200008392334,
+          "close": 28.600000381469727,
+          "volume": 202982521
+        },
+        {
+          "date": "2026-11-04",
+          "open": 28.100000381469727,
+          "high": 28.84000015258789,
+          "low": 27.6200008392334,
+          "close": 28.760000228881836,
+          "volume": 179954271
+        },
+        {
+          "date": "2026-11-05",
+          "open": 30.0,
+          "high": 31.399999618530273,
+          "low": 29.6200008392334,
+          "close": 31.299999237060547,
+          "volume": 490522111
+        },
+        {
+          "date": "2026-11-06",
+          "open": 31.0,
+          "high": 31.739999771118164,
+          "low": 30.219999313354492,
+          "close": 30.3799991607666,
+          "volume": 303884871
+        },
+        {
+          "date": "2026-11-09",
+          "open": 30.979999542236328,
+          "high": 31.059999465942383,
+          "low": 29.940000534057617,
+          "close": 30.100000381469727,
+          "volume": 129809779
+        },
+        {
+          "date": "2026-11-10",
+          "open": 29.959999084472656,
+          "high": 31.040000915527344,
+          "low": 29.68000030517578,
+          "close": 30.600000381469727,
+          "volume": 103359489
+        },
+        {
+          "date": "2026-11-11",
+          "open": 30.440000534057617,
+          "high": 31.020000457763672,
+          "low": 29.84000015258789,
+          "close": 30.100000381469727,
+          "volume": 110336033
+        },
+        {
+          "date": "2026-11-12",
+          "open": 29.8799991607666,
+          "high": 30.360000610351562,
+          "low": 29.540000915527344,
+          "close": 29.979999542236328,
+          "volume": 109558509
+        },
+        {
+          "date": "2026-11-13",
+          "open": 29.739999771118164,
+          "high": 29.799999237060547,
+          "low": 28.799999237060547,
+          "close": 28.860000610351562,
+          "volume": 109152387
+        }
+      ],
+      "price": {
+        "current": 28.86,
+        "previous": 29.98,
+        "change": -1.12,
+        "change_pct": -3.74,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-13",
+        "close": 28.86,
+        "previous_close": 29.98,
+        "change": -1.12,
+        "change_pct": -3.74,
+        "volume": 109152387
+      },
+      "fundamentals": {
+        "market_cap": 742574522368,
+        "pe_ratio": 21.220589,
+        "pb_ratio": 2.3410275,
+        "dividend_yield": 0.0,
+        "beta": 0.662,
+        "volume": 109152387,
+        "avg_volume": 146978800,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 1810.HK",
+        "items": [],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [],
+        "error": null,
+        "window": {
+          "start": "2026-11-13 16:00:00 CST",
+          "end": "2026-11-15 20:28:28 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 3.74%，短线承压"
+      ]
+    },
+    {
+      "company_id": "meituan",
+      "company_name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": [
+        "外卖业务",
+        "到店服务",
+        "酒店旅游",
+        "新业务"
+      ],
+      "analysis_date": "2026-11-15",
+      "analysis_time": "2026-11-15 20:28:28 CST",
+      "news_window": {
+        "start": "2026-11-13 16:00:00 CST",
+        "end": "2026-11-15 20:28:28 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-02",
+          "open": 71.19999694824219,
+          "high": 74.1500015258789,
+          "low": 70.80000305175781,
+          "close": 73.05000305175781,
+          "volume": 34295830
+        },
+        {
+          "date": "2026-11-03",
+          "open": 73.3499984741211,
+          "high": 74.94999694824219,
+          "low": 73.0999984741211,
+          "close": 74.3499984741211,
+          "volume": 23940420
+        },
+        {
+          "date": "2026-11-04",
+          "open": 73.5999984741211,
+          "high": 75.19999694824219,
+          "low": 72.94999694824219,
+          "close": 75.19999694824219,
+          "volume": 21362860
+        },
+        {
+          "date": "2026-11-05",
+          "open": 77.5,
+          "high": 82.4000015258789,
+          "low": 77.0,
+          "close": 80.30000305175781,
+          "volume": 90039092
+        },
+        {
+          "date": "2026-11-06",
+          "open": 78.0999984741211,
+          "high": 83.0,
+          "low": 78.0,
+          "close": 80.4000015258789,
+          "volume": 51431875
+        },
+        {
+          "date": "2026-11-09",
+          "open": 80.6500015258789,
+          "high": 81.9000015258789,
+          "low": 74.75,
+          "close": 75.1500015258789,
+          "volume": 65516899
+        },
+        {
+          "date": "2026-11-10",
+          "open": 75.5999984741211,
+          "high": 77.4000015258789,
+          "low": 75.4000015258789,
+          "close": 75.5,
+          "volume": 26375796
+        },
+        {
+          "date": "2026-11-11",
+          "open": 74.69999694824219,
+          "high": 74.69999694824219,
+          "low": 72.30000305175781,
+          "close": 72.8499984741211,
+          "volume": 30427317
+        },
+        {
+          "date": "2026-11-12",
+          "open": 72.19999694824219,
+          "high": 73.4000015258789,
+          "low": 71.0,
+          "close": 72.0999984741211,
+          "volume": 36362862
+        },
+        {
+          "date": "2026-11-13",
+          "open": 71.19999694824219,
+          "high": 72.6500015258789,
+          "low": 69.6500015258789,
+          "close": 69.80000305175781,
+          "volume": 24952585
+        }
+      ],
+      "price": {
+        "current": 69.8,
+        "previous": 72.1,
+        "change": -2.3,
+        "change_pct": -3.19,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-13",
+        "close": 69.8,
+        "previous_close": 72.1,
+        "change": -2.3,
+        "change_pct": -3.19,
+        "volume": 24952585
+      },
+      "fundamentals": {
+        "market_cap": 430794506240,
+        "pe_ratio": null,
+        "pb_ratio": 2.1668048,
+        "dividend_yield": 0.0,
+        "beta": 0.185,
+        "volume": 24952585,
+        "avg_volume": 32671392,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 3690.HK",
+        "items": [],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [],
+        "error": null,
+        "window": {
+          "start": "2026-11-13 16:00:00 CST",
+          "end": "2026-11-15 20:28:28 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 3.19%，短线承压"
+      ]
+    },
+    {
+      "company_id": "horizon",
+      "company_name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": [
+        "AI芯片",
+        "自动驾驶",
+        "合作伙伴",
+        "技术优势"
+      ],
+      "analysis_date": "2026-11-15",
+      "analysis_time": "2026-11-15 20:28:28 CST",
+      "news_window": {
+        "start": "2026-11-13 16:00:00 CST",
+        "end": "2026-11-15 20:28:28 CST"
+      },
+      "success": true,
+      "history": [],
+      "price": {
+        "current": 3.75,
+        "previous": 3.855,
+        "change": -0.105,
+        "change_pct": -2.72,
+        "trend": "下跌",
+        "source": "Sina Finance"
+      },
+      "previous_session": {
+        "date": "2026-11-13",
+        "close": 3.75,
+        "previous_close": 3.855,
+        "change": -0.105,
+        "change_pct": -2.72,
+        "volume": 133574706,
+        "source": "Sina Finance",
+        "source_symbol": "hk09660",
+        "source_url": "https://hq.sinajs.cn/list=hk09660",
+        "open": 3.855,
+        "high": 4.03,
+        "low": 3.74,
+        "raw_name": "地平线机器人－Ｗ"
+      },
+      "fundamentals": {
+        "volume": 133574706
+      },
+      "market_data_source": "Sina Finance",
+      "market_data_notes": [
+        "配置为优先使用新浪财经行情"
+      ],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 09660.HK",
+        "items": [],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [],
+        "error": null,
+        "window": {
+          "start": "2026-11-13 16:00:00 CST",
+          "end": "2026-11-15 20:28:28 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 2.72%，短线承压"
+      ]
+    },
+    {
+      "company_id": "sanan",
+      "company_name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": [
+        "LED芯片",
+        "化合物半导体",
+        "Mini/Micro LED",
+        "碳化硅"
+      ],
+      "analysis_date": "2026-11-15",
+      "analysis_time": "2026-11-15 20:28:28 CST",
+      "news_window": {
+        "start": "2026-11-13 15:00:00 CST",
+        "end": "2026-11-15 20:28:28 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-02",
+          "open": 9.130000114440918,
+          "high": 9.1899995803833,
+          "low": 8.869999885559082,
+          "close": 9.0600004196167,
+          "volume": 68526806
+        },
+        {
+          "date": "2026-11-03",
+          "open": 8.970000267028809,
+          "high": 9.180000305175781,
+          "low": 8.899999618530273,
+          "close": 8.9399995803833,
+          "volume": 71623834
+        },
+        {
+          "date": "2026-11-04",
+          "open": 9.0,
+          "high": 9.399999618530273,
+          "low": 8.819999694824219,
+          "close": 9.350000381469727,
+          "volume": 101634986
+        },
+        {
+          "date": "2026-11-05",
+          "open": 9.210000038146973,
+          "high": 9.710000038146973,
+          "low": 9.1899995803833,
+          "close": 9.539999961853027,
+          "volume": 93740319
+        },
+        {
+          "date": "2026-11-06",
+          "open": 9.050000190734863,
+          "high": 9.34000015258789,
+          "low": 9.050000190734863,
+          "close": 9.180000305175781,
+          "volume": 66772952
+        },
+        {
+          "date": "2026-11-09",
+          "open": 9.300000190734863,
+          "high": 9.34000015258789,
+          "low": 9.1899995803833,
+          "close": 9.210000038146973,
+          "volume": 40873071
+        },
+        {
+          "date": "2026-11-10",
+          "open": 9.34000015258789,
+          "high": 9.449999809265137,
+          "low": 9.260000228881836,
+          "close": 9.4399995803833,
+          "volume": 51732032
+        },
+        {
+          "date": "2026-11-11",
+          "open": 9.350000381469727,
+          "high": 9.59000015258789,
+          "low": 9.300000190734863,
+          "close": 9.539999961853027,
+          "volume": 55791727
+        },
+        {
+          "date": "2026-11-12",
+          "open": 9.5600004196167,
+          "high": 9.739999771118164,
+          "low": 9.329999923706055,
+          "close": 9.359999656677246,
+          "volume": 74223569
+        },
+        {
+          "date": "2026-11-13",
+          "open": 9.369999885559082,
+          "high": 9.479999542236328,
+          "low": 9.020000457763672,
+          "close": 9.069999694824219,
+          "volume": 60588338
+        }
+      ],
+      "price": {
+        "current": 9.07,
+        "previous": 9.36,
+        "change": -0.29,
+        "change_pct": -3.1,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-13",
+        "close": 9.07,
+        "previous_close": 9.36,
+        "change": -0.29,
+        "change_pct": -3.1,
+        "volume": 60588338
+      },
+      "fundamentals": {
+        "market_cap": 45250396160,
+        "pe_ratio": null,
+        "pb_ratio": 1.2325044,
+        "dividend_yield": 0.0,
+        "beta": 1.197,
+        "volume": 60588338,
+        "avg_volume": 96878521,
+        "currency": "CNY"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 600703.SS",
+        "items": [],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [],
+        "error": null,
+        "window": {
+          "start": "2026-11-13 16:00:00 CST",
+          "end": "2026-11-15 20:28:28 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 3.10%，短线承压"
+      ]
+    }
+  ]
+}
