@@ -109,6 +109,28 @@ class ReportIndexTests(TempRepoTestCase):
         self.assertTrue(any("重复的报告 id" in item for item in errors))
 
 
+class ValuationIndexTests(TempRepoTestCase):
+    def test_absent_index_is_allowed(self):
+        self.assertEqual(cc.check_valuation_index(self.root), [])
+
+    def test_missing_archive_page_is_reported(self):
+        self.write_json(
+            "docs/valuation_reports.json",
+            {"reports": [{"id": "v1", "date": "2026-11-17", "htmlPath": "valuation/valuation_20261117.html"}]},
+        )
+        errors = cc.check_valuation_index(self.root)
+        self.assertEqual(len(errors), 1)
+        self.assertIn("htmlPath", errors[0])
+
+    def test_existing_archive_page_passes(self):
+        self.write("docs/valuation/valuation_20261117.html", "<html></html>")
+        self.write_json(
+            "docs/valuation_reports.json",
+            {"reports": [{"id": "v1", "date": "2026-11-17", "htmlPath": "valuation/valuation_20261117.html"}]},
+        )
+        self.assertEqual(cc.check_valuation_index(self.root), [])
+
+
 class ReportsJsTests(TempRepoTestCase):
     def test_missing_raw_path(self):
         self.write("docs/js/reports.js", "const reports = [{ rawPath: 'reports/gone.md' }];\n")

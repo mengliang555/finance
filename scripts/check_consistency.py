@@ -62,6 +62,7 @@ DOC_MARKDOWN_GLOBS = (
 )
 
 REPORT_INDEX = Path("docs/reports/daily_reports.json")
+VALUATION_INDEX = Path("docs/valuation_reports.json")
 REPORTS_JS = Path("docs/js/reports.js")
 CONFIG_FILE = Path("scripts/daily_analysis_config.json")
 WORKFLOW_FILE = Path(".github/workflows/daily-analysis.yml")
@@ -189,6 +190,35 @@ def check_report_index(root: Path) -> list[str]:
         html_path = entry.get("htmlPath")
         if html_path and not (root / DOCS_ROOT / html_path).exists():
             errors.append(f"{REPORT_INDEX.as_posix()}: {report_id or '?'} 的 htmlPath 不存在 -> {html_path}")
+    return errors
+
+
+def check_valuation_index(root: Path) -> list[str]:
+    """估值页面索引可选；存在时校验归档页面是否落地。"""
+    path = root / VALUATION_INDEX
+    if not path.exists():
+        return []
+
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError as exc:
+        return [f"{VALUATION_INDEX.as_posix()}: JSON 解析失败：{exc}"]
+
+    reports = payload.get("reports") if isinstance(payload, dict) else None
+    if not isinstance(reports, list):
+        return [f"{VALUATION_INDEX.as_posix()}: 缺少 reports 数组"]
+
+    errors = []
+    for entry in reports:
+        if not isinstance(entry, dict):
+            errors.append(f"{VALUATION_INDEX.as_posix()}: reports 中存在非对象条目")
+            continue
+        report_id = entry.get("id", "?")
+        html_path = entry.get("htmlPath")
+        if not html_path:
+            errors.append(f"{VALUATION_INDEX.as_posix()}: {report_id} 缺少 htmlPath")
+        elif not (root / DOCS_ROOT / html_path).exists():
+            errors.append(f"{VALUATION_INDEX.as_posix()}: {report_id} 的 htmlPath 不存在 -> {html_path}")
     return errors
 
 
@@ -385,6 +415,7 @@ def run_all(root: Path, max_age_days: int = 7) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     errors.extend(check_json_files(root))
     errors.extend(check_report_index(root))
+    errors.extend(check_valuation_index(root))
     errors.extend(check_reports_js(root))
     errors.extend(check_markdown_links(root))
     errors.extend(check_html_links(root))

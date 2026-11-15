@@ -1,0 +1,89 @@
+/* 估值与仓位建议：首页区块 + 独立页面共用样式 */
+
+.valuation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.valuation-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.valuation-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.valuation-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.valuation-ticker {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.valuation-badge {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.valuation-badge.add {
+    background: #059669;
+}
+
+.valuation-badge.reduce {
+    background: #dc2626;
+}
+
+.valuation-badge.hold {
+    background: #6b7280;
+}
+
+.valuation-meta {
+    font-size: 0.85rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0.25rem 0;
+}
+
+.valuation-reason {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.6rem;
+    line-height: 1.6;
+}
+
+.valuation-loading,
+.valuation-empty {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 12px;
+}
+
+.valuation-updated {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+}

@@ -38,6 +38,7 @@
 
 ### 网站页面
 - [主页面](docs/index.html)
+- [估值与仓位建议](docs/valuation.html)
 - [小米报告页面](docs/reports/xiaomi_report.html)
 - [美团报告页面](docs/reports/meituan_report.html)
 - [地平线机器人报告页面](docs/reports/horizon_report.html)

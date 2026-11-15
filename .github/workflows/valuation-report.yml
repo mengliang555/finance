@@ -1,13 +1,13 @@
-name: 每日估值邮件
+name: 工作日估值与仓位建议
 
 on:
   schedule:
-    # 每天 02:00 UTC = 10:00 Asia/Shanghai（排在 09:00 日报之后）
-    - cron: "0 2 * * *"
+    # 周一到周五 02:00 UTC = 10:00 Asia/Shanghai
+    - cron: "0 2 * * 1-5"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: valuation-report
@@ -35,7 +35,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: 生成估值分析并发送邮件
+      - name: 生成估值建议并发送邮件
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
@@ -49,10 +49,28 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
         run: python scripts/valuation_report.py
 
+      - name: 提交估值页面
+        if: always() && (github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/valuation.html docs/valuation_reports.json
+          if [ -d docs/valuation ]; then
+            git add docs/valuation
+          fi
+          if git diff --cached --quiet; then
+            echo "估值页面没有变化"
+            exit 0
+          fi
+          git commit -m "chore: publish valuation $(date -u +%Y%m%d)"
+          git push origin HEAD:${{ github.ref_name }}
+
       - name: 上传报告
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: valuation-report
-          path: reports/valuation/
+          path: |
+            reports/valuation/
+            docs/valuation.html
           if-no-files-found: ignore

@@ -33,7 +33,8 @@ COMPANY = {
     "industry": "消费电子",
 }
 
-LLM_JSON = """{"rating":"低估","fair_value_range":"30-36 HKD","confidence":"中",
+LLM_JSON = """{"rating":"低估","action":"加仓","position_hint":"分批加仓 5%-10%",
+"action_reason":"估值低于历史中枢，且公司持续回购","fair_value_range":"30-36 HKD","confidence":"中",
 "thesis":"估值低于历史中枢","drivers":["持续回购"],"risks":["手机竞争加剧"],"data_gaps":[]}"""
 
 
@@ -87,6 +88,7 @@ class NormalizeTests(unittest.TestCase):
         result = vr.normalize_analysis(
             {
                 "rating": "买入",
+                "action": "梭哈",
                 "confidence": "很高",
                 "fair_value_range": "30 HKD",
                 "thesis": "x" * 300,
@@ -96,6 +98,8 @@ class NormalizeTests(unittest.TestCase):
             }
         )
         self.assertEqual(result["rating"], "合理")
+        self.assertEqual(result["action"], "持有")
+        self.assertEqual(result["position_hint"], "维持当前仓位")
         self.assertEqual(result["confidence"], "低")
         self.assertEqual(len(result["thesis"]), 200)
         self.assertEqual(len(result["drivers"]), 3)
@@ -107,17 +111,28 @@ class RuleBasedTests(unittest.TestCase):
     def test_low_pe_is_undervalued(self):
         result = vr.rule_based_analysis(dict(METRICS, pe_ratio=12.0))
         self.assertEqual(result["rating"], "低估")
+        self.assertEqual(result["action"], "加仓")
         self.assertIn("PE 12.0", result["thesis"])
 
     def test_high_pe_is_overvalued(self):
         result = vr.rule_based_analysis(dict(METRICS, pe_ratio=42.0))
         self.assertEqual(result["rating"], "高估")
+        self.assertEqual(result["action"], "减仓")
 
     def test_missing_data_stays_neutral(self):
         result = vr.rule_based_analysis({})
         self.assertEqual(result["rating"], "合理")
+        self.assertEqual(result["action"], "持有")
         self.assertEqual(result["fair_value_range"], "数据不足")
         self.assertEqual(result["confidence"], "低")
+
+    def test_high_range_position_reduces(self):
+        result = vr.rule_based_analysis(dict(METRICS, pe_ratio=20.0, range_position=0.92))
+        self.assertEqual(result["action"], "减仓")
+
+    def test_low_range_position_adds(self):
+        result = vr.rule_based_analysis(dict(METRICS, pe_ratio=20.0, range_position=0.12))
+        self.assertEqual(result["action"], "加仓")
 
 
 class AnalyzeCompanyTests(unittest.TestCase):
@@ -128,6 +143,7 @@ class AnalyzeCompanyTests(unittest.TestCase):
 
         self.assertEqual(result["source"], "llm")
         self.assertEqual(result["analysis"]["rating"], "低估")
+        self.assertEqual(result["analysis"]["action"], "加仓")
         self.assertEqual(result["analysis"]["fair_value_range"], "30-36 HKD")
         self.assertIsNone(result["error"])
         self.assertIn("小米集团", client.prompts[0][1])
@@ -183,6 +199,7 @@ class RenderTests(unittest.TestCase):
         text = vr.render_markdown([self._result()], vr.analysis.now_in_timezone("Asia/Shanghai"))
         self.assertIn("小米集团", text)
         self.assertIn("低估", text)
+        self.assertIn("加仓", text)
         self.assertIn(vr.DISCLAIMER, text)
 
     def test_html_escapes_company_name(self):
@@ -299,6 +316,53 @@ class LlmClientTests(unittest.TestCase):
                 client.complete("system", "user")
 
         self.assertIn("401", str(ctx.exception))
+
+
+class ValuationPageTests(unittest.TestCase):
+    def setUp(self):
+        self.now = vr.analysis.now_in_timezone("Asia/Shanghai")
+        self.results = [
+            {
+                "company": COMPANY,
+                "metrics": METRICS,
+                "analysis": vr.normalize_analysis(vr.parse_llm_json(LLM_JSON)),
+                "source": "llm",
+                "error": None,
+            }
+        ]
+        self.items = vr.build_items(self.results)
+
+    def test_build_items_keeps_action_fields(self):
+        self.assertEqual(self.items[0]["action"], "加仓")
+        self.assertIn("分批加仓", self.items[0]["position_hint"])
+        self.assertEqual(self.items[0]["source"], "LLM")
+
+    def test_page_contains_action_and_history_link(self):
+        history = [{"id": "v1", "date": "2026-11-17", "htmlPath": "valuation/valuation_20261117.html"}]
+
+        page = vr.render_valuation_page(self.items, self.now, history, base="", link_prefix="valuation/")
+
+        self.assertIn("加仓", page)
+        self.assertIn("valuation/valuation_20261117.html", page)
+        self.assertIn("index.html", page)
+
+    def test_write_outputs_creates_files_and_dedupes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "docs").mkdir()
+            date_key = self.now.strftime("%Y%m%d")
+
+            vr.write_valuation_outputs(self.items, self.now, root=root)
+
+            self.assertTrue((root / "docs" / "valuation.html").is_file())
+            self.assertTrue((root / "docs" / "valuation" / f"valuation_{date_key}.html").is_file())
+            data = json.loads((root / "docs" / "valuation_reports.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(data["reports"]), 1)
+            self.assertEqual(data["reports"][0]["items"][0]["action"], "加仓")
+
+            vr.write_valuation_outputs(self.items, self.now, root=root)
+            data = json.loads((root / "docs" / "valuation_reports.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(data["reports"]), 1)
 
 
 class WriteReportTests(unittest.TestCase):

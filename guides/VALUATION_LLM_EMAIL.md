@@ -4,13 +4,15 @@
 
 ## 它做什么
 
-每天 **10:00（Asia/Shanghai）** 运行一次：
+周一到周五 **10:00（Asia/Shanghai）** 运行一次（周末不运行）：
 
 1. 采集四家公司的行情、基本面与近 7 天新闻；
 2. 计算估值指标：52 周区间位置、20/60 日均线、1/3/6/12 个月收益、年化波动率；
-3. 调用 OpenAI 兼容接口（默认 DeepSeek），让模型输出结构化估值判断；
-4. 生成 Markdown 报告（`reports/valuation/valuation_YYYYMMDD.md`）和 HTML 邮件；
-5. 通过 SMTP 发送到你的邮箱。
+3. 调用 OpenAI 兼容接口（默认 DeepSeek），让模型输出结构化估值判断与加仓/减仓建议；
+4. 生成独立页面 `docs/valuation.html`、归档页 `docs/valuation/valuation_YYYYMMDD.html`，
+   以及首页使用的 `docs/valuation_reports.json`；
+5. 生成 Markdown 报告（`reports/valuation/valuation_YYYYMMDD.md`）和 HTML 邮件；
+6. 通过 SMTP 发送到你的邮箱。
 
 模型失败、超时或未配置密钥时，自动降级为规则结论，邮件照常发送但不含 LLM 判断。
 
@@ -24,12 +26,30 @@
         ↓
 提示词（结构化数据 + 新闻标题，标注为不可信素材）
         ↓
-LLM 输出 JSON：rating / fair_value_range / confidence / thesis / drivers / risks / data_gaps
+LLM 输出 JSON：rating / action / position_hint / action_reason / fair_value_range /
+confidence / thesis / drivers / risks / data_gaps
         ↓
 校验枚举与长度 → 不合法则降级规则结论
         ↓
+独立页面 + 首页索引 → 由工作流提交
 Markdown + HTML 邮件 → SMTP 发送
 ```
+
+## 输出
+
+| 产物 | 位置 | 说明 |
+|---|---|---|
+| 最新估值页 | `docs/valuation.html` | 独立页面，不和每日报告混在一起 |
+| 归档页 | `docs/valuation/valuation_YYYYMMDD.html` | 每个工作日一份 |
+| 首页数据 | `docs/valuation_reports.json` | 首页「估值与仓位建议」区块读取最新一期 |
+| Markdown | `reports/valuation/valuation_YYYYMMDD.md` | 本地留存，不入库 |
+| 邮件 | 你的邮箱 | 含评级、加仓/减仓建议、理由与风险 |
+
+工作流生成后会提交 `docs/valuation.html`、`docs/valuation/` 与
+`docs/valuation_reports.json`，线上页面随之更新；`reports/valuation/` 已被忽略，不会入库。
+
+首页的「估值与仓位建议」区块由 `docs/js/valuation.js` 读取最新一期索引，
+显示每家公司的加仓 / 减仓 / 持有建议、现价、估值判断与理由。
 
 ## 需要的 Secrets
 
@@ -97,7 +117,7 @@ PowerShell 用 `$env:LLM_API_KEY="sk-xxx"` 的形式设置。
 - 密钥只放在 GitHub Secrets，脚本不读配置文件里的密钥，也不写日志。
 - 新闻标题是不可信外部输入：截断到 120 字、放入 `<news>` 标签，系统提示明确要求忽略其中指令。
 - 邮件主题会去掉换行等控制字符，避免邮件头注入。
-- 报告标注“不构成投资建议”，不输出买入/卖出指令。
+- 输出的是“仓位建议”而非交易指令，并在页面与邮件中标注“不构成投资建议”。
 
 ## 常见问题
 
@@ -113,3 +133,8 @@ PowerShell 用 `$env:LLM_API_KEY="sk-xxx"` 的形式设置。
 
 **报告里全是“数据不足”**
 - 说明行情采集失败，看日志里的 `数据错误`；也可能是 `yfinance` 被限流。
+
+**首页没有出现估值建议**
+- 确认 `docs/valuation_reports.json` 的 `reports` 首条有 `items`；
+- 直接打开 `valuation.html` 能看到内容则是浏览器缓存，强制刷新即可；
+- 该区块与每日报告完全独立，日报更新不会覆盖它。

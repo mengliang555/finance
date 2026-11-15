@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>公司财务分析项目 | GitHub Pages</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/valuation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -22,6 +23,7 @@
                 <a href="reports_index.html" class="nav-link"><i class="fas fa-file-alt"></i> 报告中心</a>
                 <a href="#companies" class="nav-link"><i class="fas fa-building"></i> 公司分析</a>
                 <a href="#comparison" class="nav-link"><i class="fas fa-balance-scale"></i> 对比分析</a>
+                <a href="#valuation" class="nav-link"><i class="fas fa-gauge-high"></i> 估值建议</a>
                 <a href="#framework" class="nav-link"><i class="fas fa-sitemap"></i> 分析框架</a>
                 <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> 关于</a>
             </div>
@@ -491,6 +493,26 @@
         </div>
     </section>
 
+    <!-- 估值与仓位建议部分 -->
+    <section id="valuation" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">估值与仓位建议</h2>
+                <p class="section-subtitle">工作日 10:00 更新，给出加仓 / 减仓 / 持有建议，与每日报告相互独立</p>
+            </div>
+
+            <div class="valuation-grid" id="valuationGrid">
+                <div class="valuation-loading">正在加载估值建议...</div>
+            </div>
+
+            <div class="framework-actions">
+                <a href="valuation.html" class="btn btn-primary">
+                    <i class="fas fa-chart-pie"></i> 查看完整估值报告
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- 分析框架部分 -->
     <section id="framework" class="section">
         <div class="container">
@@ -708,5 +730,6 @@
     <!-- JavaScript文件 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/valuation.js"></script>
 </body>
 </html>
