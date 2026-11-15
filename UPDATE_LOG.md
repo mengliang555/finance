@@ -1,5 +1,41 @@
 # 更新日志
 
+## 2026年11月15日 - 每日分析迁移到 GitHub Actions 并加入一致性校验
+
+### 主要变更
+1. **新增每日自动发布工作流** `.github/workflows/daily-analysis.yml`
+   - 每天 01:00 UTC（09:00 Asia/Shanghai）运行 `scripts/daily_company_analysis.py`
+   - 生成前后各执行一次一致性校验，失败则不提交
+   - 校验通过后由 `github-actions[bot]` 提交 `data/`、`reports/daily_analysis/`、`docs/reports/`
+   - 支持 `workflow_dispatch` 手动补跑，日志作为 artifact 上传
+
+2. **新增校验工作流** `.github/workflows/ci.yml`
+   - push 到 `main` 与 PR 时运行：语法编译、单元测试、仓库一致性校验
+
+3. **新增一致性校验工具** `scripts/check_consistency.py` 与 `tests/test_check_consistency.py`
+   - 覆盖 JSON 可解析、报告索引与 `reports.js` 引用、Markdown/HTML 本地链接、
+     发布根目录越界、股票代码覆盖、cron 时区换算、日报时效（警告）
+   - 22 个单元测试，仅依赖标准库
+
+4. **清理失效引用**
+   - 移除 `docs/js/reports.js` 中两条指向已删除 `reports/ai_analysis/` 的记录
+   - 修正 `NAVIGATION.md`：中宠股份路径、删除不存在的 3 月 19 日日报与 AI 报告、删除 Git 指南链接
+   - 修正首页“分析框架”链接：改为 GitHub 地址，避免 Pages 越界 404
+   - 补充 `LICENSE`（MIT），与 README 声明一致
+   - 报告中心 AI 分类计数初始值改为 0
+
+5. **重写** `guides/DAILY_ANALYSIS_SETUP.md`
+   - 以 GitHub Actions 为准，移除 crontab / launchd 与本机路径说明
+
+### 背景
+- 仓库内没有任何实际调度文件，最后一份日报生成于 2026-05-12，站点已停更约半年。
+- 文档与站点的引用漂移会导致 404，且没有机制在合并前发现。
+
+### 影响
+- ✅ 每日 09:00 自动发布，不再依赖人工运行
+- ✅ 引用漂移在 CI 阶段失败，避免把坏链接合入 `main`
+- ✅ 调度时间只有一个来源，配置与工作流不一致会被检测
+
 ## 2026年5月9日 - 项目整理与企业报告重生成
 
 ### 主要变更

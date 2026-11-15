@@ -1,46 +1,40 @@
 # Finance Analysis Project
 
-专业的财务分析项目，包含公司分析、行业研究、每日报告和AI分析。
+专业的财务分析项目，包含公司分析、行业研究、每日报告和自动化发布。
 
 ## 📁 项目结构
 
 ```
 finance/
 ├── README.md                    # 项目说明
-├── docs/                        # 网站文件
-│   ├── index.html              # 主页面
-│   ├── css/                    # 样式文件
-│   ├── js/                     # JavaScript文件
-│   ├── reports/                # 报告页面
-│   └── archive/                # 归档文件
-├── reports/                     # 分析报告
-│   ├── company_analysis/       # 公司分析
-│   │   ├── xiaomi_financial_analysis.md
-│   │   ├── meituan_financial_analysis.md
-│   │   ├── horizon_robotics_financial_analysis.md
-│   │   └── sanan_opto_financial_analysis.md
-│   ├── industry_analysis/      # 行业分析
-│   │   ├── comparative_analysis.md
-│   │   └── power_equipment_grid.md
-│   ├── daily_reports/          # 每日报告
-│   │   └── daily_stock_performance_20260312.md
-│   └── ai_analysis/            # AI分析
-│       ├── deepseek_v4_open_source_analysis.md
-│       └── deepseek_v4_huawei_ascend_analysis.md
-├── data/                       # 数据文件
-│   ├── raw/                    # 原始数据
-│   └── processed/              # 处理后的数据
-├── scripts/                    # 脚本文件
-│   ├── data_collection/        # 数据收集脚本
-│   └── analysis/               # 分析脚本
-├── guides/                     # 指南文档
-│   ├── company_analysis_framework.md
-│   ├── ACCESS_GUIDE.md
-│   ├── GITHUB_PAGES_SETUP.md
-│   └── GIT_VERSION_CONTROL_GUIDE.md
-├── archive/                    # 归档文件
-│   └── 20260311/               # 2026年3月11日归档
-└── .gitignore                  # Git忽略配置
+├── NAVIGATION.md                # 导航索引
+├── UPDATE_LOG.md                # 更新日志
+├── requirements.txt             # Python 依赖
+├── LICENSE                      # MIT 许可证
+├── .github/workflows/           # 自动化
+│   ├── ci.yml                   # 推送/PR 一致性校验
+│   └── daily-analysis.yml       # 每天 09:00 生成并发布日报
+├── docs/                        # 网站文件（GitHub Pages 发布根目录）
+│   ├── index.html               # 主页面
+│   ├── reports_index.html       # 报告中心
+│   ├── css/                     # 样式文件
+│   ├── js/                      # 交互与报告索引
+│   └── reports/                 # 报告页面与索引 JSON
+├── reports/                     # 分析报告（Markdown）
+│   ├── company_analysis/        # 公司分析
+│   ├── industry_analysis/       # 行业分析
+│   └── daily_analysis/          # 每日报告与摘要
+├── data/                        # 数据文件
+│   └── daily_analysis/          # 每日行情与分析 JSON
+├── scripts/                     # 脚本
+│   ├── daily_company_analysis.py    # 每日分析主脚本
+│   ├── check_consistency.py         # 仓库一致性校验
+│   ├── daily_analysis_config.json   # 公司与调度配置
+│   ├── analysis/                    # 站点维护脚本
+│   └── data_collection/             # 数据采集脚本
+├── tests/                       # 单元测试
+├── guides/                      # 指南文档
+└── archive/                     # 历史归档
 ```
 
 ## 🎯 核心功能
@@ -61,15 +55,10 @@ finance/
 - 市场表现总结
 - 操作建议
 
-### 4. AI技术分析
-- DeepSeek V4开源影响分析
-- 华为升腾芯片训练影响分析
-- AI产业链投资机会
-
-### 5. 自动化工具
-- 数据收集脚本
-- 网站报告更新脚本
-- 分析工具
+### 4. 自动化与校验
+- GitHub Actions 每天 09:00（Asia/Shanghai）自动生成并发布日报
+- `scripts/check_consistency.py` 检查链接、报告索引、股票代码与调度配置的一致性
+- 单元测试覆盖校验逻辑，推送与 PR 时自动运行
 
 ## 🚀 快速开始
 
@@ -87,11 +76,14 @@ cd finance
 # 安装依赖
 pip install -r requirements.txt
 
-# 运行数据收集脚本
-python scripts/data_collection/get_horizon_data.py
+# 运行每日分析（生成 Markdown / JSON / 站点页面）
+python scripts/daily_company_analysis.py
 
-# 更新网站报告
-python scripts/analysis/update_website_reports.py
+# 校验文档、站点与配置是否一致
+python scripts/check_consistency.py
+
+# 运行单元测试
+python -m unittest discover -s tests -v
 ```
 
 ### 查看报告
@@ -137,6 +129,6 @@ python scripts/analysis/update_website_reports.py
 
 ---
 
-**最后更新**: 2026年3月12日  
+**最后更新**: 2026年11月15日  
 **项目状态**: 活跃开发中  
 **数据更新频率**: 每日

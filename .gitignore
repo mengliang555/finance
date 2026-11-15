@@ -49,9 +49,10 @@ venv/
 *.log
 logs/
 
-# 测试文件
+# 测试文件（忽略根目录零散脚本，保留 tests/ 下的正式用例）
 test_*
 *_test.py
+!tests/test_*.py
 
 # 个人配置文件（不提交）
 personal_config.json

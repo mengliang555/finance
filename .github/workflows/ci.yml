@@ -1,0 +1,33 @@
+name: 一致性校验
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 语法编译
+        run: python -m compileall -q scripts tests
+
+      - name: 单元测试
+        run: python -m unittest discover -s tests -v
+
+      - name: 仓库一致性校验
+        run: python scripts/check_consistency.py
