@@ -40,6 +40,8 @@ import daily_company_analysis as analysis  # noqa: E402
 
 DISCLAIMER = "本报告由程序结合公开数据与语言模型生成，仅供研究参考，不构成投资建议。市场有风险，决策需谨慎。"
 
+TENCENT_KLINE_URL = "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param={symbol},day,,,{limit},qfq"
+
 SYSTEM_PROMPT = """你是一名谨慎的证券研究员，只依据用户提供的结构化数据做估值判断。
 
 要求：
@@ -240,21 +242,55 @@ def _moving_average(values, window):
     return sum(values[-window:]) / window
 
 
-def collect_metrics(company, config, now):
-    """采集估值所需的行情与基本面指标；失败时返回带 error 的空结构。"""
-    valuation = config.get("valuation") or {}
-    period = valuation.get("history_period", "1y")
-    metrics = {"ticker": company.get("ticker", ""), "error": None}
+def tencent_symbol(ticker):
+    """把 1810.HK / 600703.SS 之类的代码转换成腾讯行情用的代码。"""
+    code, _, suffix = ticker.partition(".")
+    if suffix == "HK" and code.isdigit():
+        return "hk" + code.zfill(5)
+    if suffix in {"SS", "SH"}:
+        return "sh" + code
+    if suffix == "SZ":
+        return "sz" + code
+    return None
 
+
+def parse_tencent_kline(payload, symbol):
+    """解析腾讯日线 JSON，返回 (收盘价列表, 成交量列表)。"""
+    node = ((payload or {}).get("data") or {}).get(symbol) or {}
+    bars = node.get("qfqday") or node.get("day") or []
+    closes, volumes = [], []
+    for bar in bars:
+        if not isinstance(bar, (list, tuple)) or len(bar) < 6:
+            continue
+        close = analysis.number_or_none(bar[2])
+        if close is None:
+            continue
+        closes.append(close)
+        volume = analysis.number_or_none(bar[5])
+        if volume is not None:
+            # A 股成交量单位是“手”，换算成股
+            volumes.append(volume * 100 if symbol.startswith(("sh", "sz")) else volume)
+    return closes, volumes
+
+
+def fetch_tencent_history(ticker, limit=250, timeout=15):
+    symbol = tencent_symbol(ticker)
+    if not symbol:
+        return [], []
+    request = urllib.request.Request(
+        TENCENT_KLINE_URL.format(symbol=symbol, limit=limit),
+        headers={"User-Agent": "Mozilla/5.0", "Referer": "https://gu.qq.com/"},
+    )
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+    return parse_tencent_kline(payload, symbol)
+
+
+def _series_from_history(hist):
+    closes, volumes = [], []
+    if hist is None or getattr(hist, "empty", True):
+        return closes, volumes
     try:
-        _, hist, info = analysis.get_stock_data(company["ticker"], period)
-    except Exception as exc:
-        metrics["error"] = str(exc)
-        return metrics
-
-    closes = []
-    volumes = []
-    if hist is not None and not hist.empty:
         for value in hist["Close"].tolist():
             number = analysis.number_or_none(value)
             if number is not None:
@@ -263,26 +299,77 @@ def collect_metrics(company, config, now):
             number = analysis.number_or_none(value)
             if number is not None:
                 volumes.append(number)
+    except (KeyError, TypeError):
+        return [], []
+    return closes, volumes
+
+
+def _apply_history(metrics, closes, volumes):
+    current = closes[-1]
+    high, low = max(closes), min(closes)
+    metrics.update(
+        {
+            "price": round(current, 3),
+            "high_52w": round(high, 3),
+            "low_52w": round(low, 3),
+            "range_position": round((current - low) / (high - low), 3) if high > low else None,
+            "sma20": _round_or_none(_moving_average(closes, 20)),
+            "sma60": _round_or_none(_moving_average(closes, 60)),
+            "return_1m": _return_over(closes, 21),
+            "return_3m": _return_over(closes, 63),
+            "return_6m": _return_over(closes, 126),
+            "return_1y": _return_over(closes, 252),
+            "volatility_annual": _annualized_volatility(closes),
+            "avg_volume_20d": _round_or_none(_moving_average(volumes, 20)),
+        }
+    )
+    return metrics
+
+
+def collect_metrics(company, config, now):
+    """采集估值指标：Yahoo → 腾讯日线 → 新浪实时价，逐级兜底。"""
+    valuation = config.get("valuation") or {}
+    period = valuation.get("history_period", "1y")
+    ticker = company.get("ticker", "")
+    metrics = {"ticker": ticker, "error": None, "data_source": None}
+    info = {}
+
+    try:
+        _, hist, info = analysis.get_stock_data(ticker, period)
+        metrics["data_source"] = "Yahoo Finance"
+        closes, volumes = _series_from_history(hist)
+    except Exception as exc:
+        metrics["yahoo_error"] = clean_text(exc, 200)
+        closes, volumes = [], []
+
+    if not closes:
+        try:
+            closes, volumes = fetch_tencent_history(ticker)
+            if closes:
+                metrics["data_source"] = "Tencent Finance"
+        except Exception as exc:
+            metrics["tencent_error"] = clean_text(exc, 200)
 
     if closes:
-        current = closes[-1]
-        high, low = max(closes), min(closes)
-        metrics.update(
-            {
-                "price": round(current, 3),
-                "high_52w": round(high, 3),
-                "low_52w": round(low, 3),
-                "range_position": round((current - low) / (high - low), 3) if high > low else None,
-                "sma20": _round_or_none(_moving_average(closes, 20)),
-                "sma60": _round_or_none(_moving_average(closes, 60)),
-                "return_1m": _return_over(closes, 21),
-                "return_3m": _return_over(closes, 63),
-                "return_6m": _return_over(closes, 126),
-                "return_1y": _return_over(closes, 252),
-                "volatility_annual": _annualized_volatility(closes),
-                "avg_volume_20d": _round_or_none(_moving_average(volumes, 20)),
-            }
-        )
+        _apply_history(metrics, closes, volumes)
+    else:
+        # 没有历史数据时，至少拿一个实时价，避免整页 N/A
+        try:
+            quote = analysis.fetch_sina_quote(company, config)
+            metrics.update(
+                {
+                    "price": quote.get("close"),
+                    "range_position": None,
+                    "data_source": "Sina Finance",
+                }
+            )
+        except Exception as exc:
+            errors = [
+                str(item)
+                for item in (metrics.get("yahoo_error"), metrics.get("tencent_error"), clean_text(exc, 200))
+                if item
+            ]
+            metrics["error"] = "; ".join(errors) or "行情采集失败"
 
     info = info or {}
     metrics.update(
@@ -301,6 +388,9 @@ def collect_metrics(company, config, now):
             "free_cashflow": analysis.number_or_none(info.get("freeCashflow")),
         }
     )
+    if not metrics.get("currency"):
+        suffix = ticker.partition(".")[2]
+        metrics["currency"] = {"HK": "HKD", "SS": "CNY", "SH": "CNY", "SZ": "CNY"}.get(suffix)
     return metrics
 
 
@@ -423,6 +513,7 @@ def render_markdown(results, now):
                 "",
                 f"- 现价：{_format_number(metrics.get('price'))}｜52 周区间："
                 f"{_format_number(metrics.get('low_52w'))} – {_format_number(metrics.get('high_52w'))}",
+                f"- 行情来源：{metrics.get('data_source') or 'N/A'}",
                 f"- 估值判断：**{view['rating']}**（置信度 {view['confidence']}）",
                 f"- 仓位建议：**{view['action']}**（{view['position_hint']}）",
                 f"- 建议理由：{view['action_reason'] or '数据不足'}",
@@ -477,6 +568,7 @@ def build_items(results):
                 "thesis": view["thesis"],
                 "drivers": view["drivers"],
                 "risks": view["risks"],
+                "data_source": metrics.get("data_source") or "",
                 "source": "LLM" if result["source"] == "llm" else "规则",
                 "error": result.get("error") or metrics.get("error") or "",
             }
@@ -559,6 +651,7 @@ def render_valuation_page(items, now, history, base="", link_prefix="valuation/"
             f"（置信度 {html.escape(item['confidence'])}）</p>",
             f"<div class='kv'><div><span>仓位建议</span><strong>{html.escape(item['position_hint'])}</strong></div>"
             f"<div><span>合理区间</span><strong>{html.escape(item['fair_value_range'])}</strong></div>"
+            f"<div><span>行情来源</span><strong>{html.escape(item.get('data_source') or 'N/A')}</strong></div>"
             f"<div><span>判断来源</span><strong>{html.escape(item['source'])}</strong></div></div>",
             f"<p><strong>建议理由：</strong>{html.escape(item['action_reason'] or '数据不足')}</p>",
             f"<p><strong>核心逻辑：</strong>{html.escape(item['thesis'] or '数据不足')}</p>",

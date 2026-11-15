@@ -257,6 +257,71 @@ class LlmClientTests(unittest.TestCase):
         self.assertIn("401", str(ctx.exception))
 
 
+class TencentFallbackTests(unittest.TestCase):
+    def test_symbol_mapping(self):
+        self.assertEqual(vr.tencent_symbol("09660.HK"), "hk09660")
+        self.assertEqual(vr.tencent_symbol("1810.HK"), "hk01810")
+        self.assertEqual(vr.tencent_symbol("600703.SS"), "sh600703")
+        self.assertEqual(vr.tencent_symbol("002891.SZ"), "sz002891")
+        self.assertIsNone(vr.tencent_symbol("AAPL"))
+
+    def test_parse_kline(self):
+        payload = {
+            "data": {
+                "hk09660": {
+                    "qfqday": [["2026-11-13", "3.855", "3.750", "4.030", "3.740", "133574706.000"]]
+                }
+            }
+        }
+        closes, volumes = vr.parse_tencent_kline(payload, "hk09660")
+        self.assertEqual(closes, [3.75])
+        self.assertEqual(volumes, [133574706.0])
+
+    def test_parse_kline_scales_a_share_volume(self):
+        payload = {
+            "data": {
+                "sh600703": {"day": [["2026-11-13", "9.37", "9.07", "9.48", "9.02", "605883"]]}
+            }
+        }
+        _, volumes = vr.parse_tencent_kline(payload, "sh600703")
+        self.assertEqual(volumes, [60588300.0])
+
+    def test_apply_history_metrics(self):
+        metrics = {}
+
+        vr._apply_history(metrics, [10.0, 12.0, 8.0, 11.0], [1, 2, 3, 4])
+
+        self.assertEqual(metrics["price"], 11.0)
+        self.assertEqual(metrics["high_52w"], 12.0)
+        self.assertEqual(metrics["low_52w"], 8.0)
+        self.assertEqual(metrics["range_position"], 0.75)
+
+    def test_collect_metrics_falls_back_to_tencent(self):
+        config = {"valuation": {"history_period": "1y"}}
+        now = vr.analysis.now_in_timezone("Asia/Shanghai")
+
+        with patch.object(vr.analysis, "get_stock_data", side_effect=RuntimeError("yahoo down")):
+            with patch.object(vr, "fetch_tencent_history", return_value=([10.0, 11.0, 12.0], [1, 2, 3])):
+                metrics = vr.collect_metrics(COMPANY, config, now)
+
+        self.assertEqual(metrics["price"], 12.0)
+        self.assertEqual(metrics["data_source"], "Tencent Finance")
+        self.assertIsNone(metrics["error"])
+
+    def test_collect_metrics_all_sources_fail(self):
+        config = {"valuation": {"history_period": "1y"}}
+        now = vr.analysis.now_in_timezone("Asia/Shanghai")
+
+        with patch.object(vr.analysis, "get_stock_data", side_effect=RuntimeError("yahoo down")):
+            with patch.object(vr, "fetch_tencent_history", side_effect=RuntimeError("tencent down")):
+                with patch.object(vr.analysis, "fetch_sina_quote", side_effect=RuntimeError("sina down")):
+                    metrics = vr.collect_metrics(COMPANY, config, now)
+
+        self.assertIsNone(metrics.get("price"))
+        self.assertIn("yahoo down", metrics["error"])
+        self.assertIn("tencent down", metrics["error"])
+
+
 class ValuationPageTests(unittest.TestCase):
     def setUp(self):
         self.now = vr.analysis.now_in_timezone("Asia/Shanghai")
@@ -276,6 +341,13 @@ class ValuationPageTests(unittest.TestCase):
         self.assertIn("分批加仓", self.items[0]["position_hint"])
         self.assertEqual(self.items[0]["source"], "LLM")
 
+    def test_build_items_keeps_data_source(self):
+        result = dict(self.results[0], metrics=dict(METRICS, data_source="Tencent Finance"))
+
+        items = vr.build_items([result])
+
+        self.assertEqual(items[0]["data_source"], "Tencent Finance")
+
     def test_page_contains_action_and_history_link(self):
         history = [{"id": "v1", "date": "2026-11-17", "htmlPath": "valuation/valuation_20261117.html"}]
 
@@ -284,6 +356,7 @@ class ValuationPageTests(unittest.TestCase):
         self.assertIn("加仓", page)
         self.assertIn("valuation/valuation_20261117.html", page)
         self.assertIn("index.html", page)
+        self.assertIn("行情来源", page)
 
     def test_write_outputs_creates_files_and_dedupes(self):
         with tempfile.TemporaryDirectory() as tmp:
