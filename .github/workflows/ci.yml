@@ -26,6 +26,9 @@ jobs:
       - name: 语法编译
         run: python -m compileall -q scripts tests
 
+      - name: 构建站点产物
+        run: python scripts/build_site.py --out dist
+
       - name: 单元测试
         run: python -m unittest discover -s tests -v
 

@@ -1,0 +1,10 @@
+# Cloudflare Workers 配置：纯静态资源部署。
+# Workers Builds 中的命令：
+#   Build command:   python3 scripts/build_site.py
+#   Deploy command:  npx wrangler deploy
+# 本地预览：npx wrangler dev；本地发布：npx wrangler deploy
+name = "finance"
+compatibility_date = "2026-11-15"
+
+[assets]
+directory = "./dist"

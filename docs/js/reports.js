@@ -264,6 +264,27 @@ function getCategoryName(category) {
     return names[category] || category;
 }
 
+// 依次尝试同源地址与 GitHub raw 地址，同源优先
+async function fetchReportMarkdown(report) {
+    const sources = [
+        new URL(report.rawPath, window.location.href).href,
+        `https://raw.githubusercontent.com/mengliang555/finance/main/${report.rawPath}`
+    ];
+
+    for (const url of sources) {
+        try {
+            const response = await fetch(url, { cache: 'no-cache' });
+            if (response.ok) {
+                return await response.text();
+            }
+        } catch (error) {
+            console.warn('加载报告失败，尝试下一个来源:', url, error);
+        }
+    }
+
+    throw new Error(`无法从站点或 GitHub 加载 ${report.rawPath}`);
+}
+
 // 查看报告
 async function viewReport(reportId) {
     const report = reports.find(r => r.id === reportId);
@@ -296,16 +317,9 @@ async function viewReport(reportId) {
             return;
         }
 
-        // 使用GitHub raw文件URL
-        const rawUrl = `https://raw.githubusercontent.com/mengliang555/finance/main/${report.rawPath}`;
-        
-        // 获取Markdown内容
-        const response = await fetch(rawUrl);
-        if (!response.ok) {
-            throw new Error(`HTTP错误: ${response.status}`);
-        }
-        
-        const markdown = await response.text();
+        // 同源优先（构建时会把 Markdown 复制到站点根目录），
+        // GitHub raw 作为本地预览与 GitHub Pages 的兜底
+        const markdown = await fetchReportMarkdown(report);
         
         // 使用marked.js渲染Markdown
         const html = marked.parse(markdown);
@@ -329,7 +343,7 @@ async function viewReport(reportId) {
                 <h3 style="color: #1e293b; margin-bottom: 10px;">加载失败</h3>
                 <p style="color: #64748b; margin-bottom: 20px;">无法加载报告内容：${error.message}</p>
                 <p style="font-size: 0.9em; color: #94a3b8; margin-bottom: 20px;">
-                    请确保文件已提交到GitHub仓库，并且网络连接正常。
+                    请确认报告文件已随站点发布，或仓库可公开访问。
                 </p>
                 <button onclick="viewReport('${reportId}')" style="padding: 10px 20px; background: #4f46e5; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 500;">
                     <i class="fas fa-redo"></i> 重试加载

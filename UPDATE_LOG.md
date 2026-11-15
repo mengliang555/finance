@@ -1,5 +1,42 @@
 # 更新日志
 
+## 2026年11月15日 - 支持 Cloudflare Workers 部署
+
+### 主要变更
+1. **新增站点构建脚本** `scripts/build_site.py`
+   - 把 `docs/` 原样复制到 `dist/`
+   - 把 `reports/**/*.md` 与 `guides/**/*.md` 按原路径复制进去
+   - 生成 Workers 静态资源原生支持的 `_headers`（安全头 + Markdown 短缓存）
+   - 校验输出目录，拒绝写入仓库根目录或 `docs/` 内部
+
+2. **新增部署配置**
+   - `wrangler.toml`：`name = "finance"`、`[assets] directory = "./dist"`
+   - `.python-version`：固定构建镜像的 Python 版本
+
+3. **报告中心改为同源优先**
+   - 先请求站点内的 `reports/...`，失败再回退 GitHub raw
+   - Cloudflare 上不再依赖 `raw.githubusercontent.com`
+
+4. **工作流增加构建步骤**
+   - `ci.yml`：push/PR 时构建 `dist`，构建失败即失败
+   - `daily-analysis.yml`：提交前构建，避免发布无法构建的站点
+
+5. **新增部署指南** `guides/CLOUDFLARE_DEPLOY.md`
+   - Workers Builds 表单、CLI 发布、本地预览、自定义域名、故障排查
+   - 附 Pages 切换方式与两种配置不可混用的说明
+
+### 背景
+- 站点此前只能在 GitHub Pages 上完整工作，报告正文依赖 GitHub raw，
+  仓库转私有或分支改名即全部失效。
+- Cloudflare 控制台新建项目默认走 Workers Builds，部署命令为
+  `npx wrangler deploy`，因此配置使用 Workers 的 `[assets]` 而不是 Pages 的
+  `pages_build_output_dir`。
+
+### 影响
+- ✅ 推送（含每日机器人提交）即可触发 Workers 自动部署
+- ✅ 报告不再要求仓库公开才能加载
+- ✅ 构建产物在 CI 中验证，坏站点不会被推上线
+
 ## 2026年11月15日 - 每日分析迁移到 GitHub Actions 并加入一致性校验
 
 ### 主要变更

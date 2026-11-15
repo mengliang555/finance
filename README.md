@@ -11,6 +11,7 @@ finance/
 ├── UPDATE_LOG.md                # 更新日志
 ├── requirements.txt             # Python 依赖
 ├── LICENSE                      # MIT 许可证
+├── wrangler.toml                # Cloudflare Workers 配置
 ├── .github/workflows/           # 自动化
 │   ├── ci.yml                   # 推送/PR 一致性校验
 │   └── daily-analysis.yml       # 每天 09:00 生成并发布日报
@@ -29,6 +30,7 @@ finance/
 ├── scripts/                     # 脚本
 │   ├── daily_company_analysis.py    # 每日分析主脚本
 │   ├── check_consistency.py         # 仓库一致性校验
+│   ├── build_site.py                # 组装部署产物 dist/
 │   ├── daily_analysis_config.json   # 公司与调度配置
 │   ├── analysis/                    # 站点维护脚本
 │   └── data_collection/             # 数据采集脚本
@@ -67,6 +69,16 @@ finance/
 https://mengliang555.github.io/finance/
 ```
 
+### 部署到 Cloudflare Workers
+```bash
+# 组装 dist/（docs/ + 报告 Markdown）
+python scripts/build_site.py
+
+# 发布（需要先 npx wrangler login）
+npx wrangler deploy
+```
+Workers Builds 的 Git 集成与自定义域名步骤见 [guides/CLOUDFLARE_DEPLOY.md](guides/CLOUDFLARE_DEPLOY.md)。
+
 ### 本地开发
 ```bash
 # 克隆项目
@@ -104,7 +116,7 @@ python -m unittest discover -s tests -v
 - **前端**: HTML5、CSS3、JavaScript
 - **后端**: Python、Shell脚本
 - **数据**: JSON、Markdown
-- **部署**: GitHub Pages
+- **部署**: GitHub Pages、Cloudflare Workers
 - **版本控制**: Git
 
 ## 📈 更新日志

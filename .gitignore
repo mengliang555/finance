@@ -61,6 +61,10 @@ local_settings.py
 # 自动生成的文件
 generated/
 output/
+
+# Cloudflare Pages 构建产物（由 scripts/build_site.py 生成）
+dist/
+.wrangler/
 # 整理后的忽略规则
 archive/*.md
 temp/
