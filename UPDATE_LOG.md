@@ -1,5 +1,35 @@
 # 更新日志
 
+## 2026年11月15日 - 新闻源增加 Google News RSS 兜底
+
+### 主要变更
+1. **`daily_company_analysis.py` 新增两个 Provider**
+   - `GoogleNewsRssProvider`：按关键词检索 Google 新闻 RSS，无需密钥
+   - `FallbackNewsProvider`：主源无结果或报错时按配置顺序回退
+
+2. **配置新增字段**
+   - `news.fallback_providers`：兜底源顺序，当前为 `["google-news-rss"]`
+   - `news.industry_queries`：行业消息检索词，当前为 `["港股", "A股", "半导体"]`
+   - `news.rss.google_news_url`、`news.rss.timeout`
+   - 公司可用 `news_query` 覆盖默认检索词（默认用公司名）
+
+3. **解析与去重**
+   - RSS 的 RFC 822 时间统一转换为本地时区
+   - 按新闻窗口过滤、按标题去重、按时间倒序
+   - 兜底成功时报告来源标注“yfinance 无结果，已回退”
+
+4. **测试**
+   - 新增 13 个单元测试：RSS 解析、时区转换、窗口过滤、检索词覆盖、回退选择、错误汇总
+
+### 背景
+- 2026-11-15 手动运行日报时，yfinance 在 GitHub runner 上返回 0 条新闻，
+  四家公司的公司消息面和行业消息面全部为空，报告只剩行情和估值。
+
+### 影响
+- ✅ 新闻为空时自动改用 Google 新闻 RSS，报告恢复消息面内容
+- ✅ 两条来源都失败时保留行情与基本面，并在报告中标注原因
+- ✅ 兜底顺序可在配置中调整，后续加源不用改代码
+
 ## 2026年11月15日 - 支持 Cloudflare Workers 部署
 
 ### 主要变更

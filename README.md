@@ -56,6 +56,7 @@ finance/
 - 关注股票每日涨幅情况
 - 市场表现总结
 - 操作建议
+- 新闻主源 yfinance，无结果时自动回退 Google 新闻 RSS
 
 ### 4. 自动化与校验
 - GitHub Actions 每天 09:00（Asia/Shanghai）自动生成并发布日报

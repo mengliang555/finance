@@ -75,8 +75,14 @@
   },
   "news": {
     "provider": "yfinance",
+    "fallback_providers": ["google-news-rss"],
     "fallback": "网络新闻不可用时保留行情和基本面分析，并在报告中标注新闻缺失原因",
-    "industry_tickers": ["^HSI", "^HSTECH", "000001.SS", "159995.SZ"]
+    "industry_tickers": ["^HSI", "^HSTECH", "000001.SS", "159995.SZ"],
+    "industry_queries": ["港股", "A股", "半导体"],
+    "rss": {
+      "google_news_url": "https://news.google.com/rss/search?q={query}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "timeout": 12
+    }
   },
   "notification": {
     "enabled": false,

@@ -5,11 +5,14 @@
 
 import argparse
 import datetime as dt
+import email.utils
 import html
 import json
 import sys
 import traceback
+import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -27,6 +30,7 @@ except ImportError:
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CONFIG_FILE = PROJECT_ROOT / "scripts" / "daily_analysis_config.json"
 DEFAULT_TIMEZONE = "Asia/Shanghai"
+DEFAULT_GOOGLE_NEWS_URL = "https://news.google.com/rss/search?q={query}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
 
 
 def now_in_timezone(timezone_name):
@@ -56,7 +60,12 @@ def load_config():
     config.setdefault("news", {})
     config["news"].setdefault("provider", "yfinance")
     config["news"].setdefault("fallback", "网络新闻不可用时保留行情和基本面分析，并在报告中标注新闻缺失原因")
+    config["news"].setdefault("fallback_providers", [])
     config["news"].setdefault("industry_tickers", ["^HSI", "^HSTECH", "000001.SS"])
+    config["news"].setdefault("industry_queries", [])
+    config["news"].setdefault("rss", {})
+    config["news"]["rss"].setdefault("google_news_url", DEFAULT_GOOGLE_NEWS_URL)
+    config["news"]["rss"].setdefault("timeout", 12)
     config.setdefault("market_data", {})
     config["market_data"].setdefault("provider_order", ["yfinance", "sina"])
     config["market_data"].setdefault("sina_symbols", {})
@@ -160,6 +169,46 @@ def normalize_news_item(item, timezone_name, source_symbol):
     }
 
 
+def parse_rss_datetime(value, timezone_name):
+    """解析 RSS 的 RFC 822 时间，失败返回 None。"""
+    if not value:
+        return None
+    try:
+        parsed = email.utils.parsedate_to_datetime(value.strip())
+    except (TypeError, ValueError):
+        return None
+    if parsed is None:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=dt.timezone.utc)
+    return parsed.astimezone(ZoneInfo(timezone_name))
+
+
+def parse_rss_items(raw, timezone_name):
+    """把 RSS XML 解析成统一的新闻条目结构。"""
+    root = ET.fromstring(raw)
+    items = []
+    for node in root.findall(".//item"):
+        title = (node.findtext("title") or "").strip()
+        if not title:
+            continue
+        publisher_node = node.find("source")
+        publisher = (publisher_node.text or "").strip() if publisher_node is not None else ""
+        published_at = parse_rss_datetime(node.findtext("pubDate") or "", timezone_name)
+        items.append(
+            {
+                "title": title,
+                "publisher": publisher,
+                "link": (node.findtext("link") or "").strip(),
+                "published_at": published_at.isoformat() if published_at else "",
+                "published_display": published_at.strftime("%Y-%m-%d %H:%M") if published_at else "时间未知",
+                "source": "google-news-rss",
+                "source_symbol": "",
+            }
+        )
+    return items
+
+
 class NewsProvider:
     name = "base"
 
@@ -238,11 +287,140 @@ class YFinanceNewsProvider(NewsProvider):
         }
 
 
+class GoogleNewsRssProvider(NewsProvider):
+    """Google 新闻 RSS 兜底源：无需密钥，按关键词返回中文财经新闻。"""
+
+    name = "google-news-rss"
+
+    def __init__(self, config, timezone_name):
+        news = config.get("news", {})
+        rss = news.get("rss", {})
+        self.url_template = rss.get("google_news_url", DEFAULT_GOOGLE_NEWS_URL)
+        self.timeout = int(rss.get("timeout", 12))
+        self.industry_queries = list(news.get("industry_queries") or [])
+        self.timezone_name = timezone_name
+
+    def _fetch_xml(self, query):
+        url = self.url_template.format(query=urllib.parse.quote(query))
+        request = urllib.request.Request(
+            url,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; finance-analysis/1.0)"},
+        )
+        return urllib.request.urlopen(request, timeout=self.timeout).read()
+
+    def _fetch_query(self, query, start, end, limit):
+        try:
+            items = parse_rss_items(self._fetch_xml(query), self.timezone_name)
+        except Exception as exc:
+            return [], f"{query}: {exc}"
+
+        window_items = []
+        for item in items:
+            if not item["published_at"]:
+                continue
+            published = dt.datetime.fromisoformat(item["published_at"])
+            if start <= published <= end:
+                window_items.append(item)
+        window_items.sort(key=lambda item: item["published_at"], reverse=True)
+        return window_items[:limit], None
+
+    def fetch_company_news(self, company, start, end, limit):
+        query = company.get("news_query") or company.get("name") or company["ticker"]
+        items, error = self._fetch_query(query, start, end, limit)
+        return {
+            "provider": self.name,
+            "source": f"Google 新闻 RSS: {query}",
+            "items": items,
+            "error": error,
+        }
+
+    def fetch_industry_news(self, tickers, start, end, limit):
+        queries = self.industry_queries or ["港股", "A股"]
+        items = []
+        errors = []
+        for query in queries:
+            news, error = self._fetch_query(query, start, end, max(limit, 2))
+            items.extend(news)
+            if error:
+                errors.append(error)
+
+        seen = set()
+        deduped = []
+        for item in sorted(items, key=lambda entry: entry["published_at"], reverse=True):
+            if item["title"] in seen:
+                continue
+            seen.add(item["title"])
+            deduped.append(item)
+
+        return {
+            "provider": self.name,
+            "source": "Google 新闻 RSS: " + "、".join(queries),
+            "items": deduped[:limit],
+            "error": "; ".join(errors) if errors else None,
+        }
+
+
+class FallbackNewsProvider(NewsProvider):
+    """主源无结果时，按顺序尝试备用新闻源。"""
+
+    def __init__(self, primary, fallbacks):
+        self.primary = primary
+        self.fallbacks = list(fallbacks)
+        self.name = primary.name
+
+    def _select(self, fetch):
+        primary_result = fetch(self.primary)
+        if primary_result.get("items"):
+            return primary_result
+
+        errors = []
+        if primary_result.get("error"):
+            errors.append(f"{self.primary.name}: {primary_result['error']}")
+
+        for provider in self.fallbacks:
+            try:
+                result = fetch(provider)
+            except Exception as exc:
+                errors.append(f"{provider.name}: {exc}")
+                continue
+            if result.get("items"):
+                merged = dict(result)
+                merged["source"] = f"{result['source']}（{self.primary.name} 无结果，已回退）"
+                merged["error"] = None
+                return merged
+            if result.get("error"):
+                errors.append(f"{provider.name}: {result['error']}")
+
+        merged = dict(primary_result)
+        merged["error"] = "; ".join(errors) if errors else "所有新闻源在当前窗口内均无结果"
+        return merged
+
+    def fetch_company_news(self, company, start, end, limit):
+        return self._select(lambda provider: provider.fetch_company_news(company, start, end, limit))
+
+    def fetch_industry_news(self, tickers, start, end, limit):
+        return self._select(lambda provider: provider.fetch_industry_news(tickers, start, end, limit))
+
+
 def build_news_provider(config):
+    timezone_name = config["schedule"]["timezone"]
     provider_name = config.get("news", {}).get("provider", "yfinance")
-    if provider_name != "yfinance":
+    if provider_name == "yfinance":
+        primary = YFinanceNewsProvider(timezone_name)
+    else:
         print(f"未识别新闻 provider {provider_name}，回退到 yfinance")
-    return YFinanceNewsProvider(config["schedule"]["timezone"])
+        primary = YFinanceNewsProvider(timezone_name)
+
+    fallbacks = []
+    for fallback_name in config.get("news", {}).get("fallback_providers", []):
+        if fallback_name == GoogleNewsRssProvider.name:
+            fallbacks.append(GoogleNewsRssProvider(config, timezone_name))
+        else:
+            print(f"未识别新闻 fallback {fallback_name}，已跳过")
+
+    if not fallbacks:
+        return primary
+    return FallbackNewsProvider(primary, fallbacks)
 
 
 def dataframe_records(hist):
@@ -726,7 +904,8 @@ def generate_markdown_report(results, industry_news, config, output_file, now):
             "",
             "- 行情来源：优先按配置尝试 Yahoo Finance / yfinance；关键行情缺失时回退到 Sina Finance。",
             f"- 行情 fallback：{config.get('market_data', {}).get('fallback_note', '')}",
-            f"- 新闻 provider：{config.get('news', {}).get('provider', 'yfinance')}；当前仅保证 yfinance news 基础来源，可继续扩展到 NewsAPI、交易所公告或自建搜索。",
+            f"- 新闻 provider：{config.get('news', {}).get('provider', 'yfinance')}；"
+            f"主源无结果时依次回退 {', '.join(config.get('news', {}).get('fallback_providers') or []) or '（未配置）'}。",
             "- 若 provider 不返回发布时间，报告会保留标题但无法严格验证窗口覆盖。",
             "- 本报告由脚本自动生成，仅供研究参考，不构成投资建议。",
         ]

@@ -131,11 +131,20 @@ python -m unittest discover -s tests -v
 - `yfinance` 偶发限流或字段缺失，脚本会自动回退新浪行情；
 - 若两家都失败，该公司的 `success` 为 `false`，报告会在“失败项”中说明原因，不影响其他公司。
 
+**报告里新闻为空**
+- `yfinance` 的新闻在 CI 环境偶尔返回空或被限流，脚本会自动回退到 Google 新闻 RSS（按公司名检索）；
+- 两条来源都失败时，报告会在“抓取说明”里标注原因，不影响行情与基本面部分；
+- 想换检索词可在配置的 `companies[].news_query` 中覆盖，行业检索词用 `news.industry_queries`。
+
 **站点上的报告打不开**
 - 报告中心的 Markdown 通过 `raw.githubusercontent.com` 读取，需要仓库保持公开、分支名为 `main`；
 - 动态日报使用本地 HTML（`htmlPath`），不依赖外网。
 
 ## 📝 变更记录
+
+### v2.1 (2026-11-15)
+- 新增 Google 新闻 RSS 兜底源，yfinance 无结果时自动回退；
+- 新增 RSS 解析、窗口过滤与回退选择的单元测试。
 
 ### v2.0 (2026-11-15)
 - 迁移到 GitHub Actions，删除 crontab / launchd 说明；
