@@ -96,30 +96,6 @@ const reports = [
         rawPath: 'reports/daily_reports/daily_stock_performance_20260312.md'
     },
     
-    // AI分析报告
-    {
-        id: 'deepseek-open',
-        title: 'DeepSeek V4开源影响分析',
-        category: 'ai',
-        description: '分析DeepSeek V4如果开源对A股和港股上市公司的影响，重点关注AI算力和应用公司。',
-        icon: 'fas fa-brain',
-        iconColor: 'linear-gradient(135deg, #5f27cd, #7d4ce8)',
-        date: '2026-03-12',
-        size: '6.3KB',
-        rawPath: 'reports/ai_analysis/deepseek_v4_open_source_analysis.md'
-    },
-    {
-        id: 'deepseek-huawei',
-        title: 'DeepSeek V4华为升腾芯片训练影响分析',
-        category: 'ai',
-        description: '分析如果DeepSeek V4使用华为升腾芯片训练，对华为昇腾产业链和国产AI芯片生态的影响。',
-        icon: 'fas fa-microchip',
-        iconColor: 'linear-gradient(135deg, #00d2d3, #2de9ea)',
-        date: '2026-03-12',
-        size: '6.5KB',
-        rawPath: 'reports/ai_analysis/deepseek_v4_huawei_ascend_analysis.md'
-    },
-    
     // 指南文档
     {
         id: 'framework',

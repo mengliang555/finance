@@ -7,7 +7,7 @@
 - [美团财务分析](reports/company_analysis/meituan_financial_analysis.md)
 - [地平线机器人财务分析](reports/company_analysis/horizon_robotics_financial_analysis.md)
 - [三安光电财务分析](reports/company_analysis/sanan_opto_financial_analysis.md)
-- [中宠股份深度分析](reports/zhongchong_analysis_20260319.md)
+- [中宠股份深度分析](reports/company_analysis/zhongchong_financial_analysis.md)
 
 ### 行业分析报告
 - [四家公司对比分析](reports/industry_analysis/comparative_analysis.md)
@@ -22,18 +22,17 @@
 - [2026年3月16日公司分析（周一复盘版）](reports/daily_analysis/daily_company_analysis_20260316.md)
 - [2026年3月17日公司分析（周二复盘版）](reports/daily_analysis/daily_company_analysis_20260317.md)
 - [2026年3月18日公司分析（周三复盘版）](reports/daily_analysis/daily_company_analysis_20260318.md)
-- [2026年3月19日公司分析（周四复盘版）](reports/daily_analysis/daily_company_analysis_20260319.md)
-- [2026年3月19日公司分析（周四复盘版）](reports/daily_analysis/daily_company_analysis_20260319.md)
-
-### AI分析报告
-- [DeepSeek V4开源影响分析](reports/ai_analysis/deepseek_v4_open_source_analysis.md)
-- [DeepSeek V4华为升腾芯片训练影响分析](reports/ai_analysis/deepseek_v4_huawei_ascend_analysis.md)
+- [2026年5月9日公司分析](reports/daily_analysis/daily_company_analysis_20260509.md)
+- [2026年5月10日公司分析](reports/daily_analysis/daily_company_analysis_20260510.md)
+- [2026年5月11日公司分析](reports/daily_analysis/daily_company_analysis_20260511.md)
+- [2026年5月12日公司分析](reports/daily_analysis/daily_company_analysis_20260512.md)
 
 ### 指南文档
 - [公司分析框架](guides/company_analysis_framework.md)
 - [访问指南](guides/ACCESS_GUIDE.md)
 - [GitHub Pages设置指南](guides/GITHUB_PAGES_SETUP.md)
-- [Git版本控制指南](guides/GIT_VERSION_CONTROL_GUIDE.md)
+- [每日分析自动化指南](guides/DAILY_ANALYSIS_SETUP.md)
+- [Markdown报告指南](guides/MARKDOWN_REPORTS_GUIDE.md)
 
 ### 网站页面
 - [主页面](docs/index.html)
@@ -45,11 +44,11 @@
 
 ## 🔄 更新流程
 
-### 每日更新
-1. 运行数据收集脚本
-2. 生成每日报告
-3. 更新网站数据
-4. 提交到GitHub
+### 每日更新（自动）
+1. GitHub Actions 每天 09:00（Asia/Shanghai）运行 `scripts/daily_company_analysis.py`
+2. 生成日报、摘要、站点页面与报告索引
+3. 自动执行 `scripts/check_consistency.py` 做一致性校验
+4. 校验通过后由机器人账号提交并推送，站点随之更新
 
 ### 公司分析更新
 1. 收集最新财务数据
@@ -132,6 +131,6 @@
 
 ---
 
-**导航索引最后更新**: 2026年3月19日  
+**导航索引最后更新**: 2026年11月15日  
 **维护状态**: 活跃  
-**下次全面检查**: 2026年3月26日
+**下次全面检查**: 2026年12月15日
