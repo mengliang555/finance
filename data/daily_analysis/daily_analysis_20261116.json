@@ -1,0 +1,731 @@
+{
+  "generated_at": "2026-11-16T15:42:17.589915+08:00",
+  "industry_news": {
+    "provider": "yfinance",
+    "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+    "items": [
+      {
+        "title": "New World shares plunge 47% to record low on $3.2 billion rights issue",
+        "publisher": "Investing.com",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/world-shares-plunge-47-record-052052173.html",
+        "published_at": "2026-11-16T13:20:52+08:00",
+        "published_display": "2026-11-16 13:20",
+        "source": "yfinance news",
+        "source_symbol": "^HSI"
+      }
+    ],
+    "error": null,
+    "window": {
+      "start": "2026-11-13 16:00:00 CST",
+      "end": "2026-11-16 15:42:17 CST"
+    }
+  },
+  "results": [
+    {
+      "company_id": "xiaomi",
+      "company_name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": [
+        "智能手机",
+        "IoT",
+        "汽车业务",
+        "海外市场"
+      ],
+      "analysis_date": "2026-11-16",
+      "analysis_time": "2026-11-16 15:42:17 CST",
+      "news_window": {
+        "start": "2026-11-13 16:00:00 CST",
+        "end": "2026-11-16 15:42:17 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-03",
+          "open": 28.639999389648438,
+          "high": 28.920000076293945,
+          "low": 28.1200008392334,
+          "close": 28.600000381469727,
+          "volume": 202982521
+        },
+        {
+          "date": "2026-11-04",
+          "open": 28.100000381469727,
+          "high": 28.84000015258789,
+          "low": 27.6200008392334,
+          "close": 28.760000228881836,
+          "volume": 179954271
+        },
+        {
+          "date": "2026-11-05",
+          "open": 30.0,
+          "high": 31.399999618530273,
+          "low": 29.6200008392334,
+          "close": 31.299999237060547,
+          "volume": 490522111
+        },
+        {
+          "date": "2026-11-06",
+          "open": 31.0,
+          "high": 31.739999771118164,
+          "low": 30.219999313354492,
+          "close": 30.3799991607666,
+          "volume": 303884871
+        },
+        {
+          "date": "2026-11-09",
+          "open": 30.979999542236328,
+          "high": 31.059999465942383,
+          "low": 29.940000534057617,
+          "close": 30.100000381469727,
+          "volume": 129809779
+        },
+        {
+          "date": "2026-11-10",
+          "open": 29.959999084472656,
+          "high": 31.040000915527344,
+          "low": 29.68000030517578,
+          "close": 30.600000381469727,
+          "volume": 103359489
+        },
+        {
+          "date": "2026-11-11",
+          "open": 30.440000534057617,
+          "high": 31.020000457763672,
+          "low": 29.84000015258789,
+          "close": 30.100000381469727,
+          "volume": 110336033
+        },
+        {
+          "date": "2026-11-12",
+          "open": 29.8799991607666,
+          "high": 30.360000610351562,
+          "low": 29.540000915527344,
+          "close": 29.979999542236328,
+          "volume": 109558509
+        },
+        {
+          "date": "2026-11-13",
+          "open": 29.739999771118164,
+          "high": 29.799999237060547,
+          "low": 28.799999237060547,
+          "close": 28.860000610351562,
+          "volume": 109152387
+        },
+        {
+          "date": "2026-11-16",
+          "open": 29.0,
+          "high": 29.459999084472656,
+          "low": 28.700000762939453,
+          "close": 29.100000381469727,
+          "volume": 77490661
+        }
+      ],
+      "price": {
+        "current": 29.1,
+        "previous": 28.86,
+        "change": 0.24,
+        "change_pct": 0.83,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-13",
+        "close": 28.86,
+        "previous_close": 29.98,
+        "change": -1.12,
+        "change_pct": -3.74,
+        "volume": 109152387
+      },
+      "fundamentals": {
+        "market_cap": 748749783040,
+        "pe_ratio": 21.397058,
+        "pb_ratio": 2.3604953,
+        "dividend_yield": 0.0,
+        "beta": 0.662,
+        "volume": 77490661,
+        "avg_volume": 146978800,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "小米关联公司入股美嘉胜新能源 - 汽车之家",
+            "publisher": "汽车之家",
+            "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zRVZkSGN4X2xST3dndS1pbTVqa3FibUFKMkg1VHlpT0dhbWxEU050UzB0V0NodjhfQVFKZlB3RkltanpsUl9UVWtHaHMzVmZYZ2RTc0xyRlAwZ1k?oc=5",
+            "published_at": "2026-11-16T14:55:27+08:00",
+            "published_display": "2026-11-16 14:55",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米关联公司入股！美嘉胜注册资本增至9000万元_车市动态 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBNaTFWU2N3bzVPWk9CTHo4NkZoWEM0ZVBfdU9wOVdqWDduSHJFZzV0V25TVy10TWlqd1pKMWY5Q2t4a2NSeVl0d3c4ZkFCbHZYTjBmUmhlYW4xczFjQlJSZG1YSVRESVhyU3FV?oc=5",
+            "published_at": "2026-11-16T14:33:02+08:00",
+            "published_display": "2026-11-16 14:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "【网通社快报】广东美嘉胜新增小米关联公司股东 注册资本增至9000万元 - 凤凰网",
+            "publisher": "凤凰网",
+            "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE4tV0Utc2FQalNwTURBNS1NSTJUVWJ4amY2NExwMEV1RDJiSTE5QURmQVJ6bWo2WHhrb2Z5dVV2ejZoUHhKMjRaV0ZIV1k?oc=5",
+            "published_at": "2026-11-16T14:16:00+08:00",
+            "published_display": "2026-11-16 14:16",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "更新-更全-更权威的全球汽车资讯 - 网通社",
+            "publisher": "网通社",
+            "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE50c1RwQmFzX1lDaXZ6LXNSLVJmQW9LZ01ZN2xEX1pkbkhFdUIyUGVCVW8zZEJ2ZUZCLWtiU3BXcDlHMEhFQUN0TjNYZkxHWGU5R0N6amxvSGdGWVU?oc=5",
+            "published_at": "2026-11-16T14:15:00+08:00",
+            "published_display": "2026-11-16 14:15",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米入股美嘉胜新能源科技投资公司 - 新浪网",
+            "publisher": "新浪网",
+            "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBiSDhVTEQtY0NGdWY1NkN3ZVFIaWZhbXpWZjlhb2JtRU1qOEdQTmRtSTlLOHFwTVF2eTlYcHFzdFpjWWw0d2tMbk1vRQ?oc=5",
+            "published_at": "2026-11-16T12:13:53+08:00",
+            "published_display": "2026-11-16 12:13",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米入股美嘉胜新能源科技投资公司 - Moomoo",
+            "publisher": "Moomoo",
+            "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5HMzVYSFl4NGRKMWVxUVYybWMxbURPMFU5RHJib1NjNFB6aTluVXc0ZjJWZEk4RjhkNFZ3ZmZ2NExub3pOT2xFQmRuUHFZRnJpbjRrdWIwR0hJajd3?oc=5",
+            "published_at": "2026-11-16T12:13:00+08:00",
+            "published_display": "2026-11-16 12:13",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "安闻科技市占率全球第四盈利骤降28% 小米蔚来精准入股张氏家族 - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMkVaaVhqWHZDSlBFaWNtTDR2S3E2OGtTUGRVWDUxX3JrWHd5d0RmMFIzWXRpTk8ySG9WS3ZzNm1KSW1zM0c3b0ZQRDM0aHV0c1gwRHJRbC1IY3UyMkU0MTlOM2JRWFh3c3JKX0w3TTlBblB5Rm9uN1U5emNfTFpIRkZUZko5WWNSREY2eXJ1RDFvSmQ0?oc=5",
+            "published_at": "2026-11-16T11:32:55+08:00",
+            "published_display": "2026-11-16 11:32",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米SU7与泰坦合金披露两份环境声明，减碳约93%对应铝合金材料 - 新浪财经",
+            "publisher": "新浪财经",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9takt5ZkJMVEdtOVV5WS1wd1dLdmhTU1lkZnZXNjhfV2E3S2IwOXdYWnFPcG9BeFBlbHFaTWt5UmxuNXJfc1lBMHQ0TFlrM05MT2Z1blU4b2NzVUR0aDdCWm9hTmh3TXBWTUs3QVNHSQ?oc=5",
+            "published_at": "2026-11-16T11:19:28+08:00",
+            "published_display": "2026-11-16 11:19",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "New World shares plunge 47% to record low on $3.2 billion rights issue",
+            "publisher": "Investing.com",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/world-shares-plunge-47-record-052052173.html",
+            "published_at": "2026-11-16T13:20:52+08:00",
+            "published_display": "2026-11-16 13:20",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-13 16:00:00 CST",
+          "end": "2026-11-16 15:42:17 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 3.74%，短线承压",
+        "窗口期内抓取到 8 条公司消息，需评估事件影响",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "meituan",
+      "company_name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": [
+        "外卖业务",
+        "到店服务",
+        "酒店旅游",
+        "新业务"
+      ],
+      "analysis_date": "2026-11-16",
+      "analysis_time": "2026-11-16 15:42:17 CST",
+      "news_window": {
+        "start": "2026-11-13 16:00:00 CST",
+        "end": "2026-11-16 15:42:17 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-03",
+          "open": 73.3499984741211,
+          "high": 74.94999694824219,
+          "low": 73.0999984741211,
+          "close": 74.3499984741211,
+          "volume": 23940420
+        },
+        {
+          "date": "2026-11-04",
+          "open": 73.5999984741211,
+          "high": 75.19999694824219,
+          "low": 72.94999694824219,
+          "close": 75.19999694824219,
+          "volume": 21362860
+        },
+        {
+          "date": "2026-11-05",
+          "open": 77.5,
+          "high": 82.4000015258789,
+          "low": 77.0,
+          "close": 80.30000305175781,
+          "volume": 90039092
+        },
+        {
+          "date": "2026-11-06",
+          "open": 78.0999984741211,
+          "high": 83.0,
+          "low": 78.0,
+          "close": 80.4000015258789,
+          "volume": 51431875
+        },
+        {
+          "date": "2026-11-09",
+          "open": 80.6500015258789,
+          "high": 81.9000015258789,
+          "low": 74.75,
+          "close": 75.1500015258789,
+          "volume": 65516899
+        },
+        {
+          "date": "2026-11-10",
+          "open": 75.5999984741211,
+          "high": 77.4000015258789,
+          "low": 75.4000015258789,
+          "close": 75.5,
+          "volume": 26375796
+        },
+        {
+          "date": "2026-11-11",
+          "open": 74.69999694824219,
+          "high": 74.69999694824219,
+          "low": 72.30000305175781,
+          "close": 72.8499984741211,
+          "volume": 30427317
+        },
+        {
+          "date": "2026-11-12",
+          "open": 72.19999694824219,
+          "high": 73.4000015258789,
+          "low": 71.0,
+          "close": 72.0999984741211,
+          "volume": 36362862
+        },
+        {
+          "date": "2026-11-13",
+          "open": 71.19999694824219,
+          "high": 72.6500015258789,
+          "low": 69.6500015258789,
+          "close": 69.80000305175781,
+          "volume": 24952585
+        },
+        {
+          "date": "2026-11-16",
+          "open": 70.94999694824219,
+          "high": 72.8499984741211,
+          "low": 70.80000305175781,
+          "close": 71.75,
+          "volume": 24699501
+        }
+      ],
+      "price": {
+        "current": 71.75,
+        "previous": 69.8,
+        "change": 1.95,
+        "change_pct": 2.79,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-13",
+        "close": 69.8,
+        "previous_close": 72.1,
+        "change": -2.3,
+        "change_pct": -3.19,
+        "volume": 24952585
+      },
+      "fundamentals": {
+        "market_cap": 442829602816,
+        "pe_ratio": null,
+        "pb_ratio": 2.2273386,
+        "dividend_yield": 0.0,
+        "beta": 0.185,
+        "volume": 24699501,
+        "avg_volume": 32671392,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 美团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "美团：秋假出行高峰期亲子家庭房预订量同比增长67% - 电商派",
+            "publisher": "电商派",
+            "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBzVWlRQkI3QzJxdE1RTG1nQ2JOcFJmUXFUeHpzZl9IbVpaNXFNMTFTQlBHTUV0bFl3dklPZC1VMGNHS1VaMzZ3QnpyUi1TRWZlbGxVWWNOcEhMS0xTMm9xMA?oc=5",
+            "published_at": "2026-11-16T14:22:00+08:00",
+            "published_display": "2026-11-16 14:22",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "11月打卡第18天！新的一周开启，美团仍在震荡消化中。 - Moomoo",
+            "publisher": "Moomoo",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcUdrbDRyY3prSmZfa1ExcFBEWG92SmVJTDU4eE5DZFE0ZUpicy1MRlhtRmJWSk9JcVM1NkNSV2JkMS1BcGF5bmljTFFTVDdkdHViVFdWdExFcVVNWEY4dXpjR3FoMzUyc2NPR1ByV3FUeWtySnh3NUpKQUlnaE5vVVNHNi1EcENrOUNNek5oZDc5S0M2WHlUUENYbVk3LWtQY2Vraw?oc=5",
+            "published_at": "2026-11-16T13:29:22+08:00",
+            "published_display": "2026-11-16 13:29",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "新世界半日泻逾38% 大行称供股折让震惊 恒指升197点 美团涨逾3%｜港股开市 - 星島頭條",
+            "publisher": "星島頭條",
+            "link": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxObjRBZ3ZqU2czX2pwNmtBQnFYVzJWaVpPV05UY2NJVTBvQjN2bUE3MURFUTZjcGRQWGR6UWFuNG5qc01nRDJoWGxyYVJ0RW1oaXUtLXIzcVQtSDRtMldoRUJwUWgtaTVfUGs5Tk01Rkh3MHRVLWw0YUx2TXFyOW9DQmduNFZtZnJpaWJnaVVaQnhCOEt3MU5oTi1JekNvZ3JfM2p3Q1pqMXFWemxzOXdaR3NLOFI3WERLRjcxd1JsenRTLWp0UFlPaUF6UXZRNThkNEd1X0NfMFBad1FCNlctcE92T2pCUDYwVHlpZ21XQ1p3ZFQzWFRlRkxHT181cV9BamI0TkhsNXlFOUp2Q0xmVlQxVXVwcnA3LTFoQWd6WFhXb3UzeWpwQjNHU2J2S2wzT2Rvc0JhMVNiSXdTNTdMbXBMdjUxdTE0R1RORzNra1JJMTV1MWo1TDM4WWtxV3lKaTlkajhZNkdlbE9hTlF5VkhEdkxwQWFxTjJNQngtZlV5YktfdUVuaGJVWldUclhjRGxZeXN0MUI3WHhlYUpWeE9idWNqZHZmLVlfc3NHRGpuQ0VoZVNvbFNNLWhiMEIxV1Jv?oc=5",
+            "published_at": "2026-11-16T12:15:41+08:00",
+            "published_display": "2026-11-16 12:15",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "秋假遇周末带火亲子游 重庆上榜全国热门目的地前五 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVzJFT3JsTVM5b0dVQlRUVFUwVFNFQ0tqcW5tejEwRU5sX0JGT0MzcWpOYXJqdHJEVXlVR0Q4aUtUaEhXZGlpMk5xQnlHNUY1V2lMWW1rZlY2QlhXR3FKUzREM2w0R1J4eURNbmZlSHVDazNmT2JKdG5jTzkwN0p6Q0hYZ1FCWjBYb2d4dnlUakEwUDRKTUQxeGVpZzk4N3o2RlNaNA?oc=5",
+            "published_at": "2026-11-16T11:52:01+08:00",
+            "published_display": "2026-11-16 11:52",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团外卖优惠券领取入口找红包，2026年11月优惠券口令怎么领 - 新浪网",
+            "publisher": "新浪网",
+            "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5nMlFjaHplSHdjUmxvS1FnbzV0YjBBa295U1NuVFRpM2padkxMaUVncXcwX05HT25YZTIxSTEwaEh0QUVHVUptRXVKaUJIZGx6SnFZVVJUSzZ4cUc1MFhjQTBPeUFicFQ2MDE1V2lEMWc?oc=5",
+            "published_at": "2026-11-16T11:04:04+08:00",
+            "published_display": "2026-11-16 11:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "科网股集体走高：京东、百度涨超2%，美团、网易、阿里跟涨 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVEk2ZVFPN3ZjQ1gwQUY2R1MxdEY0SEZUWTJReDBYM2gyRnFVWEtFTm5naVp6b1ZQVm10elFYNTNSTDdVWnJ1d3Jvd0xMb0FoZW5XUUhSMm1nWFNYQmpiVHQ3OFJQNEJ2OHV4WERhYkcwdkJVLW1MSTc3T3lSS3c3N0dyazkta0FldjJXOA?oc=5",
+            "published_at": "2026-11-16T11:03:00+08:00",
+            "published_display": "2026-11-16 11:03",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团明确：11月16日至20日，深圳全城骑手订单超时免责、增加跑单补贴 - 粤港澳都市网",
+            "publisher": "粤港澳都市网",
+            "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE95ODBXZmRHa1IyZ0FtRlhDUEFOZmNpUnpwS3JFSV9OQ3lNc0R5Y29ORHRHcDU4RlJjNG1UUFFBT1hjaTBJcEw5ako4T013S0hJcUFJRW9RaWNHWm5P?oc=5",
+            "published_at": "2026-11-16T10:34:13+08:00",
+            "published_display": "2026-11-16 10:34",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "恒生科技指数涨幅扩大至1% - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONmVJcFVBMWlrUkF0bUhRcXhyTUNlaHlLa1h2SEgyWEVyNlItWFdIUG4xWWlSWWJWU1pLNkxYN2FPUmRtb3cxaXpuQmFCT2dZMzZ1OUtqckl5MHBxeG9sTzNJbjB3RXpNMnVWM2t2UHJhNTdBTVIyZVhTcUZhQ3czSVJJaDJiOVVYVndsNA?oc=5",
+            "published_at": "2026-11-16T10:24:31+08:00",
+            "published_display": "2026-11-16 10:24",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "New World shares plunge 47% to record low on $3.2 billion rights issue",
+            "publisher": "Investing.com",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/world-shares-plunge-47-record-052052173.html",
+            "published_at": "2026-11-16T13:20:52+08:00",
+            "published_display": "2026-11-16 13:20",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-13 16:00:00 CST",
+          "end": "2026-11-16 15:42:17 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 3.19%，短线承压",
+        "窗口期内抓取到 8 条公司消息，需评估事件影响",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "horizon",
+      "company_name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": [
+        "AI芯片",
+        "自动驾驶",
+        "合作伙伴",
+        "技术优势"
+      ],
+      "analysis_date": "2026-11-16",
+      "analysis_time": "2026-11-16 15:42:17 CST",
+      "news_window": {
+        "start": "2026-11-13 16:00:00 CST",
+        "end": "2026-11-16 15:42:17 CST"
+      },
+      "success": true,
+      "history": [],
+      "price": {
+        "current": 3.805,
+        "previous": 3.75,
+        "change": 0.055,
+        "change_pct": 1.47,
+        "trend": "上涨",
+        "source": "Sina Finance"
+      },
+      "previous_session": {
+        "date": "2026-11-16",
+        "close": 3.805,
+        "previous_close": 3.75,
+        "change": 0.055,
+        "change_pct": 1.47,
+        "volume": 141720889,
+        "source": "Sina Finance",
+        "source_symbol": "hk09660",
+        "source_url": "https://hq.sinajs.cn/list=hk09660",
+        "open": 3.76,
+        "high": 3.895,
+        "low": 3.7,
+        "raw_name": "地平线机器人－Ｗ"
+      },
+      "fundamentals": {
+        "volume": 141720889
+      },
+      "market_data_source": "Sina Finance",
+      "market_data_notes": [
+        "配置为优先使用新浪财经行情"
+      ],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 09660.HK",
+        "items": [],
+        "error": "所有新闻源在当前窗口内均无结果"
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "New World shares plunge 47% to record low on $3.2 billion rights issue",
+            "publisher": "Investing.com",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/world-shares-plunge-47-record-052052173.html",
+            "published_at": "2026-11-16T13:20:52+08:00",
+            "published_display": "2026-11-16 13:20",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-13 16:00:00 CST",
+          "end": "2026-11-16 15:42:17 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 1.47%，价格相对平稳",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "sanan",
+      "company_name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": [
+        "LED芯片",
+        "化合物半导体",
+        "Mini/Micro LED",
+        "碳化硅"
+      ],
+      "analysis_date": "2026-11-16",
+      "analysis_time": "2026-11-16 15:42:17 CST",
+      "news_window": {
+        "start": "2026-11-16 15:00:00 CST",
+        "end": "2026-11-16 15:42:17 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-03",
+          "open": 8.970000267028809,
+          "high": 9.180000305175781,
+          "low": 8.899999618530273,
+          "close": 8.9399995803833,
+          "volume": 71623834
+        },
+        {
+          "date": "2026-11-04",
+          "open": 9.0,
+          "high": 9.399999618530273,
+          "low": 8.819999694824219,
+          "close": 9.350000381469727,
+          "volume": 101634986
+        },
+        {
+          "date": "2026-11-05",
+          "open": 9.210000038146973,
+          "high": 9.710000038146973,
+          "low": 9.1899995803833,
+          "close": 9.539999961853027,
+          "volume": 93740319
+        },
+        {
+          "date": "2026-11-06",
+          "open": 9.050000190734863,
+          "high": 9.34000015258789,
+          "low": 9.050000190734863,
+          "close": 9.180000305175781,
+          "volume": 66772952
+        },
+        {
+          "date": "2026-11-09",
+          "open": 9.300000190734863,
+          "high": 9.34000015258789,
+          "low": 9.1899995803833,
+          "close": 9.210000038146973,
+          "volume": 40873071
+        },
+        {
+          "date": "2026-11-10",
+          "open": 9.34000015258789,
+          "high": 9.449999809265137,
+          "low": 9.260000228881836,
+          "close": 9.4399995803833,
+          "volume": 51732032
+        },
+        {
+          "date": "2026-11-11",
+          "open": 9.350000381469727,
+          "high": 9.59000015258789,
+          "low": 9.300000190734863,
+          "close": 9.539999961853027,
+          "volume": 55791727
+        },
+        {
+          "date": "2026-11-12",
+          "open": 9.5600004196167,
+          "high": 9.739999771118164,
+          "low": 9.329999923706055,
+          "close": 9.359999656677246,
+          "volume": 74223569
+        },
+        {
+          "date": "2026-11-13",
+          "open": 9.369999885559082,
+          "high": 9.479999542236328,
+          "low": 9.020000457763672,
+          "close": 9.069999694824219,
+          "volume": 60588338
+        },
+        {
+          "date": "2026-11-16",
+          "open": 9.010000228881836,
+          "high": 9.010000228881836,
+          "low": 8.600000381469727,
+          "close": 8.65999984741211,
+          "volume": 74464133
+        }
+      ],
+      "price": {
+        "current": 8.66,
+        "previous": 9.07,
+        "change": -0.41,
+        "change_pct": -4.52,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-16",
+        "close": 8.66,
+        "previous_close": 9.07,
+        "change": -0.41,
+        "change_pct": -4.52,
+        "volume": 74464133
+      },
+      "fundamentals": {
+        "market_cap": 43204898816,
+        "pe_ratio": null,
+        "pb_ratio": 1.1767902,
+        "dividend_yield": 0.0,
+        "beta": 1.197,
+        "volume": 74464133,
+        "avg_volume": 96878521,
+        "currency": "CNY"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 600703.SS",
+        "items": [],
+        "error": "所有新闻源在当前窗口内均无结果"
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "New World shares plunge 47% to record low on $3.2 billion rights issue",
+            "publisher": "Investing.com",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/world-shares-plunge-47-record-052052173.html",
+            "published_at": "2026-11-16T13:20:52+08:00",
+            "published_display": "2026-11-16 13:20",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-13 16:00:00 CST",
+          "end": "2026-11-16 15:42:17 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 4.52%，短线承压",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    }
+  ]
+}
