@@ -1,0 +1,947 @@
+{
+  "generated_at": "2026-11-17T16:52:08.101562+08:00",
+  "industry_news": {
+    "provider": "google-news-rss",
+    "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+    "items": [
+      {
+        "title": "港股收评：半导体股逆势走强，新消费概念活跃 - Sohu",
+        "publisher": "Sohu",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMnVROHBuUkhrRGJMamJKUGc0a3NOVFZkV2xNMFhRdjB2RmdMTnZIUkxTZ3pqLXZQajlyVG5XVzZweF9XUmViTEk5cTFsd1lGdXpnMGVBWHBCZWZRd3ZxZzJlRll2XzZPT1VxNUVwRFNuQTU2ZC1zWGtqZ2dORjQtUUxHWnFQQ1E5VERXaQ?oc=5",
+        "published_at": "2026-11-17T16:48:25+08:00",
+        "published_display": "2026-11-17 16:48",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "港股收盘(11.17) | 恒指收跌1.03% 国产芯片逆市走高 科网股、光通信股继续承压 - Moomoo",
+        "publisher": "Moomoo",
+        "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeGNxYVBmbzlRSG0xUTJYYXFCQ3BFQUhSaU84anhRMlRhZkxMeUFUVXZJZzRFeVRRY09QZkVXNDJzalJXS2wxcTMyYWxsRFg2OXNLY0hCWTVwdmhQUFpUcjdnWk1HaEwwTGRyZUVwVnYyRUR5QTQ2ZTdQcEd4S0JBUnkyT2hjQ1pxN0w2OUNhTjBpM1lQakd2Q3V0d3drNUlYa1E?oc=5",
+        "published_at": "2026-11-17T16:43:29+08:00",
+        "published_display": "2026-11-17 16:43",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "连板股追踪丨A股今日共38只个股涨停 长虹美菱、小熊电器收获2连板 - 第一财经",
+        "publisher": "第一财经",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9MRndZUWZScmdSNXR4UUo0WEdxM2ZXTjVhV0ZRazVZMnRnU25yNVZCRkJjVUtmZXZDeDk2ZEY2MS1YZEZIT0I5V0RndzVWWFQtUUdF?oc=5",
+        "published_at": "2026-11-17T16:35:50+08:00",
+        "published_display": "2026-11-17 16:35",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "港股三大指数全线收跌，恒生指数跌1.03%，万国数据-SW跌10.35%，哔哩哔哩-W跌8.79%，地平线机器人-W跌7.92% - 金融界",
+        "publisher": "金融界",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0yalJiNnpuYTMxV1BBS1hGZm5oRXJKZmpQMWxfTVMzM245akhJWGZjdW8ySnFsaFhWdkNjSnVOLXVMYXJUTS1DUU1vLVBKRjJLZTFfVDhlNEl4NUlDdlFXaFhzRFB0LXJ6VUlCbHhSNlNLQ0hu?oc=5",
+        "published_at": "2026-11-17T16:33:56+08:00",
+        "published_display": "2026-11-17 16:33",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "三星电子与苹果即将签署DRAM半导体长期供货协议 - 中金在线",
+        "publisher": "中金在线",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE10R1lOT1l0NC0xaElCWm1DRjZtSDc4U0pkMVJVYjNyLVFOMnkyMmYyb1MxWnJ2ZVlmU05iX016dW4tczFwVU9jVEx5Tl9FUFlCNWpxMXk0MnNlazR3Vjl3V1ZxRnBYd3hWYlE?oc=5",
+        "published_at": "2026-11-17T16:33:06+08:00",
+        "published_display": "2026-11-17 16:33",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "恒生科技指数下跌1.14%，科网股多数下跌｜港股收评 - 21财经",
+        "publisher": "21财经",
+        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOVpYelA0Y2FFUXhwOGUtenNxWmVUS2dYTWVQMHBaTHZ1T09sbjJtTHk0dzFZRkJiOS14SFdIMGo5QWtnT2VfS3UzR251dTNWQzNlOERLclRqU3FYX0ttZEZka1lpYnctM3ZJVnlIOGhFNDJDRlJLSV8yNlJ6dGtqRUtNT0lMSDZIZExKU1g2aw?oc=5",
+        "published_at": "2026-11-17T16:33:00+08:00",
+        "published_display": "2026-11-17 16:33",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "“未来20” 2026调研实录：半导体业务成第一大收入来源 英杰电气打开增长新空间 - Sohu",
+        "publisher": "Sohu",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOEwzSG5Xb0hhWVRxYWFvaHg4Y0RxSEJwazA1UXRJclY0LU13dmdTTFptMlkyTVRXaW9VcEl4b0RGbDh0MDhxdVdnNUpuajlQT1dhcUdKdERtRFJMSDNCdDJ2S3RzYmhpc3B5ajMzUnh4dV9paHJCUmwyTEZKb1RHRkZSSGp2bGxY?oc=5",
+        "published_at": "2026-11-17T16:32:50+08:00",
+        "published_display": "2026-11-17 16:32",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "一周基要 | 科技巨头上演“换帅连续剧”！A股冲高回落，通信却逆势走强？ - 手机新浪网",
+        "publisher": "手机新浪网",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE85WjJvdTlRMGxHV0lWVGZubWgtOGNqXzFteEFXQ2wwb0tYMHNGaVRFS3FLb3ZJcEdQWFJJRDcwVUgyZi1HTmJPTmdWSjI0MmxCbDk1OWNuZ2tnS3huNWNsZmZPTEs0Y3RNM0ZLVl84ZWZoQQ?oc=5",
+        "published_at": "2026-11-17T16:31:58+08:00",
+        "published_display": "2026-11-17 16:31",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      }
+    ],
+    "error": null,
+    "window": {
+      "start": "2026-11-17 16:00:00 CST",
+      "end": "2026-11-17 16:52:08 CST"
+    }
+  },
+  "results": [
+    {
+      "company_id": "xiaomi",
+      "company_name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": [
+        "智能手机",
+        "IoT",
+        "汽车业务",
+        "海外市场"
+      ],
+      "analysis_date": "2026-11-17",
+      "analysis_time": "2026-11-17 16:52:08 CST",
+      "news_window": {
+        "start": "2026-11-17 16:00:00 CST",
+        "end": "2026-11-17 16:52:08 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-04",
+          "open": 28.100000381469727,
+          "high": 28.84000015258789,
+          "low": 27.6200008392334,
+          "close": 28.760000228881836,
+          "volume": 179954271
+        },
+        {
+          "date": "2026-11-05",
+          "open": 30.0,
+          "high": 31.399999618530273,
+          "low": 29.6200008392334,
+          "close": 31.299999237060547,
+          "volume": 490522111
+        },
+        {
+          "date": "2026-11-06",
+          "open": 31.0,
+          "high": 31.739999771118164,
+          "low": 30.219999313354492,
+          "close": 30.3799991607666,
+          "volume": 303884871
+        },
+        {
+          "date": "2026-11-09",
+          "open": 30.979999542236328,
+          "high": 31.059999465942383,
+          "low": 29.940000534057617,
+          "close": 30.100000381469727,
+          "volume": 129809779
+        },
+        {
+          "date": "2026-11-10",
+          "open": 29.959999084472656,
+          "high": 31.040000915527344,
+          "low": 29.68000030517578,
+          "close": 30.600000381469727,
+          "volume": 103359489
+        },
+        {
+          "date": "2026-11-11",
+          "open": 30.440000534057617,
+          "high": 31.020000457763672,
+          "low": 29.84000015258789,
+          "close": 30.100000381469727,
+          "volume": 110336033
+        },
+        {
+          "date": "2026-11-12",
+          "open": 29.8799991607666,
+          "high": 30.360000610351562,
+          "low": 29.540000915527344,
+          "close": 29.979999542236328,
+          "volume": 109558509
+        },
+        {
+          "date": "2026-11-13",
+          "open": 29.739999771118164,
+          "high": 29.799999237060547,
+          "low": 28.799999237060547,
+          "close": 28.860000610351562,
+          "volume": 109152387
+        },
+        {
+          "date": "2026-11-16",
+          "open": 29.0,
+          "high": 29.459999084472656,
+          "low": 28.700000762939453,
+          "close": 29.079999923706055,
+          "volume": 93525833
+        },
+        {
+          "date": "2026-11-17",
+          "open": 29.079999923706055,
+          "high": 30.520000457763672,
+          "low": 28.459999084472656,
+          "close": 29.700000762939453,
+          "volume": 166781313
+        }
+      ],
+      "price": {
+        "current": 29.7,
+        "previous": 29.08,
+        "change": 0.62,
+        "change_pct": 2.13,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-17",
+        "close": 29.7,
+        "previous_close": 29.08,
+        "change": 0.62,
+        "change_pct": 2.13,
+        "volume": 166781313
+      },
+      "fundamentals": {
+        "market_cap": 764187901952,
+        "pe_ratio": 21.838236,
+        "pb_ratio": 2.4091654,
+        "dividend_yield": 0.0,
+        "beta": 0.662,
+        "volume": 166781313,
+        "avg_volume": 146143598,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "雷军：小米具身智能机器人已在工厂实习，能够完整地工作八小时，中间还能两次自己去充电 - 金融界",
+            "publisher": "金融界",
+            "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE05YU14WUtwc1V1a0VCdHhINDRmV0lyNk9QcUxWREl5SVloX2FtME9yMzRMeUs0NjUweXZoa1FlcUdjOWx2UExqaWR4QmJLLTVNak9jZVNpRU9fcG02Sm5hSzJMdUtBeG04U2RNLVBNbGZOVnFx?oc=5",
+            "published_at": "2026-11-17T16:25:45+08:00",
+            "published_display": "2026-11-17 16:25",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "纳芯微4.87亿元收购隔空科技，英特尔、小米退出 - www.caiwennews.com",
+            "publisher": "www.caiwennews.com",
+            "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE94bWF0ZVh2cVRXMVRLa3BxWFZuS3lWTVZ4NHhhakd4ZEFDVlF5SVZYdnZHSldEeTBLd2hBZDREMlF3bHhuUTFpRzg1clVkLW1UWGxia0Y0eTU1bGNv?oc=5",
+            "published_at": "2026-11-17T16:10:55+08:00",
+            "published_display": "2026-11-17 16:10",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米：相关内容纯属虚构，请广大车主提高警惕、谨防诈骗 - 凤凰网",
+            "publisher": "凤凰网",
+            "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFAyaTdWQ1BTdlQ2eFdIdDRycTh0MDFtVk1XLXM0cmdCVE9HQmViN29hMlM5MDFaWWlQemFxNWJxUERPVVRTR3JBYkdSc3A?oc=5",
+            "published_at": "2026-11-17T16:07:23+08:00",
+            "published_display": "2026-11-17 16:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "港股收评：半导体股逆势走强，新消费概念活跃 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMnVROHBuUkhrRGJMamJKUGc0a3NOVFZkV2xNMFhRdjB2RmdMTnZIUkxTZ3pqLXZQajlyVG5XVzZweF9XUmViTEk5cTFsd1lGdXpnMGVBWHBCZWZRd3ZxZzJlRll2XzZPT1VxNUVwRFNuQTU2ZC1zWGtqZ2dORjQtUUxHWnFQQ1E5VERXaQ?oc=5",
+            "published_at": "2026-11-17T16:48:25+08:00",
+            "published_display": "2026-11-17 16:48",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股收盘(11.17) | 恒指收跌1.03% 国产芯片逆市走高 科网股、光通信股继续承压 - Moomoo",
+            "publisher": "Moomoo",
+            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeGNxYVBmbzlRSG0xUTJYYXFCQ3BFQUhSaU84anhRMlRhZkxMeUFUVXZJZzRFeVRRY09QZkVXNDJzalJXS2wxcTMyYWxsRFg2OXNLY0hCWTVwdmhQUFpUcjdnWk1HaEwwTGRyZUVwVnYyRUR5QTQ2ZTdQcEd4S0JBUnkyT2hjQ1pxN0w2OUNhTjBpM1lQakd2Q3V0d3drNUlYa1E?oc=5",
+            "published_at": "2026-11-17T16:43:29+08:00",
+            "published_display": "2026-11-17 16:43",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "连板股追踪丨A股今日共38只个股涨停 长虹美菱、小熊电器收获2连板 - 第一财经",
+            "publisher": "第一财经",
+            "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9MRndZUWZScmdSNXR4UUo0WEdxM2ZXTjVhV0ZRazVZMnRnU25yNVZCRkJjVUtmZXZDeDk2ZEY2MS1YZEZIT0I5V0RndzVWWFQtUUdF?oc=5",
+            "published_at": "2026-11-17T16:35:50+08:00",
+            "published_display": "2026-11-17 16:35",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股三大指数全线收跌，恒生指数跌1.03%，万国数据-SW跌10.35%，哔哩哔哩-W跌8.79%，地平线机器人-W跌7.92% - 金融界",
+            "publisher": "金融界",
+            "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0yalJiNnpuYTMxV1BBS1hGZm5oRXJKZmpQMWxfTVMzM245akhJWGZjdW8ySnFsaFhWdkNjSnVOLXVMYXJUTS1DUU1vLVBKRjJLZTFfVDhlNEl4NUlDdlFXaFhzRFB0LXJ6VUlCbHhSNlNLQ0hu?oc=5",
+            "published_at": "2026-11-17T16:33:56+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "三星电子与苹果即将签署DRAM半导体长期供货协议 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE10R1lOT1l0NC0xaElCWm1DRjZtSDc4U0pkMVJVYjNyLVFOMnkyMmYyb1MxWnJ2ZVlmU05iX016dW4tczFwVU9jVEx5Tl9FUFlCNWpxMXk0MnNlazR3Vjl3V1ZxRnBYd3hWYlE?oc=5",
+            "published_at": "2026-11-17T16:33:06+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "恒生科技指数下跌1.14%，科网股多数下跌｜港股收评 - 21财经",
+            "publisher": "21财经",
+            "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOVpYelA0Y2FFUXhwOGUtenNxWmVUS2dYTWVQMHBaTHZ1T09sbjJtTHk0dzFZRkJiOS14SFdIMGo5QWtnT2VfS3UzR251dTNWQzNlOERLclRqU3FYX0ttZEZka1lpYnctM3ZJVnlIOGhFNDJDRlJLSV8yNlJ6dGtqRUtNT0lMSDZIZExKU1g2aw?oc=5",
+            "published_at": "2026-11-17T16:33:00+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "“未来20” 2026调研实录：半导体业务成第一大收入来源 英杰电气打开增长新空间 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOEwzSG5Xb0hhWVRxYWFvaHg4Y0RxSEJwazA1UXRJclY0LU13dmdTTFptMlkyTVRXaW9VcEl4b0RGbDh0MDhxdVdnNUpuajlQT1dhcUdKdERtRFJMSDNCdDJ2S3RzYmhpc3B5ajMzUnh4dV9paHJCUmwyTEZKb1RHRkZSSGp2bGxY?oc=5",
+            "published_at": "2026-11-17T16:32:50+08:00",
+            "published_display": "2026-11-17 16:32",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "一周基要 | 科技巨头上演“换帅连续剧”！A股冲高回落，通信却逆势走强？ - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE85WjJvdTlRMGxHV0lWVGZubWgtOGNqXzFteEFXQ2wwb0tYMHNGaVRFS3FLb3ZJcEdQWFJJRDcwVUgyZi1HTmJPTmdWSjI0MmxCbDk1OWNuZ2tnS3huNWNsZmZPTEs0Y3RNM0ZLVl84ZWZoQQ?oc=5",
+            "published_at": "2026-11-17T16:31:58+08:00",
+            "published_display": "2026-11-17 16:31",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-17 16:00:00 CST",
+          "end": "2026-11-17 16:52:08 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 2.13%，短线动能偏强",
+        "窗口期内抓取到 3 条公司消息，需评估事件影响",
+        "窗口期内抓取到 8 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "meituan",
+      "company_name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": [
+        "外卖业务",
+        "到店服务",
+        "酒店旅游",
+        "新业务"
+      ],
+      "analysis_date": "2026-11-17",
+      "analysis_time": "2026-11-17 16:52:08 CST",
+      "news_window": {
+        "start": "2026-11-17 16:00:00 CST",
+        "end": "2026-11-17 16:52:08 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-04",
+          "open": 73.5999984741211,
+          "high": 75.19999694824219,
+          "low": 72.94999694824219,
+          "close": 75.19999694824219,
+          "volume": 21362860
+        },
+        {
+          "date": "2026-11-05",
+          "open": 77.5,
+          "high": 82.4000015258789,
+          "low": 77.0,
+          "close": 80.30000305175781,
+          "volume": 90039092
+        },
+        {
+          "date": "2026-11-06",
+          "open": 78.0999984741211,
+          "high": 83.0,
+          "low": 78.0,
+          "close": 80.4000015258789,
+          "volume": 51431875
+        },
+        {
+          "date": "2026-11-09",
+          "open": 80.6500015258789,
+          "high": 81.9000015258789,
+          "low": 74.75,
+          "close": 75.1500015258789,
+          "volume": 65516899
+        },
+        {
+          "date": "2026-11-10",
+          "open": 75.5999984741211,
+          "high": 77.4000015258789,
+          "low": 75.4000015258789,
+          "close": 75.5,
+          "volume": 26375796
+        },
+        {
+          "date": "2026-11-11",
+          "open": 74.69999694824219,
+          "high": 74.69999694824219,
+          "low": 72.30000305175781,
+          "close": 72.8499984741211,
+          "volume": 30427317
+        },
+        {
+          "date": "2026-11-12",
+          "open": 72.19999694824219,
+          "high": 73.4000015258789,
+          "low": 71.0,
+          "close": 72.0999984741211,
+          "volume": 36362862
+        },
+        {
+          "date": "2026-11-13",
+          "open": 71.19999694824219,
+          "high": 72.6500015258789,
+          "low": 69.6500015258789,
+          "close": 69.80000305175781,
+          "volume": 24952585
+        },
+        {
+          "date": "2026-11-16",
+          "open": 70.94999694824219,
+          "high": 72.8499984741211,
+          "low": 70.80000305175781,
+          "close": 71.55000305175781,
+          "volume": 29790973
+        },
+        {
+          "date": "2026-11-17",
+          "open": 71.0,
+          "high": 71.8499984741211,
+          "low": 69.25,
+          "close": 70.5,
+          "volume": 29653949
+        }
+      ],
+      "price": {
+        "current": 70.5,
+        "previous": 71.55,
+        "change": -1.05,
+        "change_pct": -1.47,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-17",
+        "close": 70.5,
+        "previous_close": 71.55,
+        "change": -1.05,
+        "change_pct": -1.47,
+        "volume": 29653949
+      },
+      "fundamentals": {
+        "market_cap": 435114803200,
+        "pe_ratio": null,
+        "pb_ratio": 2.1885347,
+        "dividend_yield": 0.0,
+        "beta": 0.185,
+        "volume": 29653949,
+        "avg_volume": 32626386,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 美团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "深化京青协作 北京市基金会持续开展支援青海公益慈善活动 - 京报网",
+            "publisher": "京报网",
+            "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1tQk82VDF3cmdmVTlzeERSSXRLZ2t5aEppY2l5ZjBIR3lCYXhmYXcxSHQ4c2xxemtIX29uTmpfQ1VDUTZ2LWFlcDJVVjdLR1dHN1EwNUpVeExKckxkQ2c?oc=5",
+            "published_at": "2026-11-17T16:46:33+08:00",
+            "published_display": "2026-11-17 16:46",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团(03690.HK)：定于2026年11月27日举行董事会会议，以考虑及通过本集团20 - 富途牛牛",
+            "publisher": "富途牛牛",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcWNoRnlYQzRYZDUzWlMwbGMxUlJ2T19ON3NpZ241NkZtMF9MOF95V2Y5M0Z0UWg0QnJDak5kRDdSNmlKTG5UUGItSEtmdG1pMFJydkk0azdjay1rWThrTVdIclFhckFtbzBxVVVlX29mR0NfMjhfd0tXc3ZoV1lIY2RNYzJTcG5GYXZKeS1yQkd0S2g4dXEwOUo2Z25Maldq?oc=5",
+            "published_at": "2026-11-17T16:41:12+08:00",
+            "published_display": "2026-11-17 16:41",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "港股收评：半导体股逆势走强，新消费概念活跃 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMnVROHBuUkhrRGJMamJKUGc0a3NOVFZkV2xNMFhRdjB2RmdMTnZIUkxTZ3pqLXZQajlyVG5XVzZweF9XUmViTEk5cTFsd1lGdXpnMGVBWHBCZWZRd3ZxZzJlRll2XzZPT1VxNUVwRFNuQTU2ZC1zWGtqZ2dORjQtUUxHWnFQQ1E5VERXaQ?oc=5",
+            "published_at": "2026-11-17T16:48:25+08:00",
+            "published_display": "2026-11-17 16:48",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股收盘(11.17) | 恒指收跌1.03% 国产芯片逆市走高 科网股、光通信股继续承压 - Moomoo",
+            "publisher": "Moomoo",
+            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeGNxYVBmbzlRSG0xUTJYYXFCQ3BFQUhSaU84anhRMlRhZkxMeUFUVXZJZzRFeVRRY09QZkVXNDJzalJXS2wxcTMyYWxsRFg2OXNLY0hCWTVwdmhQUFpUcjdnWk1HaEwwTGRyZUVwVnYyRUR5QTQ2ZTdQcEd4S0JBUnkyT2hjQ1pxN0w2OUNhTjBpM1lQakd2Q3V0d3drNUlYa1E?oc=5",
+            "published_at": "2026-11-17T16:43:29+08:00",
+            "published_display": "2026-11-17 16:43",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "连板股追踪丨A股今日共38只个股涨停 长虹美菱、小熊电器收获2连板 - 第一财经",
+            "publisher": "第一财经",
+            "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9MRndZUWZScmdSNXR4UUo0WEdxM2ZXTjVhV0ZRazVZMnRnU25yNVZCRkJjVUtmZXZDeDk2ZEY2MS1YZEZIT0I5V0RndzVWWFQtUUdF?oc=5",
+            "published_at": "2026-11-17T16:35:50+08:00",
+            "published_display": "2026-11-17 16:35",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股三大指数全线收跌，恒生指数跌1.03%，万国数据-SW跌10.35%，哔哩哔哩-W跌8.79%，地平线机器人-W跌7.92% - 金融界",
+            "publisher": "金融界",
+            "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0yalJiNnpuYTMxV1BBS1hGZm5oRXJKZmpQMWxfTVMzM245akhJWGZjdW8ySnFsaFhWdkNjSnVOLXVMYXJUTS1DUU1vLVBKRjJLZTFfVDhlNEl4NUlDdlFXaFhzRFB0LXJ6VUlCbHhSNlNLQ0hu?oc=5",
+            "published_at": "2026-11-17T16:33:56+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "三星电子与苹果即将签署DRAM半导体长期供货协议 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE10R1lOT1l0NC0xaElCWm1DRjZtSDc4U0pkMVJVYjNyLVFOMnkyMmYyb1MxWnJ2ZVlmU05iX016dW4tczFwVU9jVEx5Tl9FUFlCNWpxMXk0MnNlazR3Vjl3V1ZxRnBYd3hWYlE?oc=5",
+            "published_at": "2026-11-17T16:33:06+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "恒生科技指数下跌1.14%，科网股多数下跌｜港股收评 - 21财经",
+            "publisher": "21财经",
+            "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOVpYelA0Y2FFUXhwOGUtenNxWmVUS2dYTWVQMHBaTHZ1T09sbjJtTHk0dzFZRkJiOS14SFdIMGo5QWtnT2VfS3UzR251dTNWQzNlOERLclRqU3FYX0ttZEZka1lpYnctM3ZJVnlIOGhFNDJDRlJLSV8yNlJ6dGtqRUtNT0lMSDZIZExKU1g2aw?oc=5",
+            "published_at": "2026-11-17T16:33:00+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "“未来20” 2026调研实录：半导体业务成第一大收入来源 英杰电气打开增长新空间 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOEwzSG5Xb0hhWVRxYWFvaHg4Y0RxSEJwazA1UXRJclY0LU13dmdTTFptMlkyTVRXaW9VcEl4b0RGbDh0MDhxdVdnNUpuajlQT1dhcUdKdERtRFJMSDNCdDJ2S3RzYmhpc3B5ajMzUnh4dV9paHJCUmwyTEZKb1RHRkZSSGp2bGxY?oc=5",
+            "published_at": "2026-11-17T16:32:50+08:00",
+            "published_display": "2026-11-17 16:32",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "一周基要 | 科技巨头上演“换帅连续剧”！A股冲高回落，通信却逆势走强？ - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE85WjJvdTlRMGxHV0lWVGZubWgtOGNqXzFteEFXQ2wwb0tYMHNGaVRFS3FLb3ZJcEdQWFJJRDcwVUgyZi1HTmJPTmdWSjI0MmxCbDk1OWNuZ2tnS3huNWNsZmZPTEs0Y3RNM0ZLVl84ZWZoQQ?oc=5",
+            "published_at": "2026-11-17T16:31:58+08:00",
+            "published_display": "2026-11-17 16:31",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-17 16:00:00 CST",
+          "end": "2026-11-17 16:52:08 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 -1.47%，价格相对平稳",
+        "窗口期内抓取到 2 条公司消息，需评估事件影响",
+        "窗口期内抓取到 8 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "horizon",
+      "company_name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": [
+        "AI芯片",
+        "自动驾驶",
+        "合作伙伴",
+        "技术优势"
+      ],
+      "analysis_date": "2026-11-17",
+      "analysis_time": "2026-11-17 16:52:08 CST",
+      "news_window": {
+        "start": "2026-11-17 16:00:00 CST",
+        "end": "2026-11-17 16:52:08 CST"
+      },
+      "success": true,
+      "history": [],
+      "price": {
+        "current": 3.49,
+        "previous": 3.79,
+        "change": -0.3,
+        "change_pct": -7.92,
+        "trend": "下跌",
+        "source": "Sina Finance"
+      },
+      "previous_session": {
+        "date": "2026-11-17",
+        "close": 3.49,
+        "previous_close": 3.79,
+        "change": -0.3,
+        "change_pct": -7.92,
+        "volume": 204671222,
+        "source": "Sina Finance",
+        "source_symbol": "hk09660",
+        "source_url": "https://hq.sinajs.cn/list=hk09660",
+        "open": 3.795,
+        "high": 3.795,
+        "low": 3.46,
+        "raw_name": "地平线机器人－Ｗ"
+      },
+      "fundamentals": {
+        "volume": 204671222
+      },
+      "market_data_source": "Sina Finance",
+      "market_data_notes": [
+        "配置为优先使用新浪财经行情"
+      ],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 09660.HK",
+        "items": [],
+        "error": "所有新闻源在当前窗口内均无结果"
+      },
+      "industry_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "港股收评：半导体股逆势走强，新消费概念活跃 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMnVROHBuUkhrRGJMamJKUGc0a3NOVFZkV2xNMFhRdjB2RmdMTnZIUkxTZ3pqLXZQajlyVG5XVzZweF9XUmViTEk5cTFsd1lGdXpnMGVBWHBCZWZRd3ZxZzJlRll2XzZPT1VxNUVwRFNuQTU2ZC1zWGtqZ2dORjQtUUxHWnFQQ1E5VERXaQ?oc=5",
+            "published_at": "2026-11-17T16:48:25+08:00",
+            "published_display": "2026-11-17 16:48",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股收盘(11.17) | 恒指收跌1.03% 国产芯片逆市走高 科网股、光通信股继续承压 - Moomoo",
+            "publisher": "Moomoo",
+            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeGNxYVBmbzlRSG0xUTJYYXFCQ3BFQUhSaU84anhRMlRhZkxMeUFUVXZJZzRFeVRRY09QZkVXNDJzalJXS2wxcTMyYWxsRFg2OXNLY0hCWTVwdmhQUFpUcjdnWk1HaEwwTGRyZUVwVnYyRUR5QTQ2ZTdQcEd4S0JBUnkyT2hjQ1pxN0w2OUNhTjBpM1lQakd2Q3V0d3drNUlYa1E?oc=5",
+            "published_at": "2026-11-17T16:43:29+08:00",
+            "published_display": "2026-11-17 16:43",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "连板股追踪丨A股今日共38只个股涨停 长虹美菱、小熊电器收获2连板 - 第一财经",
+            "publisher": "第一财经",
+            "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9MRndZUWZScmdSNXR4UUo0WEdxM2ZXTjVhV0ZRazVZMnRnU25yNVZCRkJjVUtmZXZDeDk2ZEY2MS1YZEZIT0I5V0RndzVWWFQtUUdF?oc=5",
+            "published_at": "2026-11-17T16:35:50+08:00",
+            "published_display": "2026-11-17 16:35",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股三大指数全线收跌，恒生指数跌1.03%，万国数据-SW跌10.35%，哔哩哔哩-W跌8.79%，地平线机器人-W跌7.92% - 金融界",
+            "publisher": "金融界",
+            "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0yalJiNnpuYTMxV1BBS1hGZm5oRXJKZmpQMWxfTVMzM245akhJWGZjdW8ySnFsaFhWdkNjSnVOLXVMYXJUTS1DUU1vLVBKRjJLZTFfVDhlNEl4NUlDdlFXaFhzRFB0LXJ6VUlCbHhSNlNLQ0hu?oc=5",
+            "published_at": "2026-11-17T16:33:56+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "三星电子与苹果即将签署DRAM半导体长期供货协议 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE10R1lOT1l0NC0xaElCWm1DRjZtSDc4U0pkMVJVYjNyLVFOMnkyMmYyb1MxWnJ2ZVlmU05iX016dW4tczFwVU9jVEx5Tl9FUFlCNWpxMXk0MnNlazR3Vjl3V1ZxRnBYd3hWYlE?oc=5",
+            "published_at": "2026-11-17T16:33:06+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "恒生科技指数下跌1.14%，科网股多数下跌｜港股收评 - 21财经",
+            "publisher": "21财经",
+            "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOVpYelA0Y2FFUXhwOGUtenNxWmVUS2dYTWVQMHBaTHZ1T09sbjJtTHk0dzFZRkJiOS14SFdIMGo5QWtnT2VfS3UzR251dTNWQzNlOERLclRqU3FYX0ttZEZka1lpYnctM3ZJVnlIOGhFNDJDRlJLSV8yNlJ6dGtqRUtNT0lMSDZIZExKU1g2aw?oc=5",
+            "published_at": "2026-11-17T16:33:00+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "“未来20” 2026调研实录：半导体业务成第一大收入来源 英杰电气打开增长新空间 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOEwzSG5Xb0hhWVRxYWFvaHg4Y0RxSEJwazA1UXRJclY0LU13dmdTTFptMlkyTVRXaW9VcEl4b0RGbDh0MDhxdVdnNUpuajlQT1dhcUdKdERtRFJMSDNCdDJ2S3RzYmhpc3B5ajMzUnh4dV9paHJCUmwyTEZKb1RHRkZSSGp2bGxY?oc=5",
+            "published_at": "2026-11-17T16:32:50+08:00",
+            "published_display": "2026-11-17 16:32",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "一周基要 | 科技巨头上演“换帅连续剧”！A股冲高回落，通信却逆势走强？ - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE85WjJvdTlRMGxHV0lWVGZubWgtOGNqXzFteEFXQ2wwb0tYMHNGaVRFS3FLb3ZJcEdQWFJJRDcwVUgyZi1HTmJPTmdWSjI0MmxCbDk1OWNuZ2tnS3huNWNsZmZPTEs0Y3RNM0ZLVl84ZWZoQQ?oc=5",
+            "published_at": "2026-11-17T16:31:58+08:00",
+            "published_display": "2026-11-17 16:31",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-17 16:00:00 CST",
+          "end": "2026-11-17 16:52:08 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 7.92%，短线承压",
+        "窗口期内抓取到 8 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "sanan",
+      "company_name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": [
+        "LED芯片",
+        "化合物半导体",
+        "Mini/Micro LED",
+        "碳化硅"
+      ],
+      "analysis_date": "2026-11-17",
+      "analysis_time": "2026-11-17 16:52:08 CST",
+      "news_window": {
+        "start": "2026-11-17 15:00:00 CST",
+        "end": "2026-11-17 16:52:08 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-04",
+          "open": 9.0,
+          "high": 9.399999618530273,
+          "low": 8.819999694824219,
+          "close": 9.350000381469727,
+          "volume": 101634986
+        },
+        {
+          "date": "2026-11-05",
+          "open": 9.210000038146973,
+          "high": 9.710000038146973,
+          "low": 9.1899995803833,
+          "close": 9.539999961853027,
+          "volume": 93740319
+        },
+        {
+          "date": "2026-11-06",
+          "open": 9.050000190734863,
+          "high": 9.34000015258789,
+          "low": 9.050000190734863,
+          "close": 9.180000305175781,
+          "volume": 66772952
+        },
+        {
+          "date": "2026-11-09",
+          "open": 9.300000190734863,
+          "high": 9.34000015258789,
+          "low": 9.1899995803833,
+          "close": 9.210000038146973,
+          "volume": 40873071
+        },
+        {
+          "date": "2026-11-10",
+          "open": 9.34000015258789,
+          "high": 9.449999809265137,
+          "low": 9.260000228881836,
+          "close": 9.4399995803833,
+          "volume": 51732032
+        },
+        {
+          "date": "2026-11-11",
+          "open": 9.350000381469727,
+          "high": 9.59000015258789,
+          "low": 9.300000190734863,
+          "close": 9.539999961853027,
+          "volume": 55791727
+        },
+        {
+          "date": "2026-11-12",
+          "open": 9.5600004196167,
+          "high": 9.739999771118164,
+          "low": 9.329999923706055,
+          "close": 9.359999656677246,
+          "volume": 74223569
+        },
+        {
+          "date": "2026-11-13",
+          "open": 9.369999885559082,
+          "high": 9.479999542236328,
+          "low": 9.020000457763672,
+          "close": 9.069999694824219,
+          "volume": 60588338
+        },
+        {
+          "date": "2026-11-16",
+          "open": 9.010000228881836,
+          "high": 9.010000228881836,
+          "low": 8.600000381469727,
+          "close": 8.65999984741211,
+          "volume": 74464133
+        },
+        {
+          "date": "2026-11-17",
+          "open": 8.569999694824219,
+          "high": 9.0,
+          "low": 8.520000457763672,
+          "close": 8.8100004196167,
+          "volume": 66003642
+        }
+      ],
+      "price": {
+        "current": 8.81,
+        "previous": 8.66,
+        "change": 0.15,
+        "change_pct": 1.73,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-17",
+        "close": 8.81,
+        "previous_close": 8.66,
+        "change": 0.15,
+        "change_pct": 1.73,
+        "volume": 66003642
+      },
+      "fundamentals": {
+        "market_cap": 43953254400,
+        "pe_ratio": null,
+        "pb_ratio": 1.1971736,
+        "dividend_yield": 0.0,
+        "beta": 1.197,
+        "volume": 66003642,
+        "avg_volume": 96504948,
+        "currency": "CNY"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 600703.SS",
+        "items": [],
+        "error": "所有新闻源在当前窗口内均无结果"
+      },
+      "industry_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "港股收评：半导体股逆势走强，新消费概念活跃 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMnVROHBuUkhrRGJMamJKUGc0a3NOVFZkV2xNMFhRdjB2RmdMTnZIUkxTZ3pqLXZQajlyVG5XVzZweF9XUmViTEk5cTFsd1lGdXpnMGVBWHBCZWZRd3ZxZzJlRll2XzZPT1VxNUVwRFNuQTU2ZC1zWGtqZ2dORjQtUUxHWnFQQ1E5VERXaQ?oc=5",
+            "published_at": "2026-11-17T16:48:25+08:00",
+            "published_display": "2026-11-17 16:48",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股收盘(11.17) | 恒指收跌1.03% 国产芯片逆市走高 科网股、光通信股继续承压 - Moomoo",
+            "publisher": "Moomoo",
+            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeGNxYVBmbzlRSG0xUTJYYXFCQ3BFQUhSaU84anhRMlRhZkxMeUFUVXZJZzRFeVRRY09QZkVXNDJzalJXS2wxcTMyYWxsRFg2OXNLY0hCWTVwdmhQUFpUcjdnWk1HaEwwTGRyZUVwVnYyRUR5QTQ2ZTdQcEd4S0JBUnkyT2hjQ1pxN0w2OUNhTjBpM1lQakd2Q3V0d3drNUlYa1E?oc=5",
+            "published_at": "2026-11-17T16:43:29+08:00",
+            "published_display": "2026-11-17 16:43",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "连板股追踪丨A股今日共38只个股涨停 长虹美菱、小熊电器收获2连板 - 第一财经",
+            "publisher": "第一财经",
+            "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9MRndZUWZScmdSNXR4UUo0WEdxM2ZXTjVhV0ZRazVZMnRnU25yNVZCRkJjVUtmZXZDeDk2ZEY2MS1YZEZIT0I5V0RndzVWWFQtUUdF?oc=5",
+            "published_at": "2026-11-17T16:35:50+08:00",
+            "published_display": "2026-11-17 16:35",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股三大指数全线收跌，恒生指数跌1.03%，万国数据-SW跌10.35%，哔哩哔哩-W跌8.79%，地平线机器人-W跌7.92% - 金融界",
+            "publisher": "金融界",
+            "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0yalJiNnpuYTMxV1BBS1hGZm5oRXJKZmpQMWxfTVMzM245akhJWGZjdW8ySnFsaFhWdkNjSnVOLXVMYXJUTS1DUU1vLVBKRjJLZTFfVDhlNEl4NUlDdlFXaFhzRFB0LXJ6VUlCbHhSNlNLQ0hu?oc=5",
+            "published_at": "2026-11-17T16:33:56+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "三星电子与苹果即将签署DRAM半导体长期供货协议 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE10R1lOT1l0NC0xaElCWm1DRjZtSDc4U0pkMVJVYjNyLVFOMnkyMmYyb1MxWnJ2ZVlmU05iX016dW4tczFwVU9jVEx5Tl9FUFlCNWpxMXk0MnNlazR3Vjl3V1ZxRnBYd3hWYlE?oc=5",
+            "published_at": "2026-11-17T16:33:06+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "恒生科技指数下跌1.14%，科网股多数下跌｜港股收评 - 21财经",
+            "publisher": "21财经",
+            "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOVpYelA0Y2FFUXhwOGUtenNxWmVUS2dYTWVQMHBaTHZ1T09sbjJtTHk0dzFZRkJiOS14SFdIMGo5QWtnT2VfS3UzR251dTNWQzNlOERLclRqU3FYX0ttZEZka1lpYnctM3ZJVnlIOGhFNDJDRlJLSV8yNlJ6dGtqRUtNT0lMSDZIZExKU1g2aw?oc=5",
+            "published_at": "2026-11-17T16:33:00+08:00",
+            "published_display": "2026-11-17 16:33",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "“未来20” 2026调研实录：半导体业务成第一大收入来源 英杰电气打开增长新空间 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOEwzSG5Xb0hhWVRxYWFvaHg4Y0RxSEJwazA1UXRJclY0LU13dmdTTFptMlkyTVRXaW9VcEl4b0RGbDh0MDhxdVdnNUpuajlQT1dhcUdKdERtRFJMSDNCdDJ2S3RzYmhpc3B5ajMzUnh4dV9paHJCUmwyTEZKb1RHRkZSSGp2bGxY?oc=5",
+            "published_at": "2026-11-17T16:32:50+08:00",
+            "published_display": "2026-11-17 16:32",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "一周基要 | 科技巨头上演“换帅连续剧”！A股冲高回落，通信却逆势走强？ - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE85WjJvdTlRMGxHV0lWVGZubWgtOGNqXzFteEFXQ2wwb0tYMHNGaVRFS3FLb3ZJcEdQWFJJRDcwVUgyZi1HTmJPTmdWSjI0MmxCbDk1OWNuZ2tnS3huNWNsZmZPTEs0Y3RNM0ZLVl84ZWZoQQ?oc=5",
+            "published_at": "2026-11-17T16:31:58+08:00",
+            "published_display": "2026-11-17 16:31",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-17 16:00:00 CST",
+          "end": "2026-11-17 16:52:08 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 1.73%，价格相对平稳",
+        "窗口期内抓取到 8 条行业消息，需关注板块情绪"
+      ]
+    }
+  ]
+}
