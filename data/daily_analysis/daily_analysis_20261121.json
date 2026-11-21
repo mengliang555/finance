@@ -1,0 +1,742 @@
+{
+  "generated_at": "2026-11-21T16:02:30.917436+08:00",
+  "industry_news": {
+    "provider": "yfinance",
+    "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+    "items": [
+      {
+        "title": "Why Hua Hong Grace Semiconductor Stock Held Up Better During Tech Selloffs",
+        "publisher": "Simply Wall St.",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/why-hua-hong-grace-semiconductor-161257456.html",
+        "published_at": "2026-11-21T00:12:57+08:00",
+        "published_display": "2026-11-21 00:12",
+        "source": "yfinance news",
+        "source_symbol": "^HSI"
+      }
+    ],
+    "error": null,
+    "window": {
+      "start": "2026-11-20 16:00:00 CST",
+      "end": "2026-11-21 16:02:30 CST"
+    }
+  },
+  "results": [
+    {
+      "company_id": "xiaomi",
+      "company_name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": [
+        "智能手机",
+        "IoT",
+        "汽车业务",
+        "海外市场"
+      ],
+      "analysis_date": "2026-11-21",
+      "analysis_time": "2026-11-21 16:02:30 CST",
+      "news_window": {
+        "start": "2026-11-20 16:00:00 CST",
+        "end": "2026-11-21 16:02:30 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-09",
+          "open": 30.979999542236328,
+          "high": 31.059999465942383,
+          "low": 29.940000534057617,
+          "close": 30.100000381469727,
+          "volume": 129809779
+        },
+        {
+          "date": "2026-11-10",
+          "open": 29.959999084472656,
+          "high": 31.040000915527344,
+          "low": 29.68000030517578,
+          "close": 30.600000381469727,
+          "volume": 103359489
+        },
+        {
+          "date": "2026-11-11",
+          "open": 30.440000534057617,
+          "high": 31.020000457763672,
+          "low": 29.84000015258789,
+          "close": 30.100000381469727,
+          "volume": 110336033
+        },
+        {
+          "date": "2026-11-12",
+          "open": 29.8799991607666,
+          "high": 30.360000610351562,
+          "low": 29.540000915527344,
+          "close": 29.979999542236328,
+          "volume": 109558509
+        },
+        {
+          "date": "2026-11-13",
+          "open": 29.739999771118164,
+          "high": 29.799999237060547,
+          "low": 28.799999237060547,
+          "close": 28.860000610351562,
+          "volume": 109152387
+        },
+        {
+          "date": "2026-11-16",
+          "open": 29.0,
+          "high": 29.459999084472656,
+          "low": 28.700000762939453,
+          "close": 29.079999923706055,
+          "volume": 93525833
+        },
+        {
+          "date": "2026-11-17",
+          "open": 29.079999923706055,
+          "high": 30.520000457763672,
+          "low": 28.459999084472656,
+          "close": 29.700000762939453,
+          "volume": 166780913
+        },
+        {
+          "date": "2026-11-18",
+          "open": 29.920000076293945,
+          "high": 30.100000381469727,
+          "low": 29.420000076293945,
+          "close": 29.65999984741211,
+          "volume": 100207665
+        },
+        {
+          "date": "2026-11-19",
+          "open": 29.0,
+          "high": 29.139999389648438,
+          "low": 28.260000228881836,
+          "close": 28.520000457763672,
+          "volume": 134914060
+        },
+        {
+          "date": "2026-11-20",
+          "open": 28.200000762939453,
+          "high": 28.299999237060547,
+          "low": 27.399999618530273,
+          "close": 27.639999389648438,
+          "volume": 157739608
+        }
+      ],
+      "price": {
+        "current": 27.64,
+        "previous": 28.52,
+        "change": -0.88,
+        "change_pct": -3.09,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-20",
+        "close": 27.64,
+        "previous_close": 28.52,
+        "change": -0.88,
+        "change_pct": -3.09,
+        "volume": 157739608
+      },
+      "fundamentals": {
+        "market_cap": 711130873856,
+        "pe_ratio": 20.939392,
+        "pb_ratio": 2.242065,
+        "dividend_yield": 0.0,
+        "beta": 0.662,
+        "volume": 157739608,
+        "avg_volume": 142421584,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "前小鹏高管强顺强加入小米汽车 - www.itsdw.cn",
+            "publisher": "www.itsdw.cn",
+            "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1pUGxFSHVaMkllOF9yV2F5WFF2c1U2dnZJYjVucTkzSG1VYjZqamRPel9SdjRzVWZ4OVd6ZWI0a2F4b3lSRlg1bmg0YlQ?oc=5",
+            "published_at": "2026-11-21T14:37:38+08:00",
+            "published_display": "2026-11-21 14:37",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "冲刺2027年出海，消息称前小鹏汽车西欧及南欧董事总经理强顺强加入小米汽车 - 凤凰网科技",
+            "publisher": "凤凰网科技",
+            "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5hQjl2RXZHbHE0MDFNNUNtSEJlYnZXNEdwRFFNSVlzckJDSkg1anFMM0RvRzBvWFhIUnZxTEUtc0Z2UldfYkVtVV9aUEo?oc=5",
+            "published_at": "2026-11-21T14:15:47+08:00",
+            "published_display": "2026-11-21 14:15",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米从小鹏挖来了欧洲汽车业务负责人 - Jiemian.com",
+            "publisher": "Jiemian.com",
+            "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zTUJaWnhJc2llYzQ0TGkwXzgyVmNkSlJsNEJsNS1jQ3ktMUN6WWhtRGJNX3BYbHFlSVZIQ21XMXhXVjFTTHRiNW8ySjVqQzgyUkp1TEpoTXk?oc=5",
+            "published_at": "2026-11-21T10:46:58+08:00",
+            "published_display": "2026-11-21 10:46",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "【网通社快报】前小鹏汽车西欧及南欧董事总经理强顺强于2026年9月加入小米汽车出任欧洲区董事总经理 - 凤凰网汽车",
+            "publisher": "凤凰网汽车",
+            "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5aNmM0eVVYc1gxQkEwbVpnaGQ3eS1OejdrWGVkVl84ZXdyUzB4dXhKWmREOU5uNmx2LXZSOWRhV3kwUEhlTXYzLWhVNGc?oc=5",
+            "published_at": "2026-11-21T10:37:00+08:00",
+            "published_display": "2026-11-21 10:37",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "11月20日港股通信息技术ETF华夏基金份额增加1200万份，重仓股联想集团、小米集团-W、中芯国际 - 证券之星",
+            "publisher": "证券之星",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5aZC1WNUZra3dxRktiMGJYV0ctSm5qV2lsYURFZDZTbHMwU3habGxneVZtS0FZNmVtelhzU1MyaHNRREVYckdacjdaVFBJTm5aS2Q3NWRMWjhqeVhTdTVaaExn?oc=5",
+            "published_at": "2026-11-21T06:47:33+08:00",
+            "published_display": "2026-11-21 06:47",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米汽车明年要“出海” - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1DNDZUNEYzbG1FdGpVZnpocnpPenVlcWh6ZmtFZW1GUWJuQUFoM25CUjZZNHQtMFRBX3RTVHc2XzNnY0xENU9vVXNpMmFuRUt6Q1NjSUxCeGxQaFlseGExR2RQM2o4THU2UWhYaWM0NVRZc3dTUE9xLWhYWWhwUQ?oc=5",
+            "published_at": "2026-11-21T04:59:24+08:00",
+            "published_display": "2026-11-21 04:59",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米集团-W(01810.HK)11月20日回购4991.96万港元，年内累计回购131.56亿港元 - 证券之星",
+            "publisher": "证券之星",
+            "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE04RTNRaGNSSmxsa3NYMVdQbWF3VkR4RHRwZFRra09lTXlCTzRORFEyQ19aQjAzeWNjd1U1WDFRWXRlUngxS2RoUlNwOTRFTVJMX3hBaFBybzFzcUNkNlFzWg?oc=5",
+            "published_at": "2026-11-20T22:34:38+08:00",
+            "published_display": "2026-11-20 22:34",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米集团11月20日回购181万股 涉资约4991.96万港元 - 观点网",
+            "publisher": "观点网",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5kUmtycUZ5QjlWLWN5ejQ4dngySWhlY1N4ZDNTOEpmNVJ4M0JteHNmSXc3cVhpOHVEVWNjbEFzZVYzYW43TTZnSmgtU0FNWmo3aGJ5Z05lVlJNc1hsYXRHUnBB?oc=5",
+            "published_at": "2026-11-20T19:58:04+08:00",
+            "published_display": "2026-11-20 19:58",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "Why Hua Hong Grace Semiconductor Stock Held Up Better During Tech Selloffs",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/why-hua-hong-grace-semiconductor-161257456.html",
+            "published_at": "2026-11-21T00:12:57+08:00",
+            "published_display": "2026-11-21 00:12",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-20 16:00:00 CST",
+          "end": "2026-11-21 16:02:30 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 3.09%，短线承压",
+        "窗口期内抓取到 8 条公司消息，需评估事件影响",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "meituan",
+      "company_name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": [
+        "外卖业务",
+        "到店服务",
+        "酒店旅游",
+        "新业务"
+      ],
+      "analysis_date": "2026-11-21",
+      "analysis_time": "2026-11-21 16:02:30 CST",
+      "news_window": {
+        "start": "2026-11-20 16:00:00 CST",
+        "end": "2026-11-21 16:02:30 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-09",
+          "open": 80.6500015258789,
+          "high": 81.9000015258789,
+          "low": 74.75,
+          "close": 75.1500015258789,
+          "volume": 65516899
+        },
+        {
+          "date": "2026-11-10",
+          "open": 75.5999984741211,
+          "high": 77.4000015258789,
+          "low": 75.4000015258789,
+          "close": 75.5,
+          "volume": 26375796
+        },
+        {
+          "date": "2026-11-11",
+          "open": 74.69999694824219,
+          "high": 74.69999694824219,
+          "low": 72.30000305175781,
+          "close": 72.8499984741211,
+          "volume": 30427317
+        },
+        {
+          "date": "2026-11-12",
+          "open": 72.19999694824219,
+          "high": 73.4000015258789,
+          "low": 71.0,
+          "close": 72.0999984741211,
+          "volume": 36362862
+        },
+        {
+          "date": "2026-11-13",
+          "open": 71.19999694824219,
+          "high": 72.6500015258789,
+          "low": 69.6500015258789,
+          "close": 69.80000305175781,
+          "volume": 24952585
+        },
+        {
+          "date": "2026-11-16",
+          "open": 70.94999694824219,
+          "high": 72.8499984741211,
+          "low": 70.80000305175781,
+          "close": 71.55000305175781,
+          "volume": 29790973
+        },
+        {
+          "date": "2026-11-17",
+          "open": 71.0,
+          "high": 71.8499984741211,
+          "low": 69.25,
+          "close": 70.5,
+          "volume": 29653449
+        },
+        {
+          "date": "2026-11-18",
+          "open": 70.5,
+          "high": 72.94999694824219,
+          "low": 69.8499984741211,
+          "close": 70.1500015258789,
+          "volume": 31806940
+        },
+        {
+          "date": "2026-11-19",
+          "open": 69.55000305175781,
+          "high": 69.55000305175781,
+          "low": 66.9000015258789,
+          "close": 67.55000305175781,
+          "volume": 43469374
+        },
+        {
+          "date": "2026-11-20",
+          "open": 66.5999984741211,
+          "high": 67.80000305175781,
+          "low": 66.0999984741211,
+          "close": 66.5,
+          "volume": 42500195
+        }
+      ],
+      "price": {
+        "current": 66.5,
+        "previous": 67.55,
+        "change": -1.05,
+        "change_pct": -1.55,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-20",
+        "close": 66.5,
+        "previous_close": 67.55,
+        "change": -1.05,
+        "change_pct": -1.55,
+        "volume": 42500195
+      },
+      "fundamentals": {
+        "market_cap": 410427424768,
+        "pe_ratio": null,
+        "pb_ratio": 2.0643625,
+        "dividend_yield": 0.0,
+        "beta": 0.185,
+        "volume": 42500195,
+        "avg_volume": 32661211,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 美团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "6名骑手亮相广西南宁消防技能挑战赛 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbnhET2FkeFhWQkd1TV9tWnlVT0gtMEplckNGd2VKTW1kcHY0Wm9uT0czNUlneGxvaU1mSWwxU2tPQnhZSDdCZEN1Z0FKU1Z6bVFwYmNfZXBiQmJvZUlKeFoxNVNiTV85WmV4aDZGNEdSNjVXSjduZWplVUk5M1FqS3NYRUNEcVF3cVQ0Rg?oc=5",
+            "published_at": "2026-11-21T14:51:09+08:00",
+            "published_display": "2026-11-21 14:51",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "2026美团外卖优惠券领取入口渠道整理，11月美团领外卖优惠券和红包 - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8tU1NEcVZTU1ZmaUh5UUJVUlAwWDdsS00wYWgweHdCV0xZdDlnZ1ktbHJzSU1aRF9EWjhMRV8xTEFXM0JpRWc0aHJJdDBQcnVST25PZG5EWWs5NXZubGthZVBLTEFZMnlSa2lfSEtzbjc?oc=5",
+            "published_at": "2026-11-21T11:29:57+08:00",
+            "published_display": "2026-11-21 11:29",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团外卖优惠券领取入口新用户，2026年美团外卖新用户券和天天神券红 - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE4wMjhsNUk3QUlQeTNDTjRGY0t0ZFhKTzllVVBZM2tfVy02ZGpvM2o5N1lqc0loMWc1Vl85bjFjSWNuTWhQWUI3LVlNY2RxTzJBaTNkcHJYX2UzMWxHX1JqSXM4MnZUc0JqYXBUQmdZVEY?oc=5",
+            "published_at": "2026-11-21T10:59:54+08:00",
+            "published_display": "2026-11-21 10:59",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "“追风者”、“尊享车”，高端共享单车上新，你是被颜值吸引还是被价格劝退？ - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9rN1FydlBWVXJsVUJHd2FUVkhjcWhpNlZsdk14SWw2VWNTMXJNbjM5dlowc0NWZ0lzeEFWTHFZdldDRmtSRXF0VkI5bEc3LVdKRDlzT3hR?oc=5",
+            "published_at": "2026-11-20T22:25:21+08:00",
+            "published_display": "2026-11-20 22:25",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "送外卖也能拿全国第一！35岁美团小哥夺冠 不到1年晋升站长 - 驱动之家",
+            "publisher": "驱动之家",
+            "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCZ0VsbFFuRzdvNVM0UnJJUGV1RlNkeTl6ckxxeGxqYWhGMlNMcFVQUXFLSThzNzFuMmNtZFZ5ckM4X3JIMEtTaVE3QU5nM2ZRTkF2MlFybGQ?oc=5",
+            "published_at": "2026-11-20T21:47:00+08:00",
+            "published_display": "2026-11-20 21:47",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "湖南骑手吴燕飞斩获第九届全国职工职业技能大赛冠军！美团颁发6万元奖励金 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNRXMxS1NmcVlGRmhIeVB4dnRSZ0NZOWlnTG1LalYxenlpMnZCeHhtSnhGa3RKTTlGWHRTRUNObEs3cUp0SEE2MlNlanYxeGpCTi1FaEtndXFDNnJTTXJRcEUycXNpcXBQRVFxYlBISkZfZlFzR1JaLTZmRUxmQWltX2tQZHNSMjdqWXlBSQ?oc=5",
+            "published_at": "2026-11-20T19:39:11+08:00",
+            "published_display": "2026-11-20 19:39",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "湖南骑手吴燕飞斩获第九届全国职工职业技能大赛冠军！美团颁发6万元奖励金 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSXA0cWRkdVg1dUJkekRvSkU1Z3Vob3Fadjh4ZnF6OTczUFR6UjJhVERLQmpjeUdsSVNkYlk0Zk1zRUhsaWluZk9URHhnc2lOQ0pMUDBWcWdGbnZCU01neUpkQTV0R29HM2hsUDVuYWJicEhjaWhhMjd4cWxWMFFNcm9YYjdVeHF5?oc=5",
+            "published_at": "2026-11-20T19:38:39+08:00",
+            "published_display": "2026-11-20 19:38",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "全国第一！祝贺四位美团骑手在全国职工技能大赛斩获佳绩 - Meituan",
+            "publisher": "Meituan",
+            "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1qNEFyQzgxQjc0cHdmU1JXMGVDTjZZQXRWMldNUFc1U1lRSWlBTy03LWtSXzNybzBLT2hreC1kazV1eHE2S213VlZHdkNQek0wemhUSFd0RURKdw?oc=5",
+            "published_at": "2026-11-20T19:11:25+08:00",
+            "published_display": "2026-11-20 19:11",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "Why Hua Hong Grace Semiconductor Stock Held Up Better During Tech Selloffs",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/why-hua-hong-grace-semiconductor-161257456.html",
+            "published_at": "2026-11-21T00:12:57+08:00",
+            "published_display": "2026-11-21 00:12",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-20 16:00:00 CST",
+          "end": "2026-11-21 16:02:30 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 -1.55%，价格相对平稳",
+        "窗口期内抓取到 8 条公司消息，需评估事件影响",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "horizon",
+      "company_name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": [
+        "AI芯片",
+        "自动驾驶",
+        "合作伙伴",
+        "技术优势"
+      ],
+      "analysis_date": "2026-11-21",
+      "analysis_time": "2026-11-21 16:02:30 CST",
+      "news_window": {
+        "start": "2026-11-20 16:00:00 CST",
+        "end": "2026-11-21 16:02:30 CST"
+      },
+      "success": true,
+      "history": [],
+      "price": {
+        "current": 3.12,
+        "previous": 3.395,
+        "change": -0.275,
+        "change_pct": -8.1,
+        "trend": "下跌",
+        "source": "Sina Finance"
+      },
+      "previous_session": {
+        "date": "2026-11-20",
+        "close": 3.12,
+        "previous_close": 3.395,
+        "change": -0.275,
+        "change_pct": -8.1,
+        "volume": 275394920,
+        "source": "Sina Finance",
+        "source_symbol": "hk09660",
+        "source_url": "https://hq.sinajs.cn/list=hk09660",
+        "open": 3.315,
+        "high": 3.315,
+        "low": 3.065,
+        "raw_name": "地平线机器人－Ｗ"
+      },
+      "fundamentals": {
+        "volume": 275394920
+      },
+      "market_data_source": "Sina Finance",
+      "market_data_notes": [
+        "配置为优先使用新浪财经行情"
+      ],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 地平线机器人（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "11月20日港股软件服务行业沽空数据盘点，网易、腾讯控股、地平线机器人-W沽空金额位居行业前三-证券之星 - 证券之星",
+            "publisher": "证券之星",
+            "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9CVTNtZ25jQW5qYmdYTjd0ODJzRk9SYjlzcG9GblhiYXJSSkZvR1BMMlpORm1yTGJMdVV2VEgyODNSOUw1ekR0aXRSZ08yRjB6X0REMGtMMmJNcEg5enc?oc=5",
+            "published_at": "2026-11-20T18:48:25+08:00",
+            "published_display": "2026-11-20 18:48",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "Why Hua Hong Grace Semiconductor Stock Held Up Better During Tech Selloffs",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/why-hua-hong-grace-semiconductor-161257456.html",
+            "published_at": "2026-11-21T00:12:57+08:00",
+            "published_display": "2026-11-21 00:12",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-20 16:00:00 CST",
+          "end": "2026-11-21 16:02:30 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 8.10%，短线承压",
+        "窗口期内抓取到 1 条公司消息，需评估事件影响",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "sanan",
+      "company_name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": [
+        "LED芯片",
+        "化合物半导体",
+        "Mini/Micro LED",
+        "碳化硅"
+      ],
+      "analysis_date": "2026-11-21",
+      "analysis_time": "2026-11-21 16:02:30 CST",
+      "news_window": {
+        "start": "2026-11-20 15:00:00 CST",
+        "end": "2026-11-21 16:02:30 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-09",
+          "open": 9.300000190734863,
+          "high": 9.34000015258789,
+          "low": 9.1899995803833,
+          "close": 9.210000038146973,
+          "volume": 40873071
+        },
+        {
+          "date": "2026-11-10",
+          "open": 9.34000015258789,
+          "high": 9.449999809265137,
+          "low": 9.260000228881836,
+          "close": 9.4399995803833,
+          "volume": 51732032
+        },
+        {
+          "date": "2026-11-11",
+          "open": 9.350000381469727,
+          "high": 9.59000015258789,
+          "low": 9.300000190734863,
+          "close": 9.539999961853027,
+          "volume": 55791727
+        },
+        {
+          "date": "2026-11-12",
+          "open": 9.5600004196167,
+          "high": 9.739999771118164,
+          "low": 9.329999923706055,
+          "close": 9.359999656677246,
+          "volume": 74223569
+        },
+        {
+          "date": "2026-11-13",
+          "open": 9.369999885559082,
+          "high": 9.479999542236328,
+          "low": 9.020000457763672,
+          "close": 9.069999694824219,
+          "volume": 60588338
+        },
+        {
+          "date": "2026-11-16",
+          "open": 9.010000228881836,
+          "high": 9.010000228881836,
+          "low": 8.600000381469727,
+          "close": 8.65999984741211,
+          "volume": 74464133
+        },
+        {
+          "date": "2026-11-17",
+          "open": 8.569999694824219,
+          "high": 9.0,
+          "low": 8.520000457763672,
+          "close": 8.8100004196167,
+          "volume": 66003642
+        },
+        {
+          "date": "2026-11-18",
+          "open": 8.850000381469727,
+          "high": 8.930000305175781,
+          "low": 8.640000343322754,
+          "close": 8.819999694824219,
+          "volume": 44861575
+        },
+        {
+          "date": "2026-11-19",
+          "open": 8.819999694824219,
+          "high": 8.869999885559082,
+          "low": 8.680000305175781,
+          "close": 8.75,
+          "volume": 38159544
+        },
+        {
+          "date": "2026-11-20",
+          "open": 8.5600004196167,
+          "high": 8.710000038146973,
+          "low": 8.300000190734863,
+          "close": 8.3100004196167,
+          "volume": 62436284
+        }
+      ],
+      "price": {
+        "current": 8.31,
+        "previous": 8.75,
+        "change": -0.44,
+        "change_pct": -5.03,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-20",
+        "close": 8.31,
+        "previous_close": 8.75,
+        "change": -0.44,
+        "change_pct": -5.03,
+        "volume": 62436284
+      },
+      "fundamentals": {
+        "market_cap": 41458745344,
+        "pe_ratio": null,
+        "pb_ratio": 1.1292295,
+        "dividend_yield": 0.0,
+        "beta": 1.197,
+        "volume": 62436284,
+        "avg_volume": 86958673,
+        "currency": "CNY"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 600703.SS",
+        "items": [],
+        "error": "所有新闻源在当前窗口内均无结果"
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "Why Hua Hong Grace Semiconductor Stock Held Up Better During Tech Selloffs",
+            "publisher": "Simply Wall St.",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/why-hua-hong-grace-semiconductor-161257456.html",
+            "published_at": "2026-11-21T00:12:57+08:00",
+            "published_display": "2026-11-21 00:12",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-20 16:00:00 CST",
+          "end": "2026-11-21 16:02:30 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘跌幅 5.03%，短线承压",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    }
+  ]
+}
