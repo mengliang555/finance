@@ -1,0 +1,173 @@
+# 每日公司综合分析报告
+
+**分析日期**：2026-11-22
+**生成时间**：2026-11-22 15:49:07 CST
+**计划执行**：每天 09:00 Asia/Shanghai
+**分析公司数量**：4
+**成功/失败**：4/0
+
+## 总体概览
+
+| 公司 | 代码 | 市场 | 上一交易日 | 收盘价 | 涨跌幅 | 成交量 | 行情来源 |
+|---|---|---|---|---:|---:|---:|---|
+| 小米集团 | 1810.HK | 港股 | 2026-11-20 | 27.64 | -3.09% | 1.58亿 | Yahoo Finance / yfinance |
+| 美团 | 3690.HK | 港股 | 2026-11-20 | 66.50 | -1.55% | 4250.02万 | Yahoo Finance / yfinance |
+| 地平线机器人 | 09660.HK | 港股 | 2026-11-20 | 3.12 | -8.10% | 2.75亿 | Sina Finance |
+| 三安光电 | 600703.SS | A股 | 2026-11-20 | 8.31 | -5.03% | 6243.63万 | Yahoo Finance / yfinance |
+
+## 行业消息面
+
+覆盖窗口：2026-11-20 16:00:00 CST 至 2026-11-22 15:49:07 CST
+数据来源：yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ
+- 2026-11-21 00:12｜Simply Wall St.｜Why Hua Hong Grace Semiconductor Stock Held Up Better During Tech Selloffs [链接](https://finance.yahoo.com/markets/stocks/articles/why-hua-hong-grace-semiconductor-161257456.html)
+
+## 公司分析
+
+### 小米集团 (1810.HK)
+
+市场：港股｜行业：消费电子/智能硬件
+关注点：智能手机、IoT、汽车业务、海外市场
+消息覆盖：2026-11-20 16:00:00 CST 至 2026-11-22 15:49:07 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-20
+- 收盘价：27.64
+- 涨跌额：-0.88
+- 涨跌幅：-3.09%
+- 成交量：1.58亿
+
+#### 基本面指标
+
+- 市值：711.08B HKD
+- PE：20.32
+- PB：2.24
+- 成交量/均量：1.11
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）
+- 2026-11-22 14:45｜富途牛牛｜小米官宣智能手环销量世界第一 - 富途牛牛 [链接](https://news.google.com/rss/articles/CBMinwFBVV95cUxPakVvakVkOFVaRlNobGEydjg2MHJtcV83Ym9STENuWTMtVkRVWGg5cnhVMXFZYVR6dGE2bDItTXdIWkdFQkhNTkRaY19NejMzRF9GS3A3Ry0wY2ktdEFkSEdSbGpEdU9aS3NmR1JEcVBReWs4UEFOSzloT0F2MVd6SEgyMV9PSU5RQV94RGJVYm1tdmlibVVIeUJUcDRGVTg?oc=5)
+- 2026-11-22 11:36｜Sohu｜小鹏又一前高管跳槽小米汽车！ - Sohu [链接](https://news.google.com/rss/articles/CBMijAFBVV95cUxObk1tQlVocnVBd2Jsa3ZmZXNjRGZBMWdXRlJKbFFScXBCMkRScld1R1BySi1BVlBxREVudTFQY1JlRDNXMHdmbGV6X1FBRkMyWnBaMi1lWWFZREV2TEdFalNSR1FiQ2dQakczWU5XdkZMSndiTTdTdzFmQTUxanc5SHNId0ZJOUNxREkwZw?oc=5)
+- 2026-11-21 17:39｜华盛通｜财报前瞻| 小米Q3利润恐腰斩！高盛、大摩、巴克莱齐看盈利修复，“最难季度”即将过去？ 港美股资讯 - 华盛通 [链接](https://news.google.com/rss/articles/CBMiYkFVX3lxTE42aFR5Rlp1RmZ5SHQ2Rm94WWhnLUo4T241NVU0SklnQ01fSVNzcW1pd0NyZGlmTndyeEJJVkFHTVJBMFNLOFdHa280c29hSThQTXZVYTA2bWQ0UGVXWHptRlJn?oc=5)
+- 2026-11-21 14:37｜www.itsdw.cn｜前小鹏高管强顺强加入小米汽车 - www.itsdw.cn [链接](https://news.google.com/rss/articles/CBMiTEFVX3lxTE1pUGxFSHVaMkllOF9yV2F5WFF2c1U2dnZJYjVucTkzSG1VYjZqamRPel9SdjRzVWZ4OVd6ZWI0a2F4b3lSRlg1bmg0YlQ?oc=5)
+- 2026-11-21 14:15｜凤凰网科技｜冲刺2027年出海，消息称前小鹏汽车西欧及南欧董事总经理强顺强加入小米汽车 - 凤凰网科技 [链接](https://news.google.com/rss/articles/CBMiTEFVX3lxTE5hQjl2RXZHbHE0MDFNNUNtSEJlYnZXNEdwRFFNSVlzckJDSkg1anFMM0RvRzBvWFhIUnZxTEUtc0Z2UldfYkVtVV9aUEo?oc=5)
+- 2026-11-21 13:43｜新浪财经｜5799元！小米推出米家全效空气净化器2 Ultra：首次升降出风口 - 新浪财经 [链接](https://news.google.com/rss/articles/CBMihgFBVV95cUxPZVBiOXpKX0dqQ1NxVWxzTjIzbUNaenZORVlmNFBjLUR3TE9KUFpuZHpxSTJuQ1MwalJCcnYzVTlSX0NMbnNYaGZ3QUNKQlhFQjNaSm9yYlBUYzE3YVVpbkhBaTJwa01NeHFJd3U1NWd3ZTNvYWpxWnlPZmZiRUV2TnpHaVV0QQ?oc=5)
+- 2026-11-21 10:46｜Jiemian.com｜小米从小鹏挖来了欧洲汽车业务负责人 - Jiemian.com [链接](https://news.google.com/rss/articles/CBMiVkFVX3lxTE0ydmU2V241Q0NVNkZhcHhpRTUtVEVMbDVhWVdZckRyYV91RzNpcG8yMmY1SWV5VmdJTW1VTDYweUN4YS1QTWJBRTBLVkNLUldIZE5xMzZR?oc=5)
+- 2026-11-21 10:37｜凤凰网汽车｜【网通社快报】前小鹏汽车西欧及南欧董事总经理强顺强于2026年9月加入小米汽车出任欧洲区董事总经理 - 凤凰网汽车 [链接](https://news.google.com/rss/articles/CBMiTEFVX3lxTE5aNmM0eVVYc1gxQkEwbVpnaGQ3eS1OejdrWGVkVl84ZXdyUzB4dXhKWmREOU5uNmx2LXZSOWRhV3kwUEhlTXYzLWhVNGc?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘跌幅 3.09%，短线承压
+- 窗口期内抓取到 8 条公司消息，需评估事件影响
+- 窗口期内抓取到 1 条行业消息，需关注板块情绪
+
+### 美团 (3690.HK)
+
+市场：港股｜行业：本地生活服务
+关注点：外卖业务、到店服务、酒店旅游、新业务
+消息覆盖：2026-11-20 16:00:00 CST 至 2026-11-22 15:49:07 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-20
+- 收盘价：66.50
+- 涨跌额：-1.05
+- 涨跌幅：-1.55%
+- 成交量：4250.02万
+
+#### 基本面指标
+
+- 市值：410.43B HKD
+- PB：2.06
+- 成交量/均量：1.31
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 美团（yfinance 无结果，已回退）
+- 2026-11-22 13:47｜Sohu｜下周重磅！首批主动ETF上市，美褐皮书发布 - Sohu [链接](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTHFFclNqakhhVnVPMmpOcnNYbzBCNlpLbENzVnhKRS1CX3JodUNGeGZzcjZ4OUgweFpWZEVRU2QzcVc0UEpJRDBILXhLTnRiSDlKT1E4ZzZWOHB2eWRTbTgwSXliYVRCVTc2RUZHdE4yMTg5RE5HSW8zYlRBdXBUN1dlbUdMT19Ecmlz?oc=5)
+- 2026-11-22 12:40｜yeeyi｜下周重磅日程：“美联储最爱通胀指标”、小米、美团、B站、戴尔财报-yeeyi - yeeyi [链接](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9mbzVjM3hBX2JyUXVkZkd2U2pTTWs4SUw2aU9WTkR6T1hiYTZ6R19WRE02dkYxYUN5NEU5UnBlRE1qY19OVGNSd0cwV0ZsXzZ4SGppbS1n?oc=5)
+- 2026-11-22 10:44｜手机新浪网｜2026美团外卖优惠券领取入口大全，11月美团外卖大额红包口令 - 手机新浪网 [链接](https://news.google.com/rss/articles/CBMicEFVX3lxTE1VdElUSWMydkxRSmZ1ZUx4MWpNejdMZjI0VVQ4VUNHc21Pb0FDQVl3Y3hYaGNnVTBfYkM4WmdqQ0pDbXIyMFdKcnBhOWVyWFlpV1JXbUFKMjJISkUzY1poVWdIVWR6T1VGVERwMWJfT1k?oc=5)
+- 2026-11-21 21:18｜新湖南｜国赛夺冠！美团颁发6万元奖励金 - 新湖南 [链接](https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Oc0ZaZXVEZ3NlMlFCWVZac2ZRenB2SVFUMVBsRGVUeTgzTUJLa05FSF83YVZOMzM4cl9Oc3Z3cXRiZGJMSHY1XzlYQUdpYWRTMUphTnpRRlF4OW0zUTFN?oc=5)
+- 2026-11-21 17:01｜Sohu｜演出、商务全都来了，厉娜！《后会友期》热播后，网友称厉娜的商务动态让人看不过来了，目前已有十余个商务合作 - Sohu [链接](https://news.google.com/rss/articles/CBMijAFBVV95cUxPcV9ETXByaDJTWm9YX3cza3BSRFlTOUF1WHR6a2NMdTlPc28tclo3OGhTWmVmWG1Yb3ZGNWFvS0dHTWJaU1dtX044YVlsR1JWLXpQZG9fSnIzY3UxMzJPSlNQWGFTOXJhV0hxdXhyS1RJX0ozSUNVTF9EZVdnTWloNVVtWGY1aVppS0JNYw?oc=5)
+- 2026-11-21 17:01｜Sohu｜厉娜《后会友期》后商务爆发！官宣美团单车等十余个合作，演出也回来了 - Sohu [链接](https://news.google.com/rss/articles/CBMijAFBVV95cUxNd0hxaHVqY1k3bjdLMWwxbTc0X2pPenkwSEtyaFFONkF1bEdMb3pSNHJtay1weUhRalRXY0ctRGQ5dEhWTHo2WDdRVElDQzdKbVl1ZEV3TDc5eDBRbkJ2NWFETDJuU09OZ1RLZ0xkaGlMQWpfZVBKOU00Ql9JaWY0VEFJMzRVTXQyUHN5Tg?oc=5)
+- 2026-11-21 16:39｜手机新浪网｜美团外卖优惠券领取入口2026年免费领券，11月美团外卖天天神券 - 手机新浪网 [链接](https://news.google.com/rss/articles/CBMicEFVX3lxTFAxanpPbURHQ0N0bzFGaE1sRkpHaXNUOWU4bmNfMUpGS0Q1S0Yxa0NfWkFlUjVLSjBxeVJrRHFiN0E3a0RrY0d1elNKV0FGWV9oVU9aZzRObDJ5NWw0THlMNVhUV0c2Y2MyZWdiSHNhWDI?oc=5)
+- 2026-11-21 14:51｜Sohu｜6名骑手亮相广西南宁消防技能挑战赛 - Sohu [链接](https://news.google.com/rss/articles/CBMijAFBVV95cUxPbnhET2FkeFhWQkd1TV9tWnlVT0gtMEplckNGd2VKTW1kcHY0Wm9uT0czNUlneGxvaU1mSWwxU2tPQnhZSDdCZEN1Z0FKU1Z6bVFwYmNfZXBiQmJvZUlKeFoxNVNiTV85WmV4aDZGNEdSNjVXSjduZWplVUk5M1FqS3NYRUNEcVF3cVQ0Rg?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘波动 -1.55%，价格相对平稳
+- 窗口期内抓取到 8 条公司消息，需评估事件影响
+- 窗口期内抓取到 1 条行业消息，需关注板块情绪
+
+### 地平线机器人 (09660.HK)
+
+市场：港股｜行业：自动驾驶/AI芯片
+关注点：AI芯片、自动驾驶、合作伙伴、技术优势
+消息覆盖：2026-11-20 16:00:00 CST 至 2026-11-22 15:49:07 CST
+行情来源：Sina Finance
+行情说明：配置为优先使用新浪财经行情
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-20
+- 收盘价：3.12
+- 涨跌额：-0.28
+- 涨跌幅：-8.10%
+- 成交量：2.75亿
+
+#### 基本面指标
+
+
+#### 公司消息面
+
+数据来源：yfinance news: 09660.HK
+抓取说明：所有新闻源在当前窗口内均无结果；网络新闻不可用时保留行情和基本面分析，并在报告中标注新闻缺失原因
+- 窗口期内未从当前 provider 抓取到可用新闻。
+
+#### 分析结论
+
+- 上一交易日收盘跌幅 8.10%，短线承压
+- 窗口期内抓取到 1 条行业消息，需关注板块情绪
+
+### 三安光电 (600703.SS)
+
+市场：A股｜行业：LED芯片/化合物半导体
+关注点：LED芯片、化合物半导体、Mini/Micro LED、碳化硅
+消息覆盖：2026-11-20 15:00:00 CST 至 2026-11-22 15:49:07 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-20
+- 收盘价：8.31
+- 涨跌额：-0.44
+- 涨跌幅：-5.03%
+- 成交量：6243.63万
+
+#### 基本面指标
+
+- 市值：41.46B CNY
+- PB：1.13
+- 成交量/均量：0.72
+
+#### 公司消息面
+
+数据来源：yfinance news: 600703.SS
+抓取说明：所有新闻源在当前窗口内均无结果；网络新闻不可用时保留行情和基本面分析，并在报告中标注新闻缺失原因
+- 窗口期内未从当前 provider 抓取到可用新闻。
+
+#### 分析结论
+
+- 上一交易日收盘跌幅 5.03%，短线承压
+- 窗口期内抓取到 1 条行业消息，需关注板块情绪
+
+## 数据来源和限制
+
+- 行情来源：优先按配置尝试 Yahoo Finance / yfinance；关键行情缺失时回退到 Sina Finance。
+- 行情 fallback：Yahoo Finance 行情缺失或异常时自动回退到新浪财经行情接口；新浪接口为非官方公开行情源。
+- 新闻 provider：yfinance；主源无结果时依次回退 google-news-rss。
+- 若 provider 不返回发布时间，报告会保留标题但无法严格验证窗口覆盖。
+- 本报告由脚本自动生成，仅供研究参考，不构成投资建议。
