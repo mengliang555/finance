@@ -1,0 +1,166 @@
+# 每日公司综合分析报告
+
+**分析日期**：2026-11-25
+**生成时间**：2026-11-25 17:37:55 CST
+**计划执行**：每天 09:00 Asia/Shanghai
+**分析公司数量**：4
+**成功/失败**：4/0
+
+## 总体概览
+
+| 公司 | 代码 | 市场 | 上一交易日 | 收盘价 | 涨跌幅 | 成交量 | 行情来源 |
+|---|---|---|---|---:|---:|---:|---|
+| 小米集团 | 1810.HK | 港股 | 2026-11-25 | 26.56 | 0.23% | 2.47亿 | Yahoo Finance / yfinance |
+| 美团 | 3690.HK | 港股 | 2026-11-25 | 61.45 | -4.28% | 8034.34万 | Yahoo Finance / yfinance |
+| 地平线机器人 | 09660.HK | 港股 | 2026-11-25 | 2.84 | -4.22% | 2.28亿 | Sina Finance |
+| 三安光电 | 600703.SS | A股 | 2026-11-25 | 7.40 | -7.27% | 8713.23万 | Yahoo Finance / yfinance |
+
+## 行业消息面
+
+覆盖窗口：2026-11-25 16:00:00 CST 至 2026-11-25 17:37:55 CST
+数据来源：Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）
+- 2026-11-25 17:33｜东方财富网｜科威尔：控股股东提议回购2000万元-3000万元公司股份 - 东方财富网 [链接](https://news.google.com/rss/articles/CBMiZkFVX3lxTE02aHlKaHRnR25iQkVrSTRxNWpfb09iRUs1eGdnWUhxOExJUVFkamJuUDdpbG9pX1FBMVY1M3YzbFN2QWxHazlNamJ5LU05V0tGSlJ6LWVOM04xODdWN3lOY3ZUOWgtQQ?oc=5)
+- 2026-11-25 17:30｜Sohu｜沪指失守3500点，半导体股下挫，沐曦股份跌超11% ，上纬新材跌近13%，九阳股份炸板又封板，7天5板（编辑：树苗）#一财情报局 - Sohu [链接](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWC02ajVpTzV4TDNybm5MQWJqUHlHV0k1ZnM5WGdHOWhkUml3ZVZrTmhxZ2pxZ0t6NG96aVFzOHhYeDlVVTIyc0cyOWhCdTNYazhrU2hNYUU3S1J1QXVJMloxanlSeVptQ1NZdmdzSTM4bF9vUlBqYU9iRmtmNWVWTF83T3didGFF?oc=5)
+- 2026-11-25 17:29｜东方财富网｜三大股指同步刷阶段性新低！A股为何跌跌不休？ - 东方财富网 [链接](https://news.google.com/rss/articles/CBMiZkFVX3lxTE9rWmVOQVBHbXZJekdEb3BkUVpnUzlPUGhyZDFmRU1rV0NRVmlBSHVZS0hVNHE4azlCeUFSS1dFOFEyYzJESWo4M0FyWjJFRlByVFFuMTFIdFpjTnFVOXVfZDJ1SDFQdw?oc=5)
+- 2026-11-25 17:28｜东方财富网｜恒指跌破22000点创年内新低：成长股集体重挫，物理AI牛股单周大涨90% - 东方财富网 [链接](https://news.google.com/rss/articles/CBMiZkFVX3lxTFBDXzdER0Y0ZmNKcURHWlZOVmFwR1ZlNjhPMTVCTi1JZHhCLW53VnpoSkdKbjNIQi1JZEg0UmlfOXN5dFNxYWxydHlvWmRWNXE4bEJPUnFQMUJmN3F3SkJ0MTFHU0NqZw?oc=5)
+- 2026-11-25 17:26｜手机新浪网｜A股利好！超60家上市公司，密集披露 - 手机新浪网 [链接](https://news.google.com/rss/articles/CBMilgFBVV95cUxPMlBVSHk3OTFKWEhpb2VMaTVMWndsX3o2Q09oTnZPY1g4RjhWM3Y5NDEwMkpaNEo0VTJaTFN1NXRmRkpoaUs2QmhwTV9PZGVCVTlKWmJLdTNMWjN4ZHBFWkM3cUxueE52Q1k0dVZ2MThWd1J2cUxzYWVObHl1V1FZczNlMFpRaVMtYmlhdWZEQ0JVcFJwV2c?oc=5)
+- 2026-11-25 17:26｜手机新浪网｜A股回购潮来了，逾30家公司集体发布回购公告 - 手机新浪网 [链接](https://news.google.com/rss/articles/CBMiggFBVV95cUxQclRsQTM3NkdRWGh5Y3I2ZmdaSGJta25ZVTVmSWlManlwbElfVzhmc01tcXp3RzFtNmZlNVZZRlhranZ6cERBWnFHUXlXWUxTLUh3X21kT21kOWFzTzFFZjlhX3FmVUhsWE1SSl9RNTdyZXoyNGlZSDZHeFNRYklhMnhR?oc=5)
+- 2026-11-25 17:22｜证券之星｜华勤技术（603296.SH）回购300万股A股_滚动新闻_财经 - 证券之星 [链接](https://news.google.com/rss/articles/CBMiYEFVX3lxTE10c3NPeXVCT013cEUtVkVuS0trei1nOFQtUk5fRmJXcFZBYnpEYXI3QVF1MDBQQ29rRUhSbEdVa0RJdmFCdGZLWktTTG80NXVRaXFHeklyUTlLcTVSSllqOQ?oc=5)
+- 2026-11-25 17:20｜手机新浪网｜复星医药：首次回购A股 耗资约4999.45万元 - 手机新浪网 [链接](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5oR2tmbEFTblpIc0VwR3YwcWNBdlBtd0hYSm1PbWhxZnBmdmtHLTRsVS1VaGQwTTZXQjF1M0oySDNxTHZfekpJMHk5czI0Rms?oc=5)
+
+## 公司分析
+
+### 小米集团 (1810.HK)
+
+市场：港股｜行业：消费电子/智能硬件
+关注点：智能手机、IoT、汽车业务、海外市场
+消息覆盖：2026-11-25 16:00:00 CST 至 2026-11-25 17:37:55 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-25
+- 收盘价：26.56
+- 涨跌额：0.06
+- 涨跌幅：0.23%
+- 成交量：2.47亿
+
+#### 基本面指标
+
+- 市值：683.25B HKD
+- PE：19.53
+- PB：2.15
+- 成交量/均量：1.73
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）
+- 2026-11-25 16:10｜Sohu｜半两财经｜小米Q3财报发布：单季营收达1072亿元，再度突破千亿大关 - Sohu [链接](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdmpZbUNiSHNJeVB5SjlUeHI3V1ZLXzZGc3dvMS1rSEhzX3dKZWRSMTlWdXZab3J4d3YzaFpIZGJGT3JuMXJ4WTlDcE1lbUw0N1VLTWdZdms3UFNCamxoV09KbzZWRk9BbTRaNXdQQWMzTVZOSDJPaWgxb1g3ZjNDMms0Nm5FMlpH?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘波动 0.23%，价格相对平稳
+- 窗口期内抓取到 1 条公司消息，需评估事件影响
+- 窗口期内抓取到 8 条行业消息，需关注板块情绪
+
+### 美团 (3690.HK)
+
+市场：港股｜行业：本地生活服务
+关注点：外卖业务、到店服务、酒店旅游、新业务
+消息覆盖：2026-11-25 16:00:00 CST 至 2026-11-25 17:37:55 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-25
+- 收盘价：61.45
+- 涨跌额：-2.75
+- 涨跌幅：-4.28%
+- 成交量：8034.34万
+
+#### 基本面指标
+
+- 市值：379.26B HKD
+- PB：1.91
+- 成交量/均量：2.44
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 美团（yfinance 无结果，已回退）
+- 2026-11-25 16:25｜东方财富网｜港股收评：恒指、恒科高开低走收跌；半导体重挫，天数智芯跌超18%，华虹宏力跌超17%；宁德时代跌超12%，美团、百度飘绿；哔哩哔哩大涨 - 东方财富网 [链接](https://news.google.com/rss/articles/CBMiZkFVX3lxTE1kdjhGOTFwR1Noa1VaTmswb3NBR0pqMTJTVF9MeFZ5RDk3RW9SUFNDVl8xUVhzb21jS1NhQXVVNEJ5aHVSMDBWWGEzTV9sQVpjRDBmNzZsYTdNYWR0Z2FiYjVxbEtxZw?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘跌幅 4.28%，短线承压
+- 窗口期内抓取到 1 条公司消息，需评估事件影响
+- 窗口期内抓取到 8 条行业消息，需关注板块情绪
+
+### 地平线机器人 (09660.HK)
+
+市场：港股｜行业：自动驾驶/AI芯片
+关注点：AI芯片、自动驾驶、合作伙伴、技术优势
+消息覆盖：2026-11-25 16:00:00 CST 至 2026-11-25 17:37:55 CST
+行情来源：Sina Finance
+行情说明：配置为优先使用新浪财经行情
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-25
+- 收盘价：2.84
+- 涨跌额：-0.12
+- 涨跌幅：-4.22%
+- 成交量：2.28亿
+
+#### 基本面指标
+
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 地平线机器人（yfinance 无结果，已回退）
+- 2026-11-25 16:28｜雪球｜地平线机器人-W(09660)股票股价_股价行情_讨论_资讯_财报_数据报告 - 雪球 [链接](https://news.google.com/rss/articles/CBMiP0FVX3lxTE5wcmdlajVOMnh2QkdteTlCUVhKMzlrT255RmY3c2RocGxMemlKNWRhcnJwbV9JcTlfT0NwQkJfYw?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘跌幅 4.22%，短线承压
+- 窗口期内抓取到 1 条公司消息，需评估事件影响
+- 窗口期内抓取到 8 条行业消息，需关注板块情绪
+
+### 三安光电 (600703.SS)
+
+市场：A股｜行业：LED芯片/化合物半导体
+关注点：LED芯片、化合物半导体、Mini/Micro LED、碳化硅
+消息覆盖：2026-11-25 15:00:00 CST 至 2026-11-25 17:37:55 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-25
+- 收盘价：7.40
+- 涨跌额：-0.58
+- 涨跌幅：-7.27%
+- 成交量：8713.23万
+
+#### 基本面指标
+
+- 市值：36.92B CNY
+- PB：1.01
+- 成交量/均量：1.01
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 三安光电（yfinance 无结果，已回退）
+- 2026-11-25 17:28｜集微网｜三安光电原总经理林科闯被采取刑事强制措施 - 集微网 [链接](https://news.google.com/rss/articles/CBMiQ0FVX3lxTE4xSTV2RlVPTGdDUXlKdVMwbG9xd1FSXzA0Y1B4a2gtZnRNM05RUWwtd1Axb0RXakowUzNyRW1NSENNQkE?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘跌幅 7.27%，短线承压
+- 窗口期内抓取到 1 条公司消息，需评估事件影响
+- 窗口期内抓取到 8 条行业消息，需关注板块情绪
+
+## 数据来源和限制
+
+- 行情来源：优先按配置尝试 Yahoo Finance / yfinance；关键行情缺失时回退到 Sina Finance。
+- 行情 fallback：Yahoo Finance 行情缺失或异常时自动回退到新浪财经行情接口；新浪接口为非官方公开行情源。
+- 新闻 provider：yfinance；主源无结果时依次回退 google-news-rss。
+- 若 provider 不返回发布时间，报告会保留标题但无法严格验证窗口覆盖。
+- 本报告由脚本自动生成，仅供研究参考，不构成投资建议。
