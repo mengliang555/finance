@@ -1,0 +1,994 @@
+{
+  "generated_at": "2026-11-26T17:12:40.818183+08:00",
+  "industry_news": {
+    "provider": "google-news-rss",
+    "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+    "items": [
+      {
+        "title": "振华股份拟1.00亿元-2.00亿元回购A股 蔡再华持股35.05% - 观点网",
+        "publisher": "观点网",
+        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5WU5mVk9kSVNPbzZKU0VHN18wLUg3VElsRVRjdnlsTnktZzhEeE9MVzFEVm96d2wyNFlPd0Y1SGRsQ19XRnNoUHJxa01XMXNZNnotWWRDOVpENnMxNkFJZXFB?oc=5",
+        "published_at": "2026-11-26T17:09:03+08:00",
+        "published_display": "2026-11-26 17:09",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "信利国际：11月26日斥资61.17万港元回购83.80万股 - 东方财富网",
+        "publisher": "东方财富网",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9DMXdtemZ6UFdJSVBSZWhGUExzNkNoVjJHaXZuQ09FZDRwY0VzaXlLZFlZa3N0RXZGcnlmalkyUHh4OEVrWEE5ZzlyazZyY0ZCSF9xcjlScURfb251Rks1UUVETGJqQQ?oc=5",
+        "published_at": "2026-11-26T17:07:47+08:00",
+        "published_display": "2026-11-26 17:07",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "中微公司在合肥成立新半导体设备公司 注册资本5000万 - Sohu",
+        "publisher": "Sohu",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPY2pheEo1WnRBWGQ3Q011ODNFMUhycTB3TlN5RDhaS25lTmx1d2R6ZTBqbUJqWU93cTZ2cFVROEJpTWY5MndIVURhc1FMQjkzMHNpVHBOXy0wMDVfYlVSSnhIZHlsV29qa3U3UU93bld1bnFEVDBhSU9LTWVEclYwX2tYOUVUSGNDb3JFcw?oc=5",
+        "published_at": "2026-11-26T17:07:11+08:00",
+        "published_display": "2026-11-26 17:07",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "港股这只次新股尾盘大涨超67% 高盛展望：2027年超配港股 - www.mrjjxw.com",
+        "publisher": "www.mrjjxw.com",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpOWFDTnI5MW56aWNuTVJQVFpWempsSTJ4TWRRWDZZQkU0M29KelRVUDdNUWlrT3I0MHpCeUlja21rOFNNNFlzNC1OTy1DNkU0ajlLUm9WbG1nOVc3bW1oWGJiZHhGdw?oc=5",
+        "published_at": "2026-11-26T17:06:44+08:00",
+        "published_display": "2026-11-26 17:06",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "A股收评：创业板指涨0.29%，超1700股上涨！贵金属、元件板块领涨 - 中金在线",
+        "publisher": "中金在线",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5iRm1OZEQtNnJpdEUzTDI3cXYwOVNlQkJiNEUxUTlwcjJMMzQwTVdqMjk5aEVNUTVLT3ZmNGNqM3NINFFZdmZIdkRLUGticXRqZ3QzVVFVc1ZneF9ZY2pNNndsenNfRXBGUks4dVhCWQ?oc=5",
+        "published_at": "2026-11-26T17:04:03+08:00",
+        "published_display": "2026-11-26 17:04",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "A股收评：创业板指涨0.29%！贵金属、元件板块强势 - 中金在线",
+        "publisher": "中金在线",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5EZnR3U3V2NnBQRlBIV1FfNFN6cXpxQUFkY1dYSzdjanJVNEtrWnFxcHJaSzJBZ3JtbzA1bDhfM3RKNHlQUWxJOGZDRlJHanI1eXc0NG9ibDB2ZU5qOTJVR3d5TXEtX1FHa3dwTkFtOA?oc=5",
+        "published_at": "2026-11-26T17:04:02+08:00",
+        "published_display": "2026-11-26 17:04",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "长久物流累计回购561.45万股股份，耗资2962.79万元 - 东方财富网",
+        "publisher": "东方财富网",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBoWDBUelhoMTd6NmRZSExTd2RZZUZ4MTZKVTNIbVFrQmc5bmh1NW9NYlhlODcyRi1Jc1dRZzJpdTlNZ3NSVV9vd2RLMW91Tk1rM1VKYWxpYk04NTZpaUstUURRbkxCZw?oc=5",
+        "published_at": "2026-11-26T17:03:09+08:00",
+        "published_display": "2026-11-26 17:03",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      },
+      {
+        "title": "锐新科技：截至11月20日最新股东户数1.55万户，较上期减少0.22% - 东方财富网",
+        "publisher": "东方财富网",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBhSlJsNk5wZm1wenp0NW96bWZxNlpFeC1yMzFKWDJBRHdzYlNkNTBxUV9ScFZmWDdydC1maVdyVVRLWDk0Rmx0SURGaXNSa0dQamF2eGtJRnNpbTJ3ckMxXzBRdHpqdw?oc=5",
+        "published_at": "2026-11-26T16:50:35+08:00",
+        "published_display": "2026-11-26 16:50",
+        "source": "google-news-rss",
+        "source_symbol": ""
+      }
+    ],
+    "error": null,
+    "window": {
+      "start": "2026-11-26 16:00:00 CST",
+      "end": "2026-11-26 17:12:40 CST"
+    }
+  },
+  "results": [
+    {
+      "company_id": "xiaomi",
+      "company_name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": [
+        "智能手机",
+        "IoT",
+        "汽车业务",
+        "海外市场"
+      ],
+      "analysis_date": "2026-11-26",
+      "analysis_time": "2026-11-26 17:12:40 CST",
+      "news_window": {
+        "start": "2026-11-26 16:00:00 CST",
+        "end": "2026-11-26 17:12:40 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-13",
+          "open": 29.739999771118164,
+          "high": 29.799999237060547,
+          "low": 28.799999237060547,
+          "close": 28.860000610351562,
+          "volume": 109152387
+        },
+        {
+          "date": "2026-11-16",
+          "open": 29.0,
+          "high": 29.459999084472656,
+          "low": 28.700000762939453,
+          "close": 29.079999923706055,
+          "volume": 93525833
+        },
+        {
+          "date": "2026-11-17",
+          "open": 29.079999923706055,
+          "high": 30.520000457763672,
+          "low": 28.459999084472656,
+          "close": 29.700000762939453,
+          "volume": 166780913
+        },
+        {
+          "date": "2026-11-18",
+          "open": 29.920000076293945,
+          "high": 30.100000381469727,
+          "low": 29.420000076293945,
+          "close": 29.65999984741211,
+          "volume": 100207665
+        },
+        {
+          "date": "2026-11-19",
+          "open": 29.0,
+          "high": 29.139999389648438,
+          "low": 28.260000228881836,
+          "close": 28.520000457763672,
+          "volume": 134914060
+        },
+        {
+          "date": "2026-11-20",
+          "open": 28.200000762939453,
+          "high": 28.299999237060547,
+          "low": 27.399999618530273,
+          "close": 27.639999389648438,
+          "volume": 157739608
+        },
+        {
+          "date": "2026-11-23",
+          "open": 27.15999984741211,
+          "high": 27.700000762939453,
+          "low": 26.799999237060547,
+          "close": 27.520000457763672,
+          "volume": 132508409
+        },
+        {
+          "date": "2026-11-24",
+          "open": 27.520000457763672,
+          "high": 27.84000015258789,
+          "low": 25.899999618530273,
+          "close": 26.5,
+          "volume": 232838214
+        },
+        {
+          "date": "2026-11-25",
+          "open": 26.860000610351562,
+          "high": 28.65999984741211,
+          "low": 26.459999084472656,
+          "close": 26.559999465942383,
+          "volume": 247095958
+        },
+        {
+          "date": "2026-11-26",
+          "open": 27.200000762939453,
+          "high": 27.719999313354492,
+          "low": 26.579999923706055,
+          "close": 26.600000381469727,
+          "volume": 127000581
+        }
+      ],
+      "price": {
+        "current": 26.6,
+        "previous": 26.56,
+        "change": 0.04,
+        "change_pct": 0.15,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-26",
+        "close": 26.6,
+        "previous_close": 26.56,
+        "change": 0.04,
+        "change_pct": 0.15,
+        "volume": 127000581
+      },
+      "fundamentals": {
+        "market_cap": 684183584768,
+        "pe_ratio": 19.558825,
+        "pb_ratio": 2.1577036,
+        "dividend_yield": 0.0,
+        "beta": null,
+        "volume": 127000581,
+        "avg_volume": 145428857,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "新浪大厅摆满小米车模，雷军扫楼后员工排队领|小米集团|雷军|新浪|微博|小米汽车_新浪新闻 - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE84QXlWTzBlY3VUVXNQZE1waE1XWG5RUS1Fei1RREd4WUVmNVhyM3V6NWVqcUZEbnYwM1VKRlFwZXBsY0oxdFpQaTJ2aVJPa2NuMmZ6UmxTMW5nXzE1NXFkUEdPRQ?oc=5",
+            "published_at": "2026-11-26T16:53:00+08:00",
+            "published_display": "2026-11-26 16:53",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "万咖壹联（01762.HK）附属公司获2027年度UMIADS游戏行业独家代理授权-证券之星 - 证券之星",
+            "publisher": "证券之星",
+            "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9VZEwxUTJQeXd0bHJzcDhvdW1hVmpmOTg2c3BCMDl4QTUwMjZpcG1FNF9FRjFBLWpUOWtNb0lHVTluWjNaOHRBdlRIdGNIME1ZUlNCb193THVtN01NMnc?oc=5",
+            "published_at": "2026-11-26T16:47:15+08:00",
+            "published_display": "2026-11-26 16:47",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "手机上的新浪 - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1Iemw4SUdWX1o1d19wOUVTd0NZTFA3VGxYeXFtMlBDSklyYWljMEZ2SUZQNzZlc2FSSGQ0WUswM1FtRFloUEUyWWt4QmN5SEdrUTRKbExvbHdXdGppbllLZlNSdw?oc=5",
+            "published_at": "2026-11-26T16:36:00+08:00",
+            "published_display": "2026-11-26 16:36",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美银证券：小米集团-W重申“买入”评级 目标价34港元 - 新浪财经_金融信息服务商",
+            "publisher": "新浪财经_金融信息服务商",
+            "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVDhkWTdGTFduZF9MVXNqNVEwNktyeHlubEhYeEFoZ3lpR0VxazZlWmJtMGdlM1RndDlWdzhlV3JQMWwwZUd4MWFpelZ0ZjBXVk9FMTNLOE9IelNabVJiSXROMnp3VDNHdXVwbWR3dG9tNXNoT1p3U2dvbVVBbm82alRNeWg4NUJycWRtdTdlR29iNEl6eVREaWJ3NUFTZk1BMy1Ia2JoT3ZnUQ?oc=5",
+            "published_at": "2026-11-26T16:15:00+08:00",
+            "published_display": "2026-11-26 16:15",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "振华股份拟1.00亿元-2.00亿元回购A股 蔡再华持股35.05% - 观点网",
+            "publisher": "观点网",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5WU5mVk9kSVNPbzZKU0VHN18wLUg3VElsRVRjdnlsTnktZzhEeE9MVzFEVm96d2wyNFlPd0Y1SGRsQ19XRnNoUHJxa01XMXNZNnotWWRDOVpENnMxNkFJZXFB?oc=5",
+            "published_at": "2026-11-26T17:09:03+08:00",
+            "published_display": "2026-11-26 17:09",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "信利国际：11月26日斥资61.17万港元回购83.80万股 - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9DMXdtemZ6UFdJSVBSZWhGUExzNkNoVjJHaXZuQ09FZDRwY0VzaXlLZFlZa3N0RXZGcnlmalkyUHh4OEVrWEE5ZzlyazZyY0ZCSF9xcjlScURfb251Rks1UUVETGJqQQ?oc=5",
+            "published_at": "2026-11-26T17:07:47+08:00",
+            "published_display": "2026-11-26 17:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "中微公司在合肥成立新半导体设备公司 注册资本5000万 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPY2pheEo1WnRBWGQ3Q011ODNFMUhycTB3TlN5RDhaS25lTmx1d2R6ZTBqbUJqWU93cTZ2cFVROEJpTWY5MndIVURhc1FMQjkzMHNpVHBOXy0wMDVfYlVSSnhIZHlsV29qa3U3UU93bld1bnFEVDBhSU9LTWVEclYwX2tYOUVUSGNDb3JFcw?oc=5",
+            "published_at": "2026-11-26T17:07:11+08:00",
+            "published_display": "2026-11-26 17:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股这只次新股尾盘大涨超67% 高盛展望：2027年超配港股 - www.mrjjxw.com",
+            "publisher": "www.mrjjxw.com",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpOWFDTnI5MW56aWNuTVJQVFpWempsSTJ4TWRRWDZZQkU0M29KelRVUDdNUWlrT3I0MHpCeUlja21rOFNNNFlzNC1OTy1DNkU0ajlLUm9WbG1nOVc3bW1oWGJiZHhGdw?oc=5",
+            "published_at": "2026-11-26T17:06:44+08:00",
+            "published_display": "2026-11-26 17:06",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "A股收评：创业板指涨0.29%，超1700股上涨！贵金属、元件板块领涨 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5iRm1OZEQtNnJpdEUzTDI3cXYwOVNlQkJiNEUxUTlwcjJMMzQwTVdqMjk5aEVNUTVLT3ZmNGNqM3NINFFZdmZIdkRLUGticXRqZ3QzVVFVc1ZneF9ZY2pNNndsenNfRXBGUks4dVhCWQ?oc=5",
+            "published_at": "2026-11-26T17:04:03+08:00",
+            "published_display": "2026-11-26 17:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "A股收评：创业板指涨0.29%！贵金属、元件板块强势 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5EZnR3U3V2NnBQRlBIV1FfNFN6cXpxQUFkY1dYSzdjanJVNEtrWnFxcHJaSzJBZ3JtbzA1bDhfM3RKNHlQUWxJOGZDRlJHanI1eXc0NG9ibDB2ZU5qOTJVR3d5TXEtX1FHa3dwTkFtOA?oc=5",
+            "published_at": "2026-11-26T17:04:02+08:00",
+            "published_display": "2026-11-26 17:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "长久物流累计回购561.45万股股份，耗资2962.79万元 - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBoWDBUelhoMTd6NmRZSExTd2RZZUZ4MTZKVTNIbVFrQmc5bmh1NW9NYlhlODcyRi1Jc1dRZzJpdTlNZ3NSVV9vd2RLMW91Tk1rM1VKYWxpYk04NTZpaUstUURRbkxCZw?oc=5",
+            "published_at": "2026-11-26T17:03:09+08:00",
+            "published_display": "2026-11-26 17:03",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "锐新科技：截至11月20日最新股东户数1.55万户，较上期减少0.22% - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBhSlJsNk5wZm1wenp0NW96bWZxNlpFeC1yMzFKWDJBRHdzYlNkNTBxUV9ScFZmWDdydC1maVdyVVRLWDk0Rmx0SURGaXNSa0dQamF2eGtJRnNpbTJ3ckMxXzBRdHpqdw?oc=5",
+            "published_at": "2026-11-26T16:50:35+08:00",
+            "published_display": "2026-11-26 16:50",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-26 16:00:00 CST",
+          "end": "2026-11-26 17:12:40 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 0.15%，价格相对平稳",
+        "窗口期内抓取到 4 条公司消息，需评估事件影响",
+        "窗口期内抓取到 8 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "meituan",
+      "company_name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": [
+        "外卖业务",
+        "到店服务",
+        "酒店旅游",
+        "新业务"
+      ],
+      "analysis_date": "2026-11-26",
+      "analysis_time": "2026-11-26 17:12:40 CST",
+      "news_window": {
+        "start": "2026-11-26 16:00:00 CST",
+        "end": "2026-11-26 17:12:40 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-13",
+          "open": 71.19999694824219,
+          "high": 72.6500015258789,
+          "low": 69.6500015258789,
+          "close": 69.80000305175781,
+          "volume": 24952585
+        },
+        {
+          "date": "2026-11-16",
+          "open": 70.94999694824219,
+          "high": 72.8499984741211,
+          "low": 70.80000305175781,
+          "close": 71.55000305175781,
+          "volume": 29790973
+        },
+        {
+          "date": "2026-11-17",
+          "open": 71.0,
+          "high": 71.8499984741211,
+          "low": 69.25,
+          "close": 70.5,
+          "volume": 29653449
+        },
+        {
+          "date": "2026-11-18",
+          "open": 70.5,
+          "high": 72.94999694824219,
+          "low": 69.8499984741211,
+          "close": 70.1500015258789,
+          "volume": 31806940
+        },
+        {
+          "date": "2026-11-19",
+          "open": 69.55000305175781,
+          "high": 69.55000305175781,
+          "low": 66.9000015258789,
+          "close": 67.55000305175781,
+          "volume": 43469374
+        },
+        {
+          "date": "2026-11-20",
+          "open": 66.5999984741211,
+          "high": 67.80000305175781,
+          "low": 66.0999984741211,
+          "close": 66.5,
+          "volume": 42500195
+        },
+        {
+          "date": "2026-11-23",
+          "open": 65.94999694824219,
+          "high": 67.05000305175781,
+          "low": 63.0,
+          "close": 66.4000015258789,
+          "volume": 67897948
+        },
+        {
+          "date": "2026-11-24",
+          "open": 67.0,
+          "high": 68.19999694824219,
+          "low": 63.849998474121094,
+          "close": 64.19999694824219,
+          "volume": 42339005
+        },
+        {
+          "date": "2026-11-25",
+          "open": 63.79999923706055,
+          "high": 66.25,
+          "low": 61.04999923706055,
+          "close": 61.45000076293945,
+          "volume": 80397323
+        },
+        {
+          "date": "2026-11-26",
+          "open": 63.150001525878906,
+          "high": 64.9000015258789,
+          "low": 62.650001525878906,
+          "close": 62.70000076293945,
+          "volume": 57115827
+        }
+      ],
+      "price": {
+        "current": 62.7,
+        "previous": 61.45,
+        "change": 1.25,
+        "change_pct": 2.03,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-26",
+        "close": 62.7,
+        "previous_close": 61.45,
+        "change": 1.25,
+        "change_pct": 2.03,
+        "volume": 57115827
+      },
+      "fundamentals": {
+        "market_cap": 386974449664,
+        "pe_ratio": null,
+        "pb_ratio": 1.9463991,
+        "dividend_yield": 0.0,
+        "beta": 0.185,
+        "volume": 57115827,
+        "avg_volume": 32828092,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 美团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "香港交易所信息显示，贝莱德在美团-WH股的持股比例于11月23日从6.06%降至5.78%。 - 富途牛牛",
+            "publisher": "富途牛牛",
+            "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSDM1WXpUZWpORE5wNlgwSm9pTUNIcVR3MlBPTjl5RVNFbko4SEpiUXN5QjJnc3pKY1NXVlRqS3Q3dDlNOVlXNzZpVTdwODNRTUhwYWZ3NmgtM2t4ei1jV3RXWnlGaVprbWFtVFdxSTN0bTAtYUJTNnpWUG9IMGlYbElscEM2Mkx1X1lhSk5hdlVKREZMeDR6R1pBbE9MRUU?oc=5",
+            "published_at": "2026-11-26T17:09:23+08:00",
+            "published_display": "2026-11-26 17:09",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团和淘宝闪购取消超时扣款处罚 ，货拉拉承诺将整体抽成比降至约9%。 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVVNpUTBaSnNPZ0VMd1RqQ3hOVzdXM1hsLVloanJTZllBYVQzcGV2Z0VDM2dCR3N3dGgyYkdtUVUzN29IcXRDT1Q0UkM0RGtTRUlUOWN5b3UtNjFqbnJMQkpjajF3TEhWMVBYaERkQVQwX0NaWVk3aDJNS0UxT0RYYmlwSVh5M0I2X0JWYg?oc=5",
+            "published_at": "2026-11-26T16:55:40+08:00",
+            "published_display": "2026-11-26 16:55",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团收编叮咚，阿里重启淘鲜达：前置仓再无独立战事 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQX3NSQV9oZlk2ZXBYYVJ6d3ZaTUxPdTAtbXFYN0FySGFNak00blppcUxHNkhucmZYaEJSbHNPa2ZfREdIdDVabURJRzg3dzBINU1tQnRzQk9XdzhUZzJocXZzcVRnY0tLSER4dnQ4UXVxTjRfVU8wU0lyTjNkMjY1ZUh1NC1QWU1H?oc=5",
+            "published_at": "2026-11-26T16:14:32+08:00",
+            "published_display": "2026-11-26 16:14",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团无人机首条工业物流配送航线落地东莞 - 电商派",
+            "publisher": "电商派",
+            "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE15REN2NEVxT2NBSWRxdktfQS1nbmxSTWhVRmNTZk9kUHE1REhzMnVMVnNPMlpJOWZGckVNZjlSSk9ObFlrY2tkVW5aUWZOcGNqMHAtS2k0aFJ2a2dnTlRwRA?oc=5",
+            "published_at": "2026-11-26T16:13:00+08:00",
+            "published_display": "2026-11-26 16:13",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团、淘宝等18家平台企业取消超时扣款、抽成下调 - 观点网",
+            "publisher": "观点网",
+            "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBnTjNuU0h4S0RXdzAzcnJlTFdDRGcxVHk0Yy1vMVY0T2FsczhfbWJaUnJXQ21iTDhfVnlFUl9zSExiX2Z5azI5bjV1MGtiUQ?oc=5",
+            "published_at": "2026-11-26T16:01:23+08:00",
+            "published_display": "2026-11-26 16:01",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "振华股份拟1.00亿元-2.00亿元回购A股 蔡再华持股35.05% - 观点网",
+            "publisher": "观点网",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5WU5mVk9kSVNPbzZKU0VHN18wLUg3VElsRVRjdnlsTnktZzhEeE9MVzFEVm96d2wyNFlPd0Y1SGRsQ19XRnNoUHJxa01XMXNZNnotWWRDOVpENnMxNkFJZXFB?oc=5",
+            "published_at": "2026-11-26T17:09:03+08:00",
+            "published_display": "2026-11-26 17:09",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "信利国际：11月26日斥资61.17万港元回购83.80万股 - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9DMXdtemZ6UFdJSVBSZWhGUExzNkNoVjJHaXZuQ09FZDRwY0VzaXlLZFlZa3N0RXZGcnlmalkyUHh4OEVrWEE5ZzlyazZyY0ZCSF9xcjlScURfb251Rks1UUVETGJqQQ?oc=5",
+            "published_at": "2026-11-26T17:07:47+08:00",
+            "published_display": "2026-11-26 17:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "中微公司在合肥成立新半导体设备公司 注册资本5000万 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPY2pheEo1WnRBWGQ3Q011ODNFMUhycTB3TlN5RDhaS25lTmx1d2R6ZTBqbUJqWU93cTZ2cFVROEJpTWY5MndIVURhc1FMQjkzMHNpVHBOXy0wMDVfYlVSSnhIZHlsV29qa3U3UU93bld1bnFEVDBhSU9LTWVEclYwX2tYOUVUSGNDb3JFcw?oc=5",
+            "published_at": "2026-11-26T17:07:11+08:00",
+            "published_display": "2026-11-26 17:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股这只次新股尾盘大涨超67% 高盛展望：2027年超配港股 - www.mrjjxw.com",
+            "publisher": "www.mrjjxw.com",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpOWFDTnI5MW56aWNuTVJQVFpWempsSTJ4TWRRWDZZQkU0M29KelRVUDdNUWlrT3I0MHpCeUlja21rOFNNNFlzNC1OTy1DNkU0ajlLUm9WbG1nOVc3bW1oWGJiZHhGdw?oc=5",
+            "published_at": "2026-11-26T17:06:44+08:00",
+            "published_display": "2026-11-26 17:06",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "A股收评：创业板指涨0.29%，超1700股上涨！贵金属、元件板块领涨 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5iRm1OZEQtNnJpdEUzTDI3cXYwOVNlQkJiNEUxUTlwcjJMMzQwTVdqMjk5aEVNUTVLT3ZmNGNqM3NINFFZdmZIdkRLUGticXRqZ3QzVVFVc1ZneF9ZY2pNNndsenNfRXBGUks4dVhCWQ?oc=5",
+            "published_at": "2026-11-26T17:04:03+08:00",
+            "published_display": "2026-11-26 17:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "A股收评：创业板指涨0.29%！贵金属、元件板块强势 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5EZnR3U3V2NnBQRlBIV1FfNFN6cXpxQUFkY1dYSzdjanJVNEtrWnFxcHJaSzJBZ3JtbzA1bDhfM3RKNHlQUWxJOGZDRlJHanI1eXc0NG9ibDB2ZU5qOTJVR3d5TXEtX1FHa3dwTkFtOA?oc=5",
+            "published_at": "2026-11-26T17:04:02+08:00",
+            "published_display": "2026-11-26 17:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "长久物流累计回购561.45万股股份，耗资2962.79万元 - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBoWDBUelhoMTd6NmRZSExTd2RZZUZ4MTZKVTNIbVFrQmc5bmh1NW9NYlhlODcyRi1Jc1dRZzJpdTlNZ3NSVV9vd2RLMW91Tk1rM1VKYWxpYk04NTZpaUstUURRbkxCZw?oc=5",
+            "published_at": "2026-11-26T17:03:09+08:00",
+            "published_display": "2026-11-26 17:03",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "锐新科技：截至11月20日最新股东户数1.55万户，较上期减少0.22% - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBhSlJsNk5wZm1wenp0NW96bWZxNlpFeC1yMzFKWDJBRHdzYlNkNTBxUV9ScFZmWDdydC1maVdyVVRLWDk0Rmx0SURGaXNSa0dQamF2eGtJRnNpbTJ3ckMxXzBRdHpqdw?oc=5",
+            "published_at": "2026-11-26T16:50:35+08:00",
+            "published_display": "2026-11-26 16:50",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-26 16:00:00 CST",
+          "end": "2026-11-26 17:12:40 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 2.03%，短线动能偏强",
+        "窗口期内抓取到 5 条公司消息，需评估事件影响",
+        "窗口期内抓取到 8 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "horizon",
+      "company_name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": [
+        "AI芯片",
+        "自动驾驶",
+        "合作伙伴",
+        "技术优势"
+      ],
+      "analysis_date": "2026-11-26",
+      "analysis_time": "2026-11-26 17:12:40 CST",
+      "news_window": {
+        "start": "2026-11-26 16:00:00 CST",
+        "end": "2026-11-26 17:12:40 CST"
+      },
+      "success": true,
+      "history": [],
+      "price": {
+        "current": 2.855,
+        "previous": 2.845,
+        "change": 0.01,
+        "change_pct": 0.35,
+        "trend": "上涨",
+        "source": "Sina Finance"
+      },
+      "previous_session": {
+        "date": "2026-11-26",
+        "close": 2.855,
+        "previous_close": 2.845,
+        "change": 0.01,
+        "change_pct": 0.35,
+        "volume": 167776715,
+        "source": "Sina Finance",
+        "source_symbol": "hk09660",
+        "source_url": "https://hq.sinajs.cn/list=hk09660",
+        "open": 2.915,
+        "high": 3.015,
+        "low": 2.85,
+        "raw_name": "地平线机器人－Ｗ"
+      },
+      "fundamentals": {
+        "volume": 167776715
+      },
+      "market_data_source": "Sina Finance",
+      "market_data_notes": [
+        "配置为优先使用新浪财经行情"
+      ],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 09660.HK",
+        "items": [],
+        "error": "所有新闻源在当前窗口内均无结果"
+      },
+      "industry_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "振华股份拟1.00亿元-2.00亿元回购A股 蔡再华持股35.05% - 观点网",
+            "publisher": "观点网",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5WU5mVk9kSVNPbzZKU0VHN18wLUg3VElsRVRjdnlsTnktZzhEeE9MVzFEVm96d2wyNFlPd0Y1SGRsQ19XRnNoUHJxa01XMXNZNnotWWRDOVpENnMxNkFJZXFB?oc=5",
+            "published_at": "2026-11-26T17:09:03+08:00",
+            "published_display": "2026-11-26 17:09",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "信利国际：11月26日斥资61.17万港元回购83.80万股 - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9DMXdtemZ6UFdJSVBSZWhGUExzNkNoVjJHaXZuQ09FZDRwY0VzaXlLZFlZa3N0RXZGcnlmalkyUHh4OEVrWEE5ZzlyazZyY0ZCSF9xcjlScURfb251Rks1UUVETGJqQQ?oc=5",
+            "published_at": "2026-11-26T17:07:47+08:00",
+            "published_display": "2026-11-26 17:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "中微公司在合肥成立新半导体设备公司 注册资本5000万 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPY2pheEo1WnRBWGQ3Q011ODNFMUhycTB3TlN5RDhaS25lTmx1d2R6ZTBqbUJqWU93cTZ2cFVROEJpTWY5MndIVURhc1FMQjkzMHNpVHBOXy0wMDVfYlVSSnhIZHlsV29qa3U3UU93bld1bnFEVDBhSU9LTWVEclYwX2tYOUVUSGNDb3JFcw?oc=5",
+            "published_at": "2026-11-26T17:07:11+08:00",
+            "published_display": "2026-11-26 17:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股这只次新股尾盘大涨超67% 高盛展望：2027年超配港股 - www.mrjjxw.com",
+            "publisher": "www.mrjjxw.com",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpOWFDTnI5MW56aWNuTVJQVFpWempsSTJ4TWRRWDZZQkU0M29KelRVUDdNUWlrT3I0MHpCeUlja21rOFNNNFlzNC1OTy1DNkU0ajlLUm9WbG1nOVc3bW1oWGJiZHhGdw?oc=5",
+            "published_at": "2026-11-26T17:06:44+08:00",
+            "published_display": "2026-11-26 17:06",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "A股收评：创业板指涨0.29%，超1700股上涨！贵金属、元件板块领涨 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5iRm1OZEQtNnJpdEUzTDI3cXYwOVNlQkJiNEUxUTlwcjJMMzQwTVdqMjk5aEVNUTVLT3ZmNGNqM3NINFFZdmZIdkRLUGticXRqZ3QzVVFVc1ZneF9ZY2pNNndsenNfRXBGUks4dVhCWQ?oc=5",
+            "published_at": "2026-11-26T17:04:03+08:00",
+            "published_display": "2026-11-26 17:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "A股收评：创业板指涨0.29%！贵金属、元件板块强势 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5EZnR3U3V2NnBQRlBIV1FfNFN6cXpxQUFkY1dYSzdjanJVNEtrWnFxcHJaSzJBZ3JtbzA1bDhfM3RKNHlQUWxJOGZDRlJHanI1eXc0NG9ibDB2ZU5qOTJVR3d5TXEtX1FHa3dwTkFtOA?oc=5",
+            "published_at": "2026-11-26T17:04:02+08:00",
+            "published_display": "2026-11-26 17:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "长久物流累计回购561.45万股股份，耗资2962.79万元 - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBoWDBUelhoMTd6NmRZSExTd2RZZUZ4MTZKVTNIbVFrQmc5bmh1NW9NYlhlODcyRi1Jc1dRZzJpdTlNZ3NSVV9vd2RLMW91Tk1rM1VKYWxpYk04NTZpaUstUURRbkxCZw?oc=5",
+            "published_at": "2026-11-26T17:03:09+08:00",
+            "published_display": "2026-11-26 17:03",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "锐新科技：截至11月20日最新股东户数1.55万户，较上期减少0.22% - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBhSlJsNk5wZm1wenp0NW96bWZxNlpFeC1yMzFKWDJBRHdzYlNkNTBxUV9ScFZmWDdydC1maVdyVVRLWDk0Rmx0SURGaXNSa0dQamF2eGtJRnNpbTJ3ckMxXzBRdHpqdw?oc=5",
+            "published_at": "2026-11-26T16:50:35+08:00",
+            "published_display": "2026-11-26 16:50",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-26 16:00:00 CST",
+          "end": "2026-11-26 17:12:40 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 0.35%，价格相对平稳",
+        "窗口期内抓取到 8 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "sanan",
+      "company_name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": [
+        "LED芯片",
+        "化合物半导体",
+        "Mini/Micro LED",
+        "碳化硅"
+      ],
+      "analysis_date": "2026-11-26",
+      "analysis_time": "2026-11-26 17:12:40 CST",
+      "news_window": {
+        "start": "2026-11-26 15:00:00 CST",
+        "end": "2026-11-26 17:12:40 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-13",
+          "open": 9.369999885559082,
+          "high": 9.479999542236328,
+          "low": 9.020000457763672,
+          "close": 9.069999694824219,
+          "volume": 60588338
+        },
+        {
+          "date": "2026-11-16",
+          "open": 9.010000228881836,
+          "high": 9.010000228881836,
+          "low": 8.600000381469727,
+          "close": 8.65999984741211,
+          "volume": 74464133
+        },
+        {
+          "date": "2026-11-17",
+          "open": 8.569999694824219,
+          "high": 9.0,
+          "low": 8.520000457763672,
+          "close": 8.8100004196167,
+          "volume": 66003642
+        },
+        {
+          "date": "2026-11-18",
+          "open": 8.850000381469727,
+          "high": 8.930000305175781,
+          "low": 8.640000343322754,
+          "close": 8.819999694824219,
+          "volume": 44861575
+        },
+        {
+          "date": "2026-11-19",
+          "open": 8.819999694824219,
+          "high": 8.869999885559082,
+          "low": 8.680000305175781,
+          "close": 8.75,
+          "volume": 38159544
+        },
+        {
+          "date": "2026-11-20",
+          "open": 8.5600004196167,
+          "high": 8.710000038146973,
+          "low": 8.300000190734863,
+          "close": 8.3100004196167,
+          "volume": 62436284
+        },
+        {
+          "date": "2026-11-23",
+          "open": 8.050000190734863,
+          "high": 8.210000038146973,
+          "low": 7.670000076293945,
+          "close": 8.0600004196167,
+          "volume": 122212769
+        },
+        {
+          "date": "2026-11-24",
+          "open": 8.350000381469727,
+          "high": 8.470000267028809,
+          "low": 7.940000057220459,
+          "close": 7.980000019073486,
+          "volume": 90185975
+        },
+        {
+          "date": "2026-11-25",
+          "open": 7.800000190734863,
+          "high": 7.96999979019165,
+          "low": 7.380000114440918,
+          "close": 7.400000095367432,
+          "volume": 87132273
+        },
+        {
+          "date": "2026-11-26",
+          "open": 7.489999771118164,
+          "high": 7.539999961853027,
+          "low": 7.190000057220459,
+          "close": 7.300000190734863,
+          "volume": 77124133
+        }
+      ],
+      "price": {
+        "current": 7.3,
+        "previous": 7.4,
+        "change": -0.1,
+        "change_pct": -1.35,
+        "trend": "下跌"
+      },
+      "previous_session": {
+        "date": "2026-11-26",
+        "close": 7.3,
+        "previous_close": 7.4,
+        "change": -0.1,
+        "change_pct": -1.35,
+        "volume": 77124133
+      },
+      "fundamentals": {
+        "market_cap": 36419837952,
+        "pe_ratio": null,
+        "pb_ratio": 0.9919826,
+        "dividend_yield": 0.0,
+        "beta": 1.197,
+        "volume": 77124133,
+        "avg_volume": 85722545,
+        "currency": "CNY"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 三安光电（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "三安光电原总经理，被采取刑事措施！ - 新浪财经_金融信息服务商",
+            "publisher": "新浪财经_金融信息服务商",
+            "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNV0QxcllQQ0plS2Q5eVpPcUItNjU2YUNjeDlvMDZ6NHZ4dHdNSS0yelphUzZnTzFJNURrTkw5bEhBQlUzUWpRSFBxVXNKajItcW8xNndUeVFsU2VvSHJDVWNjR1BUWXJiTk1MQncyOWVFSUVUOXVPc0d0Q1FuVU1VQTJFZ3RUcFhPZG1UOXZoemJVLWR5ZTg0aUxnb0NrZXBDTjEzM095dXlObDRWYkpjaWlheFdMWVJYWFl6dlE1eXZoYXQyRHBKOHJTTnJVTmoyaFQ2WGRndnc0UWM?oc=5",
+            "published_at": "2026-11-26T16:12:49+08:00",
+            "published_display": "2026-11-26 16:12",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 港股、A股、半导体（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "振华股份拟1.00亿元-2.00亿元回购A股 蔡再华持股35.05% - 观点网",
+            "publisher": "观点网",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5WU5mVk9kSVNPbzZKU0VHN18wLUg3VElsRVRjdnlsTnktZzhEeE9MVzFEVm96d2wyNFlPd0Y1SGRsQ19XRnNoUHJxa01XMXNZNnotWWRDOVpENnMxNkFJZXFB?oc=5",
+            "published_at": "2026-11-26T17:09:03+08:00",
+            "published_display": "2026-11-26 17:09",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "信利国际：11月26日斥资61.17万港元回购83.80万股 - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9DMXdtemZ6UFdJSVBSZWhGUExzNkNoVjJHaXZuQ09FZDRwY0VzaXlLZFlZa3N0RXZGcnlmalkyUHh4OEVrWEE5ZzlyazZyY0ZCSF9xcjlScURfb251Rks1UUVETGJqQQ?oc=5",
+            "published_at": "2026-11-26T17:07:47+08:00",
+            "published_display": "2026-11-26 17:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "中微公司在合肥成立新半导体设备公司 注册资本5000万 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPY2pheEo1WnRBWGQ3Q011ODNFMUhycTB3TlN5RDhaS25lTmx1d2R6ZTBqbUJqWU93cTZ2cFVROEJpTWY5MndIVURhc1FMQjkzMHNpVHBOXy0wMDVfYlVSSnhIZHlsV29qa3U3UU93bld1bnFEVDBhSU9LTWVEclYwX2tYOUVUSGNDb3JFcw?oc=5",
+            "published_at": "2026-11-26T17:07:11+08:00",
+            "published_display": "2026-11-26 17:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "港股这只次新股尾盘大涨超67% 高盛展望：2027年超配港股 - www.mrjjxw.com",
+            "publisher": "www.mrjjxw.com",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpOWFDTnI5MW56aWNuTVJQVFpWempsSTJ4TWRRWDZZQkU0M29KelRVUDdNUWlrT3I0MHpCeUlja21rOFNNNFlzNC1OTy1DNkU0ajlLUm9WbG1nOVc3bW1oWGJiZHhGdw?oc=5",
+            "published_at": "2026-11-26T17:06:44+08:00",
+            "published_display": "2026-11-26 17:06",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "A股收评：创业板指涨0.29%，超1700股上涨！贵金属、元件板块领涨 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5iRm1OZEQtNnJpdEUzTDI3cXYwOVNlQkJiNEUxUTlwcjJMMzQwTVdqMjk5aEVNUTVLT3ZmNGNqM3NINFFZdmZIdkRLUGticXRqZ3QzVVFVc1ZneF9ZY2pNNndsenNfRXBGUks4dVhCWQ?oc=5",
+            "published_at": "2026-11-26T17:04:03+08:00",
+            "published_display": "2026-11-26 17:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "A股收评：创业板指涨0.29%！贵金属、元件板块强势 - 中金在线",
+            "publisher": "中金在线",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5EZnR3U3V2NnBQRlBIV1FfNFN6cXpxQUFkY1dYSzdjanJVNEtrWnFxcHJaSzJBZ3JtbzA1bDhfM3RKNHlQUWxJOGZDRlJHanI1eXc0NG9ibDB2ZU5qOTJVR3d5TXEtX1FHa3dwTkFtOA?oc=5",
+            "published_at": "2026-11-26T17:04:02+08:00",
+            "published_display": "2026-11-26 17:04",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "长久物流累计回购561.45万股股份，耗资2962.79万元 - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBoWDBUelhoMTd6NmRZSExTd2RZZUZ4MTZKVTNIbVFrQmc5bmh1NW9NYlhlODcyRi1Jc1dRZzJpdTlNZ3NSVV9vd2RLMW91Tk1rM1VKYWxpYk04NTZpaUstUURRbkxCZw?oc=5",
+            "published_at": "2026-11-26T17:03:09+08:00",
+            "published_display": "2026-11-26 17:03",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "锐新科技：截至11月20日最新股东户数1.55万户，较上期减少0.22% - 东方财富网",
+            "publisher": "东方财富网",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBhSlJsNk5wZm1wenp0NW96bWZxNlpFeC1yMzFKWDJBRHdzYlNkNTBxUV9ScFZmWDdydC1maVdyVVRLWDk0Rmx0SURGaXNSa0dQamF2eGtJRnNpbTJ3ckMxXzBRdHpqdw?oc=5",
+            "published_at": "2026-11-26T16:50:35+08:00",
+            "published_display": "2026-11-26 16:50",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-26 16:00:00 CST",
+          "end": "2026-11-26 17:12:40 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘波动 -1.35%，价格相对平稳",
+        "窗口期内抓取到 1 条公司消息，需评估事件影响",
+        "窗口期内抓取到 8 条行业消息，需关注板块情绪"
+      ]
+    }
+  ]
+}
