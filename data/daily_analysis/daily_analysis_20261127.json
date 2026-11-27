@@ -1,0 +1,724 @@
+{
+  "generated_at": "2026-11-27T17:29:21.582543+08:00",
+  "industry_news": {
+    "provider": "yfinance",
+    "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+    "items": [
+      {
+        "title": "China stocks surge most in two years as Beijing vows stronger market support",
+        "publisher": "Reuters",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+        "published_at": "2026-11-27T16:10:45+08:00",
+        "published_display": "2026-11-27 16:10",
+        "source": "yfinance news",
+        "source_symbol": "^HSI"
+      }
+    ],
+    "error": null,
+    "window": {
+      "start": "2026-11-27 16:00:00 CST",
+      "end": "2026-11-27 17:29:21 CST"
+    }
+  },
+  "results": [
+    {
+      "company_id": "xiaomi",
+      "company_name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": [
+        "智能手机",
+        "IoT",
+        "汽车业务",
+        "海外市场"
+      ],
+      "analysis_date": "2026-11-27",
+      "analysis_time": "2026-11-27 17:29:21 CST",
+      "news_window": {
+        "start": "2026-11-27 16:00:00 CST",
+        "end": "2026-11-27 17:29:21 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-16",
+          "open": 29.0,
+          "high": 29.459999084472656,
+          "low": 28.700000762939453,
+          "close": 29.079999923706055,
+          "volume": 93525833
+        },
+        {
+          "date": "2026-11-17",
+          "open": 29.079999923706055,
+          "high": 30.520000457763672,
+          "low": 28.459999084472656,
+          "close": 29.700000762939453,
+          "volume": 166780913
+        },
+        {
+          "date": "2026-11-18",
+          "open": 29.920000076293945,
+          "high": 30.100000381469727,
+          "low": 29.420000076293945,
+          "close": 29.65999984741211,
+          "volume": 100207665
+        },
+        {
+          "date": "2026-11-19",
+          "open": 29.0,
+          "high": 29.139999389648438,
+          "low": 28.260000228881836,
+          "close": 28.520000457763672,
+          "volume": 134914060
+        },
+        {
+          "date": "2026-11-20",
+          "open": 28.200000762939453,
+          "high": 28.299999237060547,
+          "low": 27.399999618530273,
+          "close": 27.639999389648438,
+          "volume": 157739608
+        },
+        {
+          "date": "2026-11-23",
+          "open": 27.15999984741211,
+          "high": 27.700000762939453,
+          "low": 26.799999237060547,
+          "close": 27.520000457763672,
+          "volume": 132508409
+        },
+        {
+          "date": "2026-11-24",
+          "open": 27.520000457763672,
+          "high": 27.84000015258789,
+          "low": 25.899999618530273,
+          "close": 26.5,
+          "volume": 232838214
+        },
+        {
+          "date": "2026-11-25",
+          "open": 26.860000610351562,
+          "high": 28.65999984741211,
+          "low": 26.459999084472656,
+          "close": 26.559999465942383,
+          "volume": 247095958
+        },
+        {
+          "date": "2026-11-26",
+          "open": 27.200000762939453,
+          "high": 27.719999313354492,
+          "low": 26.579999923706055,
+          "close": 26.600000381469727,
+          "volume": 127000381
+        },
+        {
+          "date": "2026-11-27",
+          "open": 26.299999237060547,
+          "high": 27.84000015258789,
+          "low": 26.239999771118164,
+          "close": 27.799999237060547,
+          "volume": 181981325
+        }
+      ],
+      "price": {
+        "current": 27.8,
+        "previous": 26.6,
+        "change": 1.2,
+        "change_pct": 4.51,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-27",
+        "close": 27.8,
+        "previous_close": 26.6,
+        "change": 1.2,
+        "change_pct": 4.51,
+        "volume": 181981325
+      },
+      "fundamentals": {
+        "market_cap": 715048943616,
+        "pe_ratio": 21.060604,
+        "pb_ratio": 2.2550435,
+        "dividend_yield": 0.0,
+        "beta": 0.662,
+        "volume": 181981325,
+        "avg_volume": 145187028,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "小米(01810.HK)互联网服务推全球商业品牌UMIADS - 富途牛牛",
+            "publisher": "富途牛牛",
+            "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQa3RkeFM3YXVSRHdFUkthZll5b0VLcTFTZU5QUjl3UTlqdWVMQmdUcGpJY0thZGs1V0xXbzN6RTJnb1BVMDlKWVJFeXk4eHZqOWl0WnZjb0dyVzMwRWozNVFlM0J2QnZWdkdLY0dxZUNLU21LTF9MaU9zN2NRQkVpVFVITFNkZEtpTHk0bVpHWG1aWkhleWdCRnNTZnpJYVp6Q1JlcGJKeGxhX0x6?oc=5",
+            "published_at": "2026-11-27T17:21:22+08:00",
+            "published_display": "2026-11-27 17:21",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "消息称小米REDMI评估7英寸超大屏等多形态新机预计2027年亮相 - 新浪网",
+            "publisher": "新浪网",
+            "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9nRDEzODBqeUdNMmRwQlBXYU5JUmpNQ2pBZC1QLWpid0c1Y0dZdFV2UEVSenMwX21ZckEyeVh6ZkM5eTFLLXNnbjdia3VZQi1qUGJqVnRhcm5nQzh5SWExaVpsWkp1cFlVYkF5dlJpU1c?oc=5",
+            "published_at": "2026-11-27T16:58:30+08:00",
+            "published_display": "2026-11-27 16:58",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "雷军到访新浪总部，王高飞热情接待并试坐澎程N70 - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5uNk10RzNYNy16b2dTT28xcW9oWHdSd2FFdXFNQzF6dFZ4MEdzSGlNUldBem9jVS03RW5VMFN5bkVRMHNSYXVhQ3lVNEN3cmNPYUpleldHWFdld1hlcDdnRmFjVmtFaEJuX012c2MxWnk1dw?oc=5",
+            "published_at": "2026-11-27T16:57:56+08:00",
+            "published_display": "2026-11-27 16:57",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米汽车交付10万辆，为什么收入反而下降？ - 汽车之家",
+            "publisher": "汽车之家",
+            "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1aNTh4QWJEcEVZdzVoV0pYWFh6R3lHa3hHbXNpT0FUWUpMeTNlV09Ba1QtS0xjRE1BU2U0Zm5PQTZfWWdOUFV6SGhkdmQ2SGJHdjd4U1BpOFJUOUE?oc=5",
+            "published_at": "2026-11-27T16:28:29+08:00",
+            "published_display": "2026-11-27 16:28",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "传小米AI眼镜2代或将于12月中旬发布，客服回应 - Moomoo",
+            "publisher": "Moomoo",
+            "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yUF8ybGNvZkw3OFl3dXpraTI3NzVoZDhsSG53Q1JibzVVVnFPVnVUc05VVWhrZThXa1ZRY01Qb1lrNm9hVkhQLTYyMEgwZ29qazJmOUJNY05GLWFF?oc=5",
+            "published_at": "2026-11-27T16:24:43+08:00",
+            "published_display": "2026-11-27 16:24",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米集团迎来重要人事调整 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZDNxbmdnbTRwT3Z2U1lYZGVEWXYwUDhiZHJTaF93S3VqWWFSSjFtcTZKZTQ2YVBqWkZlTlYyazJkdnJ3dVF3b3plbnJzNTE3NkhTUnB1SW9WUk1DU0ptMTREU21GYXg1akV3VUJGdDBCM3FvRG00SmdXdVVlMXBXVGFlZEJkbEJI?oc=5",
+            "published_at": "2026-11-27T16:03:35+08:00",
+            "published_display": "2026-11-27 16:03",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "China stocks surge most in two years as Beijing vows stronger market support",
+            "publisher": "Reuters",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+            "published_at": "2026-11-27T16:10:45+08:00",
+            "published_display": "2026-11-27 16:10",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-27 16:00:00 CST",
+          "end": "2026-11-27 17:29:21 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 4.51%，短线动能偏强",
+        "窗口期内抓取到 6 条公司消息，需评估事件影响",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "meituan",
+      "company_name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": [
+        "外卖业务",
+        "到店服务",
+        "酒店旅游",
+        "新业务"
+      ],
+      "analysis_date": "2026-11-27",
+      "analysis_time": "2026-11-27 17:29:21 CST",
+      "news_window": {
+        "start": "2026-11-27 16:00:00 CST",
+        "end": "2026-11-27 17:29:21 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-16",
+          "open": 70.94999694824219,
+          "high": 72.8499984741211,
+          "low": 70.80000305175781,
+          "close": 71.55000305175781,
+          "volume": 29790973
+        },
+        {
+          "date": "2026-11-17",
+          "open": 71.0,
+          "high": 71.8499984741211,
+          "low": 69.25,
+          "close": 70.5,
+          "volume": 29653449
+        },
+        {
+          "date": "2026-11-18",
+          "open": 70.5,
+          "high": 72.94999694824219,
+          "low": 69.8499984741211,
+          "close": 70.1500015258789,
+          "volume": 31806940
+        },
+        {
+          "date": "2026-11-19",
+          "open": 69.55000305175781,
+          "high": 69.55000305175781,
+          "low": 66.9000015258789,
+          "close": 67.55000305175781,
+          "volume": 43469374
+        },
+        {
+          "date": "2026-11-20",
+          "open": 66.5999984741211,
+          "high": 67.80000305175781,
+          "low": 66.0999984741211,
+          "close": 66.5,
+          "volume": 42500195
+        },
+        {
+          "date": "2026-11-23",
+          "open": 65.94999694824219,
+          "high": 67.05000305175781,
+          "low": 63.0,
+          "close": 66.4000015258789,
+          "volume": 67897948
+        },
+        {
+          "date": "2026-11-24",
+          "open": 67.0,
+          "high": 68.19999694824219,
+          "low": 63.849998474121094,
+          "close": 64.19999694824219,
+          "volume": 42339005
+        },
+        {
+          "date": "2026-11-25",
+          "open": 63.79999923706055,
+          "high": 66.25,
+          "low": 61.04999923706055,
+          "close": 61.45000076293945,
+          "volume": 80397323
+        },
+        {
+          "date": "2026-11-26",
+          "open": 63.150001525878906,
+          "high": 64.9000015258789,
+          "low": 62.650001525878906,
+          "close": 62.70000076293945,
+          "volume": 57115727
+        },
+        {
+          "date": "2026-11-27",
+          "open": 63.0,
+          "high": 68.55000305175781,
+          "low": 62.849998474121094,
+          "close": 67.8499984741211,
+          "volume": 59996595
+        }
+      ],
+      "price": {
+        "current": 67.85,
+        "previous": 62.7,
+        "change": 5.15,
+        "change_pct": 8.21,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-27",
+        "close": 67.85,
+        "previous_close": 62.7,
+        "change": 5.15,
+        "change_pct": 8.21,
+        "volume": 59996595
+      },
+      "fundamentals": {
+        "market_cap": 418759409664,
+        "pe_ratio": null,
+        "pb_ratio": 2.1062706,
+        "dividend_yield": 0.0,
+        "beta": 0.185,
+        "volume": 59996595,
+        "avg_volume": 33244396,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 美团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "美团第三季度收入1156亿元 核心本地商业经营溢利57亿元 - 新浪财经",
+            "publisher": "新浪财经",
+            "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNX2ZnZDJEdXVCd2h6TkthWC1HbGoySGhjdEt4VkQ4QVNxSncwVG41eUNaV3MzVnpGZTNlNFNjZWlXWUJOZ0JxTm80MUpkRzJCUl9aSWhHbEpMckxUNTk0S1NEaFVQQVpZcG1SSzg3NXg0UTdTUUV5M0lBTzhyQW5udndfR1c3NWN2QWc?oc=5",
+            "published_at": "2026-11-27T17:12:34+08:00",
+            "published_display": "2026-11-27 17:12",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团Q3营收1156亿元 同比增长21.6%！AI经营工作台妙手服务商家超200万 - 驱动之家",
+            "publisher": "驱动之家",
+            "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE50djJSSWg1Y0Q2V2Y1U09UTVJSYnBEWWo0MUpkRTFTZTZiVENVT2tXM0F0VVMweXpJUF90akMxWllmVVE3bndkdzNsaDZzXzdwWVlWTGp1NDc?oc=5",
+            "published_at": "2026-11-27T17:09:00+08:00",
+            "published_display": "2026-11-27 17:09",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团2026年三季报：营收增长21.6%，AI经营工作台“妙手”已服务200万商家 - 中华网财经",
+            "publisher": "中华网财经",
+            "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1PVVVTUVZXaHBveS1vQm9ZVzhGOVpoTUlrUmlWVWNyTTBPbmVUYWVIeXNoT2xVellZNHo0UGkySUpmVzhQemN1VGNiZVMtc0RIWndkd1JyLUZoU0VSeTcxNTJqTjBJTG13R0lzbmt3?oc=5",
+            "published_at": "2026-11-27T17:03:13+08:00",
+            "published_display": "2026-11-27 17:03",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "【直播预告】美团2026年第三季度业绩电话会 - 东方财富",
+            "publisher": "东方财富",
+            "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9GclV4SW9TUElqdUtob0lEQ2hBV1JQQUV0cHQ1TUZVNXRzZm55a1pWeUNHWlhaM1k4bHFIYmx4b0JWcVVVRGtDbWtWVFpFNTN0Qzl5TnRYSGpwNGRwTHR1ZENBdw?oc=5",
+            "published_at": "2026-11-27T16:58:14+08:00",
+            "published_display": "2026-11-27 16:58",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团 2026 财年第三财季归母净利润 20.7 亿元，同比扭亏为盈 - 同花顺财经",
+            "publisher": "同花顺财经",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1VSUxIZWRHbHY4cmlxQnNhQlQtbFN0dDZqMk8xVkVNcDFxV0xPTWJ5X3R0ZktmNHRualFxaWhxTnRkZVBjOVpRazVvZmNlUWtpS04yc1VzbWwyajdXWURmdTlR?oc=5",
+            "published_at": "2026-11-27T16:51:37+08:00",
+            "published_display": "2026-11-27 16:51",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团(03690.HK)：2026年Q3收入为人民币1,156亿元，同比增长21.6%。 - 富途牛牛",
+            "publisher": "富途牛牛",
+            "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPaEFKanVZX0RpbVMtSnRDWUZxcXF2WlZMaFZ0dGdoWGhocUN0QnM5WUhqczkzcUxTRERsRWFYQlBiNHlrY1BXT1hpak9SNTZ3LTlBQlVVMUNfdVQ1ckROeWlLZUs1el83d3liQ0tOZ3pLZ1NpNGNGVV91a3E3VDF6enkySlQ4aGoxRERMT1NBbDNpVkczNDNjTA?oc=5",
+            "published_at": "2026-11-27T16:49:13+08:00",
+            "published_display": "2026-11-27 16:49",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "美团股价大涨超8%，盘后业绩超预期_公司新闻 - 证券之星",
+            "publisher": "证券之星",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1sTzExSW1uZHZTdGpsRzdkeVBxX2RHREVCR2FQMm5HN0hMamlpWmotbGE3TjcybGpKNmprS2h0Zm1NMkJ0Qkw0NmJOWnNyRHRBVl9lcV9qbkZyaXpzUU5qM1F3?oc=5",
+            "published_at": "2026-11-27T16:47:43+08:00",
+            "published_display": "2026-11-27 16:47",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "超预估，美团第三季度营收1,155.6亿元人民币 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObDlBal9wYl8tSlUycFhnU0RrYmxrRmFRZWtBNW95NmxSWFVjSlhueV9UOHJyZ3A4U0JIdXZ5MWYxbGZ6SVhXWHZmd2pJaGliZHQtcV9sRnlGMFk0NVpzME1UWTloUWRYUGR2RDNkM1J2anBzSG9WUENCR2t4cFVpNS1xSXlZQThyenhUdA?oc=5",
+            "published_at": "2026-11-27T16:45:26+08:00",
+            "published_display": "2026-11-27 16:45",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "China stocks surge most in two years as Beijing vows stronger market support",
+            "publisher": "Reuters",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+            "published_at": "2026-11-27T16:10:45+08:00",
+            "published_display": "2026-11-27 16:10",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-27 16:00:00 CST",
+          "end": "2026-11-27 17:29:21 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 8.21%，短线动能偏强",
+        "窗口期内抓取到 8 条公司消息，需评估事件影响",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "horizon",
+      "company_name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": [
+        "AI芯片",
+        "自动驾驶",
+        "合作伙伴",
+        "技术优势"
+      ],
+      "analysis_date": "2026-11-27",
+      "analysis_time": "2026-11-27 17:29:21 CST",
+      "news_window": {
+        "start": "2026-11-27 16:00:00 CST",
+        "end": "2026-11-27 17:29:21 CST"
+      },
+      "success": true,
+      "history": [],
+      "price": {
+        "current": 3.14,
+        "previous": 2.84,
+        "change": 0.3,
+        "change_pct": 10.56,
+        "trend": "上涨",
+        "source": "Sina Finance"
+      },
+      "previous_session": {
+        "date": "2026-11-27",
+        "close": 3.14,
+        "previous_close": 2.84,
+        "change": 0.3,
+        "change_pct": 10.56,
+        "volume": 242407890,
+        "source": "Sina Finance",
+        "source_symbol": "hk09660",
+        "source_url": "https://hq.sinajs.cn/list=hk09660",
+        "open": 2.88,
+        "high": 3.2,
+        "low": 2.845,
+        "raw_name": "地平线机器人－Ｗ"
+      },
+      "fundamentals": {
+        "volume": 242407890
+      },
+      "market_data_source": "Sina Finance",
+      "market_data_notes": [
+        "配置为优先使用新浪财经行情"
+      ],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 09660.HK",
+        "items": [],
+        "error": "所有新闻源在当前窗口内均无结果"
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "China stocks surge most in two years as Beijing vows stronger market support",
+            "publisher": "Reuters",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+            "published_at": "2026-11-27T16:10:45+08:00",
+            "published_display": "2026-11-27 16:10",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-27 16:00:00 CST",
+          "end": "2026-11-27 17:29:21 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 10.56%，短线动能偏强",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "sanan",
+      "company_name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": [
+        "LED芯片",
+        "化合物半导体",
+        "Mini/Micro LED",
+        "碳化硅"
+      ],
+      "analysis_date": "2026-11-27",
+      "analysis_time": "2026-11-27 17:29:21 CST",
+      "news_window": {
+        "start": "2026-11-27 15:00:00 CST",
+        "end": "2026-11-27 17:29:21 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-16",
+          "open": 9.010000228881836,
+          "high": 9.010000228881836,
+          "low": 8.600000381469727,
+          "close": 8.65999984741211,
+          "volume": 74464133
+        },
+        {
+          "date": "2026-11-17",
+          "open": 8.569999694824219,
+          "high": 9.0,
+          "low": 8.520000457763672,
+          "close": 8.8100004196167,
+          "volume": 66003642
+        },
+        {
+          "date": "2026-11-18",
+          "open": 8.850000381469727,
+          "high": 8.930000305175781,
+          "low": 8.640000343322754,
+          "close": 8.819999694824219,
+          "volume": 44861575
+        },
+        {
+          "date": "2026-11-19",
+          "open": 8.819999694824219,
+          "high": 8.869999885559082,
+          "low": 8.680000305175781,
+          "close": 8.75,
+          "volume": 38159544
+        },
+        {
+          "date": "2026-11-20",
+          "open": 8.5600004196167,
+          "high": 8.710000038146973,
+          "low": 8.300000190734863,
+          "close": 8.3100004196167,
+          "volume": 62436284
+        },
+        {
+          "date": "2026-11-23",
+          "open": 8.050000190734863,
+          "high": 8.210000038146973,
+          "low": 7.670000076293945,
+          "close": 8.0600004196167,
+          "volume": 122212769
+        },
+        {
+          "date": "2026-11-24",
+          "open": 8.350000381469727,
+          "high": 8.470000267028809,
+          "low": 7.940000057220459,
+          "close": 7.980000019073486,
+          "volume": 90185975
+        },
+        {
+          "date": "2026-11-25",
+          "open": 7.800000190734863,
+          "high": 7.96999979019165,
+          "low": 7.380000114440918,
+          "close": 7.400000095367432,
+          "volume": 87132273
+        },
+        {
+          "date": "2026-11-26",
+          "open": 7.489999771118164,
+          "high": 7.539999961853027,
+          "low": 7.190000057220459,
+          "close": 7.300000190734863,
+          "volume": 77124133
+        },
+        {
+          "date": "2026-11-27",
+          "open": 7.409999847412109,
+          "high": 8.020000457763672,
+          "low": 7.289999961853027,
+          "close": 8.0,
+          "volume": 126378293
+        }
+      ],
+      "price": {
+        "current": 8.0,
+        "previous": 7.3,
+        "change": 0.7,
+        "change_pct": 9.59,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-27",
+        "close": 8.0,
+        "previous_close": 7.3,
+        "change": 0.7,
+        "change_pct": 9.59,
+        "volume": 126378293
+      },
+      "fundamentals": {
+        "market_cap": 39912148992,
+        "pe_ratio": null,
+        "pb_ratio": 1.0871042,
+        "dividend_yield": 0.0,
+        "beta": 1.197,
+        "volume": 126378293,
+        "avg_volume": 85572728,
+        "currency": "CNY"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 三安光电（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "三安光电原总经理，被采取刑事措施！ - 新浪财经",
+            "publisher": "新浪财经",
+            "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOMjhaNlpBcnRnU05kTjJiY05VWDU4SXo1OGJVcFBvMmxNc1haWjdveHk1MktJOUxXVDJWLWZGTzZ2aXJWeWw1N2ZydG5Ua0FyU2FSdi14N2g3eDZQd1hMaWtyZEVHdnlLT2hfTDR3QjRVOWc5T0RzUnN4S3lKdkxjRVhtZjlycHNCZHdDSXpJb01GVUNzdEUyYjlkbUdrOVJveFQtWENoR1BPZUFTaTV6QzQ3X1phc09IcnFlM21pRDhCS09IRUhTNnhqSkR4ZXgzRm4xU25rdmUwTDQ?oc=5",
+            "published_at": "2026-11-27T17:20:30+08:00",
+            "published_display": "2026-11-27 17:20",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "China stocks surge most in two years as Beijing vows stronger market support",
+            "publisher": "Reuters",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+            "published_at": "2026-11-27T16:10:45+08:00",
+            "published_display": "2026-11-27 16:10",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-27 16:00:00 CST",
+          "end": "2026-11-27 17:29:21 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 9.59%，短线动能偏强",
+        "窗口期内抓取到 1 条公司消息，需评估事件影响",
+        "窗口期内抓取到 1 条行业消息，需关注板块情绪"
+      ]
+    }
+  ]
+}

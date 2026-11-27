@@ -1,0 +1,171 @@
+# 每日公司综合分析报告
+
+**分析日期**：2026-11-27
+**生成时间**：2026-11-27 17:29:21 CST
+**计划执行**：每天 09:00 Asia/Shanghai
+**分析公司数量**：4
+**成功/失败**：4/0
+
+## 总体概览
+
+| 公司 | 代码 | 市场 | 上一交易日 | 收盘价 | 涨跌幅 | 成交量 | 行情来源 |
+|---|---|---|---|---:|---:|---:|---|
+| 小米集团 | 1810.HK | 港股 | 2026-11-27 | 27.80 | 4.51% | 1.82亿 | Yahoo Finance / yfinance |
+| 美团 | 3690.HK | 港股 | 2026-11-27 | 67.85 | 8.21% | 5999.66万 | Yahoo Finance / yfinance |
+| 地平线机器人 | 09660.HK | 港股 | 2026-11-27 | 3.14 | 10.56% | 2.42亿 | Sina Finance |
+| 三安光电 | 600703.SS | A股 | 2026-11-27 | 8.00 | 9.59% | 1.26亿 | Yahoo Finance / yfinance |
+
+## 行业消息面
+
+覆盖窗口：2026-11-27 16:00:00 CST 至 2026-11-27 17:29:21 CST
+数据来源：yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ
+- 2026-11-27 16:10｜Reuters｜China stocks surge most in two years as Beijing vows stronger market support [链接](https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html)
+
+## 公司分析
+
+### 小米集团 (1810.HK)
+
+市场：港股｜行业：消费电子/智能硬件
+关注点：智能手机、IoT、汽车业务、海外市场
+消息覆盖：2026-11-27 16:00:00 CST 至 2026-11-27 17:29:21 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-27
+- 收盘价：27.80
+- 涨跌额：1.20
+- 涨跌幅：4.51%
+- 成交量：1.82亿
+
+#### 基本面指标
+
+- 市值：715.05B HKD
+- PE：21.06
+- PB：2.26
+- 成交量/均量：1.25
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）
+- 2026-11-27 17:21｜富途牛牛｜小米(01810.HK)互联网服务推全球商业品牌UMIADS - 富途牛牛 [链接](https://news.google.com/rss/articles/CBMirAFBVV95cUxQa3RkeFM3YXVSRHdFUkthZll5b0VLcTFTZU5QUjl3UTlqdWVMQmdUcGpJY0thZGs1V0xXbzN6RTJnb1BVMDlKWVJFeXk4eHZqOWl0WnZjb0dyVzMwRWozNVFlM0J2QnZWdkdLY0dxZUNLU21LTF9MaU9zN2NRQkVpVFVITFNkZEtpTHk0bVpHWG1aWkhleWdCRnNTZnpJYVp6Q1JlcGJKeGxhX0x6?oc=5)
+- 2026-11-27 16:58｜新浪网｜消息称小米REDMI评估7英寸超大屏等多形态新机预计2027年亮相 - 新浪网 [链接](https://news.google.com/rss/articles/CBMicEFVX3lxTE9nRDEzODBqeUdNMmRwQlBXYU5JUmpNQ2pBZC1QLWpid0c1Y0dZdFV2UEVSenMwX21ZckEyeVh6ZkM5eTFLLXNnbjdia3VZQi1qUGJqVnRhcm5nQzh5SWExaVpsWkp1cFlVYkF5dlJpU1c?oc=5)
+- 2026-11-27 16:57｜手机新浪网｜雷军到访新浪总部，王高飞热情接待并试坐澎程N70 - 手机新浪网 [链接](https://news.google.com/rss/articles/CBMickFVX3lxTE5uNk10RzNYNy16b2dTT28xcW9oWHdSd2FFdXFNQzF6dFZ4MEdzSGlNUldBem9jVS03RW5VMFN5bkVRMHNSYXVhQ3lVNEN3cmNPYUpleldHWFdld1hlcDdnRmFjVmtFaEJuX012c2MxWnk1dw?oc=5)
+- 2026-11-27 16:28｜汽车之家｜小米汽车交付10万辆，为什么收入反而下降？ - 汽车之家 [链接](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1aNTh4QWJEcEVZdzVoV0pYWFh6R3lHa3hHbXNpT0FUWUpMeTNlV09Ba1QtS0xjRE1BU2U0Zm5PQTZfWWdOUFV6SGhkdmQ2SGJHdjd4U1BpOFJUOUE?oc=5)
+- 2026-11-27 16:24｜Moomoo｜传小米AI眼镜2代或将于12月中旬发布，客服回应 - Moomoo [链接](https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yUF8ybGNvZkw3OFl3dXpraTI3NzVoZDhsSG53Q1JibzVVVnFPVnVUc05VVWhrZThXa1ZRY01Qb1lrNm9hVkhQLTYyMEgwZ29qazJmOUJNY05GLWFF?oc=5)
+- 2026-11-27 16:03｜Sohu｜小米集团迎来重要人事调整 - Sohu [链接](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZDNxbmdnbTRwT3Z2U1lYZGVEWXYwUDhiZHJTaF93S3VqWWFSSjFtcTZKZTQ2YVBqWkZlTlYyazJkdnJ3dVF3b3plbnJzNTE3NkhTUnB1SW9WUk1DU0ptMTREU21GYXg1akV3VUJGdDBCM3FvRG00SmdXdVVlMXBXVGFlZEJkbEJI?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘涨幅 4.51%，短线动能偏强
+- 窗口期内抓取到 6 条公司消息，需评估事件影响
+- 窗口期内抓取到 1 条行业消息，需关注板块情绪
+
+### 美团 (3690.HK)
+
+市场：港股｜行业：本地生活服务
+关注点：外卖业务、到店服务、酒店旅游、新业务
+消息覆盖：2026-11-27 16:00:00 CST 至 2026-11-27 17:29:21 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-27
+- 收盘价：67.85
+- 涨跌额：5.15
+- 涨跌幅：8.21%
+- 成交量：5999.66万
+
+#### 基本面指标
+
+- 市值：418.76B HKD
+- PB：2.11
+- 成交量/均量：1.80
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 美团（yfinance 无结果，已回退）
+- 2026-11-27 17:12｜新浪财经｜美团第三季度收入1156亿元 核心本地商业经营溢利57亿元 - 新浪财经 [链接](https://news.google.com/rss/articles/CBMiigFBVV95cUxNX2ZnZDJEdXVCd2h6TkthWC1HbGoySGhjdEt4VkQ4QVNxSncwVG41eUNaV3MzVnpGZTNlNFNjZWlXWUJOZ0JxTm80MUpkRzJCUl9aSWhHbEpMckxUNTk0S1NEaFVQQVpZcG1SSzg3NXg0UTdTUUV5M0lBTzhyQW5udndfR1c3NWN2QWc?oc=5)
+- 2026-11-27 17:09｜驱动之家｜美团Q3营收1156亿元 同比增长21.6%！AI经营工作台妙手服务商家超200万 - 驱动之家 [链接](https://news.google.com/rss/articles/CBMiWEFVX3lxTE50djJSSWg1Y0Q2V2Y1U09UTVJSYnBEWWo0MUpkRTFTZTZiVENVT2tXM0F0VVMweXpJUF90akMxWllmVVE3bndkdzNsaDZzXzdwWVlWTGp1NDc?oc=5)
+- 2026-11-27 17:03｜中华网财经｜美团2026年三季报：营收增长21.6%，AI经营工作台“妙手”已服务200万商家 - 中华网财经 [链接](https://news.google.com/rss/articles/CBMibkFVX3lxTE1PVVVTUVZXaHBveS1vQm9ZVzhGOVpoTUlrUmlWVWNyTTBPbmVUYWVIeXNoT2xVellZNHo0UGkySUpmVzhQemN1VGNiZVMtc0RIWndkd1JyLUZoU0VSeTcxNTJqTjBJTG13R0lzbmt3?oc=5)
+- 2026-11-27 16:58｜东方财富｜【直播预告】美团2026年第三季度业绩电话会 - 东方财富 [链接](https://news.google.com/rss/articles/CBMiY0FVX3lxTE9GclV4SW9TUElqdUtob0lEQ2hBV1JQQUV0cHQ1TUZVNXRzZm55a1pWeUNHWlhaM1k4bHFIYmx4b0JWcVVVRGtDbWtWVFpFNTN0Qzl5TnRYSGpwNGRwTHR1ZENBdw?oc=5)
+- 2026-11-27 16:51｜同花顺财经｜美团 2026 财年第三财季归母净利润 20.7 亿元，同比扭亏为盈 - 同花顺财经 [链接](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1VSUxIZWRHbHY4cmlxQnNhQlQtbFN0dDZqMk8xVkVNcDFxV0xPTWJ5X3R0ZktmNHRualFxaWhxTnRkZVBjOVpRazVvZmNlUWtpS04yc1VzbWwyajdXWURmdTlR?oc=5)
+- 2026-11-27 16:49｜富途牛牛｜美团(03690.HK)：2026年Q3收入为人民币1,156亿元，同比增长21.6%。 - 富途牛牛 [链接](https://news.google.com/rss/articles/CBMimAFBVV95cUxPaEFKanVZX0RpbVMtSnRDWUZxcXF2WlZMaFZ0dGdoWGhocUN0QnM5WUhqczkzcUxTRERsRWFYQlBiNHlrY1BXT1hpak9SNTZ3LTlBQlVVMUNfdVQ1ckROeWlLZUs1el83d3liQ0tOZ3pLZ1NpNGNGVV91a3E3VDF6enkySlQ4aGoxRERMT1NBbDNpVkczNDNjTA?oc=5)
+- 2026-11-27 16:47｜证券之星｜美团股价大涨超8%，盘后业绩超预期_公司新闻 - 证券之星 [链接](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1sTzExSW1uZHZTdGpsRzdkeVBxX2RHREVCR2FQMm5HN0hMamlpWmotbGE3TjcybGpKNmprS2h0Zm1NMkJ0Qkw0NmJOWnNyRHRBVl9lcV9qbkZyaXpzUU5qM1F3?oc=5)
+- 2026-11-27 16:45｜Sohu｜超预估，美团第三季度营收1,155.6亿元人民币 - Sohu [链接](https://news.google.com/rss/articles/CBMijAFBVV95cUxObDlBal9wYl8tSlUycFhnU0RrYmxrRmFRZWtBNW95NmxSWFVjSlhueV9UOHJyZ3A4U0JIdXZ5MWYxbGZ6SVhXWHZmd2pJaGliZHQtcV9sRnlGMFk0NVpzME1UWTloUWRYUGR2RDNkM1J2anBzSG9WUENCR2t4cFVpNS1xSXlZQThyenhUdA?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘涨幅 8.21%，短线动能偏强
+- 窗口期内抓取到 8 条公司消息，需评估事件影响
+- 窗口期内抓取到 1 条行业消息，需关注板块情绪
+
+### 地平线机器人 (09660.HK)
+
+市场：港股｜行业：自动驾驶/AI芯片
+关注点：AI芯片、自动驾驶、合作伙伴、技术优势
+消息覆盖：2026-11-27 16:00:00 CST 至 2026-11-27 17:29:21 CST
+行情来源：Sina Finance
+行情说明：配置为优先使用新浪财经行情
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-27
+- 收盘价：3.14
+- 涨跌额：0.30
+- 涨跌幅：10.56%
+- 成交量：2.42亿
+
+#### 基本面指标
+
+
+#### 公司消息面
+
+数据来源：yfinance news: 09660.HK
+抓取说明：所有新闻源在当前窗口内均无结果；网络新闻不可用时保留行情和基本面分析，并在报告中标注新闻缺失原因
+- 窗口期内未从当前 provider 抓取到可用新闻。
+
+#### 分析结论
+
+- 上一交易日收盘涨幅 10.56%，短线动能偏强
+- 窗口期内抓取到 1 条行业消息，需关注板块情绪
+
+### 三安光电 (600703.SS)
+
+市场：A股｜行业：LED芯片/化合物半导体
+关注点：LED芯片、化合物半导体、Mini/Micro LED、碳化硅
+消息覆盖：2026-11-27 15:00:00 CST 至 2026-11-27 17:29:21 CST
+行情来源：Yahoo Finance / yfinance
+
+#### 上一交易日表现
+
+- 收盘日期：2026-11-27
+- 收盘价：8.00
+- 涨跌额：0.70
+- 涨跌幅：9.59%
+- 成交量：1.26亿
+
+#### 基本面指标
+
+- 市值：39.91B CNY
+- PB：1.09
+- 成交量/均量：1.48
+
+#### 公司消息面
+
+数据来源：Google 新闻 RSS: 三安光电（yfinance 无结果，已回退）
+- 2026-11-27 17:20｜新浪财经｜三安光电原总经理，被采取刑事措施！ - 新浪财经 [链接](https://news.google.com/rss/articles/CBMi2wFBVV95cUxOMjhaNlpBcnRnU05kTjJiY05VWDU4SXo1OGJVcFBvMmxNc1haWjdveHk1MktJOUxXVDJWLWZGTzZ2aXJWeWw1N2ZydG5Ua0FyU2FSdi14N2g3eDZQd1hMaWtyZEVHdnlLT2hfTDR3QjRVOWc5T0RzUnN4S3lKdkxjRVhtZjlycHNCZHdDSXpJb01GVUNzdEUyYjlkbUdrOVJveFQtWENoR1BPZUFTaTV6QzQ3X1phc09IcnFlM21pRDhCS09IRUhTNnhqSkR4ZXgzRm4xU25rdmUwTDQ?oc=5)
+
+#### 分析结论
+
+- 上一交易日收盘涨幅 9.59%，短线动能偏强
+- 窗口期内抓取到 1 条公司消息，需评估事件影响
+- 窗口期内抓取到 1 条行业消息，需关注板块情绪
+
+## 数据来源和限制
+
+- 行情来源：优先按配置尝试 Yahoo Finance / yfinance；关键行情缺失时回退到 Sina Finance。
+- 行情 fallback：Yahoo Finance 行情缺失或异常时自动回退到新浪财经行情接口；新浪接口为非官方公开行情源。
+- 新闻 provider：yfinance；主源无结果时依次回退 google-news-rss。
+- 若 provider 不返回发布时间，报告会保留标题但无法严格验证窗口覆盖。
+- 本报告由脚本自动生成，仅供研究参考，不构成投资建议。
