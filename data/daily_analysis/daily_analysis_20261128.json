@@ -1,0 +1,915 @@
+{
+  "generated_at": "2026-11-28T16:42:19.632516+08:00",
+  "industry_news": {
+    "provider": "yfinance",
+    "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+    "items": [
+      {
+        "title": "China Stocks Jump After Beijing Soothes the Market",
+        "publisher": "Barrons.com",
+        "link": "https://www.barrons.com/livecoverage/stock-market-news-today-112726/card/china-stocks-jump-after-beijing-soothes-the-market-325SjmV2gaDGL8SoMYKY?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-11-27T20:34:52+08:00",
+        "published_display": "2026-11-27 20:34",
+        "source": "yfinance news",
+        "source_symbol": "000001.SS"
+      },
+      {
+        "title": "Tech Revival Boosts Asian Stock Markets",
+        "publisher": "MT Newswires",
+        "link": "https://finance.yahoo.com/markets/world-indices/articles/tech-revival-boosts-asian-stock-104837741.html",
+        "published_at": "2026-11-27T18:48:37+08:00",
+        "published_display": "2026-11-27 18:48",
+        "source": "yfinance news",
+        "source_symbol": "^HSI"
+      },
+      {
+        "title": "China to prop up struggling stock market after tech crash",
+        "publisher": "The Telegraph",
+        "link": "https://www.telegraph.co.uk/business/2026/11/27/china-to-prop-up-struggling-stock-market-after-tech-crash/",
+        "published_at": "2026-11-27T18:40:23+08:00",
+        "published_display": "2026-11-27 18:40",
+        "source": "yfinance news",
+        "source_symbol": "000001.SS"
+      },
+      {
+        "title": "China to prop up struggling stock market after tech crash",
+        "publisher": "The Telegraph",
+        "link": "https://uk.finance.yahoo.com/news/china-prop-struggling-stock-market-104023872.html",
+        "published_at": "2026-11-27T18:40:23+08:00",
+        "published_display": "2026-11-27 18:40",
+        "source": "yfinance news",
+        "source_symbol": "000001.SS"
+      },
+      {
+        "title": "China stocks surge most in two years as Beijing vows stronger market support",
+        "publisher": "Reuters",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+        "published_at": "2026-11-27T18:16:28+08:00",
+        "published_display": "2026-11-27 18:16",
+        "source": "yfinance news",
+        "source_symbol": "000001.SS"
+      }
+    ],
+    "error": null,
+    "window": {
+      "start": "2026-11-27 16:00:00 CST",
+      "end": "2026-11-28 16:42:19 CST"
+    }
+  },
+  "results": [
+    {
+      "company_id": "xiaomi",
+      "company_name": "小米集团",
+      "ticker": "1810.HK",
+      "market": "港股",
+      "industry": "消费电子/智能硬件",
+      "analysis_focus": [
+        "智能手机",
+        "IoT",
+        "汽车业务",
+        "海外市场"
+      ],
+      "analysis_date": "2026-11-28",
+      "analysis_time": "2026-11-28 16:42:19 CST",
+      "news_window": {
+        "start": "2026-11-27 16:00:00 CST",
+        "end": "2026-11-28 16:42:19 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-16",
+          "open": 29.0,
+          "high": 29.459999084472656,
+          "low": 28.700000762939453,
+          "close": 29.079999923706055,
+          "volume": 93525833
+        },
+        {
+          "date": "2026-11-17",
+          "open": 29.079999923706055,
+          "high": 30.520000457763672,
+          "low": 28.459999084472656,
+          "close": 29.700000762939453,
+          "volume": 166780913
+        },
+        {
+          "date": "2026-11-18",
+          "open": 29.920000076293945,
+          "high": 30.100000381469727,
+          "low": 29.420000076293945,
+          "close": 29.65999984741211,
+          "volume": 100207665
+        },
+        {
+          "date": "2026-11-19",
+          "open": 29.0,
+          "high": 29.139999389648438,
+          "low": 28.260000228881836,
+          "close": 28.520000457763672,
+          "volume": 134914060
+        },
+        {
+          "date": "2026-11-20",
+          "open": 28.200000762939453,
+          "high": 28.299999237060547,
+          "low": 27.399999618530273,
+          "close": 27.639999389648438,
+          "volume": 157739608
+        },
+        {
+          "date": "2026-11-23",
+          "open": 27.15999984741211,
+          "high": 27.700000762939453,
+          "low": 26.799999237060547,
+          "close": 27.520000457763672,
+          "volume": 132508409
+        },
+        {
+          "date": "2026-11-24",
+          "open": 27.520000457763672,
+          "high": 27.84000015258789,
+          "low": 25.899999618530273,
+          "close": 26.5,
+          "volume": 232838214
+        },
+        {
+          "date": "2026-11-25",
+          "open": 26.860000610351562,
+          "high": 28.65999984741211,
+          "low": 26.459999084472656,
+          "close": 26.559999465942383,
+          "volume": 247095958
+        },
+        {
+          "date": "2026-11-26",
+          "open": 27.200000762939453,
+          "high": 27.719999313354492,
+          "low": 26.579999923706055,
+          "close": 26.600000381469727,
+          "volume": 127000381
+        },
+        {
+          "date": "2026-11-27",
+          "open": 26.299999237060547,
+          "high": 27.84000015258789,
+          "low": 26.239999771118164,
+          "close": 27.799999237060547,
+          "volume": 181971325
+        }
+      ],
+      "price": {
+        "current": 27.8,
+        "previous": 26.6,
+        "change": 1.2,
+        "change_pct": 4.51,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-27",
+        "close": 27.8,
+        "previous_close": 26.6,
+        "change": 1.2,
+        "change_pct": 4.51,
+        "volume": 181971325
+      },
+      "fundamentals": {
+        "market_cap": 715048943616,
+        "pe_ratio": 20.441175,
+        "pb_ratio": 2.227864,
+        "dividend_yield": 0.0,
+        "beta": 0.662,
+        "volume": 181960125,
+        "avg_volume": 145753972,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 小米集团（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "小米武汉科技园开园！雷军现身，与嘉宾一起喝小米粥 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTFNKeW9BVFFFRVhJYzQ0OURURmZBZG96Mmg1SW5zVHZrSm9HaFk3YmM5NHJ1dV9QeVhrZFhvUmh3RjJyR1ZUWG80NGJNemRZTWRvcUVaeFdQLUd3NExjRmxNQUF5ZXhETk56eDRkV0hTSXo2NnZBSGNFT0lCX0VWNnhMVWl3ZXh3a2hDZA?oc=5",
+            "published_at": "2026-11-28T12:55:49+08:00",
+            "published_display": "2026-11-28 12:55",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米武汉科技园开园！雷军现身，与嘉宾一起喝小米粥 - 极目新闻",
+            "publisher": "极目新闻",
+            "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBNa2tvNjJIc3F6VEI2d0RzeWY5XzNzZzFqX3J1czYzZkNrWEVtRnJiZVFNLWZ5ZDJweENZdE8wMS1NMGlDTEp1QlY3cGVacXBOMDFTY3dZN0FMTUk?oc=5",
+            "published_at": "2026-11-28T12:55:49+08:00",
+            "published_display": "2026-11-28 12:55",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "何小鹏带IRON机器人到小米展台互动，回看2024年人形机器人上车热潮何其相似 - 网通社",
+            "publisher": "网通社",
+            "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9OM1RQQ3YwbmRTd2Z1LS11Mlp3Vjl1VmZsVTJEdjlvZTY1ZVpqZ2tfVWVoUWhQYzcyMkZzZWhxeWM3eWliMFV5NVh1NlQzTHV5TXByM1NBaVBRck0?oc=5",
+            "published_at": "2026-11-28T12:32:12+08:00",
+            "published_display": "2026-11-28 12:32",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米Q3营收1072亿、净利49亿：汽车及AI创新业务239亿成增长新支柱 - 富途牛牛",
+            "publisher": "富途牛牛",
+            "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1YbjQtZU93TGQ0a1Vya0U2V3ktSnViOWxtZjVRSGdjTExtd1lXNVdiZGdiM3VjX0RrSURpNzBJN2VEVGZTOGx5Zm1mVHBTLWk5?oc=5",
+            "published_at": "2026-11-28T10:14:45+08:00",
+            "published_display": "2026-11-28 10:14",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米架构调整：王晓雁统筹生态链大家电，向卢伟冰汇报 - Sohu",
+            "publisher": "Sohu",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONTh3UjY5cmhnc0NWVV9aRjJiUmd5aDVRc1NTdEkxeUY4UmQ4Rzl2Rl8wYTkzMkZpdlA2M0VFakJtR25RSElzOTJfR2I0TGRTRXQ4NGdDZ2VVMXZxSGszLWFIbW9tNUsyendqV01pTmp6Y3lJZW52X2d4Rk9XWnZQY1Fsb3Q0T3BIVGdocA?oc=5",
+            "published_at": "2026-11-28T07:10:03+08:00",
+            "published_display": "2026-11-28 07:10",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "11月27日富国中证港股通信息技术综合ETF基金份额减少400万份，重仓股联想集团、小米集团-W、中芯国际 - 证券之星",
+            "publisher": "证券之星",
+            "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9pSUNyTnZRTTZ0R3hRbW9UTm9pSkR0eTN4MDEtaDg1OFRrRF8tSkpfVTl0UnoxV1lKYmtuM1RSYTlxaVR4NWNqWWVCSUFqWHB1MUdQbmNkdm1NR0JMS01kSUd3?oc=5",
+            "published_at": "2026-11-28T06:34:14+08:00",
+            "published_display": "2026-11-28 06:34",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米玄戒O3芯片计划2027年搭载于小米汽车，200TOPS算力赋能智能座舱 - 网通社",
+            "publisher": "网通社",
+            "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5WYXMwVTdjOExsOVp1aE9KLWVVazVRMG1uMWFXLWlOSEJ6ZXRjMmxCUGdZVWROeXpXNmpIcTI4X0s2R3NzWmE0UVhzUngxY1JoeWxCT3R2dzQ0dXhs?oc=5",
+            "published_at": "2026-11-28T01:50:12+08:00",
+            "published_display": "2026-11-28 01:50",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "小米利润腰斩！雷军却不着急？他把钱花哪里去了 - 手机新浪网",
+            "publisher": "手机新浪网",
+            "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORndoNExpX245aTIydlZYZXA3eEJuWnk0VjVXM1A5aFQtd3ZMWGw0MmZDMnhRMzlPU0ZXejRXeFo4Um1yTEJHM25VV25RbGN2WDRKNWtmanlIRU8yN0dYVmpsaTFJQ1pVM1V6RFp5NVB3YXEyYzF1dU1hdE1pQjNOdTl5Zw?oc=5",
+            "published_at": "2026-11-27T22:07:09+08:00",
+            "published_display": "2026-11-27 22:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "China Stocks Jump After Beijing Soothes the Market",
+            "publisher": "Barrons.com",
+            "link": "https://www.barrons.com/livecoverage/stock-market-news-today-112726/card/china-stocks-jump-after-beijing-soothes-the-market-325SjmV2gaDGL8SoMYKY?siteid=yhoof2&yptr=yahoo",
+            "published_at": "2026-11-27T20:34:52+08:00",
+            "published_display": "2026-11-27 20:34",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "Tech Revival Boosts Asian Stock Markets",
+            "publisher": "MT Newswires",
+            "link": "https://finance.yahoo.com/markets/world-indices/articles/tech-revival-boosts-asian-stock-104837741.html",
+            "published_at": "2026-11-27T18:48:37+08:00",
+            "published_display": "2026-11-27 18:48",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "China to prop up struggling stock market after tech crash",
+            "publisher": "The Telegraph",
+            "link": "https://www.telegraph.co.uk/business/2026/11/27/china-to-prop-up-struggling-stock-market-after-tech-crash/",
+            "published_at": "2026-11-27T18:40:23+08:00",
+            "published_display": "2026-11-27 18:40",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "China to prop up struggling stock market after tech crash",
+            "publisher": "The Telegraph",
+            "link": "https://uk.finance.yahoo.com/news/china-prop-struggling-stock-market-104023872.html",
+            "published_at": "2026-11-27T18:40:23+08:00",
+            "published_display": "2026-11-27 18:40",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "China stocks surge most in two years as Beijing vows stronger market support",
+            "publisher": "Reuters",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+            "published_at": "2026-11-27T18:16:28+08:00",
+            "published_display": "2026-11-27 18:16",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-27 16:00:00 CST",
+          "end": "2026-11-28 16:42:19 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 4.51%，短线动能偏强",
+        "窗口期内抓取到 8 条公司消息，需评估事件影响",
+        "窗口期内抓取到 5 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "meituan",
+      "company_name": "美团",
+      "ticker": "3690.HK",
+      "market": "港股",
+      "industry": "本地生活服务",
+      "analysis_focus": [
+        "外卖业务",
+        "到店服务",
+        "酒店旅游",
+        "新业务"
+      ],
+      "analysis_date": "2026-11-28",
+      "analysis_time": "2026-11-28 16:42:19 CST",
+      "news_window": {
+        "start": "2026-11-27 16:00:00 CST",
+        "end": "2026-11-28 16:42:19 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-16",
+          "open": 70.94999694824219,
+          "high": 72.8499984741211,
+          "low": 70.80000305175781,
+          "close": 71.55000305175781,
+          "volume": 29790973
+        },
+        {
+          "date": "2026-11-17",
+          "open": 71.0,
+          "high": 71.8499984741211,
+          "low": 69.25,
+          "close": 70.5,
+          "volume": 29653449
+        },
+        {
+          "date": "2026-11-18",
+          "open": 70.5,
+          "high": 72.94999694824219,
+          "low": 69.8499984741211,
+          "close": 70.1500015258789,
+          "volume": 31806940
+        },
+        {
+          "date": "2026-11-19",
+          "open": 69.55000305175781,
+          "high": 69.55000305175781,
+          "low": 66.9000015258789,
+          "close": 67.55000305175781,
+          "volume": 43469374
+        },
+        {
+          "date": "2026-11-20",
+          "open": 66.5999984741211,
+          "high": 67.80000305175781,
+          "low": 66.0999984741211,
+          "close": 66.5,
+          "volume": 42500195
+        },
+        {
+          "date": "2026-11-23",
+          "open": 65.94999694824219,
+          "high": 67.05000305175781,
+          "low": 63.0,
+          "close": 66.4000015258789,
+          "volume": 67897948
+        },
+        {
+          "date": "2026-11-24",
+          "open": 67.0,
+          "high": 68.19999694824219,
+          "low": 63.849998474121094,
+          "close": 64.19999694824219,
+          "volume": 42339005
+        },
+        {
+          "date": "2026-11-25",
+          "open": 63.79999923706055,
+          "high": 66.25,
+          "low": 61.04999923706055,
+          "close": 61.45000076293945,
+          "volume": 80397323
+        },
+        {
+          "date": "2026-11-26",
+          "open": 63.150001525878906,
+          "high": 64.9000015258789,
+          "low": 62.650001525878906,
+          "close": 62.70000076293945,
+          "volume": 57115727
+        },
+        {
+          "date": "2026-11-27",
+          "open": 63.0,
+          "high": 68.55000305175781,
+          "low": 62.849998474121094,
+          "close": 67.8499984741211,
+          "volume": 59995795
+        }
+      ],
+      "price": {
+        "current": 67.85,
+        "previous": 62.7,
+        "change": 5.15,
+        "change_pct": 8.21,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-27",
+        "close": 67.85,
+        "previous_close": 62.7,
+        "change": 5.15,
+        "change_pct": 8.21,
+        "volume": 59995795
+      },
+      "fundamentals": {
+        "market_cap": 418759409664,
+        "pe_ratio": null,
+        "pb_ratio": 2.1062706,
+        "dividend_yield": 0.0,
+        "beta": 0.185,
+        "volume": 59990695,
+        "avg_volume": 33750099,
+        "currency": "HKD"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: 3690.HK",
+        "items": [
+          {
+            "title": "'Big Short' Investor Michael Burry Thinks This Chinese Stock Is Worth About 60% More Than Its Price. Should You Buy?",
+            "publisher": "Motley Fool",
+            "link": "https://www.fool.com/investing/2026/11/27/big-short-investor-michael-burry-thinks-this-chinese-stock-is-worth-about-60-more-than-its-price-should-you-buy/",
+            "published_at": "2026-11-28T02:53:03+08:00",
+            "published_display": "2026-11-28 02:53",
+            "source": "yfinance news",
+            "source_symbol": "3690.HK"
+          },
+          {
+            "title": "Meituan Stocks Jump 8.97% as Profit Returns and Delivery Price War Cools",
+            "publisher": "GuruFocus.com",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/meituan-stocks-jump-8-97-180947837.html",
+            "published_at": "2026-11-28T02:09:47+08:00",
+            "published_display": "2026-11-28 02:09",
+            "source": "yfinance news",
+            "source_symbol": "3690.HK"
+          },
+          {
+            "title": "Meituan (MPNGF) Q3 2026 Earnings Call Highlights: Revenue Jumps 21. ...",
+            "publisher": "GuruFocus.com",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/meituan-mpngf-q3-2026-earnings-122105573.html",
+            "published_at": "2026-11-27T20:21:05+08:00",
+            "published_display": "2026-11-27 20:21",
+            "source": "yfinance news",
+            "source_symbol": "3690.HK"
+          },
+          {
+            "title": "Meituan swings to Q3 profit as revenue beats, adjusted profit misses",
+            "publisher": "Investing.com",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/meituan-swings-q3-profit-revenue-115920831.html",
+            "published_at": "2026-11-27T19:59:20+08:00",
+            "published_display": "2026-11-27 19:59",
+            "source": "yfinance news",
+            "source_symbol": "3690.HK"
+          },
+          {
+            "title": "Meituan Posts Earnings Beat as Price War Cools",
+            "publisher": "The Wall Street Journal",
+            "link": "https://www.wsj.com/business/earnings/meituan-posts-earnings-beat-as-price-war-cools-d1380f04?siteid=yhoof2&yptr=yahoo",
+            "published_at": "2026-11-27T17:13:00+08:00",
+            "published_display": "2026-11-27 17:13",
+            "source": "yfinance news",
+            "source_symbol": "3690.HK"
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "China Stocks Jump After Beijing Soothes the Market",
+            "publisher": "Barrons.com",
+            "link": "https://www.barrons.com/livecoverage/stock-market-news-today-112726/card/china-stocks-jump-after-beijing-soothes-the-market-325SjmV2gaDGL8SoMYKY?siteid=yhoof2&yptr=yahoo",
+            "published_at": "2026-11-27T20:34:52+08:00",
+            "published_display": "2026-11-27 20:34",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "Tech Revival Boosts Asian Stock Markets",
+            "publisher": "MT Newswires",
+            "link": "https://finance.yahoo.com/markets/world-indices/articles/tech-revival-boosts-asian-stock-104837741.html",
+            "published_at": "2026-11-27T18:48:37+08:00",
+            "published_display": "2026-11-27 18:48",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "China to prop up struggling stock market after tech crash",
+            "publisher": "The Telegraph",
+            "link": "https://www.telegraph.co.uk/business/2026/11/27/china-to-prop-up-struggling-stock-market-after-tech-crash/",
+            "published_at": "2026-11-27T18:40:23+08:00",
+            "published_display": "2026-11-27 18:40",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "China to prop up struggling stock market after tech crash",
+            "publisher": "The Telegraph",
+            "link": "https://uk.finance.yahoo.com/news/china-prop-struggling-stock-market-104023872.html",
+            "published_at": "2026-11-27T18:40:23+08:00",
+            "published_display": "2026-11-27 18:40",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "China stocks surge most in two years as Beijing vows stronger market support",
+            "publisher": "Reuters",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+            "published_at": "2026-11-27T18:16:28+08:00",
+            "published_display": "2026-11-27 18:16",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-27 16:00:00 CST",
+          "end": "2026-11-28 16:42:19 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 8.21%，短线动能偏强",
+        "窗口期内抓取到 5 条公司消息，需评估事件影响",
+        "窗口期内抓取到 5 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "horizon",
+      "company_name": "地平线机器人",
+      "ticker": "09660.HK",
+      "market": "港股",
+      "industry": "自动驾驶/AI芯片",
+      "analysis_focus": [
+        "AI芯片",
+        "自动驾驶",
+        "合作伙伴",
+        "技术优势"
+      ],
+      "analysis_date": "2026-11-28",
+      "analysis_time": "2026-11-28 16:42:19 CST",
+      "news_window": {
+        "start": "2026-11-27 16:00:00 CST",
+        "end": "2026-11-28 16:42:19 CST"
+      },
+      "success": true,
+      "history": [],
+      "price": {
+        "current": 3.14,
+        "previous": 2.84,
+        "change": 0.3,
+        "change_pct": 10.56,
+        "trend": "上涨",
+        "source": "Sina Finance"
+      },
+      "previous_session": {
+        "date": "2026-11-27",
+        "close": 3.14,
+        "previous_close": 2.84,
+        "change": 0.3,
+        "change_pct": 10.56,
+        "volume": 242407890,
+        "source": "Sina Finance",
+        "source_symbol": "hk09660",
+        "source_url": "https://hq.sinajs.cn/list=hk09660",
+        "open": 2.88,
+        "high": 3.2,
+        "low": 2.845,
+        "raw_name": "地平线机器人－Ｗ"
+      },
+      "fundamentals": {
+        "volume": 242407890
+      },
+      "market_data_source": "Sina Finance",
+      "market_data_notes": [
+        "配置为优先使用新浪财经行情"
+      ],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 地平线机器人（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "地平线连发两项基础模型 聚焦具身智能“感知”与“多本体适配” - 东方财富",
+            "publisher": "东方财富",
+            "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5oeTRQOVhuZ3RkTmItZlAxQk5kYkdDUTdnSzJyVXM5OS03eURiWWlGTlczSkZjVDlGNVZVTzBnd0Q3UG5JV3pLLWRJQmhqX0k2cUtJNGJXRlBkQW9hRjlIdkVwVQ?oc=5",
+            "published_at": "2026-11-28T02:56:25+08:00",
+            "published_display": "2026-11-28 02:56",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "China Stocks Jump After Beijing Soothes the Market",
+            "publisher": "Barrons.com",
+            "link": "https://www.barrons.com/livecoverage/stock-market-news-today-112726/card/china-stocks-jump-after-beijing-soothes-the-market-325SjmV2gaDGL8SoMYKY?siteid=yhoof2&yptr=yahoo",
+            "published_at": "2026-11-27T20:34:52+08:00",
+            "published_display": "2026-11-27 20:34",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "Tech Revival Boosts Asian Stock Markets",
+            "publisher": "MT Newswires",
+            "link": "https://finance.yahoo.com/markets/world-indices/articles/tech-revival-boosts-asian-stock-104837741.html",
+            "published_at": "2026-11-27T18:48:37+08:00",
+            "published_display": "2026-11-27 18:48",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "China to prop up struggling stock market after tech crash",
+            "publisher": "The Telegraph",
+            "link": "https://www.telegraph.co.uk/business/2026/11/27/china-to-prop-up-struggling-stock-market-after-tech-crash/",
+            "published_at": "2026-11-27T18:40:23+08:00",
+            "published_display": "2026-11-27 18:40",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "China to prop up struggling stock market after tech crash",
+            "publisher": "The Telegraph",
+            "link": "https://uk.finance.yahoo.com/news/china-prop-struggling-stock-market-104023872.html",
+            "published_at": "2026-11-27T18:40:23+08:00",
+            "published_display": "2026-11-27 18:40",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "China stocks surge most in two years as Beijing vows stronger market support",
+            "publisher": "Reuters",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+            "published_at": "2026-11-27T18:16:28+08:00",
+            "published_display": "2026-11-27 18:16",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-27 16:00:00 CST",
+          "end": "2026-11-28 16:42:19 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 10.56%，短线动能偏强",
+        "窗口期内抓取到 1 条公司消息，需评估事件影响",
+        "窗口期内抓取到 5 条行业消息，需关注板块情绪"
+      ]
+    },
+    {
+      "company_id": "sanan",
+      "company_name": "三安光电",
+      "ticker": "600703.SS",
+      "market": "A股",
+      "industry": "LED芯片/化合物半导体",
+      "analysis_focus": [
+        "LED芯片",
+        "化合物半导体",
+        "Mini/Micro LED",
+        "碳化硅"
+      ],
+      "analysis_date": "2026-11-28",
+      "analysis_time": "2026-11-28 16:42:19 CST",
+      "news_window": {
+        "start": "2026-11-27 15:00:00 CST",
+        "end": "2026-11-28 16:42:19 CST"
+      },
+      "success": true,
+      "history": [
+        {
+          "date": "2026-11-16",
+          "open": 9.010000228881836,
+          "high": 9.010000228881836,
+          "low": 8.600000381469727,
+          "close": 8.65999984741211,
+          "volume": 74464133
+        },
+        {
+          "date": "2026-11-17",
+          "open": 8.569999694824219,
+          "high": 9.0,
+          "low": 8.520000457763672,
+          "close": 8.8100004196167,
+          "volume": 66003642
+        },
+        {
+          "date": "2026-11-18",
+          "open": 8.850000381469727,
+          "high": 8.930000305175781,
+          "low": 8.640000343322754,
+          "close": 8.819999694824219,
+          "volume": 44861575
+        },
+        {
+          "date": "2026-11-19",
+          "open": 8.819999694824219,
+          "high": 8.869999885559082,
+          "low": 8.680000305175781,
+          "close": 8.75,
+          "volume": 38159544
+        },
+        {
+          "date": "2026-11-20",
+          "open": 8.5600004196167,
+          "high": 8.710000038146973,
+          "low": 8.300000190734863,
+          "close": 8.3100004196167,
+          "volume": 62436284
+        },
+        {
+          "date": "2026-11-23",
+          "open": 8.050000190734863,
+          "high": 8.210000038146973,
+          "low": 7.670000076293945,
+          "close": 8.0600004196167,
+          "volume": 122212769
+        },
+        {
+          "date": "2026-11-24",
+          "open": 8.350000381469727,
+          "high": 8.470000267028809,
+          "low": 7.940000057220459,
+          "close": 7.980000019073486,
+          "volume": 90185975
+        },
+        {
+          "date": "2026-11-25",
+          "open": 7.800000190734863,
+          "high": 7.96999979019165,
+          "low": 7.380000114440918,
+          "close": 7.400000095367432,
+          "volume": 87132273
+        },
+        {
+          "date": "2026-11-26",
+          "open": 7.489999771118164,
+          "high": 7.539999961853027,
+          "low": 7.190000057220459,
+          "close": 7.300000190734863,
+          "volume": 77124133
+        },
+        {
+          "date": "2026-11-27",
+          "open": 7.409999847412109,
+          "high": 8.020000457763672,
+          "low": 7.289999961853027,
+          "close": 8.0,
+          "volume": 126378293
+        }
+      ],
+      "price": {
+        "current": 8.0,
+        "previous": 7.3,
+        "change": 0.7,
+        "change_pct": 9.59,
+        "trend": "上涨"
+      },
+      "previous_session": {
+        "date": "2026-11-27",
+        "close": 8.0,
+        "previous_close": 7.3,
+        "change": 0.7,
+        "change_pct": 9.59,
+        "volume": 126378293
+      },
+      "fundamentals": {
+        "market_cap": 39912148992,
+        "pe_ratio": null,
+        "pb_ratio": 1.0871042,
+        "dividend_yield": 0.0,
+        "beta": 1.197,
+        "volume": 126378293,
+        "avg_volume": 85893320,
+        "currency": "CNY"
+      },
+      "market_data_source": "Yahoo Finance / yfinance",
+      "market_data_notes": [],
+      "company_news": {
+        "provider": "google-news-rss",
+        "source": "Google 新闻 RSS: 三安光电（yfinance 无结果，已回退）",
+        "items": [
+          {
+            "title": "三安光电：融资净偿还1650.3万元，融资余额28.55亿元 - 东方财富",
+            "publisher": "东方财富",
+            "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBnWmFtUDNWNVo1c28wVV9sUXR5Z2pMY2t2V280c0JHYmpFWklvVTgxTUtGY3FTTzJSYjAwNEZXQzM4NjRYTFRyTl8yMlpGWUFiVWVwbjZpajlhaml1RGFRLU80X0ZiZw?oc=5",
+            "published_at": "2026-11-28T10:16:02+08:00",
+            "published_display": "2026-11-28 10:16",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          },
+          {
+            "title": "股票行情快报：三安光电（600703）11月27日主力资金净买入5332.61万元_主力研究_股票 - 证券之星",
+            "publisher": "证券之星",
+            "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1RWmp2QjBLWVJhRlpldU1ZWVVwTmp4UXBqUVc0MTFqek1kVERkVFMwZkQtTmExcWlQdl82RXlIM19LZUozTTRMSDFiWjMwMVNTUWdGNmpaSEQ5cHBhYU9FeQ?oc=5",
+            "published_at": "2026-11-27T21:07:14+08:00",
+            "published_display": "2026-11-27 21:07",
+            "source": "google-news-rss",
+            "source_symbol": ""
+          }
+        ],
+        "error": null
+      },
+      "industry_news": {
+        "provider": "yfinance",
+        "source": "yfinance news: ^HSI, ^HSTECH, 000001.SS, 159995.SZ",
+        "items": [
+          {
+            "title": "China Stocks Jump After Beijing Soothes the Market",
+            "publisher": "Barrons.com",
+            "link": "https://www.barrons.com/livecoverage/stock-market-news-today-112726/card/china-stocks-jump-after-beijing-soothes-the-market-325SjmV2gaDGL8SoMYKY?siteid=yhoof2&yptr=yahoo",
+            "published_at": "2026-11-27T20:34:52+08:00",
+            "published_display": "2026-11-27 20:34",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "Tech Revival Boosts Asian Stock Markets",
+            "publisher": "MT Newswires",
+            "link": "https://finance.yahoo.com/markets/world-indices/articles/tech-revival-boosts-asian-stock-104837741.html",
+            "published_at": "2026-11-27T18:48:37+08:00",
+            "published_display": "2026-11-27 18:48",
+            "source": "yfinance news",
+            "source_symbol": "^HSI"
+          },
+          {
+            "title": "China to prop up struggling stock market after tech crash",
+            "publisher": "The Telegraph",
+            "link": "https://www.telegraph.co.uk/business/2026/11/27/china-to-prop-up-struggling-stock-market-after-tech-crash/",
+            "published_at": "2026-11-27T18:40:23+08:00",
+            "published_display": "2026-11-27 18:40",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "China to prop up struggling stock market after tech crash",
+            "publisher": "The Telegraph",
+            "link": "https://uk.finance.yahoo.com/news/china-prop-struggling-stock-market-104023872.html",
+            "published_at": "2026-11-27T18:40:23+08:00",
+            "published_display": "2026-11-27 18:40",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          },
+          {
+            "title": "China stocks surge most in two years as Beijing vows stronger market support",
+            "publisher": "Reuters",
+            "link": "https://finance.yahoo.com/markets/stocks/articles/china-stocks-surge-most-two-081045333.html",
+            "published_at": "2026-11-27T18:16:28+08:00",
+            "published_display": "2026-11-27 18:16",
+            "source": "yfinance news",
+            "source_symbol": "000001.SS"
+          }
+        ],
+        "error": null,
+        "window": {
+          "start": "2026-11-27 16:00:00 CST",
+          "end": "2026-11-28 16:42:19 CST"
+        }
+      },
+      "conclusion": [
+        "上一交易日收盘涨幅 9.59%，短线动能偏强",
+        "窗口期内抓取到 2 条公司消息，需评估事件影响",
+        "窗口期内抓取到 5 条行业消息，需关注板块情绪"
+      ]
+    }
+  ]
+}
